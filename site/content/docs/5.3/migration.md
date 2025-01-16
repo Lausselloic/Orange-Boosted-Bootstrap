@@ -1022,6 +1022,12 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
     <summary><span class="badge text-bg-danger">Breaking</span> Deprecated CSS variables:</summary>
     <ul>
       <li><code>--bs-border-radius-2xl</code></li>
+      <li><code>--bs-navbar-nav-icon-padding-x</code> → <code>--bs-navbar-nav-icon-margin-x</code></li>
+      <li><code>--bs-navbar-nav-icon-padding-y</code> → <code>--bs-navbar-nav-icon-margin-y</code></li>
+      <li><code>--bs-navbar-nav-link-padding-x</code> → <code>--bs-navbar-nav-link-margin-x</code></li>
+      <li><code>--bs-navbar-nav-link-padding-y</code> → <code>--bs-navbar-nav-link-margin-y</code></li>
+      <li><code>--bs-navbar-toggler-padding-x</code> → <code>--bs-navbar-toggler-margin-x</code></li>
+      <li><code>--bs-navbar-toggler-padding-y</code> → <code>--bs-navbar-toggler-margin-y</code></li>
       <li><code>--bs-offcanvas-transition-duration</code></li>
       <li><code>--o-caption-color</code></li>
       <li><code>--o-carousel-interval</code></li>
@@ -1055,6 +1061,22 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
       <li><code>$link-hover-color-dark</code></li>
       <li><code>$mark-bg-dark</code></li>
       <li><code>$mark-color-dark</code></li>
+      <li><code>$navbar-minimized-nav-icon-padding-y</code> → <code>$navbar-minimized-nav-icon-margin-y</code></li>
+      <li><code>$navbar-minimized-toggler-padding-y</code> → <code>$navbar-minimized-toggler-margin-y</code></li>
+      <li><code>$navbar-nav-icon-padding-x</code> → <code>$navbar-nav-icon-margin-x</code></li>
+      <li><code>$navbar-nav-icon-padding-x-xs</code> → <code>$navbar-nav-icon-margin-x-xs</code></li>
+      <li><code>$navbar-nav-icon-padding-y</code> → <code>$navbar-nav-icon-margin-y</code></li>
+      <li><code>$navbar-nav-icon-padding-y-xs</code> → <code>$navbar-nav-icon-margin-y-xs</code></li>
+      <li><code>$navbar-nav-link-padding-x</code> → <code>$navbar-nav-link-margin-x</code></li>
+      <li><code>$navbar-nav-link-padding-x-xs</code> → <code>$navbar-nav-link-margin-x-xs</code></li>
+      <li><code>$navbar-nav-link-padding-y</code> → <code>$navbar-nav-link-margin-y</code></li>
+      <li><code>$navbar-supra-icon-padding-x</code> → <code>$navbar-supra-icon-margin-x</code></li>
+      <li><code>$navbar-supra-icon-padding-y</code> → <code>$navbar-supra-icon-margin-y</code></li>
+      <li><code>$navbar-supra-link-padding-x</code> → <code>$navbar-supra-link-margin-x</code></li>
+      <li><code>$navbar-supra-link-padding-y</code> → <code>$navbar-supra-link-margin-y</code></li>
+      <li><code>$navbar-toggler-padding-x</code> → <code>$navbar-toggler-margin-x</code></li>
+      <li><code>$navbar-toggler-padding-y</code> → <code>$navbar-toggler-margin-y</code></li>
+      <li><code>$popover-header-padding-y</code></li>
       <li><code>$pre-color-dark</code></li>
       <li><code>$table-caption-color-dark</code></li>
     </ul>
@@ -1133,6 +1155,12 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
       <li><code>--bs-nav-underline-link-hover-bg</code></li>
       <li><code>--bs-nav-underline-link-hover-color</code></li>
       <li><code>--bs-nav-underline-link-padding-x</code></li>
+      <li><code>--bs-navbar-nav-icon-margin-x</code></li>
+      <li><code>--bs-navbar-nav-icon-margin-y</code></li>
+      <li><code>--bs-navbar-nav-link-margin-x</code></li>
+      <li><code>--bs-navbar-nav-link-margin-y</code></li>
+      <li><code>--bs-navbar-toggler-margin-x</code></li>
+      <li><code>--bs-navbar-toggler-margin-y</code></li>
       <li><code>--bs-network-color</code></li>
       <li><code>--bs-network-logo</code></li>
       <li><code>--bs-offcanvas-transition</code></li>
@@ -1273,6 +1301,21 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
       <li><code>$nav-underline-link-border-width</code></li>
       <li><code>$nav-underline-link-hover-color</code></li>
       <li><code>$nav-underline-link-padding-x</code></li>
+      <li><code>$navbar-minimized-nav-icon-margin-y</code></li>
+      <li><code>$navbar-minimized-toggler-margin-y</code></li>
+      <li><code>$navbar-nav-icon-margin-x</code></li>
+      <li><code>$navbar-nav-icon-margin-x-xs</code></li>
+      <li><code>$navbar-nav-icon-margin-y</code></li>
+      <li><code>$navbar-nav-icon-margin-y-xs</code></li>
+      <li><code>$navbar-nav-link-margin-x</code></li>
+      <li><code>$navbar-nav-link-margin-x-xs</code></li>
+      <li><code>$navbar-nav-link-margin-y</code></li>
+      <li><code>$navbar-supra-icon-margin-x</code></li>
+      <li><code>$navbar-supra-icon-margin-y</code></li>
+      <li><code>$navbar-supra-link-margin-x</code></li>
+      <li><code>$navbar-supra-link-margin-y</code></li>
+      <li><code>$navbar-toggler-margin-x</code></li>
+      <li><code>$navbar-toggler-margin-y</code></li>
       <li><code>$modal-footer-margin-top</code></li>
       <li><code>$modal-footer-margin-top-sm</code></li>
       <li><code>$modal-scrollable-footer-margin-top</code></li>

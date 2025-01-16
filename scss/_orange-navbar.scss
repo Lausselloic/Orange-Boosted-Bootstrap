@@ -7,20 +7,20 @@
   --#{$prefix}navbar-padding-y: 0px;
   --#{$prefix}navbar-nav-font-size: #{$font-size-sm};
   --#{$prefix}navbar-nav-line-height: #{$line-height-sm};
-  --#{$prefix}navbar-nav-link-padding-y: #{$navbar-supra-link-padding-y};
-  --#{$prefix}navbar-nav-link-padding-x: #{$navbar-supra-link-padding-x};
-  --#{$prefix}navbar-nav-icon-padding-y: #{$navbar-supra-icon-padding-y};
-  --#{$prefix}navbar-nav-icon-padding-x: #{$navbar-supra-icon-padding-x};
+  --#{$prefix}navbar-nav-link-margin-y: #{$navbar-supra-link-margin-y};
+  --#{$prefix}navbar-nav-link-margin-x: #{$navbar-supra-link-margin-x};
+  --#{$prefix}navbar-nav-icon-margin-y: #{$navbar-supra-icon-margin-y};
+  --#{$prefix}navbar-nav-icon-margin-x: #{$navbar-supra-icon-margin-x};
   --#{$prefix}navbar-nav-icon-size: #{$navbar-supra-icon-size};
   // scss-docs-end supra-navbar-css-vars
 
   display: none;
 
   .navbar-nav .nav-link {
-    padding-top: var(--#{$prefix}navbar-nav-link-padding-y);
+    margin-top: var(--#{$prefix}navbar-nav-link-margin-y);
 
     &.nav-icon {
-      padding-top: add(var(--#{$prefix}navbar-nav-icon-padding-y), .3125rem);
+      margin-top: add(var(--#{$prefix}navbar-nav-icon-margin-y), .3125rem);
     }
   }
 
@@ -38,8 +38,8 @@
     --#{$prefix}navbar-brand-logo-size: #{$navbar-brand-logo-size-xs};
     --#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size-xs};
     --#{$prefix}navbar-brand-letter-spacing: #{$navbar-brand-letter-spacing-xs};
-    --#{$prefix}navbar-nav-icon-padding-y: #{$navbar-minimized-nav-icon-padding-y};
-    --#{$prefix}navbar-toggler-padding-y: #{$navbar-minimized-toggler-padding-y};
+    --#{$prefix}navbar-nav-icon-margin-y: #{$navbar-minimized-nav-icon-margin-y};
+    --#{$prefix}navbar-toggler-margin-y: #{$navbar-minimized-toggler-margin-y};
 
     .two-lined {
       --#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size-two-lined-xs};

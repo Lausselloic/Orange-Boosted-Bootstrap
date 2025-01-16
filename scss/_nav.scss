@@ -26,6 +26,7 @@
   display: flex; // Boosted mod: instead of `block`
   align-items: center; // Boosted mod
   padding: var(--#{$prefix}nav-link-padding-y) var(--#{$prefix}nav-link-padding-x);
+  margin: var(--#{$prefix}nav-link-margin-y) var(--#{$prefix}nav-link-margin-x); // Boosted mod
   @include font-size(var(--#{$prefix}nav-link-font-size));
   font-weight: var(--#{$prefix}nav-link-font-weight);
   color: var(--#{$prefix}nav-link-color);

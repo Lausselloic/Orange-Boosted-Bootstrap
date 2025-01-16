@@ -1492,9 +1492,9 @@ $navbar-padding-y:                    .375rem !default; // Boosted mod
 $navbar-padding-x:                    null !default;
 $navbar-font-weight:                  $font-weight-bold !default; // Boosted mod
 
-$navbar-nav-link-padding-y:           1rem !default; // Boosted mod
-$navbar-nav-link-padding-x-xs:        $spacer * .25 !default; // Boosted mod
-$navbar-nav-link-padding-x:           $spacer * .5 !default; // Boosted mod
+$navbar-nav-link-margin-y:            1rem !default; // Boosted mod
+$navbar-nav-link-margin-x-xs:         $spacer * .25 !default; // Boosted mod
+$navbar-nav-link-margin-x:            $spacer * .5 !default; // Boosted mod
 
 $navbar-brand-font-size:              2.1875rem !default; // Boosted mod
 // Boosted mod: no nav-link-height calculation
@@ -1502,8 +1502,8 @@ $navbar-brand-padding-y:              0 !default; // Boosted mod
 $navbar-brand-margin-end:             $spacer * 1.5 !default; // Boosted mod
 
 $navbar-toggler-icon-close-bg:        $cross-icon !default; // Boosted mod
-$navbar-toggler-padding-y:            $spacer * .6 !default; // Boosted mod: same as $navbar-nav-icon-padding-y-xs
-$navbar-toggler-padding-x:            $spacer * .75 !default; // Boosted mod: same as $navbar-nav-icon-padding-x-xs
+$navbar-toggler-margin-y:             $spacer * .6 !default; // Boosted mod: same as $navbar-nav-icon-margin-y-xs
+$navbar-toggler-margin-x:             $spacer * .75 !default; // Boosted mod: same as $navbar-nav-icon-margin-x-xs
 $navbar-toggler-font-size-xs:         1.04166666rem !default; // Boosted mod
 $navbar-toggler-font-size:            1.25rem !default; // Boosted mod
 $navbar-toggler-border-radius:        $btn-border-radius !default;
@@ -1552,20 +1552,20 @@ $navbar-brand-letter-spacing-two-lined:     $letter-spacing-base * 8 !default;
 $navbar-icon-size-xs:                       $spacer * 1.25 !default;
 $navbar-icon-size:                          $spacer * 1.5 !default;
 
-$navbar-nav-icon-padding-y-xs:              $spacer * .6 !default;
-$navbar-nav-icon-padding-x-xs:              $spacer * .75 !default;
-$navbar-nav-icon-padding-y:                 $navbar-brand-margin-y !default;
-$navbar-nav-icon-padding-x:                 $spacer !default;
+$navbar-nav-icon-margin-y-xs:               $spacer * .6 !default;
+$navbar-nav-icon-margin-x-xs:               $spacer * .75 !default;
+$navbar-nav-icon-margin-y:                  $navbar-brand-margin-y !default;
+$navbar-nav-icon-margin-x:                  $spacer !default;
 
-$navbar-supra-link-padding-y:               $spacer * .6 !default;
-$navbar-supra-link-padding-x:               .46875rem !default;
-$navbar-supra-icon-padding-y:               $spacer * .25 !default;
-$navbar-supra-icon-padding-x:               $navbar-nav-icon-padding-x-xs !default;
+$navbar-supra-link-margin-y:                $spacer * .6 !default;
+$navbar-supra-link-margin-x:                .46875rem !default;
+$navbar-supra-icon-margin-y:                $spacer * .25 !default;
+$navbar-supra-icon-margin-x:                $navbar-nav-icon-margin-x-xs !default;
 $navbar-supra-icon-size:                    $navbar-icon-size-xs !default;
 
 $navbar-minimized-brand-margin-y:           $spacer * .75 !default;
-$navbar-minimized-nav-icon-padding-y:       $navbar-minimized-brand-margin-y !default;
-$navbar-minimized-toggler-padding-y:        $navbar-minimized-brand-margin-y !default;
+$navbar-minimized-nav-icon-margin-y:        $navbar-minimized-brand-margin-y !default;
+$navbar-minimized-toggler-margin-y:         $navbar-minimized-brand-margin-y !default;
 
 $navbar-badge-padding-y:                    .125rem !default;
 $navbar-badge-padding-x:                    .375rem !default;
@@ -2469,7 +2469,7 @@ $tag-font-size-sm:                  $font-size-sm !default;
 // Local navigation
 
 // scss-docs-start local-nav-variables
-$local-nav-padding-y:           $navbar-nav-link-padding-y !default;
+$local-nav-padding-y:           $navbar-nav-link-margin-y !default;
 $local-nav-color:               null !default;
 $local-nav-bg:                  var(--#{$prefix}body-bg) !default;
 $local-nav-hover-color:         var(--#{$prefix}link-hover-color) !default;

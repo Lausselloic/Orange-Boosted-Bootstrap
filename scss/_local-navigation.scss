@@ -69,14 +69,20 @@
       &:hover {
         color: var(--#{$prefix}local-nav-hover-color);
 
-        &::before {
+        &::after {
           color: var(--#{$prefix}local-nav-active-color);
         }
       }
 
       @include media-breakpoint-down(lg) {
-        --bs-nav-link-padding-x: 0;
         --bs-navbar-border-width: 0px;
+
+        padding: var(--bs-nav-link-margin-y) 0;
+        margin: 0 calc(-1 * var(--bs-nav-link-margin-x)); // stylelint-disable-line function-disallowed-list
+
+        &::before {
+          content: none;
+        }
 
         &:hover {
           color: var(--#{$prefix}local-nav-color);
@@ -88,15 +94,15 @@
     .nav-link.active {
       --#{$prefix}navbar-active-color: var(--#{$prefix}local-nav-color);
 
-      &::before {
-        bottom: calc(-1 * var(--#{$prefix}local-nav-border-width)); // stylelint-disable-line function-disallowed-list
+      &::after {
+        bottom: calc(-1 * (var(--#{$prefix}local-nav-border-width) + var(--bs-nav-link-margin-y))); // stylelint-disable-line function-disallowed-list
         color: var(--#{$prefix}local-nav-active-color);
       }
 
       @include media-breakpoint-down(lg) {
         background-color: var(--#{$prefix}local-nav-active-bg);
 
-        &::before {
+        &::after {
           position: absolute;
           top: 0;
           bottom: 0;
