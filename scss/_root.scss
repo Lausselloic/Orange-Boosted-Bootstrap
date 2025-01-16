@@ -243,7 +243,6 @@
   --#{$prefix}heading-color: #{$headings-color};
 
   --#{$prefix}link-color: #{$link-color};
-  --#{$prefix}link-color-rgb: #{to-rgb($link-color)};
   --#{$prefix}link-decoration: #{$link-decoration};
 
   --#{$prefix}link-hover-color: #{$link-hover-color};
@@ -484,7 +483,6 @@
 
     --#{$prefix}link-color: #{$link-color-dark};
     --#{$prefix}link-hover-color: #{$link-hover-color-dark};
-    --#{$prefix}link-color-rgb: #{to-rgb($link-color-dark)};
     --#{$prefix}link-hover-color-rgb: #{to-rgb($link-hover-color-dark)};
 
     --#{$prefix}code-color: #{$code-color-dark};

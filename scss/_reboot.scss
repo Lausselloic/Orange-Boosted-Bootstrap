@@ -350,13 +350,28 @@ sup { top: -.5em; }
 // Links
 
 a {
-  color: rgba(var(--#{$prefix}link-color-rgb), var(--#{$prefix}link-opacity, 1));
+  --#{$prefix}link-color-rgb: #{$ouds-navigation-link-color-content-enabled}; // OUDS mod
+
+  color: var(--#{$prefix}link-color-rgb);
   text-decoration: $link-decoration;
 
-  &:hover {
-    --#{$prefix}link-color-rgb: var(--#{$prefix}link-hover-color-rgb);
+  &:hover,
+  &:focus-visible,
+  &:focus[data-focus-visible-added] {
+    --#{$prefix}link-color-rgb: #{$ouds-navigation-link-color-content-hover};
+
     text-decoration: $link-hover-decoration;
   }
+
+  &:active {
+    --#{$prefix}link-color-rgb: #{$ouds-navigation-link-color-content-pressed};
+  }
+}
+
+// OUDS mod: disabled links
+a[aria-disabled="true"] {
+  color: var(--#{$prefix}color-action-disabled);
+  pointer-events: none;
 }
 
 // And undo these styles for placeholder links/named anchors (without href).

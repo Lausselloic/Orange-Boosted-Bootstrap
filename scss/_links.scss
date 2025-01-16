@@ -1,0 +1,75 @@
+//
+// Orange component link
+//
+
+%chevron-properties {
+  display: inline-block;
+  width: $ouds-navigation-link-size-icon-medium;
+  height: $ouds-navigation-link-size-icon-medium;
+  vertical-align: middle;
+  content: "";
+  background-color: $ouds-navigation-link-color-arrow-enabled;
+  mask: var(--#{$prefix}chevron-icon) no-repeat;
+}
+
+.link {
+  // scss-docs-start link-css-vars
+  --#{$prefix}link-color-rgb: #{$ouds-navigation-link-color-content-enabled};
+  // scss-docs-end link-css-vars
+
+  @include get-font-size("label-large");
+  display: block;
+  min-width: $ouds-navigation-link-size-min-width-medium;
+  min-height: $ouds-navigation-link-size-min-height-medium;
+  padding: $ouds-navigation-link-space-padding-block $ouds-navigation-link-space-padding-inline;
+  font-weight: $link-font-weight;
+  color: var(--#{$prefix}link-color-rgb);
+  text-decoration: $link-decoration;// OUDS mod
+
+  &:hover,
+  &:focus-visible,
+  &:focus[data-focus-visible-added] {
+    --#{$prefix}link-color-rgb: #{$ouds-navigation-link-color-content-hover};
+
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:active {
+    --#{$prefix}link-color-rgb: #{$ouds-navigation-link-color-content-pressed};
+  }
+
+  &.link-sm{
+    @include get-font-size("label-medium");
+    min-width: $ouds-navigation-link-size-min-width-small;
+    min-height: $ouds-navigation-link-size-min-height-small;
+  }
+
+  &.link-chevron {
+
+    &:not(:hover):not(:active):not(:focus) {
+      text-decoration: none;
+    }
+
+    &:not(.back)::after {
+      @extend %chevron-properties;
+      margin-left: $ouds-navigation-link-space-column-gap-arrow-medium;
+      transform: $linked-chevron-transform;
+    }
+
+    &.link-sm::after {
+      width: $ouds-navigation-link-size-icon-small;
+      height: $ouds-navigation-link-size-icon-small;
+      margin-left: $ouds-navigation-link-space-column-gap-arrow-small;
+    }
+
+    &[aria-disabled="true"]::after {
+      background-color: var(--#{$prefix}color-action-disabled);
+    }
+
+    &.back::before {
+      @extend %chevron-properties;
+      margin-right: $ouds-navigation-link-space-column-gap-arrow-medium;
+    }
+  }
+}
+

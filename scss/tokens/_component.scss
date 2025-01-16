@@ -262,29 +262,29 @@ $ouds-indicator-skeleton-color-gradient-middle: var(--#{$prefix}color-opacity-lo
 // Navigation
 
 // scss-docs-start ouds-component-navigation
-// $ouds-navigation-link-size-min-height-medium: $ouds-dimension-600 !default;
-// $ouds-navigation-link-size-min-height-small: $ouds-dimension-550 !default;
-// $ouds-navigation-link-size-min-width-medium: $ouds-dimension-600 !default;
-// $ouds-navigation-link-size-min-width-small: $ouds-dimension-550 !default;
+$ouds-navigation-link-size-min-height-medium: $ouds-dimension-600 !default;
+$ouds-navigation-link-size-min-height-small: $ouds-dimension-550 !default;
+$ouds-navigation-link-size-min-width-medium: $ouds-dimension-600 !default;
+$ouds-navigation-link-size-min-width-small: $ouds-dimension-550 !default;
 // $ouds-navigation-link-color-content-disabled-mono: $ouds-color-repository-opacity-black-medium !default;
 // $ouds-navigation-link-color-content-enabled-mono: $ouds-color-repository-neutral-emphasized-black !default;
 // $ouds-navigation-link-color-content-focus-mono: $ouds-color-repository-neutral-emphasized-black !default;
 // $ouds-navigation-link-color-content-hover-mono: $ouds-color-repository-neutral-emphasized-black !default;
 // $ouds-navigation-link-color-content-pressed-mono: $ouds-color-repository-opacity-black-higher !default;
-// $ouds-navigation-link-color-arrow-enabled: var(--#{$prefix}color-content-brand-primary) !default;
-// $ouds-navigation-link-color-arrow-focus: var(--#{$prefix}color-content-brand-primary) !default;
-// $ouds-navigation-link-color-arrow-hover: var(--#{$prefix}color-content-brand-primary) !default;
-// $ouds-navigation-link-color-arrow-pressed: var(--#{$prefix}color-content-brand-primary) !default;
-// $ouds-navigation-link-color-content-enabled: var(--#{$prefix}color-action-enabled) !default;
+$ouds-navigation-link-color-arrow-enabled: var(--#{$prefix}color-content-brand-primary) !default;
+$ouds-navigation-link-color-arrow-focus: var(--#{$prefix}color-content-brand-primary) !default;
+$ouds-navigation-link-color-arrow-hover: var(--#{$prefix}color-content-brand-primary) !default;
+$ouds-navigation-link-color-arrow-pressed: var(--#{$prefix}color-content-brand-primary) !default;
+$ouds-navigation-link-color-content-enabled: var(--#{$prefix}color-action-enabled) !default;
 // $ouds-navigation-link-color-content-focus: var(--#{$prefix}color-action-focus) !default;
-// $ouds-navigation-link-color-content-hover: var(--#{$prefix}color-action-hover) !default;
-// $ouds-navigation-link-color-content-pressed: var(--#{$prefix}color-action-pressed) !default;
-// $ouds-navigation-link-size-icon-medium: $ouds-size-icon-with-label-large-size-xs !default;
-// $ouds-navigation-link-size-icon-small: $ouds-size-icon-with-label-medium-size-sm !default;
-// $ouds-navigation-link-space-column-gap-arrow-medium: $ouds-space-column-gap-shorter !default;
-// $ouds-navigation-link-space-column-gap-arrow-small: $ouds-space-column-gap-shortest !default;
+$ouds-navigation-link-color-content-hover: var(--#{$prefix}color-action-hover) !default;
+$ouds-navigation-link-color-content-pressed: var(--#{$prefix}color-action-pressed) !default;
+$ouds-navigation-link-size-icon-medium: $ouds-size-icon-with-label-large-size-xs !default;
+$ouds-navigation-link-size-icon-small: $ouds-size-icon-with-label-medium-size-sm !default;
+$ouds-navigation-link-space-column-gap-arrow-medium: $ouds-space-column-gap-shorter !default;
+$ouds-navigation-link-space-column-gap-arrow-small: $ouds-space-column-gap-shortest !default;
 // $ouds-navigation-link-space-column-gap-icon-medium: $ouds-space-column-gap-short !default;
 // $ouds-navigation-link-space-column-gap-icon-small: $ouds-space-column-gap-shorter !default;
-// $ouds-navigation-link-space-padding-block: $ouds-space-padding-block-medium !default;
-// $ouds-navigation-link-space-padding-inline: $ouds-space-padding-inline-none !default;
+$ouds-navigation-link-space-padding-block: $ouds-space-padding-block-medium !default;
+$ouds-navigation-link-space-padding-inline: $ouds-space-padding-inline-none !default;
 // scss-docs-end ouds-component-navigation
