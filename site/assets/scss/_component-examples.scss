@@ -395,6 +395,26 @@
   }
 }
 
+// Boosted mod: allow to display smart responsive pagination behavior in the docs
+// when `$enable-responsive-pagination` is enabled (see site/assets/scss/docs.scss)
+.bd-example-responsive-pagination {
+  // scss-docs-start pagination-mixin-use
+  .page-item {
+    @include media-breakpoint-down(sm) {
+      @include pagination-max-items(3);
+    }
+
+    @include media-breakpoint-between(sm, md) {
+      @include pagination-max-items(10);
+    }
+
+    @include media-breakpoint-up(md) {
+      @include pagination-max-items(12);
+    }
+  }
+  // scss-docs-end pagination-mixin-use
+}
+
 .bd-file-ref {
   position: relative; // Boosted mod
 

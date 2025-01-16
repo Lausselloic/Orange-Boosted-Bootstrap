@@ -33,4 +33,5 @@ You can find and customize these variables for key global options in Boosted's `
 | `$enable-important-utilities`  | `true` (default) or `false`           | Enables the `!important` suffix in utility classes. |
 | `$enable-smooth-scroll`        | `true` (default) or `false`           | Applies `scroll-behavior: smooth` globally, except for users asking for reduced motion through [`prefers-reduced-motion` media query]({{< docsref "/getting-started/accessibility#reduced-motion" >}}) |
 | `$enable-fixed-header`         | `true` (default) or `false`           | Set `scroll-padding-top` rule to root element, preventing focus from being hidden under a fixed header. |
+| `$enable-responsive-pagination` | `true` or `false` (default)          | Enables an automatic CSS responsive handling for the pagination meaning you may not handle it in the backend. |
 {{< /bs-table >}}

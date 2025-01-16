@@ -427,23 +427,24 @@ $orange-filter:         invert(46%) sepia(60%) saturate(2878%) hue-rotate(6deg) 
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
-$enable-caret:                true !default;
-$enable-rounded:              false !default;
-$enable-shadows:              false !default;
-$enable-gradients:            false !default;
-$enable-transitions:          true !default;
-$enable-reduced-motion:       true !default;
-$enable-smooth-scroll:        true !default;
-$enable-grid-classes:         true !default;
-$enable-container-classes:    true !default;
-$enable-cssgrid:              false !default;
-$enable-button-pointers:      true !default;
-$enable-rfs:                  false !default;
-$enable-validation-icons:     true !default;
-$enable-negative-margins:     false !default;
-$enable-deprecation-messages: false !default;
-$enable-important-utilities:  true !default;
-$enable-fixed-header:         true !default; // Boosted mod: used to apply scroll-padding-top
+$enable-caret:                  true !default;
+$enable-rounded:                false !default;
+$enable-shadows:                false !default;
+$enable-gradients:              false !default;
+$enable-transitions:            true !default;
+$enable-reduced-motion:         true !default;
+$enable-smooth-scroll:          true !default;
+$enable-grid-classes:           true !default;
+$enable-container-classes:      true !default;
+$enable-cssgrid:                false !default;
+$enable-button-pointers:        true !default;
+$enable-rfs:                    false !default;
+$enable-validation-icons:       true !default;
+$enable-negative-margins:       false !default;
+$enable-deprecation-messages:   false !default;
+$enable-important-utilities:    true !default;
+$enable-fixed-header:           true !default; // Boosted mod: used to apply scroll-padding-top
+$enable-responsive-pagination:  false !default; // Boosted mod: used to apply smart responsive pagination behavior
 
 $enable-dark-mode:            true !default;
 $color-mode-type:             data !default; // `data` or `media-query`

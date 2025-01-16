@@ -833,6 +833,11 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 - **Offcanvas**
   - <span class="badge text-bg-success">New</span> A tooltip was added on close buttons of offcanvases. Please add this tooltip in your websites, by adding the attributes `data-bs-toggle`, `data-bs-placement` and `data-bs-title`.
 
+- **Pagination**
+  - <span class="badge bg-success">New</span> Added `.page-ellipsis` to help building your pagination.
+  - <span class="badge bg-warning">Warning</span> Modifications to the Sass mixin `pagination-max-items` have been made to ensure it can handle odd numbers without failing. Additionally, slight adjustments to its behavior to enhance its suitability for smaller viewports were made. The active element was also replaced from an `<a>` to a `<span>` to address design and accessibility issues. Please reflect these modifications in your websites.
+  - <span class="badge bg-danger">Breaking</span> A new variable `$enable-responsive-pagination` which alters the default behavior of our responsive component was introduced. Please check whether you need to modify it to suit your needs.
+
 - **Progress bars**
   - The markup for [progress bars]({{< docsref "/components/progress" >}}) has been updated in v5.3.0. Due to the placement of `role` and various `aria-` attributes on the inner `.progress-bar` element, **some screen readers were not announcing zero value progress bars**. Now, `role="progressbar"` and the relevant `aria-*` attributes are on the outer `.progress` element, leaving the `.progress-bar` purely for the visual presentation of the bar and optional label.
 

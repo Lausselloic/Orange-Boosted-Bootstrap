@@ -100,6 +100,21 @@
   }
 }
 
+// Boosted mod
+.page-ellipsis {
+  display: flex;
+
+  &::after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc((var(--#{$prefix}pagination-icon-size) + var(--#{$prefix}pagination-border-width) * 2)); // stylelint-disable-line function-disallowed-list
+    content: "...";
+    background-color: var(--#{$prefix}pagination-bg);
+  }
+}
+// End mod
+
 .page-item {
   &:not(:first-child) .page-link {
     margin-left: $pagination-margin-start;
@@ -177,24 +192,18 @@
     margin-left: var(--#{$prefix}pagination-margin-x-first-last);
   }
 
-  @include media-breakpoint-down(sm) {
-    @include pagination-max-items(4);
-  }
+  @if $enable-responsive-pagination {
+    @include media-breakpoint-down(sm) {
+      @include pagination-max-items(3);
+    }
 
-  @include media-breakpoint-between(sm, md) {
-    @include pagination-max-items(6);
-  }
+    @include media-breakpoint-between(sm, md) {
+      @include pagination-max-items(10);
+    }
 
-  @include media-breakpoint-between(md, lg) {
-    @include pagination-max-items(8);
-  }
-
-  @include media-breakpoint-between(lg, xl) {
-    @include pagination-max-items(10);
-  }
-
-  @include media-breakpoint-up(xl) {
-    @include pagination-max-items(12);
+    @include media-breakpoint-up(md) {
+      @include pagination-max-items(12);
+    }
   }
   // End mod
 }

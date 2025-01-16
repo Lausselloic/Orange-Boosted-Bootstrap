@@ -11,17 +11,86 @@
 
 // scss-docs-start pagination-max-items-mixin
 // Boosted mod
-// Ensure we only display `n` items:
-// - the first `n/2` items
-// - the last `n/2` items
-// - including the .active one (so maybe not the `n/2`th last item)
-@mixin pagination-max-items($pagination-max-items) {
+// The pagination list ((m) items) should display exactly (n) items and is built in 3 parts:
+// - the begining of the list is made of the first (n/2) items
+// - the end of the list is made of the last (n/2) items (or (n/2 - 1) depending on the active element)
+// - the last part of the list is made of the active element
+// - n should be greater than 0:
+//   - between 0 and 6 included, it displays the smallest version
+//   - above 7 included, it displays at least two arrows, the first, the active and the last and might have 2 three dots
+@mixin pagination-max-items($pagination-max-items: 12) {
   display: none;
 
-  &.active,
-  &:nth-child(-n+#{$pagination-max-items * .5}),
-  &:nth-last-child(-n+#{$pagination-max-items * .5}) {
-    display: list-item;
+  @if $pagination-max-items >= 7 {
+    // this determines the number of displayed numbers required at the beginning and end of a list
+    $half-first-items: $pagination-max-items * .5;
+    $half-last-items: $pagination-max-items * .5;
+    @if $pagination-max-items % 2 != 0 {
+      $half-first-items: ($pagination-max-items - 1) * .5;
+      $half-last-items: ($pagination-max-items + 1) * .5;
+    }
+
+    // rule 0: don't display any item unless they are part of the following list:
+    //  - the active item
+    //  - the (n/2 - 1) first items
+    //  - the (n/2) last items
+    //  - the (n/2) first item where m equals n
+    &.active,
+    &:nth-child(-n + #{$half-first-items - 1}),
+    &:nth-last-child(-n + #{$half-last-items}),
+    &:nth-child(#{$half-first-items}):nth-last-child(#{$half-last-items + 1}) {
+      display: flex;
+    }
+
+    // rule 1: display `...` on:
+    //  - the (n/2 - 1) first item if not the last child
+    //  - the active item when it's:
+    //    - not in (n/2 - 1) first items
+    //    - not in (n/2) last items
+    //    - not the (n/2) first item when m equals n
+    &:nth-child(#{$half-first-items - 1}):not(:last-child),
+    &:nth-child(#{$half-first-items - 1}) ~ .active:not(:nth-last-child(-n + #{$half-last-items})):not(:nth-child(#{$half-first-items}):nth-last-child(#{$half-last-items + 1})) {
+      &::after {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calc((var(--#{$prefix}pagination-icon-size) + var(--#{$prefix}pagination-border-width) * 2)); // stylelint-disable-line function-disallowed-list
+        content: "...";
+        background-color: var(--#{$prefix}pagination-bg);
+      }
+    }
+
+    // rule 2: cover the three dots when:
+    //  - the (n/2) first item when:
+    //    - it's the active item
+    //    - it's in a list where m is less or equal n
+    &.active:nth-child(#{$half-first-items}),
+    &:nth-child(#{$half-first-items}):nth-last-child(-n + #{$half-last-items + 1}) {
+      margin-left: calc(-1 * (var(--#{$prefix}pagination-icon-size) + var(--#{$prefix}pagination-border-width) * 2)); // stylelint-disable-line function-disallowed-list
+    }
+
+    // rule 3: remove some extra items due to three dots:
+    //  - the (n/2) last item when it follows the active item situated between the (n/2 - 1) first item and (n/2 + 1) last item (excluded) and m doesn't equal n
+    //  - the (n/2 - 1) last item when it follows the active item situated between the (n/2) first item and (n/2) last item (excluded)
+    &:nth-child(#{$half-first-items}) ~ .active:not(:nth-last-child(#{$half-last-items})) ~ :nth-last-child(#{$half-last-items - 1}),
+    &:nth-child(#{$half-first-items - 1}) ~ .active:not(:nth-child(#{$half-first-items}):nth-last-child(#{$half-last-items + 1})) ~ :nth-last-child(#{$half-last-items}) {
+      display: none;
+    }
+  } @else {
+    // smallest version of the pagination
+    &.active,
+    &:first-child,
+    &:last-child {
+      display: flex;
+    }
+
+    &.active .page-link {
+      --bs-pagination-padding-y: 0;
+      --bs-pagination-padding-x: .625rem;
+      color: var(--#{$prefix}pagination-color);
+      background-color: var(--#{$prefix}pagination-bg);
+      border-color: transparent;
+    }
   }
 }
 // scss-docs-end pagination-max-items-mixin
