@@ -129,7 +129,7 @@ aliases:
             </div>
             <div class="col-sm-4 col-md-6 mb-3">
               <label for="selectTitle" id="selectTitleLabel" class="form-label is-required">Title<span class="visually-hidden"> (required)</span></label>
-              <select class="form-select" id="selectTitle" aria-labelledby="selectTitleLabel selectTitleFeedback" autocomplete="sex" required>
+              <select class="form-select" id="selectTitle" aria-labelledby="selectTitleLabel" autocomplete="sex" required>
                 <option selected disabled value="" aria-hidden="true">Select a title</option>
                 <option value="1">Miss</option>
                 <option value="2">Mr.</option>
@@ -140,44 +140,44 @@ aliases:
               <div class="valid-feedback">
                 Looks good!
               </div>
-              <div id="selectTitleFeedback" class="invalid-feedback">
+              <div id="selectTitleFeedback" class="invalid-feedback" role="alert">
                 Please select a valid title.
               </div>
             </div>
             <div class="col-12">
               <div class="mb-3">
                 <label for="firstName" id="firstNameLabel" class="form-label is-required">First name<span class="visually-hidden"> (required)</span></label>
-                <input type="text" class="form-control" id="firstName" aria-labelledby="firstNameLabel firstNameFeedback" autocomplete="given-name" required>
+                <input type="text" class="form-control" id="firstName" aria-labelledby="firstNameLabel" autocomplete="given-name" required>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
-                <div id="firstNameFeedback" class="invalid-feedback">
+                <div id="firstNameFeedback" class="invalid-feedback" role="alert">
                   Please enter a valid first name.
                 </div>
               </div>
               <div class="mb-3">
                 <label for="lastName" id="lastNameLabel" class="form-label is-required">Last name<span class="visually-hidden"> (required)</span></label>
-                <input type="text" class="form-control" id="lastName" aria-labelledby="lastNameLabel lastNameFeedback" autocomplete="family-name" required>
+                <input type="text" class="form-control" id="lastName" aria-labelledby="lastNameLabel" autocomplete="family-name" required>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
-                <div id="lastNameFeedback" class="invalid-feedback">
+                <div id="lastNameFeedback" class="invalid-feedback" role="alert">
                   Please enter a valid last name.
                 </div>
               </div>
               <div class="mb-3">
                 <label for="email" id="emailLabel" class="form-label is-required">Email<span class="visually-hidden"> (required)</span></label>
-                <input type="email" class="form-control" id="email" aria-labelledby="emailLabel emailFeedback" autocomplete="email" required>
+                <input type="email" class="form-control" id="email" aria-labelledby="emailLabel" autocomplete="email" required>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
-                <div id="emailFeedback" class="invalid-feedback">
+                <div id="emailFeedback" class="invalid-feedback" role="alert">
                   Please provide a valid email.
                 </div>
               </div>
               <div class="mb-3">
                 <label for="country" id="countryLabel" class="form-label is-required">Country<span class="visually-hidden"> (required)</span></label>
-                <select class="form-select" id="country" aria-labelledby="countryLabel countryFeedback" autocomplete="country-name" required>
+                <select class="form-select" id="country" aria-labelledby="countryLabel" autocomplete="country-name" required>
                   <option selected disabled value="" aria-hidden="true">Select a country</option>
                   <option value="1">Australia</option>
                   <option value="2">Canada</option>
@@ -187,23 +187,23 @@ aliases:
                 <div class="valid-feedback">
                   Looks good!
                 </div>
-                <div id="countryFeedback" class="invalid-feedback">
+                <div id="countryFeedback" class="invalid-feedback" role="alert">
                   Please select a valid country.
                 </div>
               </div>
               <div class="mb-3">
                 <label for="company" id="companyLabel" class="form-label is-required">Name of company<span class="visually-hidden"> (required)</span></label>
-                <input type="text" class="form-control" id="company" aria-labelledby="companyLabel companyFeedback" required>
+                <input type="text" class="form-control" id="company" aria-labelledby="companyLabel" required>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
-                <div id="companyFeedback" class="invalid-feedback">
+                <div id="companyFeedback" class="invalid-feedback" role="alert">
                   Please enter a valid company name.
                 </div>
               </div>
               <div class="mb-3">
                 <label for="business" id="businessLabel" class="form-label is-required">Business type<span class="visually-hidden"> (required)</span></label>
-                <select class="form-select" id="business" aria-labelledby="businessLabel businessFeedback" required>
+                <select class="form-select" id="business" aria-labelledby="businessLabel" required>
                   <option selected disabled value="" aria-hidden="true">Select a type</option>
                   <option value="1">Corporation</option>
                   <option value="2">Limited liability company</option>
@@ -213,17 +213,17 @@ aliases:
                 <div class="valid-feedback">
                   Looks good!
                 </div>
-                <div id="businessFeedback" class="invalid-feedback">
+                <div id="businessFeedback" class="invalid-feedback" role="alert">
                   Please select a valid business type.
                 </div>
               </div>
               <div class="mb-3">
                 <label for="website" id="websiteLabel" class="form-label">Website<span class="visually-hidden"> (required)</span></label>
-                <input type="text" class="form-control" id="website" aria-labelledby="websiteLabel websiteFeedback">
+                <input type="text" class="form-control" id="website" aria-labelledby="websiteLabel">
                 <div class="valid-feedback">
                   Looks good!
                 </div>
-                <div id="websiteFeedback" class="invalid-feedback">
+                <div id="websiteFeedback" class="invalid-feedback" role="alert">
                   Please enter a valid website.
                 </div>
               </div>
@@ -232,11 +232,11 @@ aliases:
                 <button type="button" class="form-helper" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Help for text area">
                   <span class="visually-hidden">Helper for text area</span>
                 </button>
-                <textarea class="form-control" id="message" rows="5" placeholder="Describe your business and your motivation in becoming an Orange reseller" aria-labelledby="messageLabel messageFeedback" required></textarea>
+                <textarea class="form-control" id="message" rows="5" placeholder="Describe your business and your motivation in becoming an Orange reseller" aria-labelledby="messageLabel" required></textarea>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
-                <div id="messageFeedback" class="invalid-feedback">
+                <div id="messageFeedback" class="invalid-feedback" role="alert">
                   Please enter a valid message.
                 </div>
               </div>
