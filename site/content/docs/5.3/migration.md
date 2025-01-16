@@ -688,6 +688,11 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
     </ul>
   </details>
 
+### Forms
+
+- **Checkboxes, radio buttons and switches**
+  - <span class="badge bg-warning">Warning</span> The rendering of the those components has been scaled up a bit. There is also a new bottom margin applied to it to be branded in most cases. Please check the rendering of all your forms.
+
 ## v5.3.1
 
 <hr class="mb-4">

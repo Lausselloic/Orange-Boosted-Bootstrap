@@ -12,6 +12,12 @@
     float: left;
     margin-left: $form-check-padding-start * -1;
   }
+
+  // Boosted mod: Remove margin when it's the last element of a form.
+  &:last-child {
+    margin-bottom: 0;
+  }
+  // End mod
 }
 
 .form-check-reverse {
@@ -158,6 +164,7 @@
 
   min-height: $form-switch-width * .5;
   padding-left: $form-switch-padding-start;
+  margin-bottom: $form-switch-margin-bottom;
   background-color: transparent;
 
   .form-check-input {
