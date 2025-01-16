@@ -30,8 +30,8 @@ Looking to use an icon or symbol in place of text for some pagination links? Be 
 {{< example >}}
 <nav aria-label="Page navigation example with icons">
   <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="#" aria-label="Previous"></a></li>
-    <li class="page-item"><a class="page-link" href="#" aria-label="Next"></a></li>
+    <li class="page-item"><a class="page-link" href="#" title="Previous"><span class="visually-hidden">Previous</span></a></li>
+    <li class="page-item"><a class="page-link" href="#" title="Next"><span class="visually-hidden">Next</span></a></li>
   </ul>
 </nav>
 {{< /example >}}
@@ -139,7 +139,7 @@ To avoid pagination wrapping or overflowing, we limit the number or pagination i
     <li class="page-item"><a class="page-link" href="#">8</a></li>
     <li class="page-item"><a class="page-link" href="#">9</a></li>
     <li class="page-item"><a class="page-link" href="#">10</a></li>
-    <li class="page-item"><a class="page-link" href="#" aria-label="Next"></a></li>
+    <li class="page-item"><a class="page-link" href="#" title="Next"><span class="visually-hidden">Next</span></a></li>
   </ul>
 </nav>
 {{< /example >}}

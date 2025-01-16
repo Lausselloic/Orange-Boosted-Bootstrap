@@ -1644,8 +1644,9 @@ $dropdown-dark-header-color:        $white !default; // Boosted mod
 // Pagination
 
 // scss-docs-start pagination-variables
-$pagination-padding-y:              null !default; // Boosted mod: instead of `.375rem`
-$pagination-padding-x:              null !default; // Boosted mod: instead of `.75rem`
+$pagination-padding-y:              .5625rem !default; // Boosted mod: instead of `null`
+$pagination-padding-x:              .8125rem !default; // Boosted mod: instead of `null`
+$pagination-label-padding-x:        1.125rem !default; // Boosted mod
 // Boosted mod: no $pagination-padding-y-sm
 // Boosted mod: no $pagination-padding-x-sm
 // Boosted mod: no $pagination-padding-y-lg
@@ -1688,15 +1689,21 @@ $pagination-transition:             $transition-focus !default; // Boosted mod: 
 // Boosted mod: no $pagination-border-radius-lg
 
 // Boosted mod
-$pagination-padding-end:            1.125rem !default;
 $pagination-icon:                   var(--#{$prefix}chevron-icon) !default;
-$pagination-icon-size:              subtract($spacer * 2, calc(var(--#{$prefix}border-width) * 2)) !default; // stylelint-disable-line function-disallowed-list
+$pagination-icon-min-width:         .625rem !default;
+$pagination-icon-size:              1.125rem !default;
 $pagination-icon-width:             add(.5rem, 1px) !default;
 $pagination-icon-height:            subtract(1rem, 1px) !default;
+$pagination-gap:                    5px !default;
 
 $pagination-active-item-bg:         $supporting-orange !default;
 $pagination-active-item-color:      $black !default;
 $pagination-active-item-border:     $pagination-active-item-bg !default;
+
+$pagination-item-max-width:         $spacer * .5 !default;
+// fusv-disable
+$pagination-padding-end:            1.125rem !default; // Deprecated in Boosted 5.3.2 for responsive pagination
+// fusv-enable
 // End mod
 // scss-docs-end pagination-variables
 

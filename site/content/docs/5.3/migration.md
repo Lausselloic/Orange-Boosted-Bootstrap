@@ -615,6 +615,14 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
 - **Orange navbar**
   - <span class="badge text-bg-warning">Warning</span> The minimizing behavior with `.header-minimized` is applied to the `<header>` instead of one of its children directly.
 
+- **Pagination**
+  - <span class="badge bg-warning">Warning</span> For accessibility reasons, pagination's variant with icons only has been slightly modified to ensure correct semantic for all assistive technologies. It might be a useful modification to propagate into your websites if you are using this variant.
+  ```diff
+  - <li class="page-item"><a class="page-link" href="#" aria-label="Previous"></a></li>
+  - <li class="page-item"><a class="page-link" href="#" aria-label="Next"></a></li>
+  + <li class="page-item"><a class="page-link" href="#" title="Previous"><span class="visually-hidden">Previous</span></a></li>
+  + <li class="page-item"><a class="page-link" href="#" title="Next"><span class="visually-hidden">Next</span></a></li>
+  ```
 ### Forms
 
 - <span class="badge text-bg-success">New</span> In order to improve accessibility for people suffering from any form of color blindness, we added a visual cue to form elements on error when focused so information does not rely exclusively on color anymore. Although is has no direct impact, you might want to apply this same modification within your custom form controls if you have any.
@@ -633,6 +641,20 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
 ### CSS and Sass variables
 
 - <details class="mb-2">
+    <summary><span class="badge text-bg-danger">Breaking</span> Deprecated CSS variables:</summary>
+    <ul>
+      <li><code>--bs-pagination-padding-end</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge text-bg-danger">Breaking</span> Deprecated Sass variables:</summary>
+    <ul>
+      <li><code>$pagination-padding-end</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
     <summary><span class="badge text-bg-success">New</span> CSS variables:</summary>
     <ul>
       <li><code>--bs-accordion-btn-hover-bg</code></li>
@@ -646,6 +668,10 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
       <li><code>--bs-local-nav-hover-bg</code></li>
       <li><code>--bs-local-nav-hover-color</code></li>
       <li><code>--bs-local-nav-padding-y</code></li>
+      <li><code>--bs-pagination-gap</code></li>
+      <li><code>--bs-pagination-icon-min-width</code></li>
+      <li><code>--bs-pagination-item-max-width</code></li>
+      <li><code>--bs-pagination-label-padding-x</code></li>
     </ul>
   </details>
 
@@ -685,6 +711,10 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
       <li><code>$local-nav-padding-y</code></li>
       <li><code>$mark-bg-dark</code></li>
       <li><code>$mark-color-dark</code></li>
+      <li><code>$pagination-gap</code></li>
+      <li><code>$pagination-icon-min-width</code></li>
+      <li><code>$pagination-item-max-width</code></li>
+      <li><code>$pagination-label-padding-x</code></li>
     </ul>
   </details>
 

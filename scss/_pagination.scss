@@ -1,10 +1,12 @@
 .pagination {
   // scss-docs-start pagination-css-vars
   --#{$prefix}pagination-padding-x: #{$pagination-padding-x};
+  --#{$prefix}pagination-label-padding-x: #{$pagination-label-padding-x}; // Boosted mod
   --#{$prefix}pagination-padding-y: #{$pagination-padding-y};
-  --#{$prefix}pagination-padding-end: #{$pagination-padding-end}; // Boosted mod
   --#{$prefix}pagination-margin-y: #{$pagination-margin-y}; // Boosted mod
+  --#{$prefix}pagination-gap: #{$pagination-gap}; // Boosted mod
   --#{$prefix}pagination-margin-x-first-last: #{$pagination-margin-x-first-last}; // Boosted mod
+  --#{$prefix}pagination-item-max-width: #{$pagination-item-max-width}; // Boosted mod
   @include rfs($pagination-font-size, --#{$prefix}pagination-font-size);
   --#{$prefix}pagination-font-weight: #{$font-weight-bold}; // Boosted mod
   --#{$prefix}pagination-color: #{$pagination-color};
@@ -28,6 +30,7 @@
   --#{$prefix}pagination-disabled-bg: #{$pagination-disabled-bg};
   --#{$prefix}pagination-disabled-border-color: #{$pagination-disabled-border-color};
   --#{$prefix}pagination-icon: #{$pagination-icon}; // Boosted mod
+  --#{$prefix}pagination-icon-min-width: #{$pagination-icon-min-width}; // Boosted mod
   --#{$prefix}pagination-icon-size: #{$pagination-icon-size}; // Boosted mod
   --#{$prefix}pagination-icon-width: #{$pagination-icon-width}; // Boosted mod
   --#{$prefix}pagination-icon-height: #{$pagination-icon-height}; // Boosted mod
@@ -44,6 +47,7 @@
   position: relative;
   box-sizing: content-box; // Boosted mod
   display: flex; // Boosted mod
+  gap: var(--#{$prefix}pagination-gap); // Boosted mod
   align-items: center; // Boosted mod
   justify-content: center; // Boosted mod
   padding: var(--#{$prefix}pagination-padding-y) var(--#{$prefix}pagination-padding-x);
@@ -57,6 +61,7 @@
   // Boosted mod: embed icon as mask-image
   @include button-icon(
     var(--#{$prefix}pagination-icon),
+    var(--#{$prefix}pagination-icon-min-width),
     var(--#{$prefix}pagination-icon-size),
     $size: var(--#{$prefix}pagination-icon-width) var(--#{$prefix}pagination-icon-height) ,
     $selector: ".page-item:first-child .page-link, .page-item:last-child .page-link",
@@ -146,12 +151,15 @@
     }
   }
 
+  &:first-child .page-link,
+  &:last-child .page-link {
+    &:not([title]) {
+      --#{$prefix}pagination-padding-x: var(--#{$prefix}pagination-label-padding-x);
+    }
+  }
+
   &:first-child .page-link {
     margin-right: var(--#{$prefix}pagination-margin-x-first-last);
-
-    &:not(:empty) {
-      padding-right: var(--#{$prefix}pagination-padding-end);
-    }
 
     &::before {
       /* rtl:raw:
@@ -161,10 +169,6 @@
   }
 
   &:last-child .page-link {
-    &:not(:empty) {
-      padding-left: var(--#{$prefix}pagination-padding-end);
-    }
-
     &::before {
       order: 1;
 
@@ -175,6 +179,10 @@
 
   &:last-child:not(:nth-child(2)) .page-link {
     margin-left: var(--#{$prefix}pagination-margin-x-first-last);
+  }
+
+  &:not(:first-child):not(:last-child) .page-link {
+    max-width: var(--#{$prefix}pagination-item-max-width);
   }
 
   @include media-breakpoint-down(sm) {
