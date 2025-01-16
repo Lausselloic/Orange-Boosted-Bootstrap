@@ -278,7 +278,7 @@
 //
 
 .navbar-text {
-  // Boosted mod: no padding-top
+  padding-top: var(--#{$prefix}navbar-nav-link-padding-y); // Boosted mod
   padding-bottom: var(--#{$prefix}navbar-nav-link-padding-y); // Boosted mod
   color: var(--#{$prefix}navbar-color);
 
@@ -303,26 +303,28 @@
 // When collapsed, prevent the toggleable navbar contents from appearing in
 // the default flexbox row orientation. Requires the use of `flex-wrap: wrap`
 // on the `.navbar` parent.
-.navbar-collapse.show, // Boosted mod: always keep nav-items at full width when transitioning
-.navbar-collapse.collapsing {
-  flex-basis: 100%;
-  // Boosted mod: no flex-grow to avoid weird behavior in expanded breakpoints and .show
+.navbar-collapse {
+  // Bosted mod: flex-basis only on .show and .collapsing
+  flex-grow: 1;
   // For always expanded or extra full navbars, ensure content aligns itself
   // properly vertically. Can be easily overridden with flex utilities.
   align-items: center;
+  justify-content: flex-end; // Boosted mod
 
-  // Boosted mod: Handle icons support and padding of expanded navbars
-  &[class*="d-"] {
-    border-top: var(--#{$prefix}navbar-border-width) solid var(--#{$prefix}navbar-border-color);
+  // Boosted mod: Handle multiple collapse
+  // Always keep nav-items at full width when transitioning
+  &.show,
+  &.collapsing {
+    flex-basis: 100%;
+    justify-content: flex-start;
 
-    @include media-breakpoint-up(md) {
-      margin-bottom: calc(-1 * var(--#{$prefix}navbar-padding-y)); // stylelint-disable-line function-disallowed-list
-    }
-  }
+    // Handle icons support and padding of expanded navbars
+    &[class*="d-"] {
+      border-top: var(--#{$prefix}navbar-border-width) solid var(--#{$prefix}navbar-border-color);
 
-  @include media-breakpoint-up(md) {
-    &:first-of-type {
-      margin-top: var(--#{$prefix}navbar-padding-y);
+      @include media-breakpoint-up(md) {
+        margin-bottom: calc(-1 * var(--#{$prefix}navbar-padding-y)); // stylelint-disable-line function-disallowed-list
+      }
     }
   }
   // End mod
@@ -334,6 +336,7 @@
   padding: var(--#{$prefix}navbar-toggler-padding-y) calc(var(--#{$prefix}navbar-toggler-padding-x) / 2) var(--#{$prefix}navbar-toggler-padding-y) var(--#{$prefix}navbar-toggler-padding-x); // Boosted mod
   // stylelint-disable-next-line function-disallowed-list
   margin-right: calc(-.5 * var(--#{$prefix}navbar-toggler-padding-x)); // Boosted mod
+  margin-left: auto; // Boosted mod
   @include font-size(var(--#{$prefix}navbar-toggler-font-size));
   line-height: 1;
   color: var(--#{$prefix}navbar-color);
@@ -456,19 +459,6 @@
           // End mod
         }
 
-        // Boosted mod: Handle the responsiveness of the collapsing content in a global header
-        .navbar-collapse.show,
-        .navbar-collapse.collapsing {
-          &[class*="d-"] {
-            margin-bottom: 0;
-            border-top: 0;
-          }
-
-          &:first-of-type {
-            margin-top: 0;
-          }
-        }
-
         // Handle the responsiveness of the different bars of a global header
         &.supra {
           display: flex;
@@ -499,6 +489,25 @@
         .navbar-collapse {
           display: flex !important; // stylelint-disable-line declaration-no-important
           flex-basis: auto;
+          justify-content: unset; // Boosted mod
+
+          // Boosted mod: Handle the responsiveness of the collapsing content in a global header
+          &.show,
+          &.collapsing {
+            &[class*="d-"] {
+              margin-bottom: 0;
+              border-top: 0;
+            }
+
+            &:first-of-type {
+              margin-top: 0;
+            }
+          }
+
+          ~ .navbar-collapse {
+            flex-grow: 0;
+          }
+          // End mod
         }
 
         .navbar-toggler {

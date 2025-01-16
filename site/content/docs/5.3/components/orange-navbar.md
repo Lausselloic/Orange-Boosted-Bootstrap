@@ -112,7 +112,7 @@ An additional navbar (with text or icon items) can be added on the right of the 
       ...
 
       <!-- Navbar with links -->
-      <div id="global-header-0.1" class="navbar-collapse collapse me-lg-auto global-header-0">
+      <div id="global-header-0.1" class="navbar-collapse collapse global-header-0">
         <!-- Left navbar of the Supra bar -->
         <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
           <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
@@ -156,7 +156,7 @@ An additional navbar (with text or icon items) can be added on the right of the 
     <div class="container-xxl">
 
       <!-- Orange brand logo -->
-      <div class="navbar-brand me-auto me-lg-4">
+      <div class="navbar-brand">
         <a class="stretched-link" href="#">
           <img src="/docs/{{<param docs_version>}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
         </a>
@@ -168,7 +168,7 @@ An additional navbar (with text or icon items) can be added on the right of the 
       </button>
 
       <!-- Navbar with links -->
-      <div id="global-header-1.1" class="navbar-collapse collapse me-lg-auto global-header-1">
+      <div id="global-header-1.1" class="navbar-collapse collapse global-header-1">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Discover</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
@@ -236,7 +236,7 @@ If you do not intend to use your own SVG, you should explore the DOM solution an
     <div class="container-xxl">
 
       <!-- Orange brand logo -->
-      <div class="navbar-brand me-auto">
+      <div class="navbar-brand">
         <a class="stretched-link" href="#">
           <img src="/docs/{{<param docs_version>}}/assets/brand/OBS-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
         </a>
@@ -273,7 +273,7 @@ Next to the brand logo, you can add a title that can be displayed on one or two 
     <div class="container-xxl">
 
       <!-- Orange brand logo -->
-      <div class="navbar-brand me-auto me-lg-4">
+      <div class="navbar-brand">
         <a class="stretched-link" href="#">
           <img src="/docs/{{<param docs_version>}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
         </a>
@@ -307,7 +307,7 @@ Next to the brand logo, you can add a title that can be displayed on one or two 
     <div class="container-xxl">
 
       <!-- Orange brand logo -->
-      <div class="navbar-brand me-auto me-lg-4">
+      <div class="navbar-brand">
         <a class="stretched-link" href="#">
           <img src="/docs/{{<param docs_version>}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
         </a>
@@ -357,7 +357,7 @@ You can add a search input into your Global header.
       ...
 
       <!-- Navbar with action icons -->
-      <form class="d-flex d-none d-lg-flex col-3 navbar-item" role="search">
+      <form class="d-none d-lg-flex col-3 navbar-item" role="search">
         <input class="form-control" type="search" placeholder="Search" aria-label="Search">
       </form>
       <div id="global-header-5.2" class="navbar-collapse collapse d-sm-flex global-header-5">
@@ -517,7 +517,7 @@ It should be visible only for the larger screens (`lg` to `xxl` breakpoints) usi
 
   <nav class="navbar navbar-expand-lg" aria-label="Global navigation - Nav-under example">
     <div class="container-xxl">
-      <div id="global-header-7.1" class="navbar-collapse collapse m-0 global-header-7">
+      <div id="global-header-7.1" class="navbar-collapse collapse global-header-7">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>

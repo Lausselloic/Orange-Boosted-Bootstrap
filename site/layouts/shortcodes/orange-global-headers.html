@@ -30,7 +30,7 @@
 
 <nav class="navbar navbar-expand-lg" aria-label="{{ $aria_label }}">
   <div class="container-xxl">
-    <div class="navbar-brand me-auto{{ cond (or $navigation $responsive_logo) "" " me-lg-4" }}">
+    <div class="navbar-brand">
       <a class="stretched-link" href="#">
 {{- if $responsive_logo }}
         <img src="/docs/{{ $.Site.Params.docs_version }}/assets/brand/OBS-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
@@ -50,14 +50,14 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 {{- if not $navigation }}
-    <div id="{{ $id }}.1" class="navbar-collapse collapse {{ cond $responsive_logo "me-lg-3" "me-lg-auto" }} {{ $id }}">
+    <div id="{{ $id }}.1" class="navbar-collapse collapse me-lg-3 {{ $id }}">
 {{- if $supra }}
       <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
         <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
         <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
       </ul>
 {{- end }}
-      <ul class="navbar-nav">
+      <ul class="navbar-nav{{ cond $responsive_logo " ms-auto" "" }}">
 {{- if $labels }}
         <li class="nav-item"><a class="nav-link{{ cond $supra "" " active"}}" href="#"{{- if not $supra }} aria-current="page"{{- end }}>Label</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
@@ -88,12 +88,12 @@
     </div>
 {{- end }}
 {{- if eq $mode "search" }}
-    <form class="d-flex d-none d-lg-flex col-3 navbar-item" role="search">
+    <form class="d-none d-lg-flex col-3 navbar-item" role="search">
       <input class="form-control" type="search" placeholder="Search" aria-label="Search">
     </form>
 {{- end }}
     <div id="{{ $id }}.2" class="navbar-collapse collapse{{ cond (not (eq $mode "theme")) " d-sm-flex" " d-lg-flex" }}{{ cond $responsive_logo " ms-lg-3" "" }} {{ $id }}">
-      <ul class="navbar-nav flex-row">
+      <ul class="navbar-nav flex-row{{ cond $navigation " ms-lg-auto" "" }}">
 {{- if eq $mode "actions" }}
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon">
@@ -170,7 +170,7 @@
 {{- if $navigation }}
 <nav class="navbar navbar-expand-lg" aria-label="{{ $aria_label }}.2">
   <div class="container-xxl">
-    <div id="{{ $id }}.1" class="navbar-collapse collapse m-0 {{ $id }}">
+    <div id="{{ $id }}.1" class="navbar-collapse collapse {{ $id }}">
 {{- if $supra }}
       <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
         <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>

@@ -325,7 +325,7 @@ Mix and match with other components and utilities as needed.
           <a class="nav-link" href="#">Pricing</a>
         </li>
       </ul>
-      <span class="navbar-text ms-3">
+      <span class="navbar-text">
         Navbar text with an inline element
       </span>
     </div>
