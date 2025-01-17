@@ -34,33 +34,35 @@
   @extend %heading;
 }
 
-.display-1 {
-  @include font-size($h2-font-size);
-  line-height: $h2-line-height;
+h1 {
+  @include font-size(1.875rem);
+  line-height: calc(32 / 30); // stylelint-disable-line function-disallowed-list
 
   /* rtl:remove */
-  letter-spacing: $h2-spacing;
+  letter-spacing: -.8px;
 }
 
-h1,
-.display-2,
-.display-3 {
+h2,
+.display-1 {
   @include font-size($h3-font-size);
   line-height: $h3-line-height;
 
   /* rtl:remove */
-  letter-spacing: $mid-spacing;
-}
-
-/* rtl:begin:remove */
-.display-2 {
   letter-spacing: $h3-spacing;
 }
 
-/* rtl:end:remove */
+.display-2 {
+  @include font-size($h4-font-size);
+  line-height: $h4-line-height;
 
-h2,
-.display-4 {
+  /* rtl:remove */
+  letter-spacing: $h4-spacing;
+}
+
+h3,
+.display-3,
+.body-lg,
+.label-lg {
   @include font-size($h5-font-size);
   line-height: $h5-line-height;
 
@@ -68,109 +70,77 @@ h2,
   letter-spacing: $h5-spacing;
 }
 
-.lead {
-  @include font-size($h6-font-size);
-  font-weight: $lead-font-weight;
-  line-height: $lead-line-height;
+.body-md,
+.label-md {
+  @include font-size($font-size-base);
+  line-height: $line-height-base;
 
   /* rtl:remove */
-  letter-spacing: $h6-spacing;
+  letter-spacing: $letter-spacing-base;
 }
 
-@include media-breakpoint-up(sm) {
-  h1,
-  .display-1,
-  .display-2,
-  .display-3 {
-    line-height: $display-line-height;
+.body-sm,
+.label-sm {
+  @include font-size($font-size-sm);
+  line-height: $line-height-sm;
+
+  /* rtl:remove */
+  letter-spacing: 0;
+}
+
+.body-lg {
+  line-height: calc(26 / 18); // stylelint-disable-line function-disallowed-list
+}
+
+.body-md {
+  line-height: 1.5;
+}
+
+.body-sm {
+  line-height: calc(20 / 14); // stylelint-disable-line function-disallowed-list
+}
+
+.lead {
+  @include font-size($h5-font-size);
+  font-weight: $lead-font-weight;
+  line-height: calc(26 / 18); // stylelint-disable-line function-disallowed-list
+
+  /* rtl:remove */
+  letter-spacing: $h5-spacing;
+}
+
+@include media-breakpoint-up(md) {
+  h1 {
+    @include font-size($h1-font-size);
+    line-height: $h1-line-height;
+
+    /* rtl:remove */
+    letter-spacing: $h1-spacing;
   }
 
   .display-1 {
-    @include font-size($display2-size);
+    @include font-size(2.5rem);
+    line-height: $display-line-height;
 
     /* rtl:remove */
-    letter-spacing: $display2-spacing;
-  }
-
-  .display-2 {
-    @include font-size($display3-size);
-
-    /* rtl:remove */
-    letter-spacing: $display3-spacing;
-  }
-
-  h1,
-  .display-3 {
-    @include font-size($display4-size);
-
-    /* rtl:remove */
-    letter-spacing: $display4-spacing;
+    letter-spacing: -1px;
   }
 
   h2,
-  h3,
-  .display-4 {
-    @include font-size($h3-font-size);
-    line-height: $h3-line-height;
-
-    /* rtl:remove */
-    letter-spacing: $h3-spacing;
-  }
-
-  h4,
-  h5,
-  h6 {
-    @include font-size($h5-font-size);
-    line-height: $h5-line-height;
-
-    /* rtl:remove */
-    letter-spacing: $h5-spacing;
-  }
-
-  .lead {
-    @include font-size($h5-font-size);
-
-    /* rtl:remove */
-    letter-spacing: $h5-spacing;
-  }
-}
-
-@include media-breakpoint-up(lg) {
-  .display-1 {
-    @include font-size($display1-size);
-
-    /* rtl:remove */
-    letter-spacing: $display1-spacing;
-  }
-
   .display-2 {
-    @include font-size($display2-size);
-
-    /* rtl:remove */
-    letter-spacing: $display2-spacing;
-  }
-
-  .display-3 {
-    @include font-size($display3-size);
-
-    /* rtl:remove */
-    letter-spacing: $display3-spacing;
-  }
-
-  .display-4 {
-    @include font-size($display4-size);
-    line-height: $display-line-height;
-
-    /* rtl:remove */
-    letter-spacing: $display4-spacing;
-  }
-
-  h2 {
     @include font-size($h2-font-size);
     line-height: $h2-line-height;
 
     /* rtl:remove */
     letter-spacing: $h2-spacing;
+  }
+
+  .display-3 {
+    @include font-size($display3-size);
+    line-height: $display-line-height;
+
+    /* rtl:remove */
+    letter-spacing: $display3-spacing;
   }
 
   h3 {
@@ -181,6 +151,53 @@ h2,
     letter-spacing: $h3-spacing;
   }
 
+  h4,
+  h5 {
+    @include font-size($h5-font-size);
+    line-height: $h5-line-height;
+
+    /* rtl:remove */
+    letter-spacing: $h5-spacing;
+  }
+
+  .body-lg {
+    @include font-size($font-size-xlg);
+    line-height: 1.5;
+  }
+
+  .body-md {
+    @include font-size($font-size-lg);
+    line-height: calc(26 / 18); // stylelint-disable-line function-disallowed-list
+
+    /* rtl:remove */
+    letter-spacing: $h5-spacing;
+  }
+
+  .body-sm {
+    @include font-size($font-size-base);
+    line-height: 1.5;
+
+    /* rtl:remove */
+    letter-spacing: $letter-spacing-base;
+  }
+
+  .lead {
+    @include font-size($lead-font-size);
+    line-height: $lead-line-height;
+
+    /* rtl:remove */
+    letter-spacing: $lead-letter-spacing;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .display-1 {
+    @include font-size($display1-size);
+
+    /* rtl:remove */
+    letter-spacing: $display1-spacing;
+  }
+
   h4 {
     @include font-size($h4-font-size);
     line-height: $h4-line-height;
@@ -189,20 +206,12 @@ h2,
     letter-spacing: $h4-spacing;
   }
 
-  h5,
-  h6 {
+  h5 {
     @include font-size($h5-font-size);
     line-height: $h5-line-height;
 
     /* rtl:remove */
     letter-spacing: $h5-spacing;
-  }
-
-  .lead {
-    @include font-size($lead-font-size);
-
-    /* rtl:remove */
-    letter-spacing: $lead-letter-spacing;
   }
 }
 // End mod

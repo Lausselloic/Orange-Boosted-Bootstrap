@@ -94,7 +94,7 @@
 
 @include tac("H3", true) {
   font-size: $h6-font-size;
-  letter-spacing: $h6-spacing;
+  letter-spacing: $letter-spacing-base;
 }
 
 @include tac("Info") {

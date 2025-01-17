@@ -754,8 +754,8 @@ $line-length-md:              80ch !default;
 
 $letter-spacing-base:         $spacer * -.005 !default; // -0.1px
 
-$h1-font-size:                $font-size-base * 2.125 !default;   // 34px
-$h2-font-size:                $font-size-base * 1.875 !default;   // 30px
+$h1-font-size:                $font-size-base * 3.125 !default;   // 50px
+$h2-font-size:                $font-size-base * 2.125 !default;   // 34px
 $h3-font-size:                $font-size-base * 1.5 !default;     // 24px
 $h4-font-size:                $font-size-xlg !default;            // 20px
 $h5-font-size:                $font-size-lg !default;             // 18px
@@ -774,19 +774,19 @@ $font-sizes: (
 // scss-docs-end font-sizes
 
 // scss-docs-start letter-spacing
-$h1-spacing:                  $letter-spacing-base * 10 !default; // -1px
-$h2-spacing:                  $letter-spacing-base * 8 !default;  // -0.8px
+$h1-spacing:                  $letter-spacing-base * 16 !default; // -1.6px
+$h2-spacing:                  $letter-spacing-base * 10 !default; // -0.8px
 $mid-spacing:                 $letter-spacing-base * 6 !default;  // -0.6px
 $h3-spacing:                  $letter-spacing-base * 5 !default;  // -0.5px
-$h4-spacing:                  $letter-spacing-base * 4 !default;  // -0.4px
+$h4-spacing:                  $letter-spacing-base * 2 !default;  // -0.2px
 $h5-spacing:                  $letter-spacing-base * 2 !default;  // -0.2px
-$h6-spacing:                  $letter-spacing-base !default;
+// $h6-spacing:                  $letter-spacing-base !default;
 // scss-docs-end letter-spacing
 
 // stylelint-disable function-disallowed-list
 // scss-docs-start line-height
 $h1-line-height:              1 !default;
-$h2-line-height:              calc(32 / 30) !default;
+$h2-line-height:              1 !default;
 $h3-line-height:              calc(26 / 24) !default;
 $h4-line-height:              calc(22 / 20) !default;
 $h5-line-height:              calc(20 / 18) !default;
@@ -804,14 +804,12 @@ $headings-color:              inherit !default;
 // scss-docs-end headings-variables
 
 // scss-docs-start display-headings
-$display1-size:               $font-size-xlg * 3 !default;        // 60px
-$display2-size:               $font-size-xlg * 2.5 !default;      // 50px
-$display3-size:               $font-size-xlg * 2 !default;        // 40px
-$display4-size:               $h1-font-size !default;             // 34px
-$display1-spacing:            $letter-spacing-base * 20 !default; // -2px
-$display2-spacing:            $letter-spacing-base * 16 !default; // -1.6px
-$display3-spacing:            $h1-spacing !default;               // -1px
-$display4-spacing:            $h1-spacing !default;               // -1px
+$display1-size:               $font-size-base * 3.125 !default;   // 50px
+$display2-size:               $font-size-base * 2.125 !default;   // 34px
+$display3-size:               $font-size-base * 1.75 !default;    // 28px
+$display1-spacing:            $letter-spacing-base * 16 !default; // -1.6px
+$display2-spacing:            $letter-spacing-base * 10 !default; // -1px
+$display3-spacing:            $mid-spacing !default;              // -0.6px
 $display-line-height:         $h1-line-height !default;
 // scss-docs-end display-headings
 
@@ -819,7 +817,7 @@ $display-line-height:         $h1-line-height !default;
 $lead-font-size:              $font-size-xlg !default;
 $lead-font-weight:            400 !default;
 $lead-line-height:            1.5 !default;
-$lead-letter-spacing:         $letter-spacing-base * 4 !default;
+$lead-letter-spacing:         $letter-spacing-base * 2 !default;
 
 $small-font-size:             .875rem !default;
 

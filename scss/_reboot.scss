@@ -307,6 +307,9 @@ small {
   // Boosted mod
   font-weight: $font-weight-normal;
   line-height: $line-height-sm;
+
+  /* rtl:remove */
+  letter-spacing: 0;
   // End mod
 }
 

@@ -8,6 +8,28 @@ aliases:
 toc: true
 ---
 
+
+| Design side                                           | Boosted side                                              |
+| :---------------------------------------------------- | :-------------------------------------------------------- |
+| Headline large - `ods.web.sys.font.headline.l`        | `.display-1`                                              |
+| Headline medium - `ods.web.sys.font.headline.m`       | `.display-2`                                              |
+| Headline small - `ods.web.sys.font.headline.s`        | `.display-3`                                              |
+| Title large - `ods.web.sys.font.title.l`              | `h1` or `.h1`                                             |
+| Title medium - `ods.web.sys.font.title.m`             | `h2` or `.h2`                                             |
+| Title small - `ods.web.sys.font.title.s`              | `h3` or `.h3`                                             |
+| Body large bold - `ods.web.sys.font.body.l.bold`      | `.body-lg.fw-bold` or `.lead.fw-bold`                     |
+| Body large - `ods.web.sys.font.body.l`                | `.body-lg` or `.lead`                                     |
+| Body medium bold - `ods.web.sys.font.body.m.bold`     | `.body-md.fw-bold`                                        |
+| Body medium - `ods.web.sys.font.body.m`               | `.body-md`                                                |
+| Body small bold - `ods.web.sys.font.body.s.bold`      | `.body-sm.fw-bold`                                        |
+| Body small - `ods.web.sys.font.body.s`                | `.body-sm`                                                |
+| Label large - `ods.web.sys.font.label.l`              | `label-lg.fw-bold`                                        |
+| Label medium bold - `ods.web.sys.font.label.m.bold`   | `label-md.fw-bold` or `.lh-base.fw-bold`                  |
+| Label medium - `ods.web.sys.font.label.m`             | `label-md` or `.lh-base`                                  |
+| Label small bold - `ods.web.sys.font.label.s.bold`    | `label-sm.fw-bold` or `small.fw-bold` or `.small.fw-bold` |
+| Label small - `ods.web.sys.font.label.s`              | `label-sm` or `small` or `.small`                         |
+
+
 ## Global settings
 
 Boosted sets basic global display, typography, and link styles. Please refer to [**our brand**]({{< param ods.web >}}) to use it carefully. When more control is needed, check out the [textual utility classes]({{< docsref "/utilities/text" >}}).
@@ -50,12 +72,43 @@ All HTML headings, `<h1>` through `<h6>`, are available.
 `.h1` through `.h6` classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.
 
 {{< example >}}
-<p class="h1">h1. Boosted heading</p>
-<p class="h2">h2. Boosted heading</p>
-<p class="h3">h3. Boosted heading</p>
-<p class="h4">h4. Boosted heading</p>
-<p class="h5">h5. Boosted heading</p>
-<p class="h6">h6. Boosted heading</p>
+<p class="display-1">display-1. Headline</p>
+<p class="display-2">display-2. Headline</p>
+<p class="display-3">display-3. Headline</p>
+<p class="display-4">display-4. Headline</p>
+<p class="display-5">display-5. Headline</p>
+<p class="display-6">display-6. Headline</p>
+<p class="h1 mb-0">h1. Boosted title</p>
+<h1>h1. Boosted title</h1>
+<p class="h2 mb-0">h2. Boosted title</p>
+<h2>h2. Boosted title</h2>
+<p class="h3 mb-0">h3. Boosted title</p>
+<h3>h3. Boosted title</h3>
+<p class="h4 mb-0">h4. Boosted title</p>
+<h4>h4. Boosted title</h4>
+<p class="h5 mb-0">h5. Boosted title</p>
+<h5>h5. Boosted title</h5>
+<p class="h6 mb-0">h6. Boosted title</p>
+<h6>h6. Boosted title</h6>
+<p class="body-lg fw-bold mb-0">.body-lg</p>
+<p class="lead fw-bold">.body-lg (.lead)</p>
+<p class="body-lg mb-0">.body-lg</p>
+<p class="lead">.body-lg (.lead)</p>
+<p class="body-md fw-bold">.body-md</p>
+<p class="body-md">.body-md</p>
+<p class="body-sm fw-bold">.body-sm</p>
+<p class="body-sm">.body-sm</p>
+<p class="label-lg fw-bold">.label-lg</p>
+<p class="label-md fw-bold mb-0">.label-md</p>
+<p class="lh-base fw-bold">.label-md (.lh-base)</p>
+<p class="label-md mb-0">.label-md</p>
+<p class="lh-base">.label-md (.lh-base)</p>
+<p class="label-sm fw-bold mb-0">.label-sm</p>
+<small class="fw-bold">.label-sm</small>
+<p class="small fw-bold">.label-sm</p>
+<p class="label-sm mb-0">.label-sm</p>
+<small>.label-sm</small>
+<p class="small">.label-sm</p>
 {{< /example >}}
 
 ### Customizing headings
