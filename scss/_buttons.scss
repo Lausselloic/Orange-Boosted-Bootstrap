@@ -285,10 +285,11 @@
 
     &::before {
       mask-size: if(map-has-key($network, "size"), map-get($network, "size"), null);
+      transform: if(map-has-key($network, "transform"), map-get($network, "transform"), null);
+    }
 
-      @if "linkedin" == $name {
-        transform: translateY(-1px);
-      }
+    &:hover:not(:active) {
+      color: if(map-has-key($network, "hover-color"), map-get($network, "hover-color"), null);
     }
   }
 }
