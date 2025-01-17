@@ -11,7 +11,6 @@
     - title: Contents
     - title: Browsers & devices
     - title: JavaScript
-      draft: true
     - title: Webpack
       draft: true
     - title: Parcel
