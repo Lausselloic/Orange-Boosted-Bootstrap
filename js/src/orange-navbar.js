@@ -63,9 +63,17 @@ class OrangeNavbar extends BaseComponent {
  * Data API implementation
  */
 
+let timer = null
+
 EventHandler.on(window, EVENT_SCROLL_DATA_API, () => {
   for (const el of SelectorEngine.find(SELECTOR_STICKY_TOP)) {
-    OrangeNavbar.enableMinimizing(el)
+    if (timer !== null) {
+      clearTimeout(timer)
+    }
+
+    timer = setTimeout(() => {
+      OrangeNavbar.enableMinimizing(el)
+    }, 50)
   }
 })
 
