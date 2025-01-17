@@ -19,11 +19,11 @@
 @import "containers";
 @import "grid";
 @import "tables";
-@import "forms";
 @import "buttons";
 @import "transitions";
 @import "dropdown";
 @import "button-group";
+@import "forms"; // Boosted mod: import after button-group for focus issue
 @import "nav";
 @import "navbar";
 @import "card";

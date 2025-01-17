@@ -34,11 +34,17 @@
   border: 0;
   @include transition($nav-link-transition);
 
-  // Boosted mod: no focus
+  // Boosted mod: handle focus differently
   &:hover {
     color: var(--#{$prefix}nav-link-hover-color);
     text-decoration: if($link-hover-decoration == underline, none, null);
   }
+
+  // Boosted mod: make sure the focused nav link is displayed over its next sibling
+  &:focus[data-focus-visible-added] {
+    z-index: $focus-visible-zindex;
+  }
+  // End mod
 
   // Boosted mod: no `&:focus-visible`
 

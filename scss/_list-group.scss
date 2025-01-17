@@ -142,11 +142,6 @@
     &[data-focus-visible-added] {
       outline-offset: subtract(-$focus-visible-outer-width, var(--#{$prefix}list-group-border-width));
       box-shadow: inset 0 0 0 add($focus-visible-inner-width, $focus-visible-outer-width) var(--#{$prefix}focus-visible-inner-color);
-
-      &.active {
-        outline-color: var(--#{$prefix}focus-visible-inner-color);
-        box-shadow: inset 0 0 0 add($focus-visible-inner-width, $focus-visible-outer-width) var(--#{$prefix}focus-visible-outer-color);
-      }
     }
   }
   // End mod

@@ -72,7 +72,11 @@
     border-color: var(--#{$prefix}pagination-hover-border-color);
   }
 
-  // Boosted mod: no focus
+  // Boosted mod: make sure the focused page link is displayed over its next sibling
+  &:focus[data-focus-visible-added] {
+    z-index: $focus-visible-zindex;
+  }
+  // End mod
 
   // Boosted mod
   &:active,
