@@ -974,6 +974,11 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 
 - <span class="badge text-bg-success">New</span> A download app page is now available.
 
+### Examples
+
+- **Pages**
+  - <span class="badge bg-success">New</span> An e-shop page example is now available.
+
 ### CSS and Sass variables
 
 - Adds additional variables for alerts, `.btn-close`, and `.offcanvas`.

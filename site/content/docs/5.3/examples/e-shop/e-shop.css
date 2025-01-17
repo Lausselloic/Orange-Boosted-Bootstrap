@@ -1,0 +1,30 @@
+@media screen and (min-width: 768px) {
+  .card .col-7 p:first-child {
+    min-height: 2.8125rem;
+  }
+}
+
+.custom-triangle {
+  border-style: solid;
+  border-width: 0 19px 41px 0;
+  border-right-color: transparent !important; /* stylelint-disable-line declaration-no-important */
+}
+
+.custom-counter {
+  padding: 1px 2px;
+  border-radius: 5px;
+}
+
+.ratio-3x4 {
+  --bs-aspect-ratio: 133%;
+}
+
+.border-subtle {
+  --bs-border-color: var(--bs-border-color-subtle);
+  border-color: var(--bs-border-color-subtle);
+}
+
+.border-supporting-orange {
+  --bs-border-color: #ff7900;
+  border-color: #ff7900;
+}

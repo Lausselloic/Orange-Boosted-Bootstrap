@@ -1,0 +1,1567 @@
+---
+layout: examples
+title: E-shop
+extra_css:
+  - "e-shop.css"
+aliases:
+  - "/examples/e-shop"
+  - "/docs/examples/e-shop"
+---
+
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol fill="currentColor" viewbox="0 0 24 24" id="smartphone">
+    <path d="M16.801 1.8H7.2A1.199 1.199 0 0 0 6 3v18a1.2 1.2 0 0 0 1.199 1.2H16.8A1.199 1.199 0 0 0 18 21V3a1.2 1.2 0 0 0-1.199-1.2Zm-5.701.6h1.8a.3.3 0 0 1 0 .6h-1.8a.3.3 0 0 1 0-.6Zm.9 19.2a.6.6 0 1 1 0-1.2.6.6 0 0 1 0 1.2Zm4.8-1.8H7.2V3.6h9.6v16.2Z"/>
+  </symbol>
+  <symbol fill="currentColor" viewbox="0 0 24 24" id="promotion">
+    <path d="M13.793 2.316a2.4 2.4 0 0 0-3.5-.09l-.002.001a2.399 2.399 0 0 0-.08.085L4.2 8.712v11.4a2.4 2.4 0 0 0 2.4 2.4h10.8a2.4 2.4 0 0 0 2.4-2.4v-11.4l-6.007-6.396ZM12 4.212a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.12 11.064-2.115.997 1.298 1.853L14.94 18l.133 2.211-1.981-1.214-1.067 1.978-1.067-1.978-1.981 1.214.133-2.211-2.364.125 1.298-1.853-2.115-.997 2.115-.998-1.298-1.852 2.364.124-.133-2.21 1.981 1.213 1.067-1.977 1.067 1.977 1.981-1.214-.133 2.211 2.364-.124-1.298 1.852 2.115.998Z"/>
+  </symbol>
+  <symbol fill="currentColor" viewbox="0 0 24 24" id="assistance">
+    <path d="M12 1.8C6.367 1.8 1.8 6.367 1.8 12c0 5.633 4.567 10.2 10.2 10.2 5.633 0 10.2-4.567 10.2-10.2 0-5.633-4.567-10.2-10.2-10.2Zm.74 16.335a1.3 1.3 0 0 1-.89.343 1.346 1.346 0 0 1-.911-.338c-.26-.226-.39-.54-.39-.946 0-.359.126-.661.377-.906.25-.246.558-.368.924-.368.359 0 .661.122.907.368.245.245.367.547.367.906 0 .4-.128.713-.385.941Zm3.194-7.92a3.894 3.894 0 0 1-.701.944c-.271.265-.757.712-1.459 1.339-.164.147-.32.302-.466.466a1.9 1.9 0 0 0-.26.368c-.056.107-.1.218-.134.334-.03.11-.078.306-.14.586-.109.593-.448.89-1.019.89a1.04 1.04 0 0 1-.748-.292c-.203-.193-.304-.481-.304-.864 0-.479.074-.894.223-1.244.14-.34.34-.653.59-.924.245-.265.576-.58.992-.946.365-.319.629-.56.792-.722.161-.161.3-.344.41-.543.111-.2.169-.423.167-.65 0-.457-.17-.842-.51-1.155-.339-.314-.776-.47-1.312-.47-.627 0-1.09.157-1.386.474-.296.317-.547.783-.752 1.399-.195.644-.562.966-1.104.966-.32 0-.59-.112-.809-.338-.22-.225-.329-.469-.329-.731 0-.542.174-1.09.522-1.647.348-.556.855-1.016 1.523-1.381.667-.365 1.445-.548 2.335-.548.826 0 1.556.153 2.19.458.633.305 1.121.72 1.467 1.245.345.524.517 1.094.517 1.71 0 .485-.098.91-.295 1.275Z"/>
+  </symbol>
+  <symbol fill="currentColor" viewbox="0 0 24 24" id="list">
+    <path d="M20.993 6.306h-18v-3h18v3Zm0 4.8h-18v-3h18v3Zm0 4.8h-18v-3h18v3Zm0 4.8h-18v-3h18v3Z"/>
+  </symbol>
+  <symbol fill="currentColor" viewbox="0 0 24 24" id="grid">
+    <path d="M10.793 10.793h-7.8v-7.8h7.8v7.8Zm0 10.2h-7.8v-7.8h7.8v7.8Zm10.2 0h-7.8v-7.8h7.8v7.8Zm0-10.2h-7.8v-7.8h7.8v7.8Z"/>
+  </symbol>
+  <symbol fill="currentColor" viewbox="0 0 24 24" id="support">
+    <path d="M19.796 8.396h-.5c-1.113-3.857-3.962-6.6-7.3-6.6-3.339 0-6.188 2.743-7.3 6.6h-.5a2.4 2.4 0 0 0-2.4 2.4v2.4a2.4 2.4 0 0 0 2.4 2.4h.5c1.112 3.857 3.961 6.6 7.3 6.6 3.338 0 6.187-2.743 7.3-6.6h.5a2.4 2.4 0 0 0 2.4-2.4v-2.4a2.4 2.4 0 0 0-2.4-2.4Zm-2.225 8.4h-3.878a1.8 1.8 0 1 0 0 1.2h3.209a8.64 8.64 0 0 1-.344.483c-.615.805-1.324 1.432-2.107 1.865a5.027 5.027 0 0 1-2.455.652c-.848 0-1.674-.22-2.455-.652-.783-.433-1.492-1.06-2.107-1.865a9.57 9.57 0 0 1-1.483-2.882 11.68 11.68 0 0 1-.555-3.601c0-1.252.186-2.463.554-3.601.098-.3.206-.593.326-.875a.821.821 0 0 1 .873-.49c.93.132 2.599.641 4.847 2.421 2.723 2.157 5.617 1.563 6.508 1.05.061.496.092.995.092 1.495 0 1.251-.187 2.463-.555 3.6-.132.41-.289.81-.47 1.2Z"/>
+  </symbol>
+  <symbol fill="currentColor" viewbox="0 0 24 24" id="shop">
+    <path d="M3 4.8h18V3a.6.6 0 0 0-.6-.6H3.6A.6.6 0 0 0 3 3v1.8Zm17.4 7.8c-.443 0-.87-.163-1.2-.46a1.797 1.797 0 0 1-2.4 0 1.797 1.797 0 0 1-2.4 0 1.797 1.797 0 0 1-2.4 0 1.797 1.797 0 0 1-2.4 0 1.797 1.797 0 0 1-2.4 0 1.797 1.797 0 0 1-2.4 0c-.49.44-1.18.577-1.8.357V21.6h12.6v-7.2h3.6v7.2H21v-9.103a1.792 1.792 0 0 1-.6.103Zm-6.6 6.6h-9v-4.8h9v4.8ZM21 5.4H3l-.6 5.4a1.2 1.2 0 1 0 2.4 0 1.2 1.2 0 1 0 2.4 0 1.2 1.2 0
+    1 0 2.4 0 1.2 1.2 0 0 0 2.4 0 1.2 1.2 0 1 0 2.4 0 1.2 1.2 0 1 0 2.4 0 1.2 1.2 0 1 0 2.4 0 1.2 1.2 0 1 0 2.4 0L21 5.4Z"/>
+  </symbol>
+  <symbol fill="currentColor" viewbox="0 0 24 24" id="exchange">
+    <path d="M15.858 5.836c.053.004.118.004.165.033.014.009.094.115.053.125-.045.011-.114-.007-.138.047-.012.027.005.058-.013.086-.013.02-.056.03-.06.053-.014.06.087.015.095.061.01.051-.14.094-.144.17-.003.062-.006.122.073.103.091-.023.154-.105.239-.141.027-.011.084-.007.103-.02.098-.064.226-.002.332-.015.095-.012.158-.116.142-.21-.008-.049-.027-.044-.075-.05-.1-.014-.118-.05-.163-.131-.05-.09-.168-.136-.235-.212-.027-.031-.057-.075-.046-.118.01-.043.1-.103.019-.138-.045-.02-.092.005-.138-.002-.062-.01-.018-.067-.06-.092-.034-.019-.114.007-.146.02a.28.28 0 0 0-.136.095c-.04.062-.005.087.008.145.031.146.102-.004.125.191ZM7.933 16.92a.88.88 0 0 1-.189-.838.878.878 0 0 1-.512-.003c-.015.19-.01.377-.04.564-.042.247-.168.467-.26.697-.026.067-.062.152-.047.226.025.118.15.135.083.27-.047.097-.121.183-.182.273a.294.294 0 0 0-.064.165c0 .046.028.086.023.131-.007.063-.064.105-.076.165-.015.074.024.167.054.233.129.278.658.738.996.637.124-.038.196-.236.185-.352-.015-.16-.109-.075-.219-.113-.203-.071.156-.493.14-.629-.006-.057-.053-.104-.055-.165-.005-.165.317-.448.456-.507.144-.06.248-.166.369-.255a2.008 2.008 0 0 1-.662-.5ZM12 1.8C6.367 1.8 1.8 6.367 1.8 12c0 5.633 4.567 10.2 10.2 10.2 5.633 0 10.2-4.567 10.2-10.2 0-5.633-4.567-10.2-10.2-10.2Zm8.238 7.048a.62.62 0 0 0-.197-.04c-.127-.001-.215-.059-.334-.09-.092-.025-.197-.078-.29-.084-.12-.008-.228.05-.257.168-.012.047-.017.105-.066.128-.083.04-.179-.04-.259-.055a.93.93 0 0 1-.187-.045.237.237 0 0 1-.073-.047c-.017-.017-.036-.066-.055-.076a.713.713 0 0 0-.304-.075.464.464 0 0 1-.265-.081c-.129-.096.025-.128.002-.24-.004-.017-.044-.063-.04-.074.042-.175-.149-.134-.284-.102-.251.024-.567-.064-.784.036-.09.003-.181.016-.27.038.026.02.05.042.073.064l1.068 1.068c.732.737.825 1.895.22 2.74a.14.14 0 0 1 .018.018c.094.119 0 .353.007.488.01.21.06.314.18.483.19.267.431.546.374.897-.048.297-.34.49-.229.814.098.284.3.454.37.766.058.256.119.32.248.515.143.212.335 1.126.78.633.094-.032.17.012.255.032A9.246 9.246 0 0 1 12 21.243c-5.096 0-9.243-4.146-9.243-9.243 0-.589.056-1.177.168-1.755.116.092.257.083.395.155.032.058.062.053.134.06.14.056.278.142.431.142.195-.05.266-.124.39.036.113.143.4.212.569.244.097.019.186.013.264.079.07.058.108.148.166.216.116.138.237.238.415.282.121.03.251.04.374.07l.249-.25c-.34-.055-.582-.301-.84-.511-.144-.117-.289-.231-.467-.29.004 0 .06-.47-.018-.537-.199-.17-.43.2-.596.266-.405.162-.64-.151-.676-.539-.083-.908 1.322-1.114 1.9-.669.058.045.26.345.33.324.115-.035.034-.396.039-.47.013-.226.028-.324.249-.454a.696.696 0 0 0 .27-.313c.04-.085.06-.162.12-.22a.88.88 0 0 1 .778-1.291h.672a.633.633 0 0 0-.082-.05.554.554 0 0 0-.186-.068c-.016-.002-.03 0-.045-.002-.007-.002-.03-.006-.02-.014a.518.518 0 0 1 .144-.02c.094-.002.186.023.277.042.045.01.09.017.136.022a.208.208 0 0 0 .072-.002c.019-.005.065.009.061-.007-.009-.018-.045-.032-.035-.056.007-.017.033-.025.047-.033.02-.009.04-.016.061-.023.092-.029.182-.064.276-.085a.626.626 0 0 1 .195-.015c.017.002.046.002.06.014.015.014-.003.034-.013.045a.55.55 0 0 0-.102.24v.012h.688c-.075-.08-.238-.14-.291-.238-.066-.122-.014-.275-.108-.394-.1-.125-.262-.124-.39-.2-.182-.11-.277-.32-.453-.434-.266-.174-.394 0-.675-.023-.173-.014-.268-.143-.399-.238-.292-.213-.664-.307-1.017-.173-.044.017.122.551.13.582.088.36-.124.132-.262.346-.058.09.06.173.021.248-.16.316-.372-.195-.554-.31-.103-.063-.21-.074-.318-.093.35-.37.731-.71 1.138-1.018.107.006.254-.045.354-.031.255.035.479.172.721.249.051.016.422.046.392.026-.064-.042-.33-.102-.132-.125.087.019.303.093.341.003.123-.093.18-.09.338-.09.15-.105.293-.184.32-.359-.041-.097.005-.169-.021-.25-.2-.053-.165-.152-.14-.281-.053-.066-.395-.184-.478-.162.256-.119.519-.226.787-.322.231.087.479.24.425.442.082.014.174.02.253-.01.018-.007.034-.032.055-.029.024.004.032.042.041.06l.014.025.065-.01a.28.28 0 0 1 .061.001.193.193 0 0 1 .103.042c.01.01.051.036.04.054-.007.014-.038.012-.051.012-.016.001-.031.001-.046.004a2.656 2.656 0 0 1-.15.017c-.035.023.082.026.12.045.03.015.066.019.094.037.05.032-.054.052-.07.06a1.192 1.192 0 0 0-.099.052.409.409 0 0 0-.11.087.186.186 0 0 0-.044.1.244.244 0 0 0 .03.128c.029.056.063.11.102.16l.014.02c.21.255.709.621 1.06.581.388-.044.356-.536.724-.674a7.688 7.688 0 0 1 1.137-.316c.106-.025.211-.056.314-.093.146-.045.294-.082.443-.11.026-.005.052-.006.077-.01.008-.001.069-.012.043-.027a.193.193 0 0 0-.062-.015c-.023-.005-.047-.008-.07-.011a.463.463 0 0 1-.128-.03c-.01-.005-.03-.01-.027-.023.004-.018.031-.014.043-.013.051.004.104-.002.155-.002a1.13 1.13 0 0 0 .16-.008c.026-.003.051-.005.077-.01.012-.002.032 0 .03-.017a.113.113 0 0 0-.033-.067c-.009-.009-.02-.014-.028-.023-.012-.014-.006-.023.002-.037a.289.289 0 0 0 .034-.068.721.721 0 0 0 .011-.083c.01-.063.124-.074.169-.084.061-.013.165-.043.186-.112.024-.079-.06-.11-.06-.18 0-.05.083-.053.118-.07.03-.016.06-.009.091-.046l-.002-.01a9.217 9.217 0 0 1 3.474 1.698c-.268.138-.588.474-.049.689.224.089.398-.298.611-.013.044.059.09.144.044.213-.029.043-.113.105-.168.068-.068-.046.023-.2-.105-.22a.237.237 0 0 0-.23.106c-.06.096.093.235.03.33-.082.124-.286.028-.401.08-.234.102-.437.324-.687.437-.113.05-.248.04-.369.055-.079.01-.21.02-.254.097-.052.092.235.21.289.247.147.102.216.231.05.36-.208.158-.588-.148-.818.002a.165.165 0 0 0-.03.027v.002c.202.231.27.55.18.843a.874.874 0 0 1 .522.016l.007-.005c.034-.017.073-.025.102-.052.047-.044.027-.119.046-.176.02-.058.066-.089.107-.13.028-.029.049-.07.082-.093.052-.036.125-.024.183-.05.094-.042.042-.165.126-.22.06-.04.13-.016.191.003.169.05.276-.051.437-.064.016 0 .043-.028.06-.035.053-.022.124-.026.17.013.037.031.05.085.08.123.048.057.125.085.186.125.07.046.114.057.19.077.082.022.152.099.23.138.06.03.155.075.154.155-.003.141-.238.104-.32.108-.03.001-.152.01-.163.04-.016.046.194.12.227.126.09.016.129-.048.19-.102.052-.046.122-.074.16-.133.033-.05-.001-.103.006-.155.006-.044.042-.043.055-.078.025-.066-.12-.123-.16-.138a.809.809 0 0 0-.12-.034c-.025-.005-.082-.003-.103-.017-.078-.052-.088-.136-.163-.195-.271-.133-.048-.31.074-.153.189.008.235.207.443.223.1.126.22.058.292.218.013.208.055.205.24.336.064.044.038.268.172.232.042-.012.092-.065.127-.091.02-.016.066-.04.08-.061.038-.067-.085-.072-.109-.113-.111-.193.16-.25.294-.242.127.006.136.164.162.257a.326.326 0 0 0 .075.144.286.286 0 0 0 .075.055c.046.023.093.029.136.059.03.026.064.045.1.058.087.191.167.386.24.583h-.006c-.146.008-.28.097-.428.048Zm-2.942.834L16.23 8.616l-1.749 1.748-2.675 2.676-3.214 3.214c.085.084.475.32 1.04.374.596.075 6.176.05 6.176.05l-1.87-1.868 3.112-3.112c.703-.702.733-1.529.246-2.016ZM6.681 14.34l1.064 1.064 1.747-1.748 2.676-2.675 3.214-3.214c-.085-.085-.474-.32-1.04-.374-.595-.075-6.173-.05-6.173-.05l1.867 1.866-3.113 3.113c-.702.702-.73 1.53-.242 2.018Z"/>
+  </symbol>
+  <symbol fill="currentColor" viewbox="0 0 24 24" id="tick">
+    <path d="m19.361 7.039.863-.863a.6.6 0 0 0 0-.849l-.951-.951a.6.6 0 0 0-.849 0l-.942.943A9.545 9.545 0 0 0 13.2 3.674V3h.6V1.8a.6.6 0 0 0-.6-.6h-2.4a.6.6 0 0 0-.6.6V3h.6v.674c-4.736.59-8.4 4.63-8.4 9.526a9.6 9.6 0 1 0 16.961-6.161ZM12 21a7.8 7.8 0 1 1 0-15.6A7.8 7.8 0 0 1 12 21Zm-7.2-7.8a7.2 7.2 0 0 0 12.291 5.091L12 13.2V6a7.2 7.2 0 0 0-7.2 7.2Z"/>
+  </symbol>
+  <symbol fill="currentColor" viewbox="0 0 24 24" id="clock" fill-rule="evenodd">
+    <path d="M16.14 15.972a.9.9 0 0 1-1.272 0l-3.516-3.516-.002-.001a.924.924 0 0 1-.029-.03l-.014-.017-.015-.017-.016-.021-.01-.013a.894.894 0 0 1-.018-.024l-.008-.012-.016-.025-.007-.012a.848.848 0 0 1-.015-.025l-.007-.014a.683.683 0 0 1-.012-.023l-.008-.017a.855.855 0 0 1-.01-.022l-.008-.019a.817.817 0 0 1-.017-.041l-.005-.018a.926.926 0 0 1-.009-.025l-.004-.015a.879.879 0 0 1-.007-.027l-.004-.015a.858.858 0 0 1-.006-.028l-.002-.015-.005-.028-.002-.017-.004-.027-.001-.022-.002-.022a.918.918 0 0 1-.001-.044v-6.6a.9.9 0 1 1 1.8 0v6.227L16.14 14.7a.9.9 0 0 1 0 1.272ZM12 1.8c5.633 0 10.2 4.567 10.2 10.2 0 5.633-4.567 10.2-10.2 10.2-5.633 0-10.2-4.567-10.2-10.2C1.8 6.367 6.367 1.8 12 1.8Zm0 1.8a8.4 8.4 0 1 1 0 16.8 8.4 8.4 0 0 1 0-16.8Z"/>
+  </symbol>
+  <symbol fill="currentColor" viewbox="0 0 24 24" id="danger">
+    <path d="m21.832 17.617-7.886-13.5a2.256 2.256 0 0 0-3.892 0L2.186 17.583v.002l-.02.032h.001A2.248 2.248 0 0 0 4.113 21h15.773a2.25 2.25 0 0 0 1.946-3.383Zm-6.88-.714a.823.823 0
+    0 1-1.163 0l-1.93-1.932-1.93 1.932a.823.823 0 0 1-1.174-1.155l.01-.01 1.93-1.93-1.861-1.863a.823.823 0 0 1 1.163-1.164l1.862 1.862 1.861-1.862a.823.823 0 0 1 1.174 1.153l-.01.011-1.862 1.862 1.93 1.931a.824.824 0 0 1 0 1.165Z"/>
+  </symbol>
+  <symbol fill="currentColor" viewbox="0 0 24 24" id="new">
+    <path d="m20.084 6.81-5.876 2.166V2.784a.948.948 0 0 0-.953-.936h-2.537a.945.945 0 0 0-.95.936v6.192L4.201 6.818a.908.908 0 0 0-1.191.548l-.917 2.617a.932.932 0 0 0 .582 1.192l5.729 1.927-3.656 4.845a.93.93 0 0 0 .192 1.31l2.303 1.685a.907.907 0 0 0 1.292-.223l3.467-5.104 3.674 5.118a.929.929 0 0 0 1.309.204l2.252-1.674a.937.937 0 0 0 .189-1.316l-3.656-4.845 5.841-1.932a.926.926 0 0 0 .584-1.187l-.917-2.617a.918.918 0 0 0-1.194-.557Z"/>
+  </symbol>
+  <symbol fill="currentColor" viewbox="0 0 24 24" id="tag">
+    <path d="M1.8 3.024v8.565l9.894 9.895a2.447 2.447 0 0 0 3.46 0l6.329-6.329a2.447 2.447 0 0 0 0-3.46L11.589 1.8H3.024A1.224 1.224 0 0 0 1.8 3.024ZM6 4.8a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0Z"/>
+  </symbol>
+  <symbol fill="currentColor" viewbox="0 0 24 24" id="delete">
+    <path d="m16.33 14.221-2.208-2.209 2.206-2.206a.768.768 0 0 0 0-1.086l-1.024-1.024a.768.768 0 0 0-1.086 0l-2.206 2.206-2.194-2.194a.768.768 0 0 0-1.086 0L7.708 8.732a.768.768 0 0 0 0 1.086l2.194 2.194-2.212 2.212a.768.768 0 0 0 0 1.086l1.024 1.024a.768.768 0 0 0 1.086 0l2.212-2.212 2.209 2.209a.768.768 0 0 0 1.086 0l1.024-1.024a.768.768 0 0 0 0-1.086Zm2.895-9.422C15.24.816 8.783.816 4.799 4.8.816 8.783.816 15.241 4.8 19.225c3.984 3.983 10.442 3.983 14.426 0 3.983-3.984 3.983-10.442 0-14.426Zm-1.697 12.729A7.8 7.8 0 1 1 6.496 6.496a7.8 7.8 0 0 1 11.032 11.032Z"/>
+  </symbol>
+  <symbol fill="currentColor" viewbox="0 0 24 24" id="filter">
+    <path d="M21.6 3v1.8l-7.8 7.8v9.6l-3.6-3.6v-6L2.4 4.8V3a1.2 1.2 0 0 1 1.2-1.2h16.8A1.2 1.2 0 0 1 21.6 3Z"/>
+  </symbol>
+  <symbol fill="currentColor" viewbox="0 0 24 24" id="chevron-right">
+    <path d="m10 19 5-5 2-2-2-2-5-5-2 2 5 5-5 5z"/>
+  </symbol>
+  <symbol fill="currentColor" viewbox="-2.5 0 60 60" id="all-time">
+    <path d="m22.602 0 7.678 7.064a1.696 1.696 0 0 1-.068 2.537l-7.623 6.957.005-5.826C12.078 12.684 4.11 21.953 4.11 33.103c0 12.57 10.121 22.759 22.607 22.759 12.486 0 22.609-10.19 22.609-22.759 0-11.035-7.803-20.234-18.157-22.314l.945-.872a2.119 2.119 0 0 0 .275-2.971 2.043 2.043 0 0 0-.152-.161c12.108 2.56 21.2 13.37 21.2 26.318C53.438 47.958 41.474 60 26.718 60 11.963 60 0 47.958 0 33.103 0 19.66 9.797 8.522 22.596 6.526L22.602 0Zm-6.167 42.298c.503 0 .918.206 1.244.615v-.517h.667v3.71c0 .668-.068 1.142-.203 1.42a1.49 1.49 0 0 1-.643.66c-.293.163-.653.244-1.081.244-.509 0-.92-.117-1.232-.347-.313-.23-.465-.577-.455-1.04l.703.105c.03.219.111.378.245.476.179.136.424.203.735.203.333 0 .592-.067.774-.203a.997.997 0 0 0 .37-.564c.038-.149.054-.46.052-.935-.316.375-.709.562-1.18.562-.586 0-1.04-.212-1.36-.639-.322-.425-.483-.935-.483-1.53 0-.41.073-.788.22-1.134.149-.346.362-.614.641-.802.28-.189.608-.284.986-.284Zm4.805 0c.363 0 .66.044.887.13.227.087.395.195.502.326.107.13.181.296.224.494.024.125.036.348.036.672v.969c0 .677.016 1.104.047 1.283.03.179.092.351.183.515h-.755a1.533 1.533 0 0 1-.145-.53 2.68 2.68 0 0 1-.773.486c-.247.095-.512.14-.796.14-.469 0-.83-.114-1.08-.344a1.14 1.14 0 0 1-.378-.883c0-.21.048-.403.143-.575.095-.175.22-.313.373-.42.154-.104.328-.184.52-.238.142-.038.356-.073.642-.109.583-.07 1.014-.153 1.29-.25l.002-.122.001-.069c0-.296-.068-.505-.205-.626-.184-.163-.459-.245-.823-.245-.34 0-.59.059-.752.179-.162.12-.282.332-.36.636l-.706-.097c.064-.304.17-.55.317-.737.147-.188.36-.331.638-.432.278-.102.601-.152.968-.152Zm7.31 0c.364 0 .66.044.887.13.227.087.395.195.502.326.106.13.182.296.225.494.023.125.035.348.035.672v.969c0 .677.016 1.104.046 1.283.031.179.093.351.183.515h-.754a1.576 1.576 0 0 1-.146-.53c-.267.23-.524.391-.772.486-.246.095-.512.14-.796.14-.468 0-.829-.114-1.08-.344a1.144 1.144 0 0 1-.378-.883c0-.21.048-.403.143-.575.095-.175.219-.313.373-.42.154-.104.327-.184.52-.238.142-.038.357-.073.642-.109.584-.07 1.013-.153 1.289-.25l.005-.19c0-.297-.069-.506-.206-.627-.185-.163-.459-.245-.823-.245-.34 0-.59.059-.752.179-.162.12-.282.332-.36.636l-.706-.097c.065-.304.17-.55.317-.737.147-.188.36-.331.639-.432.277-.102.6-.152.967-.152Zm8.193-1.4v1.498h.726v.566h-.726v2.509c0 .208.012.341.038.4.025.06.066.107.125.142a.467.467 0 0 0 .246.052c.08 0 .186-.01.317-.028l.105.643a2.72 2.72 0 0 1-.547.064c-.262 0-.465-.041-.61-.126a.704.704 0 0 1-.304-.328c-.06-.137-.089-.424-.089-.859v-2.469h-.53v-.566h.53v-1.063l.72-.435Zm-11.168 1.4c.244 0 .492.078.742.235l-.248.675a1.035 1.035 0 0 0-.53-.157.686.686 0 0 0-.426.143.788.788 0 0 0-.27.398c-.08.26-.12.541-.12.849v2.246h-.721v-4.29h.65v.65c.166-.305.32-.506.46-.602a.797.797 0 0 1 .463-.146Zm7.752 0c.257 0 .493.047.708.14.215.093.377.215.485.366.106.152.181.33.224.538.026.134.04.37.04.707v2.638h-.723v-2.61c0-.296-.028-.518-.084-.665a.706.706 0 0 0-.3-.351.94.94 0 0 0-.503-.132c-.307 0-.573.099-.796.296-.224.197-.337.569-.337 1.118v2.344h-.721v-4.29h.65v.61c.313-.472.766-.708 1.357-.708Zm5.629.098v4.291h-.777v-4.29h.776Zm-9.487 2.138c-.262.108-.656.2-1.18.274-.297.044-.508.092-.63.146a.635.635 0 0 0-.286.236.632.632 0 0 0-.1.346c0 .193.073.355.219.485.146.129.36.194.64.194.278 0 .527-.061.743-.184.217-.123.376-.29.477-.503.079-.165.117-.407.117-.728v-.266Zm-7.31 0c-.262.108-.655.2-1.18.274-.298.044-.507.092-.63.146a.626.626 0 0 0-.386.582c0 .193.074.355.22.485.144.129.359.194.639.194.278 0 .526-.061.742-.184.218-.123.377-.29.479-.503.077-.165.116-.407.116-.728v-.266ZM16.487 42.9c-.322 0-.594.132-.819.394-.225.263-.337.653-.337 1.17 0 .563.11.974.332 1.232.223.26.501.389.836.389.331 0 .61-.13.834-.387.226-.257.338-.66.338-1.21 0-.525-.115-.921-.347-1.187-.231-.268-.51-.4-.837-.4Zm22.469-2.138v.837h-.777v-.837h.776ZM34.203 25.67v9.598h1.987v1.666h-1.987v3.547h-1.806v-3.547h-6.383v-1.666l6.714-9.598h1.475Zm-14.139-.06c1.411 0 2.529.393 3.351 1.182.823.788 1.235 1.765 1.235 2.93 0 .593-.12 1.175-.361 1.747-.242.572-.642 1.176-1.2 1.809-.559.632-1.486 1.502-2.784 2.606-1.085.916-1.78 1.538-2.088 1.864a5.946 5.946 0 0 0-.762.985h7.215v1.747h-9.724a3.22 3.22 0 0 1 .21-1.261c.248-.668.644-1.325 1.19-1.971.544-.646 1.332-1.394 2.363-2.243 1.598-1.32 2.68-2.365 3.241-3.137.563-.771.843-1.5.843-2.187 0-.72-.255-1.328-.767-1.823-.512-.496-1.18-.744-2.002-.744-.87 0-1.566.264-2.088.789-.521.526-.786 1.252-.792 2.181l-1.857-.19c.127-1.395.605-2.457 1.435-3.187.829-.73 1.943-1.097 3.342-1.097Zm12.333 2.98-4.606 6.678h4.606V28.59Zm7.49-4.165v2.126c.338-.394.764-.591 1.277-.591.316 0 .59.064.823.19.233.123.4.298.5.518.1.221.151.54.151.962v2.72h-.723v-2.72c0-.364-.078-.628-.235-.794-.156-.166-.378-.249-.665-.249a1.17 1.17 0 0 0-.603.168.943.943 0 0 0-.404.454c-.08.191-.12.456-.12.792v2.348h-.722v-5.924h.721Zm-23.622-6.953c.336 0 .63.048.882.145.253.097.44.228.56.394.12.165.203.387.249.665l-.706.096a.785.785 0 0 0-.28-.517c-.153-.123-.37-.186-.651-.186-.332 0-.57.056-.712.166-.141.11-.212.24-.212.388 0 .095.03.178.09.255.057.078.15.143.275.194.073.027.285.088.639.186.51.137.868.25 1.069.337.202.088.361.215.476.381.115.168.173.375.173.623 0 .242-.07.47-.212.685-.14.214-.342.38-.607.497a2.205 2.205 0 0 1-.9.176c-.553 0-.975-.115-1.266-.348-.29-.231-.476-.575-.556-1.03l.715-.114c.04.29.152.51.335.663.183.154.44.231.768.231.333 0 .578-.068.74-.204a.611.611 0 0 0 .24-.479.443.443 0 0 0-.213-.389c-.098-.063-.345-.146-.74-.245-.528-.135-.895-.252-1.1-.35a1.063 1.063 0 0 1-.625-.984c0-.191.044-.369.132-.532.086-.162.204-.298.353-.406a1.51 1.51 0 0 1 .461-.212c.194-.058.402-.086.623-.086Zm17.68 0c.463 0 .842.118 1.136.353.293.235.483.57.566 1.004l-.702.11c-.068-.289-.186-.506-.356-.652a.918.918 0 0 0-.616-.217c-.364 0-.66.13-.888.393-.227.263-.34.678-.34 1.247 0 .577.108.995.33 1.258.218.26.505.391.858.391.283 0 .52-.088.71-.263.19-.174.31-.445.362-.808l.71.093c-.077.493-.276.879-.596 1.157-.32.28-.713.418-1.179.418-.583 0-1.051-.192-1.406-.575-.355-.384-.533-.934-.533-1.651 0-.463.077-.868.23-1.216.153-.348.385-.608.697-.783.311-.172.65-.26 1.017-.26Zm4.138 0c.57 0 1.036.195 1.397.586.362.39.542.94.542 1.649 0 .043 0 .107-.003.193h-3.18c.026.472.16.832.398 1.083.238.251.534.376.891.376.265 0 .49-.07.678-.21.188-.14.336-.364.446-.67l.747.092c-.118.439-.337.78-.656 1.022-.317.243-.724.364-1.22.364-.623 0-1.117-.193-1.483-.58-.364-.387-.548-.929-.548-1.626 0-.722.186-1.283.554-1.681.37-.398.849-.598 1.437-.598Zm-17.357 0c.57 0 1.036.195 1.397.586.361.39.542.94.542 1.649 0 .043-.002.107-.005.193h-3.178c.026.472.159.832.397 1.083.239.251.535.376.89.376.266 0 .492-.07.679-.21.188-.14.337-.364.446-.67l.747.092c-.118.439-.336.78-.655 1.022-.317.243-.726.364-1.22.364-.624 0-1.118-.193-1.484-.58-.364-.387-.547-.929-.547-1.626 0-.722.185-1.283.554-1.681.369-.398.848-.598 1.437-.598Zm10.45.096v4.291H30.4v-4.29h.776Zm-4.565 0 .916 2.57c.098.278.19.567.272.865.065-.226.154-.498.27-.816l.946-2.618h.743l-1.613 4.29h-.675l-1.622-4.29h.763Zm-1.498-.097c.244 0 .492.078.743.235l-.249.675a1.03 1.03 0 0 0-.53-.158.689.689 0 0 0-.425.143.79.79 0 0 0-.27.398c-.08.26-.12.542-.12.85v2.246h-.722v-4.291h.65v.65c.166-.304.32-.505.46-.601a.8.8 0 0 1 .463-.147Zm-4.379.599c-.332 0-.61.111-.838.335-.225.224-.35.523-.374.897h2.38c-.032-.361-.123-.632-.273-.812-.23-.28-.529-.42-.895-.42Zm17.358 0c-.333 0-.611.111-.837.335-.227.224-.352.523-.376.897h2.38c-.032-.361-.122-.632-.272-.812-.23-.28-.53-.42-.895-.42Zm-6.916-2.134v.837H30.4v-.837h.776Z"/>
+  </symbol>
+  <symbol fill="currentColor" viewbox="0 0 24 24" id="random">
+    <path d="M13.793 2.316a2.4 2.4 0 0 0-3.5-.09l-.002.001a2.399 2.399 0 0 0-.08.085L4.2 8.712v11.4a2.4 2.4 0 0 0 2.4 2.4h10.8a2.4 2.4 0 0 0 2.4-2.4v-11.4l-6.007-6.396ZM12 4.212a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.12 11.064-2.115.997 1.298 1.853L14.94 18l.133 2.211-1.981-1.214-1.067 1.978-1.067-1.978-1.981 1.214.133-2.211-2.364.125 1.298-1.853-2.115-.997 2.115-.998-1.298-1.852 2.364.124-.133-2.21 1.981 1.213 1.067-1.977 1.067 1.977 1.981-1.214-.133 2.211 2.364-.124-1.298 1.852 2.115.998Z"/>
+  </symbol>
+</svg>
+
+<a id="top"></a>
+
+<div class="visually-hidden-focusable top-0 start-0 end-0 bg-dark">
+  <nav class="container-xxl d-flex flex-wrap py-1" aria-label="Skip links">
+    <a href="#title" class="d-inline-flex p-2 ms-3 bg-dark">Skip to main content</a>
+    <a href="#results-order" class="d-inline-flex p-2 ms-3 bg-dark">Skip to filter results</a>
+    <a href="#top-sales" class="d-inline-flex p-2 ms-3 bg-dark">Skip to top sales</a>
+    <a href="#advices" class="d-inline-flex p-2 ms-3 bg-dark">Skip to advices</a>
+    <a href="#footer" class="d-inline-flex p-2 ms-3 bg-dark">Skip to footer</a>
+  </nav>
+</div>
+
+<section aria-label="Callout section on this page">
+  <div class="alert alert-info alert-dismissible fade show mb-0" role="alert">
+    <p class="alert-icon"><span class="visually-hidden">Success</span></p>
+    <div>
+      <p class="alert-heading">
+        No javascript was added to build this page. It's only a placeholder page to demonstrate good design and accessibility practices.
+      </p>
+      <details>
+        <summary>Here is a non-exhaustive list of missing behaviors.</summary>
+        <ul>
+          <li>Filters don't work</li>
+          <li>Active filters should update everytime a checkbox is checked</li>
+          <li>Filters based on <code>input</code> should update the <code>aria-live="polite"</code></li>
+          <li>The focus isn't handled on click on "More something"</li>
+          <li>The behavior of button depending on the number of compared items</li>
+          <li>Load all results button doesn't work</li>
+          <li>Counters doesn't decrease</li>
+          <li>There's only the grid display implemented</li>
+        </ul>
+      </details>
+    </div>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
+  </div>
+</section>
+
+<header class="sticky-top">
+  <nav class="navbar navbar-expand-lg" aria-label="Global navigation - E-shop example" data-bs-theme="dark">
+    <div class="container-xxl">
+
+      <!-- Orange brand logo -->
+      <div class="navbar-brand me-auto me-lg-4">
+        <a class="stretched-link" href="#">
+          <img src="/docs/5.3/assets/brand/orange-logo.svg" width="50" height="50" alt="E-shop example - Back to Home" loading="lazy">
+        </a>
+      </div>
+
+      <!-- Burger menu (visible on small screens) -->
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header-1" aria-controls="global-header-1.1 global-header-1.2" aria-expanded="false" aria-label="Toggle e-shop example navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar with links -->
+      <div id="global-header-1.1" class="navbar-collapse collapse me-lg-auto global-header-1">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Orange Money</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Orange Energie</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Assistance</a></li>
+        </ul>
+      </div>
+
+      <!-- Navbar with action icons -->
+      <div id="global-header-1.2" class="navbar-collapse collapse d-flex global-header-1">
+        <ul class="navbar-nav flex-row">
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-icon">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#search" />
+              </svg>
+              <span class="visually-hidden">Search</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-icon">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy" />
+              </svg>
+              <span class="visually-hidden">Basket</span>
+              <span class="position-relative align-self-start">
+                <span class="badge text-bg-info rounded-pill position-absolute top-0 fs-6 translate-middle">
+                  1
+                  <span class="visually-hidden">shopping basket items</span>
+                </span>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-icon">
+              <img src="/docs/5.3/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="Profile picture" loading="lazy">
+              <span class="visually-hidden">My account</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<nav class="container-xxl" aria-label="Breadcrumb">
+  <ol class="breadcrumb mb-0">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Shop</a></li>
+    <li class="breadcrumb-item"><a href="#">Mobile</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Smartphones</li>
+  </ol>
+</nav>
+
+<div class="title-bar mb-2 mb-md-3" id="title">
+  <div class="container-xxl">
+    <h1 class="display-1">Smartphones</h1>
+  </div>
+</div>
+
+<main>
+  <div class="container-xxl pb-3">
+    <h2 id="filter-section" class="h4 ll-sm mb-2 mb-md-3">Choose the model that suits your needs from our selection of Smartphones.</h2>
+    <div class="row" role="group" aria-label="Filter by category">
+      <ul class="position-relative d-flex gap-2 mb-0 py-2 overflow-x-auto list-unstyled" aria-labelledby="filter-section">
+        <li>
+          <button class="tag text-nowrap active" data-bs-toggle="button" aria-pressed="true">
+            <svg width="1.5rem" height="1.5rem" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <use xlink:href="#smartphone"/>
+            </svg>
+            All<span class="visually-hidden"> Devices</span>
+          </button>
+        </li>
+        <li>
+          <button class="tag text-nowrap" data-bs-toggle="button">
+            <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+              <use xlink:href="#promotion"/>
+            </svg>
+            <span class="visually-hidden">Filter by </span>Best deal
+          </button>
+        </li>
+        <li>
+          <button class="tag text-nowrap" data-bs-toggle="button">
+            <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+              <use xlink:href="#random"/>
+            </svg>
+            <span class="visually-hidden">Filter by </span>Premium
+          </button>
+        </li>
+        <li>
+          <button class="tag text-nowrap" data-bs-toggle="button">
+            <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+              <use xlink:href="#tag"/>
+            </svg>
+            <span class="visually-hidden">Filter by </span>Small price
+          </button>
+        </li>
+        <li>
+          <button class="tag text-nowrap" data-bs-toggle="button">
+            <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+              <use xlink:href="#new"/>
+            </svg>
+            <span class="visually-hidden">Filter by </span>New
+          </button>
+        </li>
+        <li>
+          <button class="tag text-nowrap" data-bs-toggle="button">
+            <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+              <use xlink:href="#random"/>
+            </svg>
+            <span class="visually-hidden">Filter by </span>Refurbished
+          </button>
+        </li>
+        <li>
+          <button class="tag text-nowrap" data-bs-toggle="button">
+            <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+              <use xlink:href="#clock"/>
+            </svg>
+            <span class="visually-hidden">Filter by </span>Soon available
+          </button>
+        </li>
+        <li>
+          <button class="tag text-nowrap" data-bs-toggle="button">
+            <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+              <use xlink:href="#tick"/>
+            </svg>
+            <span class="visually-hidden">Filter by </span>Flash sale
+          </button>
+        </li>
+      </ul>
+    </div>
+    <hr class="mt-0 mt-md-3 border-1 border-subtle">
+    <div class="row pt-md-4 mb-3">
+
+      <div class="offcanvas-lg offcanvas-end col-lg-3 px-0 pe-lg-5 ps-lg-2" style="--bs-offcanvas-width: 280px;" tabindex="-1" id="filterOffcanvas" aria-labelledby="filterOffcanvasLabel">
+        <div class="offcanvas-header border-bottom border-1 border-subtle">
+          <h5 class="offcanvas-title fs-5" id="filterOffcanvasLabel">Filter 'Smartphones'</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#filterOffcanvas"><span class="visually-hidden">Close</span></button>
+        </div>
+        <div class="offcanvas-body">
+
+          <form class="d-flex flex-column">
+            <button type="button" class="btn btn-secondary mb-3">
+              <svg class="me-1" width="1.25rem" height="1.25rem" aria-hidden="true" focusable="false">
+                <use xlink:href="#delete"/>
+              </svg>
+              Reset filter
+            </button>
+
+            <fieldset class="d-flex flex-column mb-2 pt-lg-4">
+              <legend class="mb-0"><h3 class="h4 mb-0">Purchase type</h3></legend>
+              <hr class="border-1 border-subtle my-2">
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="offerTypeFilter">
+                <label class="form-check-label" for="offerTypeFilter">
+                  With offer (56)
+                </label>
+              </div>
+              <div class="form-check mt-1">
+                <input class="form-check-input" type="checkbox" value="" id="mobileTypeFilter" checked>
+                <label class="form-check-label" for="mobileTypeFilter">
+                  Mobile only (42)
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="d-flex flex-column mb-2 pt-lg-4">
+              <legend class="mb-0"><h3 class="h4 mb-0">Brands</h3></legend>
+              <hr class="border-1 border-subtle my-2">
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="allBrandsFilter">
+                <label class="form-check-label" for="allBrandsFilter">
+                  All (75)
+                </label>
+              </div>
+              <div class="form-check mt-1 mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="appleBrandFilter" checked>
+                <label class="form-check-label" for="appleBrandFilter">
+                  Apple (23)
+                </label>
+              </div>
+              <div class="form-check mt-1 mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="alcatelBrandFilter">
+                <label class="form-check-label" for="alcatelBrandFilter">
+                  Alcatel (2)
+                </label>
+              </div>
+              <div class="form-check mt-1 mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="honorBrandFilter">
+                <label class="form-check-label" for="honorBrandFilter">
+                  Honor (4)
+                </label>
+              </div>
+              <div class="form-check mt-1 mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="itelBrandFilter" checked>
+                <label class="form-check-label" for="itelBrandFilter">
+                  Itel (1)
+                </label>
+              </div>
+              <div class="form-check mt-1 mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="orangeBrandFilter" checked>
+                <label class="form-check-label" for="orangeBrandFilter">
+                  Orange (3)
+                </label>
+              </div>
+              <div class="form-check mt-1 mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="tclBrandFilter">
+                <label class="form-check-label" for="tclBrandFilter">
+                  TCL (6)
+                </label>
+              </div>
+              <div class="form-check mt-1 mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="samsungBrandFilter">
+                <label class="form-check-label" for="samsungBrandFilter">
+                  Samsung (10)
+                </label>
+              </div>
+              <div class="collapse" id="brandFilterCollapse">
+                <div class="d-flex flex-column">
+                  <div class="form-check mt-1 mb-2">
+                    <input class="form-check-input" type="checkbox" value="" id="xiaomiBrandFilter">
+                    <label class="form-check-label" for="xiaomiBrandFilter">
+                      Xiaomi (6)
+                    </label>
+                  </div>
+                  <div class="form-check mt-1 mb-2">
+                    <input class="form-check-input" type="checkbox" value="" id="huaweiBrandFilter">
+                    <label class="form-check-label" for="huaweiBrandFilter">
+                      Huawei (8)
+                    </label>
+                  </div>
+                  <div class="form-check mt-1 mb-2">
+                    <input class="form-check-input" type="checkbox" value="" id="otherBrandFilter">
+                    <label class="form-check-label" for="otherBrandFilter">
+                      Others (12)
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="btn btn-link justify-content-start mt-1 p-0" data-bs-toggle="collapse" data-bs-target="#brandFilterCollapse" aria-expanded="false" aria-controls="brandFilterCollapse">More brands</button>
+            </fieldset>
+
+            <fieldset class="d-flex flex-column mb-2 pt-lg-4">
+              <legend class="mb-0"><h3 class="h4 mb-0">Colors</h3></legend>
+              <hr class="border-1 border-subtle my-2">
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="allColorsFilter">
+                <label class="form-check-label" for="allColorsFilter">
+                  All (65)
+                </label>
+              </div>
+              <div class="form-check mt-1 mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="appleColorFilter" checked>
+                <label class="form-check-label" for="appleColorFilter">
+                  Black (3)
+                </label>
+              </div>
+              <div class="form-check mt-1 mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="alcatelColorFilter" checked>
+                <label class="form-check-label" for="alcatelColorFilter">
+                  Blue (3)
+                </label>
+              </div>
+              <div class="form-check mt-1 mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="honorColorFilter">
+                <label class="form-check-label" for="honorColorFilter">
+                  Gold (2)
+                </label>
+              </div>
+              <div class="form-check mt-1 mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="itelColorFilter" checked>
+                <label class="form-check-label" for="itelColorFilter">
+                  Grey (6)
+                </label>
+              </div>
+              <div class="form-check mt-1 mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="orangeColorFilter">
+                <label class="form-check-label" for="orangeColorFilter">
+                  Red (1)
+                </label>
+              </div>
+              <div class="form-check mt-1 mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="tclColorFilter">
+                <label class="form-check-label" for="tclColorFilter">
+                  Phantom Violet (23)
+                </label>
+              </div>
+              <div class="form-check mt-1 mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="samsungColorFilter">
+                <label class="form-check-label" for="samsungColorFilter">
+                  White (1)
+                </label>
+              </div>
+              <div class="collapse" id="ColorFilterCollapse">
+                <div class="d-flex flex-column">
+                  <div class="form-check mt-1 mb-2">
+                    <input class="form-check-input" type="checkbox" value="" id="xiaomiColorFilter">
+                    <label class="form-check-label" for="xiaomiColorFilter">
+                      Pink (6)
+                    </label>
+                  </div>
+                  <div class="form-check mt-1 mb-2">
+                    <input class="form-check-input" type="checkbox" value="" id="huaweiColorFilter">
+                    <label class="form-check-label" for="huaweiColorFilter">
+                      Drake's Neck Green (8)
+                    </label>
+                  </div>
+                  <div class="form-check mt-1 mb-2">
+                    <input class="form-check-input" type="checkbox" value="" id="otherColorFilter">
+                    <label class="form-check-label" for="otherColorFilter">
+                      Others (12)
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="btn btn-link justify-content-start mt-1 p-0" data-bs-toggle="collapse" data-bs-target="#ColorFilterCollapse" aria-expanded="false" aria-controls="ColorFilterCollapse">More colors</button>
+            </fieldset>
+
+            <fieldset class="d-flex flex-column mb-2 pt-lg-4">
+              <legend class="mb-0"><h3 class="h4 mb-0">Storage</h3></legend>
+              <hr class="border-1 border-subtle my-2">
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="allStorageFilter" checked>
+                <label class="form-check-label" for="allStorageFilter">
+                  All (17)
+                </label>
+              </div>
+              <div class="form-check mt-1 mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="firstStorageFilter" checked disabled>
+                <label class="form-check-label" for="firstStorageFilter">
+                  64 GB (3)
+                </label>
+              </div>
+              <div class="form-check mt-1 mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="secondStorageFilter" checked disabled>
+                <label class="form-check-label" for="secondStorageFilter">
+                  128 GB (3)
+                </label>
+              </div>
+              <div class="form-check mt-1 mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="thirdStorageFilter" checked disabled>
+                <label class="form-check-label" for="thirdStorageFilter">
+                  256 GB (7)
+                </label>
+              </div>
+              <div class="form-check mt-1 mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="fourthStorageFilter" checked disabled>
+                <label class="form-check-label" for="fourthStorageFilter">
+                  542 GB (3)
+                </label>
+              </div>
+              <div class="form-check mt-1 mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="fifthStorageFilter" checked disabled>
+                <label class="form-check-label" for="fifthStorageFilter">
+                  1 TB (1)
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="d-flex flex-column mb-2 pt-lg-4">
+              <legend class="mb-0"><h3 class="h4 mb-0">SIM</h3></legend>
+              <hr class="border-1 border-subtle my-2">
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="monoSimFilter">
+                <label class="form-check-label" for="monoSimFilter">
+                  Mono (15)
+                </label>
+              </div>
+              <div class="form-check mt-1 mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="dualSimFilter" disabled>
+                <label class="form-check-label" for="dualSimFilter">
+                  Dual (0)
+                </label>
+              </div>
+              <div class="form-check mt-1 mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="eSimFilter">
+                <label class="form-check-label" for="eSimFilter">
+                  eSIM (3)
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- No price yet since we don't have the dual range slider -->
+
+            <hr class="d-lg-none border-1 border-subtle">
+
+            <button type="button" class="btn btn-primary d-lg-none mb-3">
+              See 23 results
+            </button>
+
+            <button type="button" class="btn btn-secondary mt-3">
+              <svg class="me-1" width="1.25rem" height="1.25rem" aria-hidden="true" focusable="false">
+                <use xlink:href="#delete"/>
+              </svg>
+              Reset filter
+            </button>
+          </form>
+
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-9">
+        <div class="d-flex justify-content-between gap-2 mb-4">
+          <div class="dropdown flex-shrink-1" style="width: 9rem;">
+            <button class="btn btn-dropdown dropdown-toggle justify-content-between w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="results-order">
+              <span class="visually-hidden">Sorted by</span>Newest
+            </button>
+            <ul class="dropdown-menu">
+              <li><button class="dropdown-item active"><span class="visually-hidden">Sort by</span>Newest</button></li>
+              <li><button class="dropdown-item"><span class="visually-hidden">Sort by</span>Oldest</button></li>
+              <li><button class="dropdown-item"><span class="visually-hidden">Sort by</span>Cheapest</button></li>
+              <li><button class="dropdown-item"><span class="visually-hidden">Sort by</span>Most expensive</button></li>
+            </ul>
+          </div>
+
+          <div class="d-flex flex-shrink-1 justify-content-end" style="width: 9rem;">
+            <button class="btn btn-outline-secondary d-lg-none w-100" data-bs-toggle="offcanvas" data-bs-target="#filterOffcanvas" aria-controls="filterOffcanvas">
+              <svg class="me-1 flex-shrink-0" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                <use xlink:href="#filter"/>
+              </svg>
+              <span class="visually-hidden">Toggle</span>Filter
+            </button>
+
+            <form><div class="btn-group d-none d-md-flex ms-2" role="group" aria-label="Display management">
+              <input type="radio" class="btn-check" name="displayOffers" id="gridDisplay" autocomplete="off" checked>
+              <label class="btn btn-icon btn-no-outline" for="gridDisplay" title="Grid">
+                <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                  <use xlink:href="#grid"/>
+                </svg>
+                <span class="visually-hidden">Grid display</span>
+              </label>
+              <input type="radio" class="btn-check" name="displayOffers" id="listDisplay" autocomplete="off">
+              <label class="btn btn-icon btn-no-outline" for="listDisplay" title="List">
+                <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                  <use xlink:href="#list"/>
+                </svg>
+                <span class="visually-hidden">List display</span>
+              </label>
+            </div></form>
+          </div>
+        </div>
+
+        <div class="pt-md-3 h4 mb-2 text-nowrap" aria-live="polite" aria-atomic="true">
+          <p><span class="text-primary">16 matches</span> / <span class="d-none d-xl-inline">9</span><span class="d-xl-none">6</span> displayed</p>
+          <div class="row" role="group" aria-label="Active filter(s)">
+            <ul class="d-flex gap-2 list-unstyled pb-2 mb-0 overflow-x-auto">
+              <li>
+                <span class="tag tag-sm" id="labelTagMobileOnly">
+                  Mobile only
+                  <button class="close" aria-labelledby="labelTagMobileOnly"><span class="visually-hidden">Close</span></button>
+                </span>
+              </li>
+              <li>
+                <span class="tag tag-sm" id="labelTagApple">
+                  Apple
+                  <button class="close" aria-labelledby="labelTagApple"><span class="visually-hidden">Close</span></button>
+                </span>
+              </li>
+              <li>
+                <span class="tag tag-sm" id="labelTagItel">
+                  Itel
+                  <button class="close" aria-labelledby="labelTagItel"><span class="visually-hidden">Close</span></button>
+                </span>
+              </li>
+              <li>
+                <span class="tag tag-sm" id="labelTagOrange">
+                  Orange
+                  <button class="close" aria-labelledby="labelTagOrange"><span class="visually-hidden">Close</span></button>
+                </span>
+              </li>
+              <li>
+                <span class="tag tag-sm" id="labelTagBlack">
+                  Black
+                  <button class="close" aria-labelledby="labelTagBlack"><span class="visually-hidden">Close</span></button>
+                </span>
+              </li>
+              <li>
+                <span class="tag tag-sm" id="labelTagBlue">
+                  Blue
+                  <button class="close" aria-labelledby="labelTagBlue"><span class="visually-hidden">Close</span></button>
+                </span>
+              </li>
+              <li>
+                <span class="tag tag-sm" id="labelTagGrey">
+                  Grey
+                  <button class="close" aria-labelledby="labelTagGrey"><span class="visually-hidden">Close</span></button>
+                </span>
+              </li>
+              <li>
+                <span class="tag tag-sm" id="labelTagAllStorage">
+                  Storage — All
+                  <button class="close" aria-labelledby="labelTagAllStorage"><span class="visually-hidden">Close</span></button>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <ul class="row row-cols-1 row-cols-md-2 row-cols-xl-3 gy-3 mb-3 list-unstyled">
+          <li class="card border-0 pt-2 pt-md-0">
+            <div class="d-flex position-relative mb-2 align-items-end justify-content-between border-bottom border-supporting-orange fw-bold">
+              <div class="d-flex">
+                <p class="mb-0 p-2 bg-supporting-orange text-nowrap" data-bs-theme="light">
+                  <svg class="me-1" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                    <use xlink:href="#tick"/>
+                  </svg>Flash sale
+                </p>
+                <div class="custom-triangle border-supporting-orange"></div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between mb-2 mx-2">
+              <div class="d-flex align-items-center fw-bold small">
+                <svg class="me-1" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                  <use xlink:href="#tick"/>
+                </svg>
+                <p class="mb-0">
+                  <span class="visually-hidden">Only</span>
+                  <span class="border border-1 border-subtle custom-counter">03</span>
+                  <span class="visually-hidden">days</span>
+                  <span aria-hidden="true">:</span>
+                  <span class="border border-1 border-subtle custom-counter">01</span>
+                  <span class="visually-hidden">hour</span>
+                  <span aria-hidden="true">:</span>
+                  <span class="border border-1 border-subtle custom-counter">11</span>
+                  <span class="visually-hidden">minutes</span>
+                  <span aria-hidden="true">:</span>
+                  <span class="border border-1 border-subtle custom-counter">27</span>
+                  <span class="visually-hidden">seconds left</span>
+                </p>
+              </div>
+              <p class="tag tag-sm mb-0">103 in stock</p>
+            </div>
+            <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
+              <div class="row flex-row-reverse mb-3 align-items-start">
+                <div class="col-7">
+                  <h3 class="fs-4 mb-2">xxxxx xxxxxx xx xxx xxx</h3>
+                  <div class="star-rating star-rating-sm d-flex pt-md-1 mb-3">
+                    <p class="visually-hidden">Star rating: rated 3 out of 5</p>
+
+                    <div aria-hidden="true">
+                      <span></span>
+                      <span></span>
+                      <span class="checked"></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                  <p class="mb-3 fw-bold d-inline-flex align-middle">
+                    <svg class="border border-1 rounded-circle me-2 bg-secondary" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <defs>
+                        <linearGradient id="Gradient1">
+                          <stop offset="0%" stop-color="#0400ff"/>
+                          <stop offset="100%" stop-color="#fff800"/>
+                        </linearGradient>
+                      </defs>
+                      <circle cx="10" cy="10" r="10" fill="url('#Gradient1')"/>
+                    </svg>
+                    5 colors
+                  </p>
+                  <p class="mb-0 pt-md-1">
+                    <span class="d-block mb-1 fw-bold">From</span>
+                    <span class="fs-4 fw-bold text-primary">2 500 350 FCFA</span><br>
+                    <span class="visually-hidden">instead of </span>
+                    <span class="text-decoration-line-through">3 000 000 FCFA</span>
+                  </p>
+                </div>
+                <div class="col-5 small fw-bold">
+                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
+                  <p class="mb-0">DAS: 0,99 W/Kg</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="offset-5 col-7">
+                  <form class="mb-3">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="phoneCompare1">
+                      <label for="phoneCompare1" class="form-check-label">Compare <span class="visually-hidden">xxxxx xxxxxx xx xxx xxx to other selected smartphones</span></label>
+                    </div>
+                  </form>
+                  <a href="#" class="btn btn-secondary">More details <span class="visually-hidden">about xxxxx xxxxxx xx xxx xxx</span></a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="card border-0 pt-4 pt-md-0">
+            <div class="d-flex mt-md-3 mb-2 align-items-end justify-content-between border-bottom border-danger fw-bold">
+              <div class="d-flex mt-md-3">
+                <p class="mb-0 p-2 text-bg-danger text-nowrap">
+                  <svg class="me-1" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                    <use xlink:href="#danger"/>
+                  </svg>Out of stock
+                </p>
+                <div class="custom-triangle border-danger"></div>
+              </div>
+            </div>
+            <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
+              <div class="row flex-row-reverse mb-3 align-items-start">
+                <div class="col-7">
+                  <h3 class="fs-4 mb-2">xxxx xxx</h3>
+                  <div class="star-rating star-rating-sm d-flex pt-md-1 mb-3">
+                    <p class="visually-hidden">Star rating: rated 3 out of 5</p>
+
+                    <div aria-hidden="true">
+                      <span></span>
+                      <span></span>
+                      <span class="checked"></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                  <p class="mb-3 fw-bold d-inline-flex align-middle">
+                    <svg class="border border-1 rounded-circle me-2 bg-secondary" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <circle cx="10" cy="10" r="10" fill="#000"/>
+                    </svg>
+                    Black
+                  </p>
+                  <p class="mb-0 pt-md-1">
+                    <span class="d-block mb-1 fw-bold">From</span>
+                    <span class="fs-4 fw-bold text-primary">50 530 FCFA</span>
+                  </p>
+                </div>
+                <div class="col-5 small fw-bold">
+                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
+                  <p class="mb-0">DAS: 0,80 W/Kg</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="offset-5 col-7">
+                  <form class="mb-3">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="phoneCompare2">
+                      <label for="phoneCompare2" class="form-check-label">Compare <span class="visually-hidden">xxxx xxx to other selected smartphones</span></label>
+                    </div>
+                  </form>
+                  <a href="#" class="btn btn-secondary">More details <span class="visually-hidden">about xxxx xxx</span></a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="card border-0 pt-4 pt-md-5 pt-xl-0">
+            <div class="d-flex mt-xl-3 mb-2 align-items-end justify-content-between border-bottom border-info fw-bold">
+              <div class="d-flex mt-xl-3">
+                <p class="mb-0 p-2 text-bg-info text-nowrap">
+                  <svg class="me-1" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                    <use xlink:href="#clock"/>
+                  </svg>Soon available
+                </p>
+                <div class="custom-triangle border-info"></div>
+              </div>
+            </div>
+            <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
+              <div class="row flex-row-reverse mb-3 align-items-start">
+                <div class="col-7">
+                  <h3 class="fs-4 mb-2">xxxxxx xxxx xxx</h3>
+                  <div class="star-rating star-rating-sm d-flex pt-md-1 mb-3">
+                    <p class="visually-hidden">Star rating: rated 3 out of 5</p>
+
+                    <div aria-hidden="true">
+                      <span></span>
+                      <span></span>
+                      <span class="checked"></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                  <p class="mb-3 fw-bold d-inline-flex align-middle">
+                    <svg class="border border-1 rounded-circle me-2 bg-secondary" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <circle cx="10" cy="10" r="10" fill="#085edb"/>
+                    </svg>
+                    Blue
+                  </p>
+                  <p class="mb-0 pt-md-1">
+                    <span class="d-block mb-1 fw-bold">From</span>
+                    <span class="fs-4 fw-bold text-primary">129 952 FCFA</span>
+                  </p>
+                </div>
+                <div class="col-5 small fw-bold">
+                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
+                  <p class="mb-0">DAS: 0,75 W/Kg</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="offset-5 col-7">
+                  <form class="mb-3">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="phoneCompare3">
+                      <label for="phoneCompare3" class="form-check-label">Compare <span class="visually-hidden">xxxxxx xxxx xxx to other selected smartphones</span></label>
+                    </div>
+                  </form>
+                  <a href="#" class="btn btn-secondary">More details <span class="visually-hidden">about xxxxxx xxxx xxx</span></a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="card border-0 pt-4 pt-md-5">
+            <div class="d-flex mt-xl-3 mb-2 align-items-end justify-content-between border-bottom border-success fw-bold">
+              <div class="d-flex mt-xl-3">
+                <p class="mb-0 p-2 text-bg-success text-nowrap">
+                  <svg class="me-1" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                    <use xlink:href="#new"/>
+                  </svg>New
+                </p>
+                <div class="custom-triangle border-success"></div>
+              </div>
+            </div>
+            <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
+              <div class="row flex-row-reverse mb-3 align-items-start">
+                <div class="col-7">
+                  <h3 class="fs-4 mb-2">xxxxxxx xxx</h3>
+                  <div class="star-rating star-rating-sm d-flex pt-md-1 mb-3">
+                    <p class="visually-hidden">Star rating: rated 3 out of 5</p>
+
+                    <div aria-hidden="true">
+                      <span></span>
+                      <span></span>
+                      <span class="checked"></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                  <p class="mb-3 fw-bold d-inline-flex align-middle">
+                    <svg class="border border-1 rounded-circle me-2 bg-secondary" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <circle cx="10" cy="10" r="10" fill="#666666"/>
+                    </svg>
+                    Grey
+                  </p>
+                  <p class="mb-0 pt-md-1">
+                    <span class="d-block mb-1 fw-bold">From</span>
+                    <span class="fs-4 fw-bold text-primary">323 380 FCFA</span>
+                  </p>
+                </div>
+                <div class="col-5 small fw-bold">
+                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
+                  <p class="mb-0">DAS: 0,90 W/Kg</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="offset-5 col-7">
+                  <form class="mb-3">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="phoneCompare4">
+                      <label for="phoneCompare4" class="form-check-label">Compare <span class="visually-hidden">xxxxxxx xxx to other selected smartphones</span></label>
+                    </div>
+                  </form>
+                  <a href="#" class="btn btn-secondary">More details <span class="visually-hidden">about xxxxxxx xxx</span></a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="card border-0 pt-4 pt-md-5">
+            <div class="d-flex position-relative mb-2 align-items-end justify-content-between border-bottom border-supporting-orange fw-bold">
+              <div class="d-flex">
+                <p class="mb-0 p-2 bg-supporting-orange text-nowrap" data-bs-theme="light">
+                  <svg class="me-1" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                    <use xlink:href="#tick"/>
+                  </svg>Flash sale
+                </p>
+                <div class="custom-triangle border-supporting-orange"></div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between mb-2 mx-2">
+              <div class="d-flex align-items-center fw-bold small">
+                <svg class="me-1" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                  <use xlink:href="#tick"/>
+                </svg>
+                <p class="mb-0">
+                  <span class="visually-hidden">Only</span>
+                  <span class="border border-1 border-subtle custom-counter">03</span>
+                  <span class="visually-hidden">days</span>
+                  <span aria-hidden="true">:</span>
+                  <span class="border border-1 border-subtle custom-counter">01</span>
+                  <span class="visually-hidden">hour</span>
+                  <span aria-hidden="true">:</span>
+                  <span class="border border-1 border-subtle custom-counter">11</span>
+                  <span class="visually-hidden">minutes</span>
+                  <span aria-hidden="true">:</span>
+                  <span class="border border-1 border-subtle custom-counter">27</span>
+                  <span class="visually-hidden">seconds left</span>
+                </p>
+              </div>
+              <p class="tag tag-sm mb-0">103 in stock</p>
+            </div>
+            <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
+              <div class="row flex-row-reverse mb-3 align-items-start">
+                <div class="col-7">
+                  <h3 class="fs-4 mb-2">xxxxxxx xxxxxx xxx</h3>
+                  <div class="star-rating star-rating-sm d-flex pt-md-1 mb-3">
+                    <p class="visually-hidden">Star rating: rated 3 out of 5</p>
+
+                    <div aria-hidden="true">
+                      <span></span>
+                      <span></span>
+                      <span class="checked"></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                  <p class="mb-3 fw-bold d-inline-flex align-middle">
+                    <svg class="border border-1 rounded-circle me-2 bg-secondary" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <circle cx="10" cy="10" r="10" fill="#666666"/>
+                    </svg>
+                    Grey
+                  </p>
+                  <p class="mb-0 pt-md-1">
+                    <span class="d-block mb-1 fw-bold">From</span>
+                    <span class="fs-4 fw-bold text-primary">625 605 FCFA</span><br>
+                    <span class="visually-hidden">instead of </span>
+                    <span class="text-decoration-line-through">725 605 FCFA</span>
+                  </p>
+                </div>
+                <div class="col-5 small fw-bold">
+                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
+                  <p class="mb-0">DAS: 0,89 W/Kg</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="offset-5 col-7">
+                  <form class="mb-3">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="phoneCompare5">
+                      <label for="phoneCompare5" class="form-check-label">Compare <span class="visually-hidden">xxxxxxx xxxxxx xxx to other selected smartphones</span></label>
+                    </div>
+                  </form>
+                  <a href="#" class="btn btn-secondary">More details <span class="visually-hidden">about xxxxxxx xxxxxx xxx</span></a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="card border-0 pt-4 pt-md-5">
+            <div class="d-flex mt-md-3 mb-2 align-items-end justify-content-between border-bottom border-supporting-orange fw-bold">
+              <div class="d-flex mt-md-3">
+                <p class="mb-0 p-2 bg-supporting-orange text-nowrap" data-bs-theme="light">
+                  <svg class="me-1" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                    <use xlink:href="#promotion"/>
+                  </svg>Best deal
+                </p>
+                <div class="custom-triangle border-supporting-orange"></div>
+              </div>
+            </div>
+            <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
+              <div class="row flex-row-reverse mb-3 align-items-start">
+                <div class="col-7">
+                  <h3 class="fs-4 mb-2">xxx xx xx</h3>
+                  <div class="star-rating star-rating-sm d-flex pt-md-1 mb-3">
+                    <p class="visually-hidden">Star rating: rated 3 out of 5</p>
+
+                    <div aria-hidden="true">
+                      <span></span>
+                      <span></span>
+                      <span class="checked"></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                  <p class="mb-3 fw-bold d-inline-flex align-middle">
+                    <svg class="border border-1 rounded-circle me-2 bg-secondary" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <circle cx="10" cy="10" r="10" fill="#000000"/>
+                    </svg>
+                    Black
+                  </p>
+                  <p class="mb-0 pt-md-1">
+                    <span class="d-block mb-1 fw-bold">From</span>
+                    <span class="fs-4 fw-bold text-primary">459 900 FCFA</span><br>
+                    <span class="visually-hidden">instead of </span>
+                    <span class="text-decoration-line-through">359 900 FCFA</span>
+                  </p>
+                </div>
+                <div class="col-5 small fw-bold">
+                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
+                  <p class="mb-0">DAS: 0,87 W/Kg</p>
+                </div>
+              </div>
+              <div class="d-flex mb-3 p-2 bg-supporting-yellow" data-bs-theme="light">
+                <svg class="flex-shrink-0 me-2" width="1.875rem" height="1.875rem" fill="currentColor" aria-hidden="true" focusable="false">
+                  <use xlink:href="#exchange"/>
+                </svg>
+                <p class="mb-0 small fw-bold">Extra 20 GB for 3 months if purchased with plan</p>
+              </div>
+              <div class="row">
+                <div class="offset-5 col-7">
+                  <form class="mb-3">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="phoneCompare6">
+                      <label for="phoneCompare6" class="form-check-label">Compare <span class="visually-hidden">xxx xx xxx to other selected smartphones.</span></label>
+                    </div>
+                  </form>
+                  <a href="#" class="btn btn-secondary">More details <span class="visually-hidden">about xxx xx xxx</span></a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="card d-none d-xl-flex border-0 pt-4 pt-md-5">
+            <div class="d-flex mb-2 align-items-end justify-content-between border-bottom border-success fw-bold">
+              <div class="d-flex">
+                <p class="mb-0 p-2 text-bg-success text-nowrap">
+                  <svg class="me-1" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                    <use xlink:href="#new"/>
+                  </svg>New
+                </p>
+                <div class="custom-triangle border-success"></div>
+              </div>
+            </div>
+            <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
+              <div class="row flex-row-reverse mb-3 align-items-start">
+                <div class="col-7">
+                  <h3 class="fs-4 mb-2">xxxxxxx xxx</h3>
+                  <div class="star-rating star-rating-sm d-flex pt-md-1 mb-3">
+                    <p class="visually-hidden">Star rating: rated 3 out of 5</p>
+
+                    <div aria-hidden="true">
+                      <span></span>
+                      <span></span>
+                      <span class="checked"></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                  <p class="mb-3 fw-bold d-inline-flex align-middle">
+                    <svg class="border border-1 rounded-circle me-2 bg-secondary" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <circle cx="10" cy="10" r="10" fill="#666666"/>
+                    </svg>
+                    Grey
+                  </p>
+                  <p class="mb-0 pt-md-1">
+                    <span class="d-block mb-1 fw-bold">From</span>
+                    <span class="fs-4 fw-bold text-primary">330 320 FCFA</span>
+                  </p>
+                </div>
+                <div class="col-5 small fw-bold">
+                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
+                  <p class="mb-0">DAS: 0,90 W/Kg</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="offset-5 col-7">
+                  <form class="mb-3">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="phoneCompare7">
+                      <label for="phoneCompare7" class="form-check-label">Compare <span class="visually-hidden">xxxxxxx xxx to other selected smartphones.</span></label>
+                    </div>
+                  </form>
+                  <a href="#" class="btn btn-secondary">More details <span class="visually-hidden">about xxxxxxx xxx</span></a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="card d-none d-xl-flex border-0 pt-4 pt-md-5">
+            <div class="d-flex mb-2 align-items-end justify-content-between border-bottom border-supporting-orange fw-bold">
+              <div class="d-flex">
+                <p class="mb-0 p-2 bg-supporting-orange text-nowrap" data-bs-theme="light">
+                  <svg class="me-1" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                    <use xlink:href="#promotion"/>
+                  </svg>Best deal
+                </p>
+                <div class="custom-triangle border-supporting-orange"></div>
+              </div>
+            </div>
+            <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
+              <div class="row flex-row-reverse mb-3 align-items-start">
+                <div class="col-7">
+                  <h3 class="fs-4 mb-2">xxxxxxx xxxxxx xx</h3>
+                  <div class="star-rating star-rating-sm d-flex pt-md-1 mb-3">
+                    <p class="visually-hidden">Star rating: rated 3 out of 5</p>
+
+                    <div aria-hidden="true">
+                      <span></span>
+                      <span></span>
+                      <span class="checked"></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                  <p class="mb-3 fw-bold d-inline-flex align-middle">
+                    <svg class="border border-1 rounded-circle me-2 bg-secondary" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <circle cx="10" cy="10" r="10" fill="#666666"/>
+                    </svg>
+                    Grey
+                  </p>
+                  <p class="mb-0 pt-md-1">
+                    <span class="d-block mb-1 fw-bold">From</span>
+                    <span class="fs-4 fw-bold text-primary">550 450 FCFA</span><br>
+                    <span class="visually-hidden">instead of </span>
+                    <span class="text-decoration-line-through">700 200 FCFA</span>
+                  </p>
+                </div>
+                <div class="col-5 small fw-bold">
+                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
+                  <p class="mb-0">DAS: 0,77 W/Kg</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="offset-5 col-7">
+                  <form class="mb-3">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="phoneCompare8">
+                      <label for="phoneCompare8" class="form-check-label">Compare <span class="visually-hidden">xxxxxxx xxxxxx xx to other selected smartphones.</span></label>
+                    </div>
+                  </form>
+                  <a href="#" class="btn btn-secondary">More details <span class="visually-hidden">about xxxxxxx xxxxxx xx</span></a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="card d-none d-xl-flex border-0 pt-4 pt-md-5">
+            <div class="d-flex mb-2 align-items-end justify-content-between border-bottom border-supporting-orange fw-bold">
+              <div class="d-flex">
+                <p class="mb-0 p-2 bg-supporting-orange text-nowrap" data-bs-theme="light">
+                  <svg class="me-1" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                    <use xlink:href="#promotion"/>
+                  </svg>Best deal
+                </p>
+                <div class="custom-triangle border-supporting-orange"></div>
+              </div>
+            </div>
+            <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
+              <div class="row flex-row-reverse mb-3 align-items-start">
+                <div class="col-7">
+                  <h3 class="fs-4 mb-2">xxx xx xxx</h3>
+                  <div class="star-rating star-rating-sm d-flex pt-md-1 mb-3">
+                    <p class="visually-hidden">Star rating: rated 3 out of 5</p>
+
+                    <div aria-hidden="true">
+                      <span></span>
+                      <span></span>
+                      <span class="checked"></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                  <p class="mb-3 fw-bold d-inline-flex align-middle">
+                    <svg class="border border-1 rounded-circle me-2 bg-secondary" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <circle cx="10" cy="10" r="10" fill="#000000"/>
+                    </svg>
+                    Black
+                  </p>
+                  <p class="mb-0 pt-md-1">
+                    <span class="d-block mb-1 fw-bold">From</span>
+                    <span class="fs-4 fw-bold text-primary">300 600 FCFA</span><br>
+                    <span class="visually-hidden">instead of </span>
+                    <span class="text-decoration-line-through">500 600 FCFA</span>
+                  </p>
+                </div>
+                <div class="col-5 small fw-bold">
+                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
+                  <p class="mb-0">DAS: 0,82 W/Kg</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="offset-5 col-7">
+                  <form class="mb-3">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="phoneCompare9">
+                      <label for="phoneCompare9" class="form-check-label">Compare <span class="visually-hidden">xxx xx xxx to other selected smartphones.</span></label>
+                    </div>
+                  </form>
+                  <a href="#" class="btn btn-secondary">More details <span class="visually-hidden">about xxx xx xxx</span></a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="row pt-2 pt-md-5">
+          <div class="col-12 col-md-6 col-xl-4 offset-md-3 offset-xl-4">
+            <a class="btn btn-secondary w-100 mb-2 disabled">Compare selection (0)</a>
+            <button class="btn btn-secondary w-100">Load all results</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="h1 mb-3 pt-4 pt-md-5" id="top-sales">Top sales</h2>
+    <ul class="row row-cols-1 row-cols-md-2 row-cols-xl-3 gy-3 mb-4 pt-3 list-unstyled">
+      <li class="col">
+        <div class="position-relative"><div class="row mt-md-3">
+          <div class="col-4"><div class="ratio ratio-3x4">{{< placeholder width="100%" height="100" text="icon" >}}</div></div>
+          <div class="col-7 col-md-5">
+            <h3 class="fs-4">xxxxxx xxxxxx</h3>
+            <p class="mb-0 fw-bold">
+              From<br>
+              <span class="fs-4 text-primary">25 900 FCFA</span>
+            </p>
+          </div>
+          <div class="d-flex col-2 justify-content-end">
+            <a href="#" class="stretched-link">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                <use xlink:href="#chevron-right"/>
+              </svg>
+              <span class="visually-hidden">Go to xxxxxx xxxxxx details</span>
+            </a>
+          </div>
+        </div></div>
+      </li>
+
+      <li class="col">
+        <div class="position-relative"><div class="row mt-md-3">
+          <div class="col-4"><div class="ratio ratio-3x4">{{< placeholder width="100%" height="100" text="icon" >}}</div></div>
+          <div class="col-7 col-md-5">
+            <h3 class="fs-4">xxxxxx xxxxx xxxxx</h3>
+            <p class="mb-0 fw-bold">
+              From<br>
+              <span class="fs-4 text-primary">22 900 FCFA</span>
+            </p>
+          </div>
+          <div class="d-flex col-2 justify-content-end">
+            <a href="#" class="stretched-link">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                <use xlink:href="#chevron-right"/>
+              </svg>
+              <span class="visually-hidden">Go to xxxxxx xxxxx xxxxx details</span>
+            </a>
+          </div>
+        </div></div>
+      </li>
+
+      <li class="col">
+        <div class="position-relative"><div class="row mt-md-3">
+          <div class="col-4"><div class="ratio ratio-3x4">{{< placeholder width="100%" height="100" text="icon" >}}</div></div>
+          <div class="col-7 col-md-5">
+            <h3 class="fs-4">xxxxxxx xxx xxxxxx</h3>
+            <p class="mb-0 fw-bold">
+              From<br>
+              <span class="fs-4 text-primary">22 900 FCFA</span>
+            </p>
+          </div>
+          <div class="d-flex col-2 justify-content-end">
+            <a href="#" class="stretched-link">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                <use xlink:href="#chevron-right"/>
+              </svg>
+              <span class="visually-hidden">Go to xxxxxxx xxx xxxxxx details</span>
+            </a>
+          </div>
+        </div></div>
+      </li>
+
+      <li class="col">
+        <div class="position-relative"><div class="row mt-md-3">
+          <div class="col-4"><div class="ratio ratio-3x4">{{< placeholder width="100%" height="100" text="icon" >}}</div></div>
+          <div class="col-7 col-md-5">
+            <h3 class="fs-4">xxxxxxx x xxx</h3>
+            <p class="mb-0 fw-bold">
+              From<br>
+              <span class="fs-4 text-primary">28 900 FCFA</span>
+            </p>
+          </div>
+          <div class="d-flex col-2 justify-content-end">
+            <a href="#" class="stretched-link">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                <use xlink:href="#chevron-right"/>
+              </svg>
+              <span class="visually-hidden">Go to xxxxxxx x xxx details</span>
+            </a>
+          </div>
+        </div></div>
+      </li>
+
+      <li class="col">
+        <div class="position-relative"><div class="row mt-md-3">
+          <div class="col-4"><div class="ratio ratio-3x4">{{< placeholder width="100%" height="100" text="icon" >}}</div></div>
+          <div class="col-7 col-md-5">
+            <h3 class="fs-4">xxxxxxx xx xxxx</h3>
+            <p class="mb-0 fw-bold">
+              From<br>
+              <span class="fs-4 text-primary">42 900 FCFA</span>
+            </p>
+          </div>
+          <div class="d-flex col-2 justify-content-end">
+            <a href="#" class="stretched-link">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                <use xlink:href="#chevron-right"/>
+              </svg>
+              <span class="visually-hidden">Go to xxxxxxx xx xxxx details</span>
+            </a>
+          </div>
+        </div></div>
+      </li>
+
+      <li class="col">
+        <div class="position-relative"><div class="row mt-md-3">
+          <div class="col-4"><div class="ratio ratio-3x4">{{< placeholder width="100%" height="100" text="icon" >}}</div></div>
+          <div class="col-7 col-md-5">
+            <h3 class="fs-4">xxxxx xxx xx</h3>
+            <p class="mb-0 fw-bold">
+              From<br>
+              <span class="fs-4 text-primary">42 900 FCFA</span>
+            </p>
+          </div>
+          <div class="d-flex col-2 justify-content-end">
+            <a href="#" class="stretched-link">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                <use xlink:href="#chevron-right"/>
+              </svg>
+              <span class="visually-hidden">Go to xxxxx xxx xx details</span>
+            </a>
+          </div>
+        </div></div>
+      </li>
+    </ul>
+
+    <h2 class="visually-hidden" id="advices">Advices</h2>
+    <div class="row gy-3">
+      <div class="col-12 pt-3">
+        <div class="row gx-0">
+          <div class="col-12 col-lg-7 order-lg-1" aria-hidden="true">
+            <div class="ratio ratio-16x9 h-100">{{< placeholder width="100%" height="162" text="icon" >}}</div>
+          </div>
+          <div class="col-12 col-lg-5">
+            <div class="h-100 p-2 p-lg-4 bg-dark" data-bs-theme="dark">
+              <div class="pt-1 pt-lg-0 pe-3 pe-lg-4 pb-1 ps-2">
+                <h3 class="h1 mb-2 text-primary" id="best-budget-title">The best for my budget</h3>
+                <p class="h2 pt-1 pt-lg-2 mb-2">iPhone at a reduced price refurbished, with 1 year guarantly</p>
+                <p class="h5 pt-1 pt-lg-2 mb-3 text-primary">From 850 000 FCFA</p>
+                <a href="#" class="btn btn-secondary btn-inverse mt-1 mt-lg-2 mb-2" id="best-budget-find" aria-labelledby="best-budget-find best-budget-title">Find yours</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 pt-3 pt-lg-5">
+        <div class="row gx-0 bg-body">
+          <div class="col-12 col-lg-7 order-lg-1" aria-hidden="true">
+            <div class="ratio ratio-16x9">{{< placeholder width="100%" height="162" text="icon" >}}</div>
+          </div>
+          <div class="col-12 col-lg-5">
+            <div class="h-100 pt-2 pt-lg-0">
+              <div class="pt-1 pt-lg-0 pe-lg-5">
+                <h3 class="mb-2">Why buy your phone from Orange?</h3>
+                <p class="lead mb-0 mt-lg-1 ">Come quickly to our Orange Stores to discover the wide range of phones and smartphones that Orange offers you. Buying a new mobile phone from Orange is guaranteed to benefit from all the Orange services, its after-sales service and a welcome bonus. Our advisers are waiting to help you choose the mobile that suits you and demonstrate it to you.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 pt-2 pt-lg-4">
+        <div class="row gx-0 bg-body">
+          <div class="col-12 col-lg-7" aria-hidden="true">
+            <div class="ratio ratio-16x9">{{< placeholder width="100%" height="162" text="icon" >}}</div>
+          </div>
+          <div class="col-12 col-lg-5">
+            <div class="h-100 pt-2 pt-lg-0">
+              <div class="pt-1 pt-lg-0 ps-lg-5">
+                <h3 class="mb-2">How to choose your smartphone?</h3>
+                <p class="lead mb-0 mt-lg-1 ">Discover our wide choice of Android, Samsung or Apple iPhone smartphones to take advantages of the quality and speed of Orange's 4G network. Buying a smartphone from Orange is guaranteed to benefit from the quality of the latest generation cameras, and a large storage capacity. The long-lasting batteries will allow you to take advantage of all the features of your mobile to listen to music, watch videos and take advantage of social networks. Finally, the smartphone will be the ideal companion for paying, transferring or withdrawing money with Orange Money.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 pt-2 pt-lg-4">
+        <div class="row gx-0 bg-body">
+          <div class="col-12 col-lg-7 order-lg-1" aria-hidden="true">
+            <div class="ratio ratio-16x9">{{< placeholder width="100%" height="162" text="icon" >}}</div>
+          </div>
+          <div class="col-12 col-lg-5">
+            <div class="h-100 pt-2 pt-lg-0">
+              <div class="pt-1 pt-lg-0 pe-lg-5">
+                <h3 class="mb-2">Do you prefer a simple phone?</h3>
+                <p class="lead mb-0 mt-lg-1 ">If you want a new phone at low prices but with great features, come to the Orange store. Discover the brands Tecno, Mobiwire, Alcatel which offer all the features of the best smartphones at low prices. With these mobile phones you can also share your photos, chat on messaging, and watch your favorite videos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 pt-2 pt-lg-4">
+        <div class="row gx-0 bg-body">
+          <div class="col-12 col-lg-7" aria-hidden="true">
+            <div class="ratio ratio-16x9">{{< placeholder width="100%" height="162" text="icon" >}}</div>
+          </div>
+          <div class="col-12 col-lg-5">
+            <div class="h-100 pt-2 pt-lg-0">
+              <div class="pt-1 pt-lg-0 ps-lg-5">
+                <h3 class="mb-2">Which offer to choose with your mobile?</h3>
+                <p class="lead mb-0 mt-lg-1 ">Have you chosen your smartphone? Orange offers a wide choice of offers with or without commitment to take advantage of the quality of the Orange network and its speed with 4G. Our offers adapt to all your desires and all your budgets.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-body-secondary mt-4 mt-md-5 pb-3">
+    <div class="container-xxl pt-3 pt-md-4 pb-5">
+      <h2 class="display-3 mb-4">Orange by your side</h2>
+      <div class="row justify-content-around align-items-start gy-4 pt-2 pt-md-4 text-center">
+        <div class="position-relative col-6 col-md-2">
+          <svg class="mb-2" width="3.125rem" height="3.125rem" fill="currentColor" aria-hidden="true" focusable="false">
+            <use xlink:href="#support"/>
+          </svg>
+          <div><a href="#" class="mb-0 fw-bold stretched-link link-body-emphasis link-underline-opacity-0 link-underline-opacity-100-hover">Contact us</a></div>
+        </div>
+
+        <div class="position-relative col-6 col-md-2">
+          <svg class="mb-2" width="3.125rem" height="3.125rem" fill="currentColor" aria-hidden="true" focusable="false">
+            <use xlink:href="#assistance"/>
+          </svg>
+          <div><a href="#" class="mb-0 fw-bold stretched-link link-body-emphasis link-underline-opacity-0 link-underline-opacity-100-hover">Frequently asked questions</a></div>
+        </div>
+
+        <div class="position-relative col-6 col-md-2 pt-2 pt-md-0">
+          <svg class="mb-2" width="3.125rem" height="3.125rem" fill="currentColor" aria-hidden="true" focusable="false">
+            <use xlink:href="#shop"/>
+          </svg>
+          <div><a href="#" class="mb-0 fw-bold stretched-link link-body-emphasis link-underline-opacity-0 link-underline-opacity-100-hover">Shops</a></div>
+        </div>
+
+        <div class="position-relative col-6 col-md-2 pt-2 pt-md-0">
+          <svg class="mb-2" width="3.125rem" height="3.125rem" fill="currentColor" aria-hidden="true" focusable="false">
+            <use xlink:href="#all-time"/>
+          </svg>
+          <div><a href="#" class="mb-0 fw-bold stretched-link link-body-emphasis link-underline-opacity-0 link-underline-opacity-100-hover">24/24 service</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer navbar" data-bs-theme="dark" id="footer">
+  <h2 class="visually-hidden">Sitemap &amp; information</h2>
+  <div class="container-xxl footer-social">
+    <h3 class="footer-heading me-md-3">Follow us</h3>
+    <ul class="navbar-nav gap-2 flex-row align-self-start">
+      <li><a href="#" class="btn btn-icon btn-social btn-twitter btn-inverse"><span class="visually-hidden">Twitter</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-facebook btn-inverse"><span class="visually-hidden">Facebook</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-instagram btn-inverse"><span class="visually-hidden">Instagram</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-youtube btn-inverse"><span class="visually-hidden">YouTube</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-linkedin btn-inverse"><span class="visually-hidden">LinkedIn</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-mail btn-inverse"><span class="visually-hidden">Mail</span></a></li>
+    </ul>
+  </div>
+  <div class="border-bottom border-1 border-dark"></div>
+  <div class="container-xxl footer-title-content">
+    <h3 class="footer-heading">Sign up to our mailing list</h3>
+    <div class="row">
+      <form class="d-flex col-12 col-md-9 col-lg-7 col-xl-6 col-xxl-5 gap-2 gap-md-3">
+        <label for="inputEmail" class="visually-hidden">Email</label>
+        <input type="email" class="form-control text-bg-dark border-dark" id="inputEmail" placeholder="Enter your email">
+        <button type="submit" class="btn btn-secondary btn-inverse text-nowrap">Sign up</button>
+      </form>
+    </div>
+  </div>
+  <div class="border-bottom border-1 border-dark"></div>
+  <div class="container-xxl footer-nav">
+    <nav class="accordion accordion-dark" id="footerAccordion" aria-label="Sitemap footer">
+      <div class="row">
+        <div class="footer-column col-md-3">
+          <h3 class="accordion-header footer-heading" id="mobileDevicesHeading">
+            <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileDevicesCollapse" aria-expanded="true" aria-controls="mobileDevicesCollapse">
+              Mobile devices
+            </button>
+            <span class="d-none d-md-flex">Mobile devices</span>
+          </h3>
+          <div id="mobileDevicesCollapse" class="container-xxl accordion-collapse collapse" aria-labelledby="mobileDevicesHeading" data-bs-parent="#footerAccordion">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="#" aria-describedby="mobileDevicesHeading">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="mobileDevicesHeading">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="mobileDevicesHeading">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="mobileDevicesHeading">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-3">
+          <h3 class="accordion-header footer-heading" id="mobileInternetHeading">
+            <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileInternetCollapse" aria-expanded="true" aria-controls="mobileInternetCollapse">
+              Mobile internet
+            </button>
+            <span class="d-none d-md-flex">Mobile internet</span>
+          </h3>
+          <div id="mobileInternetCollapse" class="container-xxl accordion-collapse collapse" aria-labelledby="mobileInternetHeading" data-bs-parent="#footerAccordion">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="#" aria-describedby="mobileInternetHeading">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="mobileInternetHeading">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="mobileInternetHeading">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="mobileInternetHeading">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="mobileInternetHeading">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-3">
+          <h3 class="accordion-header footer-heading" id="orangeMoneyHeading">
+            <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#orangeMoneycollapse" aria-expanded="true" aria-controls="orangeMoneycollapse">
+              Orange Money
+            </button>
+            <span class="d-none d-md-flex">Orange Money</span>
+          </h3>
+          <div id="orangeMoneycollapse" class="container-xxl accordion-collapse collapse" aria-labelledby="orangeMoneyHeading" data-bs-parent="#footerAccordion">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="#" aria-describedby="orangeMoneyHeading">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="orangeMoneyHeading">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="orangeMoneyHeading">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="orangeMoneyHeading">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-3">
+          <h3 class="accordion-header footer-heading" id="orangeEnergieHeading">
+            <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#orangeEnergieCollapse" aria-expanded="true" aria-controls="orangeEnergieCollapse">
+              Orange Energie
+            </button>
+            <span class="d-none d-md-flex">Orange Energie</span>
+          </h3>
+          <div id="orangeEnergieCollapse" class="container-xxl accordion-collapse collapse" aria-labelledby="orangeEnergieHeading" data-bs-parent="#footerAccordion">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="#" aria-describedby="orangeEnergieHeading">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="orangeEnergieHeading">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="orangeEnergieHeading">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="border-bottom border-1 border-dark"></div>
+  <div class="container-xxl footer-terms">
+    <ul class="navbar-nav gap-md-3">
+      <li class="fw-bold">© Orange 2023</li>
+      <li><a class="nav-link" href="#">Terms and conditions</a></li>
+      <li><a class="nav-link" href="#">Personal data privacy</a></li>
+      <li><a class="nav-link" href="#">Accessibility statement</a></li>
+      <li><a class="nav-link" href="#">Cookie policy</a></li>
+    </ul>
+  </div>
+</footer>
+
+<nav aria-label="Back to top" class="back-to-top">
+  <a href="#top" class="back-to-top-link btn btn-icon btn-outline-secondary" data-bs-label="Back to top">
+    <span class="visually-hidden">Back to top</span>
+  </a>
+</nav>

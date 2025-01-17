@@ -15,7 +15,7 @@
       "axe"
     ],
     "useIncognitoBrowserContext": false,
-    "hideElements": "iframe, #text-decoration + p + div a.text-decoration-none, .accordion-collapse, #offcanvas, #offcanvasDark, #offcanvasResponsive, #bdSidebar, .overflow-y-scroll, .overflow-y-auto, .overflow-x-scroll, .overflow-x-auto, .table-responsive, fieldset.star-rating[disabled]",
+    "hideElements": "iframe, #text-decoration + p + div a.text-decoration-none, .accordion-collapse, #offcanvas, #offcanvasDark, #offcanvasResponsive, #bdSidebar, #filterOffcanvas, .overflow-y-scroll, .overflow-y-auto, .overflow-x-scroll, .overflow-x-auto, .table-responsive, fieldset.star-rating[disabled]",
     "ignore": [
       "color-contrast"
     ]

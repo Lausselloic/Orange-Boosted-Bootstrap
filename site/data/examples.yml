@@ -76,6 +76,8 @@
   examples:
     - name: Download app
       description: "How to build a download app page (redirect on iOS and Android)."
+    - name: E-shop
+      description: "How to build an e-shop page with Boosted."
     - name: Form
       description: "How to build a form with Boosted."
 
