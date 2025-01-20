@@ -66,7 +66,7 @@ Change the border color using utilities. The color utilities are generated from 
 {{< bootstrap-compatibility >}}
 
 {{< callout info >}}
-Border utilities like `.border-*` that generated from our original `$theme-colors` Sass map don't yet respond to color modes, however, any `.border-*-subtle` utility will. This will be resolved in v6.
+Border utilities like `.border-*` that generated from our original `$theme-colors` Sass map don't yet respond to color modes, however, any `.border-*-subtle` utility will. This will be resolved in Bootstrap v6.
 {{< /callout >}}
 
 {{< example class="bd-example-border-utils" >}}
@@ -92,7 +92,7 @@ Or modify the default `border-color` of a component:
   Dangerous heading
 </div>
 
-<div class="p-3 bg-info bg-opacity-10 border border-emphasized border-start-0 rounded-end">
+<div class="p-3 text-bg-info bg-opacity-10 border border-emphasized border-start-0 rounded-end">
   Changing border color and width
 </div>
 {{< /example >}}
@@ -219,11 +219,27 @@ Border raw tokens as Sass variables. **Not to be used as-is**.
 
 {{< scss-docs name="ouds-raw-border" file="scss/tokens/_raw.scss" >}}
 
+Colors raw tokens as Sass variables. **Not to be used as-is**.
+
+{{< scss-docs name="ouds-raw-color" file="scss/tokens/_raw.scss" >}}
+
 #### Semantic tokens
 
 Border semantic tokens are defined as Sass variables.
 
 {{< scss-docs name="ouds-semantic-border" file="scss/tokens/_semantic.scss" >}}
+
+Color semantic tokens as Sass variables. **Should not be used as-is**. Prefer use our [CSS semantic tokens](#css-semantic-tokens).
+
+{{< scss-docs name="ouds-semantic-color" file="scss/tokens/_semantic.scss" >}}
+
+### CSS semantic tokens
+
+Color semantic tokens as CSS variables.
+
+{{< scss-docs name="ouds-semantic-css-color" file="scss/tokens/_semantic-colors-custom-props.scss" >}}
+
+The same happens for the dark mode by replacing `-light` by `-dark`.
 
 ### Sass variables
 
@@ -231,11 +247,15 @@ Border semantic tokens are defined as Sass variables.
 
 {{< scss-docs name="border-radius-variables" file="scss/_variables.scss" >}}
 
-<!-- TODO LM: Variables for setting `border-color` in `.border-{direction}-subtle` utilities in light and dark mode:
+{{< bootstrap-compatibility false >}}
+
+Variables for setting <code>border-color</code> in <code>.border-{direction}-subtle</code> utilities in light and dark mode:
 
 {{< scss-docs name="theme-border-subtle-variables" file="scss/_variables.scss" >}}
 
-{{< scss-docs name="theme-border-subtle-dark-variables" file="scss/_variables-dark.scss" >}}-->
+{{< scss-docs name="theme-border-subtle-dark-variables" file="scss/_variables-dark.scss" >}}
+
+{{< /bootstrap-compatibility >}}
 
 ### Sass maps
 
@@ -243,11 +263,15 @@ The border utilities are declared through this map and generated using our utili
 
 {{< scss-docs name="ouds-maps-borders" file="scss/_maps.scss" >}}
 
-<!--Color mode adaptive border colors are also available as a Sass map:
+{{< bootstrap-compatibility false >}}
+
+Color mode adaptive border colors are also available as a Sass map:
 
 {{< scss-docs name="theme-border-subtle-map" file="scss/_maps.scss" >}}
 
-{{< scss-docs name="theme-border-subtle-dark-map" file="scss/_maps.scss" >}}-->
+{{< scss-docs name="theme-border-subtle-dark-map" file="scss/_maps.scss" >}}
+
+{{< /bootstrap-compatibility >}}
 
 ### Sass mixins
 

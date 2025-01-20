@@ -32,7 +32,7 @@ Here are some compliant combinations examples for texts:
 <p class="text-brand-primary p-short">Text brand-primary</p>
 <p class="text-default p-short">Text default</p>
 <p class="text-muted p-short">Text muted</p>
-<p class="text-disabled p-short">Text disabled</p> <!-- TODO LM: Do we need any of the following ? -->
+<p class="text-disabled p-short">Text disabled</p>
 <p class="text-always-black p-short">Text always-black</p>
 <p class="text-always-white p-short">Text always-white</p>
 <p class="text-on-brand-primary bg-brand-primary p-short">Text on-brand-primary</p>
@@ -66,9 +66,34 @@ In the following table we assume that the context is switching between light and
 | `.text-on-status-emphasized` | `.bg-status-accent-emphasized`, `.bg-status-positive-emphasized`, `.bg-status-warning-emphasized`, `.bg-status-info-emphasized` | — |
 | `.text-on-status-emphasized-alt` | `.bg-status-neutral-emphasized`, `.bg-status-negative-emphasized` | — |
 | `.text-on-status-muted` | `.bg-status-neutral-muted`, `.bg-status-accent-muted`, `.bg-status-positive-muted`, `.bg-status-negative-muted`, `.bg-status-warning-muted`, `.bg-status-info-muted` | — |
-| `.text-always-on-black` | `.bg-emphasized`, `.bg-always-black` | — |
-| `.text-always-on-white` | `.bg-brand-primary`, `.bg-status-accent-emphasized`, `.bg-status-positive-emphasized`, `.bg-status-warning-emphasized`, `.bg-status-info-emphasized`, `.bg-always-white` | — |
+| `.text-always-on-black` | `.bg-always-black` | — |
+| `.text-always-on-white` | `.bg-always-white` | — |
 {{< /bs-table >}}
+
+{{< bootstrap-compatibility >}}
+{{< example >}}
+{{< colors.inline >}}
+{{- range (index $.Site.Data "theme-colors") }}
+<p class="text-{{ .name }}{{ with .contrast_color }} bg-{{ . }}{{ end }}">.text-{{ .name }}</p>
+<p class="text-{{ .name }}-emphasis{{ with .contrast_color }} bg-{{ . }}{{ end }}">.text-{{ .name }}-emphasis</p>
+{{- end -}}
+{{< /colors.inline >}}
+
+<p class="text-body">.text-body</p>
+<p class="text-body-emphasis">.text-body-emphasis</p>
+<p class="text-body-secondary">.text-body-secondary</p>
+<p class="text-body-tertiary">.text-body-tertiary</p>
+
+<p class="text-black bg-white">.text-black</p>
+<p class="text-white bg-black">.text-white</p>
+<p class="text-black-50">.text-black-50</p>
+<p class="text-white-50">.text-white-50</p>
+{{< /example >}}
+
+{{< callout warning >}}
+`.text-black-50` and `.text-white-50` are deprecated as of Bootstrap v5.1.0. They'll be removed in Bootstrap v6.0.0.
+{{< /callout >}}
+{{< /bootstrap-compatibility >}}
 
 ### On icons
 
@@ -100,54 +125,6 @@ Here are [the normal contexts of use of these text color utilities](https://unif
 | `.text-status-negative` | Use to communicate something negative. It can be a destructive action, an error state, or a negative feedback. |
 {{< /bs-table >}}
 
-<!-- {{< example >}}
-{{< colors.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
-<p class="text-{{ .name }}{{ with .contrast_color }} bg-{{ . }}{{ end }}">.text-{{ .name }}</p>
-{{- end -}}
-{{< /colors.inline >}}
-
-<p class="text-body">.text-body</p>
-<p class="text-body-emphasis">.text-body-emphasis</p>
-<p class="text-body-secondary">.text-body-secondary</p>
-
-<p class="text-black bg-white">.text-black</p>
-<p class="text-white bg-black">.text-white</p>
-{{< /example >}} -->
-
-<!-- <details>
-<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
-<br>
-{{< design-callout-alert >}}
-Some of the colors combinations below do not belong to the Orange Design System specifications, and do not meet accessibility standards.
-
-Please refer to our [Orange's colors section]({{< docsref "/utilities/colors#colors" >}}) above and to the [Color guidelines](https://system.design.orange.com/0c1af118d/p/7059a5-colour/b/17b829) on the Orange Design System website.
-{{< /design-callout-alert >}}
-
-{{< example >}}
-{{< colors.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
-<p class="text-{{ .name }}{{ with .contrast_color }} bg-{{ . }}{{ end }}">.text-{{ .name }}</p>
-<p class="text-{{ .name }}-emphasis{{ with .contrast_color }} bg-{{ . }}{{ end }}">.text-{{ .name }}-emphasis</p>
-{{- end -}}
-{{< /colors.inline >}}
-
-<p class="text-body">.text-body</p>
-<p class="text-body-emphasis">.text-body-emphasis</p>
-<p class="text-body-secondary">.text-body-secondary</p>
-<p class="text-body-tertiary">.text-body-tertiary</p>
-
-<p class="text-black bg-white">.text-black</p>
-<p class="text-white bg-black">.text-white</p>
-<p class="text-black-50 bg-white">.text-black-50</p>
-<p class="text-white-50 bg-black">.text-white-50</p>
-{{< /example >}}
-
-{{< callout warning >}}
-**Deprecation:** With the addition of `.text-opacity-*` utilities and CSS variables for text utilities, `.text-black-50` and `.text-white-50` are deprecated as of v5.1.0. They'll be removed in v6.0.0.
-{{< /callout >}}
-</details> -->
-
 <!-- ## Opacity -->
 
 ## Specificity
@@ -156,20 +133,34 @@ Sometimes contextual classes cannot be applied due to the specificity of another
 
 ## CSS
 
-<!-- TODO LM: The rest of it -->
+### Sass tokens
+
+#### Raw tokens
+
+Colors raw tokens as Sass variables. **Not to be used as-is**.
+
+{{< scss-docs name="ouds-raw-color" file="scss/tokens/_raw.scss" >}}
+
+#### Semantic tokens
+
+Color semantic tokens as Sass variables. **Should not be used as-is**. Prefer use our [CSS semantic tokens](#css-semantic-tokens).
+
+{{< scss-docs name="ouds-semantic-color" file="scss/tokens/_semantic.scss" >}}
+
+### CSS semantic tokens
+
+Color semantic tokens as CSS variables.
+
+{{< scss-docs name="ouds-semantic-css-color" file="scss/tokens/_semantic-colors-custom-props.scss" >}}
+
+The same happens for the dark mode by replacing `-light` by `-dark`.
 
 In addition to the following Sass functionality, consider reading about our included [CSS custom properties]({{< docsref "/customize/css-variables" >}}) (aka CSS variables) for colors and more.
 
 ### Sass variables
 
-Most `color` utilities are generated by our theme colors, reassigned from our generic color palette variables.
-
-<!-- Boosted mod -->
-Boosted supersedes Bootstrap color variables with Orange brand color.
-
-{< scss-docs name="brand-colors" file="scss/_variables.scss" >}}
-
-{< scss-docs name="brand-colors-dark" file="scss/_variables-dark.scss" >}}
+{{< bootstrap-compatibility false >}}
+Most <code>color</code> utilities are generated by our theme colors, reassigned from our generic color palette variables.
 
 {{< scss-docs name="color-variables" file="scss/_variables.scss" >}}
 
@@ -183,21 +174,27 @@ Grayscale colors are also available, but only a subset are used to generate any 
 
 {{< scss-docs name="theme-text-map" file="scss/_maps.scss" >}}
 
-Variables for setting colors in `.text-*-emphasis` utilities in light and dark mode:
+Variables for setting colors in <code>.text-*-emphasis</code> utilities in light and dark mode:
 
 {{< scss-docs name="theme-text-variables" file="scss/_variables.scss" >}}
 
 {{< scss-docs name="theme-text-dark-variables" file="scss/_variables-dark.scss" >}}
+{{< /bootstrap-compatibility >}}
 
 ### Sass maps
 
+Our text utilities are generated from our `$ouds-text-colors`:
+
+{{< scss-docs name="ouds-maps-text-colors" file="scss/_maps.scss" >}}
+
+{{< bootstrap-compatibility false >}}
 Theme colors are then put into a Sass map so we can loop over them to generate our utilities, component modifiers, and more.
 
 {{< scss-docs name="theme-colors-map" file="scss/_variables.scss" >}}
 
 {{< scss-docs name="theme-colors-dark-map" file="scss/_variables-dark.scss" >}}
 
-Grayscale colors are also available as a Sass map. **This map is not used to generate any utilities.**
+Grayscale colors are also available as a Sass map. <strong>This map is not used to generate any utilities.</strong>
 
 {{< scss-docs name="gray-colors-map" file="scss/_variables.scss" >}}
 
@@ -207,7 +204,7 @@ RGB colors are generated from a separate Sass map:
 
 {{< scss-docs name="theme-colors-rgb-dark" file="scss/_maps.scss" >}}
 
-Color opacities build on that with their own map that's consumed by the utilities API:
+Color build on that with their own map that's consumed by the utilities API:
 
 {{< scss-docs name="utilities-text-colors" file="scss/_maps.scss" >}}
 
@@ -216,9 +213,14 @@ Color mode adaptive text colors are also available as a Sass map:
 {{< scss-docs name="theme-text-map" file="scss/_maps.scss" >}}
 
 {{< scss-docs name="theme-text-dark-map" file="scss/_maps.scss" >}}
+{{< /bootstrap-compatibility >}}
 
 ### Sass utilities API
 
 Color utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 
+{{< scss-docs name="utils-color-ouds" file="scss/_utilities.scss" >}}
+
+{{< bootstrap-compatibility false >}}
 {{< scss-docs name="utils-color" file="scss/_utilities.scss" >}}
+{{< /bootstrap-compatibility >}}

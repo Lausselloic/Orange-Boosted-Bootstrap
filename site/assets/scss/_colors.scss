@@ -173,7 +173,6 @@
   @return $level;
 }
 
-// TODO LM: see if we remove it
 @each $color, $value in map-merge($colors, map-merge($grays, ("supporting-yellow": $ouds-color-decorative-amber-500, "black": $black))) {
   .a11y-swatch-#{$color} {
     color: color-contrast($value);

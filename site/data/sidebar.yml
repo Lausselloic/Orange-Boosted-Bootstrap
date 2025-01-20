@@ -88,6 +88,8 @@
       draft: true
     - title: Input group
       draft: true
+    - title: Floating labels
+      draft: true
     - title: Quantity selector
       draft: true
     - title: Layout

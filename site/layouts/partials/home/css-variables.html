@@ -19,14 +19,14 @@
       <h3 class="fw-semibold">Using CSS variables</h3>
       <p>Use any of our <a href="/docs/{{ .Site.Params.docs_version }}/customize/css-variables/#root-variables">global <code>:root</code> variables</a> to write new styles. CSS variables use the <code>var(--bs-variableName)</code> syntax and can be inherited by children elements.</p>
       {{ highlight (printf `.component {
-  color: var(--bs-gray-800);
-  background-color: var(--bs-gray-100);
-  border: 1px solid var(--bs-gray-200);
+  color: var(--bs-color-content-default);
+  background-color: var(--bs-color-bg-secondary);
+  border: 1px solid var(--bs-color-border-default);
   border-radius: .25rem;
 }
 
 .component-header {
-  color: var(--bs-purple);
+  color: var(--bs-color-content-status-negative);
 }`) "scss" "" }}
     </div>
     <div class="col-lg-6 mb-tall">
@@ -35,12 +35,12 @@
       {{ highlight (printf `body {
   --bs-body-font-family: var(--bs-font-monospace);
   --bs-body-line-height: 1.4;
-  --bs-body-bg: var(--bs-gray-100);
+  --bs-body-bg: var(--bs-color-surface-brand-primary);
 }
 
 .table {
-  --bs-table-color: var(--bs-gray-600);
-  --bs-table-bg: var(--bs-gray-100);
+  --bs-table-color: var(--bs-color-content-muted);
+  --bs-table-bg: var(--bs-color-bg-secondary);
   --bs-table-border-color: transparent;
 }`) "scss" "" }}
     </div>

@@ -18,7 +18,7 @@
   hex: "#ffcc00"
   dark_hex: "#ffcc00"
   description: "<b>Warning —</b> Theme color used for non-destructive warning messages."
-  contrast_color: dark
+  contrast_color: black
 - name: info
   hex: "#4170d8"
   dark_hex: "#6699ff"
@@ -27,9 +27,7 @@
   hex: "#ccc"
   dark_hex: "#ccc"
   description: "<b>Light —</b> Additional theme option."
-  contrast_color: dark
 - name: dark
   hex: "#000"
   dark_hex: "#000"
   description: "<b>Dark —</b> Additional theme option."
-  contrast_color: white

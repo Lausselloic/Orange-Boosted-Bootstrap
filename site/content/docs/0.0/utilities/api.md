@@ -209,6 +209,8 @@ $utilities: (
     values: map-merge(
       $utilities-bg-colors,
       (
+        "primary": rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)),
+        /* ... */
         "transparent": transparent
       )
     )

@@ -4,14 +4,14 @@
 
 #{$ouds-root-selector} {
   // All available CSS vars and specific modifications for OUDS Web
-  --docsearch-primary-color: var(--bs-primary);
-  --docsearch-text-color: var(--bs-body-color);
+  --docsearch-primary-color: var(--bs-color-content-brand-primary);
+  --docsearch-text-color: var(--bs-color-content-default);
   // --docsearch-spacing
   // --docsearch-icon-stroke-width
   --docsearch-highlight-color: var(--docsearch-primary-color);
-  --docsearch-muted-color: var(--bs-secondary-color);
+  --docsearch-muted-color: var(--bs-color-content-muted);
   --docsearch-container-background: #{rgba($modal-backdrop-bg, $modal-backdrop-opacity)};
-  --docsearch-logo-color: var(--bs-body-color);
+  --docsearch-logo-color: var(--bs-color-content-default);
   // --docsearch-modal-width
   // --docsearch-modal-height
   --docsearch-modal-background: #{$modal-content-bg};
@@ -21,8 +21,8 @@
   --docsearch-searchbox-focus-background: transparent;
   --docsearch-searchbox-shadow: inset 0 0 0 2px var(--docsearch-text-color);
   // --docsearch-hit-height;
-  --docsearch-hit-color: var(--bs-secondary-color);
-  --docsearch-hit-active-color: var(--bs-highlight-color);
+  --docsearch-hit-color: var(--bs-color-content-muted);
+  --docsearch-hit-active-color: var(--bs-color-content-on-action-highlighted);
   --docsearch-hit-background: transparent;
   // --docsearch-hit-shadow;
   --docsearch-key-gradient: null;
@@ -102,7 +102,7 @@
   @include border-radius(0, 0);
 
   &:focus-within {
-    box-shadow: var(--bs-body-color) 0 0 0 .125rem inset;
+    box-shadow: var(--bs-color-content-default) 0 0 0 .125rem inset;
   }
 }
 
@@ -161,7 +161,7 @@
     }
 
     mark {
-      --docsearch-hit-active-color: var(--bs-body-color);
+      --docsearch-hit-active-color: var(--bs-color-content-default);
       text-decoration: none;
       background: var(--#{$prefix}color-action-highlighted);
     }
@@ -176,7 +176,7 @@
     background: transparent;
 
     path {
-      fill: var(--bs-highlight-color);
+      fill: var(--bs-color-content-on-action-highlighted);
     }
   }
 }

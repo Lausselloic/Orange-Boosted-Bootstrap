@@ -74,7 +74,7 @@
   mix-blend-mode: darken;
 
   svg {
-    filter: drop-shadow(0 1px 1px var(--bs-body-bg));
+    filter: drop-shadow(0 1px 1px var(--#{$prefix}color-bg-primary)); // OUDS mod: instead of `var(--bs-body-bg)`
   }
 }
 

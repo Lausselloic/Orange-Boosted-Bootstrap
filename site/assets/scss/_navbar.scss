@@ -41,7 +41,6 @@
 // OUDS mod
 .bd-header {
   max-height: 100vh;
-  overflow: hidden auto;
 
   @include media-breakpoint-up(lg) {
     overflow: visible;

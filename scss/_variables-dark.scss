@@ -11,12 +11,12 @@
 // scss-docs-start theme-color-dark-variables
 $primary-dark:    $ouds-color-content-brand-primary-dark !default;
 $secondary-dark:  $white !default;
-$success-dark:    $ouds-color-functional-malachite-500 !default;
-$info-dark:       $ouds-color-functional-dodger-blue-500 !default;
-$warning-dark:    $ouds-color-functional-sun-500 !default;
-$danger-dark:     $ouds-color-functional-scarlet-600 !default;
-$light-dark:      $gray-500 !default;
-$dark-dark:       $black !default;
+$success-dark:    $ouds-color-functional-malachite-300 !default;
+$info-dark:       $ouds-color-functional-dodger-blue-300 !default;
+$warning-dark:    $ouds-color-functional-sun-300 !default;
+$danger-dark:     $ouds-color-functional-scarlet-300 !default;
+$light-dark:      $ouds-color-bg-secondary-dark !default;
+$dark-dark:       $ouds-color-bg-emphasized-dark !default;
 // scss-docs-end theme-color-dark-variables
 
 // scss-docs-start theme-colors-dark-map
@@ -34,36 +34,36 @@ $theme-colors-dark: (
 // End mod
 
 // scss-docs-start theme-text-dark-variables
-$primary-text-emphasis-dark:        $primary-dark !default; // OUDS mod: instead of `tint-color($primary, 40%)`
-$secondary-text-emphasis-dark:      $secondary-dark !default; // OUDS mod: instead of `tint-color($secondary, 40%)`
-$success-text-emphasis-dark:        $success-dark !default; // OUDS mod: instead of `tint-color($success, 40%)`
-$info-text-emphasis-dark:           $info-dark !default; // OUDS mod: instead of `tint-color($info, 40%)`
-$warning-text-emphasis-dark:        $warning-dark !default; // OUDS mod: instead of `tint-color($warning, 40%)`
-$danger-text-emphasis-dark:         $danger-dark !default; // OUDS mod: instead of `tint-color($danger, 40%)`
-$light-text-emphasis-dark:          $light-dark !default; // OUDS mod: instead of `$gray-100`
-$dark-text-emphasis-dark:           $dark-dark !default; // OUDS mod: instead of `$gray-300`
+$primary-text-emphasis-dark:        $ouds-color-content-brand-primary-dark !default; // OUDS mod: instead of `tint-color($primary, 40%)`
+$secondary-text-emphasis-dark:      $ouds-color-content-muted-dark !default; // OUDS mod: instead of `tint-color($secondary, 40%)`
+$success-text-emphasis-dark:        $ouds-color-content-status-positive-dark !default; // OUDS mod: instead of `tint-color($success, 40%)`
+$info-text-emphasis-dark:           $ouds-color-content-status-info-dark !default; // OUDS mod: instead of `tint-color($info, 40%)`
+$warning-text-emphasis-dark:        $ouds-color-content-status-warning-dark !default; // OUDS mod: instead of `tint-color($warning, 40%)`
+$danger-text-emphasis-dark:         $ouds-color-content-status-negative-dark !default; // OUDS mod: instead of `tint-color($danger, 40%)`
+$light-text-emphasis-dark:          $ouds-color-content-disabled-dark !default; // OUDS mod: instead of `$gray-100`
+$dark-text-emphasis-dark:           $ouds-color-content-default-dark !default; // OUDS mod: instead of `$gray-300`
 // scss-docs-end theme-text-dark-variables
 
 // scss-docs-start theme-bg-subtle-dark-variables
-$primary-bg-subtle-dark:            $primary-dark !default; // OUDS mod: instead of `shade-color($primary, 80%)`
-$secondary-bg-subtle-dark:          $secondary-dark !default; // OUDS mod: instead of `shade-color($secondary, 80%)`
-$success-bg-subtle-dark:            $success-dark !default; // OUDS mod: instead of `shade-color($success, 80%)`
-$info-bg-subtle-dark:               $info-dark !default; // OUDS mod: instead of `shade-color($info, 80%)`
-$warning-bg-subtle-dark:            $warning-dark !default; // OUDS mod: instead of `shade-color($warning, 80%)`
-$danger-bg-subtle-dark:             $danger-dark !default; // OUDS mod: instead of `shade-color($danger, 80%)`
-$light-bg-subtle-dark:              $light-dark !default; // OUDS mod: instead of `$gray-800`
-$dark-bg-subtle-dark:               $dark-dark !default; // OUDS mod: instead of `mix($gray-800, $black)`
+$primary-bg-subtle-dark:            $ouds-color-bg-tertiary-dark !default; // OUDS mod: instead of `shade-color($primary, 80%)`
+$secondary-bg-subtle-dark:          $ouds-color-bg-secondary-dark !default; // OUDS mod: instead of `shade-color($secondary, 80%)`
+$success-bg-subtle-dark:            $ouds-color-surface-status-positive-muted-dark !default; // OUDS mod: instead of `shade-color($success, 80%)`
+$info-bg-subtle-dark:               $ouds-color-surface-status-info-muted-dark !default; // OUDS mod: instead of `shade-color($info, 80%)`
+$warning-bg-subtle-dark:            $ouds-color-surface-status-warning-muted-dark !default; // OUDS mod: instead of `shade-color($warning, 80%)`
+$danger-bg-subtle-dark:             $ouds-color-surface-status-negative-muted-dark !default; // OUDS mod: instead of `shade-color($danger, 80%)`
+$light-bg-subtle-dark:              $ouds-color-bg-secondary-dark !default; // OUDS mod: instead of `$gray-800`
+$dark-bg-subtle-dark:               $ouds-color-surface-status-neutral-muted-dark !default; // OUDS mod: instead of `mix($gray-800, $black)`
 // scss-docs-end theme-bg-subtle-dark-variables
 
 // scss-docs-start theme-border-subtle-dark-variables
-$primary-border-subtle-dark:        $primary-dark !default; // OUDS mod: instead of `shade-color($primary, 40%)`
-$secondary-border-subtle-dark:      $secondary-dark !default; // OUDS mod: instead of `shade-color($secondary, 40%)`
-$success-border-subtle-dark:        $success-dark !default; // OUDS mod: instead of `shade-color($success, 40%)`
-$info-border-subtle-dark:           $info-dark !default; // OUDS mod: instead of `shade-color($info, 40%)`
-$warning-border-subtle-dark:        $warning-dark !default; // OUDS mod: instead of `shade-color($warning, 40%)`
-$danger-border-subtle-dark:         $danger-dark !default; // OUDS mod: instead of `shade-color($danger, 40%)`
-$light-border-subtle-dark:          $light-dark !default; // OUDS mod: instead of `$gray-700`
-$dark-border-subtle-dark:           $dark-dark !default; // OUDS mod: instead of `$gray-800`
+$primary-border-subtle-dark:        $ouds-color-border-default-dark !default; // OUDS mod: instead of `shade-color($primary, 40%)`
+$secondary-border-subtle-dark:      $ouds-color-border-default-dark !default; // OUDS mod: instead of `shade-color($secondary, 40%)`
+$success-border-subtle-dark:        $ouds-color-border-default-dark !default; // OUDS mod: instead of `shade-color($success, 40%)`
+$info-border-subtle-dark:           $ouds-color-border-default-dark !default; // OUDS mod: instead of `shade-color($info, 40%)`
+$warning-border-subtle-dark:        $ouds-color-border-default-dark !default; // OUDS mod: instead of `shade-color($warning, 40%)`
+$danger-border-subtle-dark:         $ouds-color-border-default-dark !default; // OUDS mod: instead of `shade-color($danger, 40%)`
+$light-border-subtle-dark:          $ouds-color-border-default-dark !default; // OUDS mod: instead of `$gray-700`
+$dark-border-subtle-dark:           $ouds-color-border-default-dark !default; // OUDS mod: instead of `$gray-800`
 // scss-docs-end theme-border-subtle-dark-variables
 
 $body-color-dark:                   $ouds-color-content-default-dark !default; // OUDS mod: instead of `$gray-300`
@@ -73,8 +73,8 @@ $body-secondary-bg-dark:            $ouds-color-bg-secondary-dark !default; // O
 $body-tertiary-color-dark:          $ouds-color-content-muted-dark !default; // OUDS mod: instead of `rgba($body-color-dark, .5)`
 $body-tertiary-bg-dark:             $ouds-color-bg-tertiary-dark !default; // OUDS mod: instead of `mix($gray-800, $gray-900, 50%)`
 $body-emphasis-color-dark:          $ouds-color-content-default-dark !default; // OUDS mod: instead of `$gray-100`
-$border-color-dark:                 $ouds-color-border-default-dark !default; // OUDS mod: instead of `$gray-700`
-$border-color-translucent-dark:     rgba($white, .15) !default;
+$border-color-dark:                 $ouds-color-border-emphasized-dark !default; // OUDS mod: instead of `$gray-700`
+$border-color-translucent-dark:     $ouds-color-border-default-dark !default; // OUDS mod: instead of `rgba($white, .15)`
 $headings-color-dark:               inherit !default;
 $link-color-dark:                   $white !default; // OUDS mod: instead of `tint-color($primary, 40%)`
 $link-hover-color-dark:             $ouds-color-orange-500 !default; // OUDS mod: instead of `shift-color($link-color-dark, -$link-shade-percentage)`

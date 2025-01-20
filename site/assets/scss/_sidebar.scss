@@ -15,7 +15,7 @@
   @include media-breakpoint-down(lg) {
     .offcanvas-lg {
       // OUDS mod: no `border-right-color`
-      box-shadow: var(--bs-box-shadow-lg);
+      box-shadow: $ouds-elevation-emphasized;
     }
   }
 }

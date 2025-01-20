@@ -81,7 +81,7 @@ params:
   icons_usage:                      "https://design.orange.com/0c1af118d/p/92bb17-usage"
   bootstrap:                        "https://getbootstrap.com"
   ouds:
-    web:                            "https://unified-design-system.orange.com/" # TODO LM: replace this URL by the web one or even "https://oran.ge/ds-web" when it will changed
+    web:                            "https://unified-design-system.orange.com/" # TODO: replace this URL by the web one or even "https://oran.ge/ds-web" when it will changed
 
   algolia:
     appId:                          "F4PKENW3TB"

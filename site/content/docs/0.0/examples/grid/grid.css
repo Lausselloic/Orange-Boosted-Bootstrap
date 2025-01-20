@@ -1,9 +1,9 @@
 .themed-grid-col {
   padding-top: .75rem;
   padding-bottom: .75rem;
-  background-color: var(--bs-secondary-bg); /* OUDS mod: instead of `rgba(112.520718, 44.062154, 249.437846, .15)` */
+  background-color: var(--bs-color-bg-secondary); /* OUDS mod: instead of `rgba(112.520718, 44.062154, 249.437846, .15)` */
   /* OUDS mod: no `border` */
-  outline: 1px solid var(--bs-border-color-subtle); /* OUDS mod */
+  outline: 1px solid var(--bs-color-border-default); /* OUDS mod */
 }
 
 .themed-container {
@@ -11,7 +11,7 @@
   padding-top: .75rem; /* OUDS mod */
   padding-bottom: .75rem; /* OUDS mod */
   margin-bottom: 1.5rem;
-  background-color: var(--bs-secondary-bg); /* OUDS mod: instead of `rgba(112.520718, 44.062154, 249.437846, .15)` */
+  background-color: var(--bs-color-bg-secondary); /* OUDS mod: instead of `rgba(112.520718, 44.062154, 249.437846, .15)` */
   /* OUDS mod: no `border` */
-  outline: 1px solid var(--bs-border-color-subtle); /* OUDS mod */
+  outline: 1px solid var(--bs-color-border-default); /* OUDS mod */
 }

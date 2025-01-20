@@ -82,9 +82,6 @@ $utilities: ();
           "border-color": (
             property: border-color,
             class: border,
-            local-vars: (
-              "border-opacity": 1
-            ),
             values: $utilities-border-colors,
             bootstrap-compatibility: true
           ),
@@ -98,18 +95,6 @@ $utilities: ();
             property: border-width,
             class: border,
             values: $border-widths,
-            bootstrap-compatibility: true
-          ),
-          "border-opacity": (
-            css-var: true,
-            class: border-opacity,
-            values: (
-              10: .1,
-              25: .25,
-              50: .5,
-              75: .75,
-              100: 1
-            ),
             bootstrap-compatibility: true
           ),
           "border-top-ouds": (
@@ -759,31 +744,17 @@ $utilities: ();
           "color": (
             property: color,
             class: text,
-            local-vars: (
-              "text-opacity": 1
-            ),
             values: map-merge(
               $utilities-text-colors,
               (
-                "muted": var(--#{$prefix}secondary-color), // Deprecated in Bootstrap
-                "black-50": rgba($black, .5), // Deprecated in Bootstrap
-                "white-50": rgba($white, .5), // Deprecated in Bootstrap
-                "body-secondary": var(--#{$prefix}secondary-color),
-                "body-tertiary": var(--#{$prefix}tertiary-color),
-                "body-emphasis": var(--#{$prefix}emphasis-color),
+                "muted": var(--#{$prefix}color-content-muted), // Deprecated in Bootstrap // OUDS mod: instead of `var(--#{$prefix}secondary-color)`
+                "black-50": var(--#{$prefix}color-content-muted), // Deprecated in Bootstrap // OUDS mod: instead of `rgba($black, .5)`
+                "white-50": var(--#{$prefix}color-content-muted), // Deprecated in Bootstrap // OUDS mod: instead of `rgba($white, .5)`
+                "body-secondary": var(--#{$prefix}color-content-muted), // OUDS mod: instead of `var(--#{$prefix}secondary-color)`
+                "body-tertiary": var(--#{$prefix}color-content-muted), // OUDS mod: instead of `var(--#{$prefix}tertiary-color)`
+                "body-emphasis": var(--#{$prefix}color-content-default), // OUDS mod: instead of `var(--#{$prefix}emphasis-color)`
                 // OUDS mod: no "reset"
               )
-            ),
-            bootstrap-compatibility: true
-          ),
-          "text-opacity": (
-            css-var: true,
-            class: text-opacity,
-            values: (
-              25: .25,
-              50: .5,
-              75: .75,
-              100: 1
             ),
             bootstrap-compatibility: true
           ),
@@ -816,28 +787,13 @@ $utilities: ();
           "background-color": (
             property: background-color,
             class: bg,
-            local-vars: (
-              "bg-opacity": 1
-            ),
             values: map-merge(
               $utilities-bg-colors,
               (
                 // OUDS mod: no "transparent"
-                "body-secondary": rgba(var(--#{$prefix}secondary-bg-rgb), var(--#{$prefix}bg-opacity)),
-                "body-tertiary": rgba(var(--#{$prefix}tertiary-bg-rgb), var(--#{$prefix}bg-opacity)),
+                "body-secondary": var(--#{$prefix}color-bg-secondary), // OUDS mod: instead of `rgba(var(--#{$prefix}secondary-bg-rgb), var(--#{$prefix}bg-opacity))`
+                "body-tertiary": var(--#{$prefix}color-bg-secondary), // OUDS mod: instead of `rgba(var(--#{$prefix}tertiary-bg-rgb), var(--#{$prefix}bg-opacity))`
               )
-            ),
-            bootstrap-compatibility: true,
-          ),
-          "bg-opacity": (
-            css-var: true,
-            class: bg-opacity,
-            values: (
-              10: .1,
-              25: .25,
-              50: .5,
-              75: .75,
-              100: 1
             ),
             bootstrap-compatibility: true,
           ),
@@ -851,6 +807,12 @@ $utilities: ();
             property: background-color,
             class: bg,
             values: $ouds-backgrounds,
+          ),
+          "gradient": (
+            property: background-image,
+            class: bg,
+            values: (gradient: var(--#{$prefix}gradient)),
+            bootstrap-compatibility: true
           ),
         ) !global;
 
@@ -10037,9 +9999,6 @@ $utilities: ();
           "border-color": (
             property: border-color,
             class: border,
-            local-vars: (
-              "border-opacity": 1
-            ),
             values: $utilities-border-colors,
             bootstrap-compatibility: true
           ),
@@ -10053,18 +10012,6 @@ $utilities: ();
             property: border-width,
             class: border,
             values: $border-widths,
-            bootstrap-compatibility: true
-          ),
-          "border-opacity": (
-            css-var: true,
-            class: border-opacity,
-            values: (
-              10: .1,
-              25: .25,
-              50: .5,
-              75: .75,
-              100: 1
-            ),
             bootstrap-compatibility: true
           ),
           "border-top-ouds": (
@@ -10714,31 +10661,17 @@ $utilities: ();
           "color": (
             property: color,
             class: text,
-            local-vars: (
-              "text-opacity": 1
-            ),
             values: map-merge(
               $utilities-text-colors,
               (
-                "muted": var(--#{$prefix}secondary-color), // Deprecated in Bootstrap
-                "black-50": rgba($black, .5), // Deprecated in Bootstrap
-                "white-50": rgba($white, .5), // Deprecated in Bootstrap
-                "body-secondary": var(--#{$prefix}secondary-color),
-                "body-tertiary": var(--#{$prefix}tertiary-color),
-                "body-emphasis": var(--#{$prefix}emphasis-color),
+                "muted": var(--#{$prefix}color-content-muted), // Deprecated in Bootstrap // OUDS mod: instead of `var(--#{$prefix}secondary-color)`
+                "black-50": var(--#{$prefix}color-content-muted), // Deprecated in Bootstrap // OUDS mod: instead of `rgba($black, .5)`
+                "white-50": var(--#{$prefix}color-content-muted), // Deprecated in Bootstrap // OUDS mod: instead of `rgba($white, .5)`
+                "body-secondary": var(--#{$prefix}color-content-muted), // OUDS mod: instead of `var(--#{$prefix}secondary-color)`
+                "body-tertiary": var(--#{$prefix}color-content-muted), // OUDS mod: instead of `var(--#{$prefix}tertiary-color)`
+                "body-emphasis": var(--#{$prefix}color-content-default), // OUDS mod: instead of `var(--#{$prefix}emphasis-color)`
                 // OUDS mod: no "reset"
               )
-            ),
-            bootstrap-compatibility: true
-          ),
-          "text-opacity": (
-            css-var: true,
-            class: text-opacity,
-            values: (
-              25: .25,
-              50: .5,
-              75: .75,
-              100: 1
             ),
             bootstrap-compatibility: true
           ),
@@ -10771,28 +10704,13 @@ $utilities: ();
           "background-color": (
             property: background-color,
             class: bg,
-            local-vars: (
-              "bg-opacity": 1
-            ),
             values: map-merge(
               $utilities-bg-colors,
               (
                 // OUDS mod: no "transparent"
-                "body-secondary": rgba(var(--#{$prefix}secondary-bg-rgb), var(--#{$prefix}bg-opacity)),
-                "body-tertiary": rgba(var(--#{$prefix}tertiary-bg-rgb), var(--#{$prefix}bg-opacity)),
+                "body-secondary": var(--#{$prefix}color-bg-secondary), // OUDS mod: instead of `rgba(var(--#{$prefix}secondary-bg-rgb), var(--#{$prefix}bg-opacity))`
+                "body-tertiary": var(--#{$prefix}color-bg-secondary), // OUDS mod: instead of `rgba(var(--#{$prefix}tertiary-bg-rgb), var(--#{$prefix}bg-opacity))`
               )
-            ),
-            bootstrap-compatibility: true,
-          ),
-          "bg-opacity": (
-            css-var: true,
-            class: bg-opacity,
-            values: (
-              10: .1,
-              25: .25,
-              50: .5,
-              75: .75,
-              100: 1
             ),
             bootstrap-compatibility: true,
           ),
@@ -10806,6 +10724,12 @@ $utilities: ();
             property: background-color,
             class: bg,
             values: $ouds-backgrounds,
+          ),
+          "gradient": (
+            property: background-image,
+            class: bg,
+            values: (gradient: var(--#{$prefix}gradient)),
+            bootstrap-compatibility: true
           ),
         ) !global;
 
@@ -11118,53 +11042,43 @@ $utilities: ();
         }
 
         .border-primary {
-          --bs-border-opacity: 1;
-          border-color: rgba(var(--bs-primary-rgb), var(--bs-border-opacity)) !important;
+          border-color: var(--bs-color-border-brand-primary) !important;
         }
 
         .border-secondary {
-          --bs-border-opacity: 1;
-          border-color: rgba(var(--bs-secondary-rgb), var(--bs-border-opacity)) !important;
+          border-color: var(--bs-color-border-emphasized) !important;
         }
 
         .border-success {
-          --bs-border-opacity: 1;
-          border-color: rgba(var(--bs-success-rgb), var(--bs-border-opacity)) !important;
+          border-color: var(--bs-color-border-emphasized) !important;
         }
 
         .border-info {
-          --bs-border-opacity: 1;
-          border-color: rgba(var(--bs-info-rgb), var(--bs-border-opacity)) !important;
+          border-color: var(--bs-color-border-emphasized) !important;
         }
 
         .border-warning {
-          --bs-border-opacity: 1;
-          border-color: rgba(var(--bs-warning-rgb), var(--bs-border-opacity)) !important;
+          border-color: var(--bs-color-border-emphasized) !important;
         }
 
         .border-danger {
-          --bs-border-opacity: 1;
-          border-color: rgba(var(--bs-danger-rgb), var(--bs-border-opacity)) !important;
+          border-color: var(--bs-color-border-emphasized) !important;
         }
 
         .border-light {
-          --bs-border-opacity: 1;
-          border-color: rgba(85, 85, 85, var(--bs-border-opacity)) !important;
+          border-color: var(--bs-color-border-emphasized) !important;
         }
 
         .border-dark {
-          --bs-border-opacity: 1;
-          border-color: rgba(39, 39, 39, var(--bs-border-opacity)) !important;
+          border-color: var(--bs-color-border-emphasized) !important;
         }
 
         .border-black {
-          --bs-border-opacity: 1;
-          border-color: rgba(var(--bs-black-rgb), var(--bs-border-opacity)) !important;
+          border-color: var(--bs-color-always-black) !important;
         }
 
         .border-white {
-          --bs-border-opacity: 1;
-          border-color: rgba(var(--bs-white-rgb), var(--bs-border-opacity)) !important;
+          border-color: var(--bs-color-always-white) !important;
         }
 
         .border-primary-subtle {
@@ -11217,34 +11131,6 @@ $utilities: ();
 
         .border-5 {
           border-width: 5px !important;
-        }
-
-        .border-opacity-10 {
-          // Sass compilation will put a leading zero so we want to keep that one
-          // stylelint-disable-next-line @stylistic/number-leading-zero
-          --bs-border-opacity: 0.1; // stylelint-disable-line @stylistic/number-leading-zero
-        }
-
-        .border-opacity-25 {
-          // Sass compilation will put a leading zero so we want to keep that one
-          // stylelint-disable-next-line @stylistic/number-leading-zero
-          --bs-border-opacity: 0.25; // stylelint-disable-line @stylistic/number-leading-zero
-        }
-
-        .border-opacity-50 {
-          // Sass compilation will put a leading zero so we want to keep that one
-          // stylelint-disable-next-line @stylistic/number-leading-zero
-          --bs-border-opacity: 0.5; // stylelint-disable-line @stylistic/number-leading-zero
-        }
-
-        .border-opacity-75 {
-          // Sass compilation will put a leading zero so we want to keep that one
-          // stylelint-disable-next-line @stylistic/number-leading-zero
-          --bs-border-opacity: 0.75; // stylelint-disable-line @stylistic/number-leading-zero
-        }
-
-        .border-opacity-100 {
-          --bs-border-opacity: 1;
         }
 
         .border-top {
@@ -14162,104 +14048,71 @@ $utilities: ();
         }
 
         .text-primary {
-          --bs-text-opacity: 1;
-          color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
+          color: var(--bs-color-content-brand-primary) !important;
         }
 
         .text-secondary {
-          --bs-text-opacity: 1;
-          color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important;
+          color: var(--bs-color-content-muted) !important;
         }
 
         .text-success {
-          --bs-text-opacity: 1;
-          color: rgba(var(--bs-success-rgb), var(--bs-text-opacity)) !important;
+          color: var(--bs-color-content-status-positive) !important;
         }
 
         .text-info {
-          --bs-text-opacity: 1;
-          color: rgba(var(--bs-info-rgb), var(--bs-text-opacity)) !important;
+          color: var(--bs-color-content-status-info) !important;
         }
 
         .text-warning {
-          --bs-text-opacity: 1;
-          color: rgba(var(--bs-warning-rgb), var(--bs-text-opacity)) !important;
+          color: var(--bs-color-content-status-warning) !important;
         }
 
         .text-danger {
-          --bs-text-opacity: 1;
-          color: rgba(var(--bs-danger-rgb), var(--bs-text-opacity)) !important;
+          color: var(--bs-color-content-status-negative) !important;
         }
 
         .text-light {
-          --bs-text-opacity: 1;
-          color: rgba(var(--bs-light-rgb), var(--bs-text-opacity)) !important;
+          color: var(--bs-color-content-disabled) !important;
         }
 
         .text-dark {
-          --bs-text-opacity: 1;
-          color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
+          color: var(--bs-color-content-default) !important;
         }
 
         .text-black {
-          --bs-text-opacity: 1;
-          color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
+          color: var(--bs-color-always-black) !important;
         }
 
         .text-white {
-          --bs-text-opacity: 1;
-          color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+          color: var(--bs-color-always-white) !important;
         }
 
         .text-body {
-          --bs-text-opacity: 1;
-          color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
+          color: var(--bs-color-content-default) !important;
         }
 
         .text-muted {
-          --bs-text-opacity: 1;
-          color: var(--bs-secondary-color) !important;
+          color: var(--bs-color-content-muted) !important;
         }
 
         .text-black-50 {
-          --bs-text-opacity: 1;
-          color: rgba(0, 0, 0, 0.5) !important; // stylelint-disable-line @stylistic/number-leading-zero
+          color: var(--bs-color-content-muted) !important;
         }
 
         .text-white-50 {
-          --bs-text-opacity: 1;
-          color: rgba(255, 255, 255, 0.5) !important; // stylelint-disable-line @stylistic/number-leading-zero
+          color: var(--bs-color-content-muted) !important;
         }
 
         .text-body-secondary {
-          --bs-text-opacity: 1;
-          color: var(--bs-secondary-color) !important;
+          color: var(--bs-color-content-muted) !important;
         }
 
         .text-body-tertiary {
-          --bs-text-opacity: 1;
-          color: var(--bs-tertiary-color) !important;
+          color: var(--bs-color-content-muted) !important;
         }
 
         .text-body-emphasis {
-          --bs-text-opacity: 1;
-          color: var(--bs-emphasis-color) !important;
-        }
-
-        .text-opacity-25 {
-          --bs-text-opacity: 0.25; // stylelint-disable-line @stylistic/number-leading-zero
-        }
-
-        .text-opacity-50 {
-          --bs-text-opacity: 0.5; // stylelint-disable-line @stylistic/number-leading-zero
-        }
-
-        .text-opacity-75 {
-          --bs-text-opacity: 0.75; // stylelint-disable-line @stylistic/number-leading-zero
-        }
-
-        .text-opacity-100 {
-          --bs-text-opacity: 1;
+          color: var(--bs-color-content-default) !important;
         }
 
         .text-primary-emphasis {
@@ -14407,88 +14260,55 @@ $utilities: ();
         }
 
         .bg-primary {
-          --bs-bg-opacity: 1;
-          background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+          background-color: var(--bs-color-surface-brand-primary) !important;
         }
 
         .bg-secondary {
-          --bs-bg-opacity: 1;
-          background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
+          background-color: var(--bs-color-bg-secondary) !important;
         }
 
         .bg-success {
-          --bs-bg-opacity: 1;
-          background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
+          background-color: var(--bs-color-surface-status-positive-emphasized) !important;
         }
 
         .bg-info {
-          --bs-bg-opacity: 1;
-          background-color: rgba(var(--bs-info-rgb), var(--bs-bg-opacity)) !important;
+          background-color: var(--bs-color-surface-status-info-emphasized) !important;
         }
 
         .bg-warning {
-          --bs-bg-opacity: 1;
-          background-color: rgba(var(--bs-warning-rgb), var(--bs-bg-opacity)) !important;
+          background-color: var(--bs-color-surface-status-warning-emphasized) !important;
         }
 
         .bg-danger {
-          --bs-bg-opacity: 1;
-          background-color: rgba(var(--bs-danger-rgb), var(--bs-bg-opacity)) !important;
+          background-color: var(--bs-color-surface-status-negative-emphasized) !important;
         }
 
         .bg-light {
-          --bs-bg-opacity: 1;
-          background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+          background-color: var(--bs-color-bg-secondary) !important;
         }
 
         .bg-dark {
-          --bs-bg-opacity: 1;
-          background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+          background-color: var(--bs-color-surface-status-neutral-emphasized) !important;
         }
 
         .bg-black {
-          --bs-bg-opacity: 1;
-          background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;
+          background-color: var(--bs-color-always-black) !important;
         }
 
         .bg-white {
-          --bs-bg-opacity: 1;
-          background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
+          background-color: var(--bs-color-always-white) !important;
         }
 
         .bg-body {
-          --bs-bg-opacity: 1;
-          background-color: rgba(var(--bs-body-bg-rgb), var(--bs-bg-opacity)) !important;
+          background-color: var(--bs-color-bg-primary) !important;
         }
 
         .bg-body-secondary {
-          --bs-bg-opacity: 1;
-          background-color: rgba(var(--bs-secondary-bg-rgb), var(--bs-bg-opacity)) !important;
+          background-color: var(--bs-color-bg-secondary) !important;
         }
 
         .bg-body-tertiary {
-          --bs-bg-opacity: 1;
-          background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
-        }
-
-        .bg-opacity-10 {
-          --bs-bg-opacity: 0.1; // stylelint-disable-line @stylistic/number-leading-zero
-        }
-
-        .bg-opacity-25 {
-          --bs-bg-opacity: 0.25; // stylelint-disable-line @stylistic/number-leading-zero
-        }
-
-        .bg-opacity-50 {
-          --bs-bg-opacity: 0.5; // stylelint-disable-line @stylistic/number-leading-zero
-        }
-
-        .bg-opacity-75 {
-          --bs-bg-opacity: 0.75; // stylelint-disable-line @stylistic/number-leading-zero
-        }
-
-        .bg-opacity-100 {
-          --bs-bg-opacity: 1;
+          background-color: var(--bs-color-bg-secondary) !important;
         }
 
         .bg-primary-subtle {
@@ -14601,6 +14421,10 @@ $utilities: ();
 
         .bg-transparent {
           background-color: transparent !important;
+        }
+
+        .bg-gradient {
+          background-image: var(--bs-gradient) !important;
         }
 
         @media (min-width: 390px) {

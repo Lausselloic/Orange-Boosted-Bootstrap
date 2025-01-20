@@ -5,7 +5,6 @@
 
 // Color system
 
-// TODO LM: Need to decide what to set in here.
 // scss-docs-start gray-color-variables
 $white:    $ouds-color-functional-white !default; // OUDS mod: instead of `#fff`
 $gray-100: $ouds-color-functional-light-gray-80 !default; // OUDS mod: instead of `#f8f9fa`
@@ -298,16 +297,15 @@ $cyans: (
 ) !default;
 // fusv-enable
 
-// TODO LM: take care of the rest
 // scss-docs-start theme-color-variables
-$primary:       $orange !default;
-$secondary:     $black !default;
+$primary:       $orange !default; // OUDS mod: instead of `$blue`
+$secondary:     $black !default; // OUDS mod: instead of `$gray-600`
 $success:       $green !default;
-$info:          $blue !default;
+$info:          $blue !default; // OUDS mod: instead of `$cyan`
 $warning:       $yellow !default;
 $danger:        $red !default;
-$light:         $gray-500 !default;
-$dark:          $black !default;
+$light:         $ouds-color-bg-secondary-light !default; // OUDS mod: instead of `$gray-100`
+$dark:          $ouds-color-bg-emphasized-light !default; // OUDS mod: instead of `$gray-900`
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -324,36 +322,36 @@ $theme-colors: (
 // scss-docs-end theme-colors-map
 
 // scss-docs-start theme-text-variables
-$primary-text-emphasis:   $primary !default; // OUDS mod: instead of `shade-color($primary, 60%)`
-$secondary-text-emphasis: $secondary !default; // OUDS mod: instead of `shade-color($secondary, 60%)`
-$success-text-emphasis:   $success !default; // OUDS mod: instead of `shade-color($success, 60%)`
-$info-text-emphasis:      $info !default; // OUDS mod: instead of `shade-color($info, 60%)`
-$warning-text-emphasis:   $warning !default; // OUDS mod: instead of `shade-color($warning, 60%)`
-$danger-text-emphasis:    $danger !default; // OUDS mod: instead of `shade-color($danger, 60%)`
-$light-text-emphasis:     $light !default; // OUDS mod: instead of `$gray-700`
-$dark-text-emphasis:      $dark !default; // OUDS mod: instead of `$gray-700`
+$primary-text-emphasis:   $ouds-color-content-brand-primary-light !default; // OUDS mod: instead of `shade-color($primary, 60%)`
+$secondary-text-emphasis: $ouds-color-content-muted-light !default; // OUDS mod: instead of `shade-color($secondary, 60%)`
+$success-text-emphasis:   $ouds-color-content-status-positive-light !default; // OUDS mod: instead of `shade-color($success, 60%)`
+$info-text-emphasis:      $ouds-color-content-status-info-light !default; // OUDS mod: instead of `shade-color($info, 60%)`
+$warning-text-emphasis:   $ouds-color-content-status-warning-light !default; // OUDS mod: instead of `shade-color($warning, 60%)`
+$danger-text-emphasis:    $ouds-color-content-status-negative-light !default; // OUDS mod: instead of `shade-color($danger, 60%)`
+$light-text-emphasis:     $ouds-color-content-disabled-light !default; // OUDS mod: instead of `$gray-700`
+$dark-text-emphasis:      $ouds-color-content-default-light !default; // OUDS mod: instead of `$gray-700`
 // scss-docs-end theme-text-variables
 
 // scss-docs-start theme-bg-subtle-variables
-$primary-bg-subtle:       $primary !default; // OUDS mod: instead of `tint-color($primary, 80%)`
-$secondary-bg-subtle:     $secondary !default; // OUDS mod: instead of `tint-color($secondary, 80%)`
-$success-bg-subtle:       $success !default; // OUDS mod: instead of `tint-color($success, 80%)`
-$info-bg-subtle:          $info !default; // OUDS mod: instead of `tint-color($info, 80%)`
-$warning-bg-subtle:       $warning !default; // OUDS mod: instead of `tint-color($warning, 80%)`
-$danger-bg-subtle:        $danger !default; // OUDS mod: instead of `tint-color($danger, 80%)`
-$light-bg-subtle:         $light !default; // OUDS mod: instead of `mix($gray-100, $white)`
-$dark-bg-subtle:          $dark !default; // OUDS mod: instead of `$gray-400`
+$primary-bg-subtle:       $ouds-color-bg-tertiary-light !default; // OUDS mod: instead of `tint-color($primary, 80%)`
+$secondary-bg-subtle:     $ouds-color-bg-secondary-light !default; // OUDS mod: instead of `tint-color($secondary, 80%)`
+$success-bg-subtle:       $ouds-color-surface-status-positive-muted-light !default; // OUDS mod: instead of `tint-color($success, 80%)`
+$info-bg-subtle:          $ouds-color-surface-status-info-muted-light !default; // OUDS mod: instead of `tint-color($info, 80%)`
+$warning-bg-subtle:       $ouds-color-surface-status-warning-muted-light !default; // OUDS mod: instead of `tint-color($warning, 80%)`
+$danger-bg-subtle:        $ouds-color-surface-status-negative-muted-light !default; // OUDS mod: instead of `tint-color($danger, 80%)`
+$light-bg-subtle:         $ouds-color-bg-secondary-light !default; // OUDS mod: instead of `mix($gray-100, $white)`
+$dark-bg-subtle:          $ouds-color-surface-status-neutral-muted-light !default; // OUDS mod: instead of `$gray-400`
 // scss-docs-end theme-bg-subtle-variables
 
 // scss-docs-start theme-border-subtle-variables
-$primary-border-subtle:   $primary !default; // OUDS mod: instead of `tint-color($primary, 60%)`
-$secondary-border-subtle: $secondary !default; // OUDS mod: instead of `tint-color($secondary, 60%)`
-$success-border-subtle:   $success !default; // OUDS mod: instead of `tint-color($success, 60%)`
-$info-border-subtle:      $info !default; // OUDS mod: instead of `tint-color($info, 60%)`
-$warning-border-subtle:   $warning !default; // OUDS mod: instead of `tint-color($warning, 60%)`
-$danger-border-subtle:    $danger !default; // OUDS mod: instead of `tint-color($danger, 60%)`
-$light-border-subtle:     $light !default; // OUDS mod: instead of `$gray-200`
-$dark-border-subtle:      $dark !default; // OUDS mod: instead of `$gray-500`
+$primary-border-subtle:   $ouds-color-border-default-light !default; // OUDS mod: instead of `tint-color($primary, 60%)`
+$secondary-border-subtle: $ouds-color-border-default-light !default; // OUDS mod: instead of `tint-color($secondary, 60%)`
+$success-border-subtle:   $ouds-color-border-default-light !default; // OUDS mod: instead of `tint-color($success, 60%)`
+$info-border-subtle:      $ouds-color-border-default-light !default; // OUDS mod: instead of `tint-color($info, 60%)`
+$warning-border-subtle:   $ouds-color-border-default-light !default; // OUDS mod: instead of `tint-color($warning, 60%)`
+$danger-border-subtle:    $ouds-color-border-default-light !default; // OUDS mod: instead of `tint-color($danger, 60%)`
+$light-border-subtle:     $ouds-color-border-default-light !default; // OUDS mod: instead of `$gray-200`
+$dark-border-subtle:      $ouds-color-border-default-light !default; // OUDS mod: instead of `$gray-500`
 // scss-docs-end theme-border-subtle-variables
 
 // Characters which are escaped by the escape-svg function
@@ -612,8 +610,8 @@ $border-widths: (
   5: $ouds-border-width-thicker * 1.25 // OUDS mod: instead of `$border-width * 2.5`
 ) !default;
 $border-style:                $ouds-border-style-default !default; // OUDS mod: instead of `solid`
-$border-color:                $ouds-color-border-default-light !default; // OUDS mod: instead of `$gray-300`
-$border-color-translucent:    rgba($black, .175) !default;
+$border-color:                $ouds-color-border-emphasized-light !default; // OUDS mod: instead of `$gray-300`
+$border-color-translucent:    $ouds-color-border-default-light !default; // OUDS mod: instead of `rgba($black, .175)`
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
@@ -2208,11 +2206,11 @@ $code-color:                        $ouds-color-content-muted-light !default; //
 $kbd-padding-y:                     px-to-rem($ouds-space-fixed-smash) !default; // instead of `.1875rem`
 $kbd-padding-x:                     px-to-rem($ouds-space-fixed-shortest) !default; // instead of `.375rem`
 $kbd-font-size:                     $code-font-size !default;
-$kbd-color:                         var(--#{$prefix}body-bg) !default;
-$kbd-bg:                            var(--#{$prefix}body-color) !default;
+$kbd-color:                         var(--#{$prefix}color-content-on-status-emphasized-alt) !default; // OUDS mod: instead of `var(--#{$prefix}body-bg)`
+$kbd-bg:                            var(--#{$prefix}color-surface-status-neutral-emphasized) !default; // OUDS mod: instead of `var(--#{$prefix}body-color)`
 $nested-kbd-font-weight:            null !default; // Deprecated in Bootstrap v5.2.0, removing in v6
 
-$pre-color:                         var(--#{$prefix}code-color) !default; // instead of `null`
+$pre-color:                         var(--#{$prefix}color-content-muted) !default; // instead of `null`
 // End mod
 
 //

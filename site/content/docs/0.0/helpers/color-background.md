@@ -43,7 +43,6 @@ Please consider using our [color modes]({{< docsref "/customize/color-modes" >}}
 {{< /callout >}}
 
 {{< bootstrap-compatibility >}}
-<!-- TODO LM: Check Bootstrap compatibility -->
 Color and background helpers combine the power of our [`.text-*` utilities]({{< docsref "/utilities/colors" >}}) and [`.bg-*` utilities]({{< docsref "/utilities/background" >}}) in one class. Using our Sass `color-contrast()` function, we automatically determine a contrasting `color` for a particular `background-color`.
 
 {{< callout warning >}}

@@ -29,12 +29,12 @@
       padding: $ouds-space-fixed-shortest 0 $ouds-space-fixed-shortest $ouds-space-fixed-medium; // OUDS mod
       color: inherit;
       text-decoration: none;
-      // OUDS mod: no border-left
+      border-left: .125rem solid transparent;
 
       &:hover,
       &.active {
         color: var(--bd-toc-color);
-        border-left-color: var(--bs-primary); // OUDS mod: instead of `--bd-toc-color`
+        border-left-color: var(--bs-color-border-brand-primary); // OUDS mod: instead of `--bd-toc-color`
       }
 
       &.active {

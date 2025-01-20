@@ -22,7 +22,7 @@
   display: block;
   padding: .5em;
   line-height: 1;
-  color: var(--bs-body-color);
+  color: var(--bs-color-content-default); // OUDS mod: instead of `var(--#{$prefix}body-color)`
   background-color: transparent; // OUDS mod: instead of `var(--bd-pre-bg)` so that the focus-visible outline in the source code area is rendered behind this surface
   border: 0;
   @include border-radius(.25rem);

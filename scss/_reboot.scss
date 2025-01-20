@@ -25,7 +25,7 @@
 // Ability to the value of the root font sizes, affecting the value of `rem`.
 // null by default, thus nothing is generated.
 
-#{$ouds-root-selector} {
+#{$ouds-root-selector} { // OUDS mod: instead of `:root`
   @if $font-size-root != null {
     @include font-size(var(--#{$prefix}root-font-size));
   }
@@ -61,7 +61,7 @@
 //    See https://developer.mozilla.org/fr/docs/Web/CSS/font-synthesis
 
 // scss-docs-start reboot-body-rules
-#{$ouds-root-selector} > * {
+#{$ouds-root-selector} > * { // OUDS mod: instead of `body`
   position: relative; // OUDS mod: required for back-to-top component
   margin: 0; // 1
   font-family: var(--#{$prefix}body-font-family);
@@ -69,12 +69,12 @@
   @include font-size(var(--#{$prefix}body-font-size));
   font-weight: var(--#{$prefix}body-font-weight);
   line-height: var(--#{$prefix}body-line-height);
-  color: var(--#{$prefix}body-color);
+  color: var(--#{$prefix}color-content-default); // OUDS mod: instead of `var(--#{$prefix}body-color)`
   text-align: var(--#{$prefix}body-text-align);
 
   /* rtl:remove */
   letter-spacing: var(--#{$prefix}body-letter-spacing); // OUDS mod
-  background-color: var(--#{$prefix}body-bg); // 2
+  background-color: var(--#{$prefix}color-bg-primary); // 2 // OUDS mod: instead of `var(--#{$prefix}body-bg)`
   -webkit-text-size-adjust: 100%; // 3
   -webkit-tap-highlight-color: rgba($black, 0); // 4
   -webkit-font-smoothing: subpixel-antialiased; // OUDS mod
@@ -325,8 +325,8 @@ small {
 
 mark {
   padding: $mark-padding;
-  color: var(--#{$prefix}highlight-color);
-  background-color: var(--#{$prefix}highlight-bg);
+  color: var(--#{$prefix}color-content-on-action-highlighted); // OUDS mod: instead of `var(--#{$prefix}highlight-color)`
+  background-color: var(--#{$prefix}color-action-highlighted); // OUDS mod: instead of `var(--#{$prefix}highlight-bg)`
 }
 
 
@@ -408,7 +408,7 @@ var, // OUDS mod
 code {
   @include font-size($code-font-size);
   font-style: normal; // OUDS mod: <var> is italic in all browsers
-  color: var(--#{$prefix}code-color);
+  color: var(--#{$prefix}color-content-muted);
   word-wrap: break-word;
 
   // Streamline the style when inside anchors to avoid broken underline and more
@@ -744,7 +744,7 @@ progress {
 // OUDS mod
 // Selection
 ::selection {
-  color: var(--#{$prefix}highlight-color);
-  background-color: var(--#{$prefix}highlight-bg);
+  color: var(--#{$prefix}color-content-on-action-highlighted);
+  background-color: var(--#{$prefix}color-action-highlighted);
 }
 // End mod

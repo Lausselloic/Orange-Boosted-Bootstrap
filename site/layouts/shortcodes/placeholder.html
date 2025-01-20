@@ -14,7 +14,7 @@
 
 {{- $grays := $.Site.Data.grays -}}
 {{- $default_color := "var(--bs-tertiary-color)" -}} <!--OUDS mod: instead of `(index $grays 2).hex`-->
-{{- $default_background := "var(--bs-secondary-bg)" -}} <!--OUDS mod: instead of `(index $grays 5).hex`-->
+{{- $default_background := "var(--bs-color-bg-secondary)" -}} <!--OUDS mod: instead of `(index $grays 5).hex`-->
 
 {{- $title := .Get "title" | default "Placeholder" -}}
 {{- $class := .Get "class" -}}

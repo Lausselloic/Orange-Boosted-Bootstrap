@@ -4,5 +4,5 @@
   // The z-index is needed for the dropdown to stay on top of the content
   z-index: $zindex-dropdown - 1; // goes under the navbar + dropdown.
   background-color: var(--#{$prefix}color-bg-primary);
-  box-shadow: 0 .5rem 1rem rgba(var(--bs-body-color-rgb), .05), inset 0 -1px 0 rgba(var(--bs-body-color-rgb), .15);
+  box-shadow: $ouds-elevation-sticky-navigation-scrolled, inset 0 -1px 0 var(--#{$prefix}color-border-default);
 }

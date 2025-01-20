@@ -251,7 +251,7 @@
 // scss-docs-start custom-tooltip
 .custom-tooltip {
   --bs-tooltip-bg: var(--bd-violet-bg);
-  --bs-tooltip-color: var(--bs-white);
+  --bs-tooltip-color: var(--bs-color-always-white);
 }
 // scss-docs-end custom-tooltip
 
@@ -261,7 +261,7 @@
   --bs-popover-border-color: var(--bd-violet-bg);
   --bs-popover-header-bg: var(--bd-violet-bg);
   --bs-popover-header-padding-y: .5rem; // OUDS mod
-  --bs-popover-header-color: var(--bs-white);
+  --bs-popover-header-color: var(--bs-color-always-white);
   --bs-popover-body-padding-x: 1rem;
   --bs-popover-body-padding-y: .5rem;
 }
@@ -347,7 +347,7 @@
   > div {
     // OUDS mod: no `color`
     background-color: var(--bd-primary-light);
-    border: 1px solid var(--bs-primary);
+    border: 1px solid var(--bs-color-border-brand-primary);
 
     > span {
       position: absolute;
@@ -506,7 +506,7 @@
   height: 2rem;
   vertical-align: bottom;
   content: "";
-  background-color: var(--bs-body-color);
+  background-color: var(--bs-color-content-default);
   background-size: contain;
   mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'><path d='M553.478 147.416v.017a74.956 74.956 0 0 0-107.08.13v-.021L100 500h150v300a75 75 0 0 0 75 75h350a75 75 0 0 0 75-75V500h150ZM580 537.52V755H362.5a37.5 37.5 0 0 1-37.5-37.5V500h217.5a37.5 37.5 0 0 1 37.5 37.5v.02Z'/></svg>");
 }
