@@ -32,6 +32,14 @@ Let's start with the most obvious change you'll notice: the name. **Boosted is n
 
 From now on, OUDS Web won't embed Bootstrap elements that are not part of Orange Unified Design System. However, you can still use our Bootstrap compatibility mode by using `ouds-web-bootstrap.css` and `ouds-web-bootstrap.min.css`.
 
+## Foundations
+
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> Orange color has been modified from `#f16e00` to `#f15e00`. It means that under certain circumstances, you might be able to use Orange and light gray items together.
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> We provide two brand new themes that are <code>root</code> and <code>root-inverted</code>. They are complementary to `light` and `dark`. See more on our [color modes page]({{< docsref "/customize/color-modes" >}})
+
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> The root selector have been tweaked for more flexibility on JS frameworks. Please don't hesitate to contact us if you find any issue with it.
+
 ## Fonts
 
 OUDS Web doesn't use the Helvetica Neue font. Instead, it uses the system font stack. This means that the font will be slightly different depending on the operating system and browser being used.
@@ -78,6 +86,10 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 - <span class="badge text-bg-status-warning-emphasized">Warning</span> `.btn-close-white` class has been removed as it was deprecated in Boosted v5.3.3.
 
+### Form floating
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> Added the Form Floating documentation page.
+
 ## Forms
 
 ### Checks & radios
@@ -85,6 +97,30 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 - <span class="badge text-bg-status-warning-emphasized">Warning</span> `form-star-rating()` mixin has been removed as it was deprecated in Boosted v5.3.2.
 
 ## Helpers
+
+### Color background
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Most color-background color helpers have been removed or changed.
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> The new color-background color helpers are now available. Visit our [color-bg page]({{< docsref "/helpers/color-background" >}}) to see more.
+
+- <details>
+    <summary><span class="badge text-bg-status-info-emphasized">Info</span> Here are the modifications to apply in the exact same order to your websites. Please make sure to adapt the <code>[data-bs-theme]</code> to your context:</summary>
+
+  1. `.text-bg-primary` → `.text-bg-brand-primary`
+  2. `.text-bg-secondary` → `.text-bg-emphasized` or `.text-bg-neutral-emphasized`
+  3. `.text-bg-success` → `.text-bg-status-positive-emphasized` or in some rare cases `.text-bg-status-positive-muted`
+  4. `.text-bg-danger` → `.text-bg-status-negative-emphasized` or in some rare cases `.text-bg-status-negative-muted`
+  5. `.text-bg-warning` → `.text-bg-status-warning-emphasized` or in some rare cases `.text-bg-status-warning-muted`
+  6. `.text-bg-info` → `.text-bg-status-info-emphasized` or in some rare cases `.text-bg-status-info-muted`
+  7. `.text-bg-light` → `.text-bg-secondary`
+  8. `.text-bg-dark` → `.text-bg-emphasized`
+
+  </details>
+
+### Colored links
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> All colored links helpers have been removed.
 
 ### Icon
 
@@ -102,6 +138,43 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Responsive sticky helpers: `.sticky-xs-{top|bottom}`, `.sticky-2xl-{top|bottom}` and `.sticky-3xl-{top|bottom}`.
 
 ## Utilities
+
+### Background
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Most background color utilities have been removed or changed.
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Background opacity utilities have been removed.
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> The new background color utilities are now available. Visit our [background page]({{< docsref "/utilities/background" >}}) to see more.
+
+- <details>
+    <summary><span class="badge text-bg-status-info-emphasized">Info</span> Here are the modifications to apply in the exact same order to your websites. Please make sure to adapt the <code>[data-bs-theme]</code> to your context:</summary>
+
+  1. `.bg-transparent` stays the same
+  2. `.bg-white` → `.bg-always-white`
+  3. `.bg-black` → `.bg-always-black`
+  4. `.bg-primary` → `.bg-brand-primary`
+  5. `.bg-primary-subtle` (that shouldn't have been used) → `.bg-tertiary`
+  6. `.bg-secondary` → `.bg-emphasized` or in some rare cases `.bg-status-neutral-emphasized`
+  7. `.bg-secondary-subtle` (that shouldn't have been used) → `.bg-secondary`
+  8. `.bg-success` → `.bg-status-positive-emphasized` or in some rare cases `.bg-status-positive-muted`
+  9. `.bg-success-subtle` (that shouldn't have been used) → `.bg-status-positive-muted`
+  10. `.bg-danger` → `.bg-status-negative-emphasized` or in some rare cases `.bg-status-negative-muted`
+  11. `.bg-danger-subtle` (that shouldn't have been used) → `.bg-status-negative-muted`
+  12. `.bg-info` → `.bg-status-info-emphasized` or in some rare cases `.bg-status-info-muted`
+  13. `.bg-info-subtle` (that shouldn't have been used) → `.bg-status-positive-muted`
+  14. `.bg-warning` → `.bg-status-warning-emphasized`, `.bg-status-accent-emphasized` or in some rare cases `.bg-status-warning-muted`, `.bg-status-accent-muted`
+  15. `.bg-warning-subtle` (that shouldn't have been used) → `.bg-status-warning-muted` or `.bg-status-accent-muted` depending on your context
+  16. `.bg-body` → `.bg-primary`
+  17. `.bg-body-secondary` → `.bg-secondary`
+  18. `.bg-body-tertiary` → `.bg-secondary`
+  19. `.bg-light` → `.bg-secondary`
+  20. `.bg-light-subtle` (that shouldn't have been used) → `.bg-secondary`
+  21. `.bg-dark` → `.bg-emphasized` or `.bg-always-black` depending on your context
+  22. `.bg-dark-subtle` (that shouldn't have been used) → `.bg-secondary`
+  23. `.bg-supporting-*` → To remove or replace with the appropriate background
+
+  </details>
 
 ### Border
 
@@ -128,6 +201,53 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   - **Tall**: `.rounded-tall`, `.rounded-top-tall`, `.rounded-bottom-tall`, `.rounded-start-tall` and `.rounded-end-tall`.
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Border style utilities: `.border-drag`.
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> All border color utilities have been removed or changed.
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Border opacity utilities have been removed.
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> The new border color utilities are now available. Visit our [border page]({{< docsref "/utilities/borders#color" >}}) to see more.
+
+- <details>
+    <summary><span class="badge text-bg-status-info-emphasized">Info</span> Here are the modifications to apply in your websites:</summary>
+
+  1. `.border-primary` → `.border-brand-primary`
+  2. `.border-black` → `.border-always-black` or `.border-always-on-white` or `.border-on-brand-primary`
+  3. `.border-white` → `.border-always-white` or `.border-always-on-black`
+  4. All `.border-*-subtle` (that shouldn't have been used) → `.border-default`
+  5. All the remaining `.border-*` → `.border-emphasized`
+
+  </details>
+
+### Colors
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Most text color utilities have been removed or changed.
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Text opacity utilities have been removed.
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> The new text color utilities are now available. Visit our [color page]({{< docsref "/utilities/colors" >}}) to see more.
+
+- <details>
+    <summary><span class="badge text-bg-status-info-emphasized">Info</span> Here are the modifications to apply in your websites:</summary>
+
+  1. `.text-primary(-emphasis)` → `.text-brand-primary`
+  2. `.text-secondary(-emphasis)` → `.text-muted`
+  3. `.text-success(-emphasis)` (that shouldn't have been used on texts) → `.text-status-positive`
+  4. `.text-danger(-emphasis)` (that shouldn't have been used on texts) → `.text-status-negative`
+  5. `.text-warning(-emphasis)` (that shouldn't have been used on texts) → `.text-status-warning`
+  6. `.text-info(-emphasis)` (that shouldn't have been used on texts) → `.text-status-info`
+  7. `.text-light(-emphasis)` → `.text-disabled`
+  8. `.text-dark(-emphasis)` → `.text-default` or see `.text-black` below
+  9. `.text-body(-emphasis)` → `.text-default` or `.text-on-status-muted`
+  10. `.text-body-secondary` → `.text-muted`
+  11. `.text-body-tertiary` → `.text-muted`
+  12. `.text-black` → `.text-always-black` or `.text-on-brand-primary` or `.text-on-status-emphasized` or `.text-on-status-emphasized-alt` or `.text-always-on-white`
+  13. `.text-white` → `.text-always-white` or `.text-always-on-black`
+  14. `.text-black-50` → `.text-muted`
+  15. `.text-white-50` → `.text-muted`
+  16. `.text-reset` stays the same
+
+  </details>
 
 ### Display
 
@@ -281,7 +401,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
     5. **4**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)4` → `$1tallest`
     6. **5**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)5` → `$1huge`
     7. **All numbers**: Search for `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)\d` and you shouldn't have Bootstrap spacing utilities anymore
-    <!-- Next technique is almost unusable in practice -->
+    <!-- Next technique is almost unusable in practice -→
   - Change all the utilities using more precise utilities
     1. **Mixing Bootstrap numbers**: Search for `([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?\d`, when you match multiple on one line, consider using one of our [scaled spacing utilities]({{< docsref "/utilities/spacing#notation-for-scaled-values" >}}) (for example, `.mb-1.mb-md-2` → `.mb-scaled-shortest`).
     2. **Remaining standalone classes**: Follow the previous guide going through all the standalone classes.
@@ -314,6 +434,8 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> `$enable-bootstrap-compatibility` option set to `false` by default. This option allows you to compile the Sass files with a Bootstrap compatibility mode.
   - For instance, without the Bootstrap compatibility mode, you won't have the opacity Bootstrap utilities such as `.opacity-0`, `.opacity-1`, `.opacity-50`, etc. You will only have the semantic OUDS Web utilities such as `.opacity-invisible`, `.opacity-weaker`, `.opacity-weak`, etc.
+
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> `scss/_color-palette.scss` doesn't exist anymore. If you were importing it in your project, please make sure to remove it.
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> OUDS Web fully implements the design tokens. If you were using the Sass compilation, you must import the new Sass files before the variables.
 
@@ -365,6 +487,402 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>$ouds-border-width-thick</code></li>
       <li><code>$ouds-border-width-thicker</code></li>
       <li><code>$ouds-border-width-thin</code></li>
+      <li><code>$ouds-color-action-disabled-dark</code></li>
+      <li><code>$ouds-color-action-disabled-light</code></li>
+      <li><code>$ouds-color-action-enabled-dark</code></li>
+      <li><code>$ouds-color-action-enabled-light</code></li>
+      <li><code>$ouds-color-action-focus-dark</code></li>
+      <li><code>$ouds-color-action-focus-light</code></li>
+      <li><code>$ouds-color-action-highlighted-dark</code></li>
+      <li><code>$ouds-color-action-highlighted-light</code></li>
+      <li><code>$ouds-color-action-hover-dark</code></li>
+      <li><code>$ouds-color-action-hover-light</code></li>
+      <li><code>$ouds-color-action-loading-dark</code></li>
+      <li><code>$ouds-color-action-loading-light</code></li>
+      <li><code>$ouds-color-action-negative-enabled-dark</code></li>
+      <li><code>$ouds-color-action-negative-enabled-light</code></li>
+      <li><code>$ouds-color-action-negative-focus-dark</code></li>
+      <li><code>$ouds-color-action-negative-focus-light</code></li>
+      <li><code>$ouds-color-action-negative-hover-dark</code></li>
+      <li><code>$ouds-color-action-negative-hover-light</code></li>
+      <li><code>$ouds-color-action-negative-loading-dark</code></li>
+      <li><code>$ouds-color-action-negative-loading-light</code></li>
+      <li><code>$ouds-color-action-negative-pressed-dark</code></li>
+      <li><code>$ouds-color-action-negative-pressed-light</code></li>
+      <li><code>$ouds-color-action-pressed-dark</code></li>
+      <li><code>$ouds-color-action-pressed-light</code></li>
+      <li><code>$ouds-color-action-selected-dark</code></li>
+      <li><code>$ouds-color-action-selected-light</code></li>
+      <li><code>$ouds-color-action-support-enabled-dark</code></li>
+      <li><code>$ouds-color-action-support-enabled-light</code></li>
+      <li><code>$ouds-color-action-support-focus-dark</code></li>
+      <li><code>$ouds-color-action-support-focus-light</code></li>
+      <li><code>$ouds-color-action-support-hover-dark</code></li>
+      <li><code>$ouds-color-action-support-hover-light</code></li>
+      <li><code>$ouds-color-action-support-loading-dark</code></li>
+      <li><code>$ouds-color-action-support-loading-light</code></li>
+      <li><code>$ouds-color-action-support-pressed-dark</code></li>
+      <li><code>$ouds-color-action-support-pressed-light</code></li>
+      <li><code>$ouds-color-action-visited-dark</code></li>
+      <li><code>$ouds-color-action-visited-light</code></li>
+      <li><code>$ouds-color-always-black-dark</code></li>
+      <li><code>$ouds-color-always-black-light</code></li>
+      <li><code>$ouds-color-always-on-black-dark</code></li>
+      <li><code>$ouds-color-always-on-black-light</code></li>
+      <li><code>$ouds-color-always-on-white-dark</code></li>
+      <li><code>$ouds-color-always-on-white-light</code></li>
+      <li><code>$ouds-color-always-white-dark</code></li>
+      <li><code>$ouds-color-always-white-light</code></li>
+      <li><code>$ouds-color-bg-emphasized-dark</code></li>
+      <li><code>$ouds-color-bg-emphasized-light</code></li>
+      <li><code>$ouds-color-bg-primary-dark</code></li>
+      <li><code>$ouds-color-bg-primary-light</code></li>
+      <li><code>$ouds-color-bg-secondary-dark</code></li>
+      <li><code>$ouds-color-bg-secondary-light</code></li>
+      <li><code>$ouds-color-bg-tertiary-dark</code></li>
+      <li><code>$ouds-color-bg-tertiary-light</code></li>
+      <li><code>$ouds-color-border-brand-primary-dark</code></li>
+      <li><code>$ouds-color-border-brand-primary-light</code></li>
+      <li><code>$ouds-color-border-default-dark</code></li>
+      <li><code>$ouds-color-border-default-light</code></li>
+      <li><code>$ouds-color-border-emphasized-dark</code></li>
+      <li><code>$ouds-color-border-emphasized-light</code></li>
+      <li><code>$ouds-color-border-focus-dark</code></li>
+      <li><code>$ouds-color-border-focus-inset-dark</code></li>
+      <li><code>$ouds-color-border-focus-inset-light</code></li>
+      <li><code>$ouds-color-border-focus-light</code></li>
+      <li><code>$ouds-color-border-on-brand-primary-dark</code></li>
+      <li><code>$ouds-color-border-on-brand-primary-light</code></li>
+      <li><code>$ouds-color-content-brand-primary-dark</code></li>
+      <li><code>$ouds-color-content-brand-primary-light</code></li>
+      <li><code>$ouds-color-content-default-dark</code></li>
+      <li><code>$ouds-color-content-default-light</code></li>
+      <li><code>$ouds-color-content-disabled-dark</code></li>
+      <li><code>$ouds-color-content-disabled-light</code></li>
+      <li><code>$ouds-color-content-muted-dark</code></li>
+      <li><code>$ouds-color-content-muted-light</code></li>
+      <li><code>$ouds-color-content-on-action-disabled-dark</code></li>
+      <li><code>$ouds-color-content-on-action-disabled-light</code></li>
+      <li><code>$ouds-color-content-on-action-enabled-dark</code></li>
+      <li><code>$ouds-color-content-on-action-enabled-light</code></li>
+      <li><code>$ouds-color-content-on-action-focus-dark</code></li>
+      <li><code>$ouds-color-content-on-action-focus-light</code></li>
+      <li><code>$ouds-color-content-on-action-highlighted-dark</code></li>
+      <li><code>$ouds-color-content-on-action-highlighted-light</code></li>
+      <li><code>$ouds-color-content-on-action-hover-dark</code></li>
+      <li><code>$ouds-color-content-on-action-hover-light</code></li>
+      <li><code>$ouds-color-content-on-action-loading-dark</code></li>
+      <li><code>$ouds-color-content-on-action-loading-light</code></li>
+      <li><code>$ouds-color-content-on-action-pressed-dark</code></li>
+      <li><code>$ouds-color-content-on-action-pressed-light</code></li>
+      <li><code>$ouds-color-content-on-brand-primary-dark</code></li>
+      <li><code>$ouds-color-content-on-brand-primary-light</code></li>
+      <li><code>$ouds-color-content-on-overlay-emphasized-dark</code></li>
+      <li><code>$ouds-color-content-on-overlay-emphasized-light</code></li>
+      <li><code>$ouds-color-content-on-status-emphasized-alt-dark</code></li>
+      <li><code>$ouds-color-content-on-status-emphasized-alt-light</code></li>
+      <li><code>$ouds-color-content-on-status-emphasized-dark</code></li>
+      <li><code>$ouds-color-content-on-status-emphasized-light</code></li>
+      <li><code>$ouds-color-content-on-status-muted-dark</code></li>
+      <li><code>$ouds-color-content-on-status-muted-light</code></li>
+      <li><code>$ouds-color-content-status-info-dark</code></li>
+      <li><code>$ouds-color-content-status-info-light</code></li>
+      <li><code>$ouds-color-content-status-negative-dark</code></li>
+      <li><code>$ouds-color-content-status-negative-light</code></li>
+      <li><code>$ouds-color-content-status-positive-dark</code></li>
+      <li><code>$ouds-color-content-status-positive-light</code></li>
+      <li><code>$ouds-color-content-status-warning-dark</code></li>
+      <li><code>$ouds-color-content-status-warning-light</code></li>
+      <li><code>$ouds-color-decorative-accent-1-default-dark</code></li>
+      <li><code>$ouds-color-decorative-accent-1-default-light</code></li>
+      <li><code>$ouds-color-decorative-accent-1-emphasized-dark</code></li>
+      <li><code>$ouds-color-decorative-accent-1-emphasized-light</code></li>
+      <li><code>$ouds-color-decorative-accent-1-muted-dark</code></li>
+      <li><code>$ouds-color-decorative-accent-1-muted-light</code></li>
+      <li><code>$ouds-color-decorative-accent-2-default-dark</code></li>
+      <li><code>$ouds-color-decorative-accent-2-default-light</code></li>
+      <li><code>$ouds-color-decorative-accent-2-emphasized-dark</code>0</li>
+      <li><code>$ouds-color-decorative-accent-2-emphasized-light</code></li>
+      <li><code>$ouds-color-decorative-accent-2-muted-dark</code></li>
+      <li><code>$ouds-color-decorative-accent-2-muted-light</code></li>
+      <li><code>$ouds-color-decorative-accent-3-default-dark</code></li>
+      <li><code>$ouds-color-decorative-accent-3-default-light</code></li>
+      <li><code>$ouds-color-decorative-accent-3-emphasized-dark</code></li>
+      <li><code>$ouds-color-decorative-accent-3-emphasized-light</code></li>
+      <li><code>$ouds-color-decorative-accent-3-muted-dark</code></li>
+      <li><code>$ouds-color-decorative-accent-3-muted-light</code></li>
+      <li><code>$ouds-color-decorative-accent-4-default-dark</code></li>
+      <li><code>$ouds-color-decorative-accent-4-default-light</code></li>
+      <li><code>$ouds-color-decorative-accent-4-emphasized-dark</code></li>
+      <li><code>$ouds-color-decorative-accent-4-emphasized-light</code></li>
+      <li><code>$ouds-color-decorative-accent-4-muted-dark</code></li>
+      <li><code>$ouds-color-decorative-accent-4-muted-light</code></li>
+      <li><code>$ouds-color-decorative-accent-5-default-dark</code></li>
+      <li><code>$ouds-color-decorative-accent-5-default-light</code></li>
+      <li><code>$ouds-color-decorative-accent-5-emphasized-dark</code></li>
+      <li><code>$ouds-color-decorative-accent-5-emphasized-light</code></li>
+      <li><code>$ouds-color-decorative-accent-5-muted-dark</code></li>
+      <li><code>$ouds-color-decorative-accent-5-muted-light</code></li>
+      <li><code>$ouds-color-decorative-amber-100</code></li>
+      <li><code>$ouds-color-decorative-amber-200</code></li>
+      <li><code>$ouds-color-decorative-amber-300</code></li>
+      <li><code>$ouds-color-decorative-amber-400</code></li>
+      <li><code>$ouds-color-decorative-amber-500</code></li>
+      <li><code>$ouds-color-decorative-amber-600</code></li>
+      <li><code>$ouds-color-decorative-amber-700</code></li>
+      <li><code>$ouds-color-decorative-amber-800</code></li>
+      <li><code>$ouds-color-decorative-amber-900</code></li>
+      <li><code>$ouds-color-decorative-amethyst-100</code></li>
+      <li><code>$ouds-color-decorative-amethyst-200</code></li>
+      <li><code>$ouds-color-decorative-amethyst-300</code></li>
+      <li><code>$ouds-color-decorative-amethyst-400</code></li>
+      <li><code>$ouds-color-decorative-amethyst-500</code></li>
+      <li><code>$ouds-color-decorative-amethyst-600</code></li>
+      <li><code>$ouds-color-decorative-amethyst-700</code></li>
+      <li><code>$ouds-color-decorative-amethyst-800</code></li>
+      <li><code>$ouds-color-decorative-amethyst-900</code></li>
+      <li><code>$ouds-color-decorative-brand-primary-light</code></li>
+      <li><code>$ouds-color-decorative-brand-secondary-light</code></li>
+      <li><code>$ouds-color-decorative-brand-tertiary-light</code></li>
+      <li><code>$ouds-color-decorative-brand-primary-dark</code></li>
+      <li><code>$ouds-color-decorative-brand-secondary-dark</code></li>
+      <li><code>$ouds-color-decorative-brand-tertiary-dark</code></li>
+      <li><code>$ouds-color-decorative-deep-peach-100</code></li>
+      <li><code>$ouds-color-decorative-deep-peach-200</code></li>
+      <li><code>$ouds-color-decorative-deep-peach-300</code></li>
+      <li><code>$ouds-color-decorative-deep-peach-400</code></li>
+      <li><code>$ouds-color-decorative-deep-peach-500</code></li>
+      <li><code>$ouds-color-decorative-deep-peach-600</code></li>
+      <li><code>$ouds-color-decorative-deep-peach-700</code></li>
+      <li><code>$ouds-color-decorative-deep-peach-800</code></li>
+      <li><code>$ouds-color-decorative-deep-peach-900</code></li>
+      <li><code>$ouds-color-decorative-emerald-100</code></li>
+      <li><code>$ouds-color-decorative-emerald-200</code></li>
+      <li><code>$ouds-color-decorative-emerald-300</code></li>
+      <li><code>$ouds-color-decorative-emerald-400</code></li>
+      <li><code>$ouds-color-decorative-emerald-500</code></li>
+      <li><code>$ouds-color-decorative-emerald-600</code></li>
+      <li><code>$ouds-color-decorative-emerald-700</code></li>
+      <li><code>$ouds-color-decorative-emerald-800</code></li>
+      <li><code>$ouds-color-decorative-emerald-900</code></li>
+      <li><code>$ouds-color-decorative-neutral-default-dark</code></li>
+      <li><code>$ouds-color-decorative-neutral-default-light</code></li>
+      <li><code>$ouds-color-decorative-neutral-emphasized-dark</code></li>
+      <li><code>$ouds-color-decorative-neutral-emphasized-light</code></li>
+      <li><code>$ouds-color-decorative-neutral-muted-dark</code></li>
+      <li><code>$ouds-color-decorative-neutral-muted-light</code></li>
+      <li><code>$ouds-color-decorative-shocking-pink-100</code></li>
+      <li><code>$ouds-color-decorative-shocking-pink-200</code></li>
+      <li><code>$ouds-color-decorative-shocking-pink-300</code></li>
+      <li><code>$ouds-color-decorative-shocking-pink-400</code></li>
+      <li><code>$ouds-color-decorative-shocking-pink-500</code></li>
+      <li><code>$ouds-color-decorative-shocking-pink-600</code></li>
+      <li><code>$ouds-color-decorative-shocking-pink-700</code></li>
+      <li><code>$ouds-color-decorative-shocking-pink-800</code></li>
+      <li><code>$ouds-color-decorative-shocking-pink-900</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-100-dark</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-200-dark</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-300-dark</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-400-dark</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-500-dark</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-600-dark</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-700-dark</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-800-dark</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-900-dark</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-100-light</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-200-light</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-300-light</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-400-light</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-500-light</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-600-light</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-700-light</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-800-light</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-900-light</code></li>
+      <li><code>$ouds-color-decorative-sky-100</code></li>
+      <li><code>$ouds-color-decorative-sky-200</code></li>
+      <li><code>$ouds-color-decorative-sky-300</code></li>
+      <li><code>$ouds-color-decorative-sky-400</code></li>
+      <li><code>$ouds-color-decorative-sky-500</code></li>
+      <li><code>$ouds-color-decorative-sky-600</code></li>
+      <li><code>$ouds-color-decorative-sky-700</code></li>
+      <li><code>$ouds-color-decorative-sky-800</code></li>
+      <li><code>$ouds-color-decorative-sky-900</code></li>
+      <li><code>$ouds-color-functional-black</code></li>
+      <li><code>$ouds-color-functional-dark-gray-80</code></li>
+      <li><code>$ouds-color-functional-dark-gray-160</code></li>
+      <li><code>$ouds-color-functional-dark-gray-240</code></li>
+      <li><code>$ouds-color-functional-dark-gray-320</code></li>
+      <li><code>$ouds-color-functional-dark-gray-400</code></li>
+      <li><code>$ouds-color-functional-dark-gray-480</code></li>
+      <li><code>$ouds-color-functional-dark-gray-560</code></li>
+      <li><code>$ouds-color-functional-dark-gray-640</code></li>
+      <li><code>$ouds-color-functional-dark-gray-720</code></li>
+      <li><code>$ouds-color-functional-dark-gray-800</code></li>
+      <li><code>$ouds-color-functional-dark-gray-880</code></li>
+      <li><code>$ouds-color-functional-dark-gray-960</code></li>
+      <li><code>$ouds-color-functional-dodger-blue-100</code></li>
+      <li><code>$ouds-color-functional-dodger-blue-200</code></li>
+      <li><code>$ouds-color-functional-dodger-blue-300</code></li>
+      <li><code>$ouds-color-functional-dodger-blue-400</code></li>
+      <li><code>$ouds-color-functional-dodger-blue-500</code></li>
+      <li><code>$ouds-color-functional-dodger-blue-600</code></li>
+      <li><code>$ouds-color-functional-dodger-blue-700</code></li>
+      <li><code>$ouds-color-functional-dodger-blue-800</code></li>
+      <li><code>$ouds-color-functional-dodger-blue-900</code></li>
+      <li><code>$ouds-color-functional-light-gray-80</code></li>
+      <li><code>$ouds-color-functional-light-gray-160</code></li>
+      <li><code>$ouds-color-functional-light-gray-240</code></li>
+      <li><code>$ouds-color-functional-light-gray-320</code></li>
+      <li><code>$ouds-color-functional-light-gray-400</code></li>
+      <li><code>$ouds-color-functional-light-gray-480</code></li>
+      <li><code>$ouds-color-functional-light-gray-560</code></li>
+      <li><code>$ouds-color-functional-light-gray-640</code></li>
+      <li><code>$ouds-color-functional-light-gray-720</code></li>
+      <li><code>$ouds-color-functional-light-gray-800</code></li>
+      <li><code>$ouds-color-functional-light-gray-880</code></li>
+      <li><code>$ouds-color-functional-light-gray-960</code></li>
+      <li><code>$ouds-color-functional-malachite-100</code></li>
+      <li><code>$ouds-color-functional-malachite-200</code></li>
+      <li><code>$ouds-color-functional-malachite-300</code></li>
+      <li><code>$ouds-color-functional-malachite-400</code></li>
+      <li><code>$ouds-color-functional-malachite-500</code></li>
+      <li><code>$ouds-color-functional-malachite-600</code></li>
+      <li><code>$ouds-color-functional-malachite-700</code></li>
+      <li><code>$ouds-color-functional-malachite-800</code></li>
+      <li><code>$ouds-color-functional-malachite-900</code></li>
+      <li><code>$ouds-color-functional-scarlet-100</code></li>
+      <li><code>$ouds-color-functional-scarlet-200</code></li>
+      <li><code>$ouds-color-functional-scarlet-300</code></li>
+      <li><code>$ouds-color-functional-scarlet-400</code></li>
+      <li><code>$ouds-color-functional-scarlet-500</code></li>
+      <li><code>$ouds-color-functional-scarlet-600</code></li>
+      <li><code>$ouds-color-functional-scarlet-700</code></li>
+      <li><code>$ouds-color-functional-scarlet-800</code></li>
+      <li><code>$ouds-color-functional-scarlet-900</code></li>
+      <li><code>$ouds-color-functional-sun-100</code></li>
+      <li><code>$ouds-color-functional-sun-200</code></li>
+      <li><code>$ouds-color-functional-sun-300</code></li>
+      <li><code>$ouds-color-functional-sun-400</code></li>
+      <li><code>$ouds-color-functional-sun-500</code></li>
+      <li><code>$ouds-color-functional-sun-600</code></li>
+      <li><code>$ouds-color-functional-sun-700</code></li>
+      <li><code>$ouds-color-functional-sun-800</code></li>
+      <li><code>$ouds-color-functional-sun-900</code></li>
+      <li><code>$ouds-color-functional-white</code></li>
+      <li><code>$ouds-color-opacity-black-0</code></li>
+      <li><code>$ouds-color-opacity-black-40</code></li>
+      <li><code>$ouds-color-opacity-black-80</code></li>
+      <li><code>$ouds-color-opacity-black-120</code></li>
+      <li><code>$ouds-color-opacity-black-160</code></li>
+      <li><code>$ouds-color-opacity-black-200</code></li>
+      <li><code>$ouds-color-opacity-black-240</code></li>
+      <li><code>$ouds-color-opacity-black-280</code></li>
+      <li><code>$ouds-color-opacity-black-320</code></li>
+      <li><code>$ouds-color-opacity-black-360</code></li>
+      <li><code>$ouds-color-opacity-black-400</code></li>
+      <li><code>$ouds-color-opacity-black-440</code></li>
+      <li><code>$ouds-color-opacity-black-480</code></li>
+      <li><code>$ouds-color-opacity-black-520</code></li>
+      <li><code>$ouds-color-opacity-black-560</code></li>
+      <li><code>$ouds-color-opacity-black-600</code></li>
+      <li><code>$ouds-color-opacity-black-640</code></li>
+      <li><code>$ouds-color-opacity-black-680</code></li>
+      <li><code>$ouds-color-opacity-black-720</code></li>
+      <li><code>$ouds-color-opacity-black-760</code></li>
+      <li><code>$ouds-color-opacity-black-800</code></li>
+      <li><code>$ouds-color-opacity-black-840</code></li>
+      <li><code>$ouds-color-opacity-black-880</code></li>
+      <li><code>$ouds-color-opacity-black-920</code></li>
+      <li><code>$ouds-color-opacity-black-960</code></li>
+      <li><code>$ouds-color-opacity-dodger-blue</code></li>
+      <li><code>$ouds-color-opacity-lower-dark</code></li>
+      <li><code>$ouds-color-opacity-lower-light</code></li>
+      <li><code>$ouds-color-opacity-lowest-dark</code></li>
+      <li><code>$ouds-color-opacity-lowest-light</code></li>
+      <li><code>$ouds-color-opacity-malachite</code></li>
+      <li><code>$ouds-color-opacity-scarlet</code></li>
+      <li><code>$ouds-color-opacity-sun</code></li>
+      <li><code>$ouds-color-opacity-transparent-dark</code></li>
+      <li><code>$ouds-color-opacity-transparent-light</code></li>
+      <li><code>$ouds-color-opacity-white-0</code></li>
+      <li><code>$ouds-color-opacity-white-40</code></li>
+      <li><code>$ouds-color-opacity-white-80</code></li>
+      <li><code>$ouds-color-opacity-white-120</code></li>
+      <li><code>$ouds-color-opacity-white-160</code></li>
+      <li><code>$ouds-color-opacity-white-200</code></li>
+      <li><code>$ouds-color-opacity-white-240</code></li>
+      <li><code>$ouds-color-opacity-white-280</code></li>
+      <li><code>$ouds-color-opacity-white-320</code></li>
+      <li><code>$ouds-color-opacity-white-360</code></li>
+      <li><code>$ouds-color-opacity-white-400</code></li>
+      <li><code>$ouds-color-opacity-white-440</code></li>
+      <li><code>$ouds-color-opacity-white-480</code></li>
+      <li><code>$ouds-color-opacity-white-520</code></li>
+      <li><code>$ouds-color-opacity-white-560</code></li>
+      <li><code>$ouds-color-opacity-white-600</code></li>
+      <li><code>$ouds-color-opacity-white-640</code></li>
+      <li><code>$ouds-color-opacity-white-680</code></li>
+      <li><code>$ouds-color-opacity-white-720</code></li>
+      <li><code>$ouds-color-opacity-white-760</code></li>
+      <li><code>$ouds-color-opacity-white-800</code></li>
+      <li><code>$ouds-color-opacity-white-840</code></li>
+      <li><code>$ouds-color-opacity-white-880</code></li>
+      <li><code>$ouds-color-opacity-white-920</code></li>
+      <li><code>$ouds-color-opacity-white-960</code></li>
+      <li><code>$ouds-color-orange-50</code></li>
+      <li><code>$ouds-color-orange-100</code></li>
+      <li><code>$ouds-color-orange-200</code></li>
+      <li><code>$ouds-color-orange-300</code></li>
+      <li><code>$ouds-color-orange-400</code></li>
+      <li><code>$ouds-color-orange-500</code></li>
+      <li><code>$ouds-color-orange-550</code></li>
+      <li><code>$ouds-color-orange-600</code></li>
+      <li><code>$ouds-color-orange-700</code></li>
+      <li><code>$ouds-color-orange-800</code></li>
+      <li><code>$ouds-color-orange-900</code></li>
+      <li><code>$ouds-color-overlay-default-dark</code></li>
+      <li><code>$ouds-color-overlay-default-light</code></li>
+      <li><code>$ouds-color-overlay-drag-dark</code></li>
+      <li><code>$ouds-color-overlay-drag-light</code></li>
+      <li><code>$ouds-color-overlay-emphasized-dark</code></li>
+      <li><code>$ouds-color-overlay-emphasized-light</code></li>
+      <li><code>$ouds-color-overlay-modal-dark</code></li>
+      <li><code>$ouds-color-overlay-modal-light</code></li>
+      <li><code>$ouds-color-surface-brand-primary-dark</code></li>
+      <li><code>$ouds-color-surface-brand-primary-light</code></li>
+      <li><code>$ouds-color-surface-status-accent-emphasized-dark</code></li>
+      <li><code>$ouds-color-surface-status-accent-emphasized-light</code></li>
+      <li><code>$ouds-color-surface-status-accent-muted-dark</code></li>
+      <li><code>$ouds-color-surface-status-accent-muted-light</code></li>
+      <li><code>$ouds-color-surface-status-info-emphasized-dark</code></li>
+      <li><code>$ouds-color-surface-status-info-emphasized-light</code></li>
+      <li><code>$ouds-color-surface-status-info-muted-dark</code></li>
+      <li><code>$ouds-color-surface-status-info-muted-light</code></li>
+      <li><code>$ouds-color-surface-status-negative-emphasized-dark</code></li>
+      <li><code>$ouds-color-surface-status-negative-emphasized-light</code></li>
+      <li><code>$ouds-color-surface-status-negative-muted-dark</code></li>
+      <li><code>$ouds-color-surface-status-negative-muted-light</code></li>
+      <li><code>$ouds-color-surface-status-neutral-emphasized-dark</code></li>
+      <li><code>$ouds-color-surface-status-neutral-emphasized-light</code></li>
+      <li><code>$ouds-color-surface-status-neutral-muted-dark</code></li>
+      <li><code>$ouds-color-surface-status-neutral-muted-light</code></li>
+      <li><code>$ouds-color-surface-status-positive-emphasized-dark</code></li>
+      <li><code>$ouds-color-surface-status-positive-emphasized-light</code></li>
+      <li><code>$ouds-color-surface-status-positive-muted-dark</code></li>
+      <li><code>$ouds-color-surface-status-positive-muted-light</code></li>
+      <li><code>$ouds-color-surface-status-warning-emphasized-dark</code></li>
+      <li><code>$ouds-color-surface-status-warning-emphasized-light</code></li>
+      <li><code>$ouds-color-surface-status-warning-muted-dark</code></li>
+      <li><code>$ouds-color-surface-status-warning-muted-light</code></li>
+      <li><code>$ouds-color-warm-gray-100</code></li>
+      <li><code>$ouds-color-warm-gray-200</code></li>
+      <li><code>$ouds-color-warm-gray-300</code></li>
+      <li><code>$ouds-color-warm-gray-400</code></li>
+      <li><code>$ouds-color-warm-gray-500</code></li>
+      <li><code>$ouds-color-warm-gray-600</code></li>
+      <li><code>$ouds-color-warm-gray-700</code></li>
+      <li><code>$ouds-color-warm-gray-800</code></li>
+      <li><code>$ouds-color-warm-gray-900</code></li>
       <li><code>$ouds-dimension-0</code></li>
       <li><code>$ouds-dimension-100</code></li>
       <li><code>$ouds-dimension-1000</code></li>
@@ -587,7 +1105,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>$ouds-font-size-body-small-desktop</code></li>
       <li><code>$ouds-font-size-body-small-mobile</code></li>
       <li><code>$ouds-font-size-body-small-tablet</code></li>
-      <li><code>$ouds-font-size-code-medium: $oud</code></li>
+      <li><code>$ouds-font-size-code-medium</code></li>
       <li><code>$ouds-font-size-display-large-desktop</code></li>
       <li><code>$ouds-font-size-display-large-mobile</code></li>
       <li><code>$ouds-font-size-display-large-tablet</code></li>
@@ -845,6 +1363,8 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass maps:</summary>
     <ul>
       <li><code>$grid-gutter-widths</code></li>
+      <li><code>$ouds-backgrounds</code></li>
+      <li><code>$ouds-border-colors</code></li>
       <li><code>$ouds-border-radiuses</code></li>
       <li><code>$ouds-border-styles</code></li>
       <li><code>$ouds-border-widths</code></li>
@@ -857,6 +1377,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>$ouds-font-weights</code></li>
       <li><code>$ouds-icon-sizes</code></li>
       <li><code>$ouds-opacities</code></li>
+      <li><code>$ouds-text-colors</code></li>
     </ul>
   </details>
 
@@ -871,12 +1392,14 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Keys in <code>$utilities</code> map:</summary>
     <ul>
       <li><code>border-bottom-ouds</code></li>
+      <li><code>border-color-ouds</code></li>
       <li><code>border-end-ouds</code></li>
       <li><code>border-ouds</code></li>
       <li><code>border-start-ouds</code></li>
       <li><code>border-style-ouds</code></li>
       <li><code>border-top-ouds</code></li>
       <li><code>border-width-ouds</code></li>
+      <li><code>color-ouds</code></li>
       <li><code>column-gap-ouds</code></li>
       <li><code>column-gap-scaled-ouds</code></li>
       <li><code>font-size-ouds</code></li>
@@ -938,10 +1461,121 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   </details>
 
 - <details class="mb-short">
-    <summary><span class="badge text-bg-status-positive-emphasized">New</span> CSS variable:</summary>
+    <summary><span class="badge text-bg-status-positive-emphasized">New</span> CSS variables:</summary>
     <ul>
       <li><code>--bs-body-letter-spacing</code></li>
+      <li><code>--bs-color-action-disabled</code></li>
+      <li><code>--bs-color-action-enabled</code></li>
+      <li><code>--bs-color-action-focus</code></li>
+      <li><code>--bs-color-action-highlighted</code></li>
+      <li><code>--bs-color-action-hover</code></li>
+      <li><code>--bs-color-action-loading</code></li>
+      <li><code>--bs-color-action-negative-enabled</code></li>
+      <li><code>--bs-color-action-negative-focus</code></li>
+      <li><code>--bs-color-action-negative-hover</code></li>
+      <li><code>--bs-color-action-negative-loading</code></li>
+      <li><code>--bs-color-action-negative-pressed</code></li>
+      <li><code>--bs-color-action-pressed</code></li>
+      <li><code>--bs-color-action-selected</code></li>
+      <li><code>--bs-color-action-support-enabled</code></li>
+      <li><code>--bs-color-action-support-focus</code></li>
+      <li><code>--bs-color-action-support-hover</code></li>
+      <li><code>--bs-color-action-support-loading</code></li>
+      <li><code>--bs-color-action-support-pressed</code></li>
+      <li><code>--bs-color-action-visited</code></li>
+      <li><code>--bs-color-always-black</code></li>
+      <li><code>--bs-color-always-on-black</code></li>
+      <li><code>--bs-color-always-on-white</code></li>
+      <li><code>--bs-color-always-white</code></li>
+      <li><code>--bs-color-bg-emphasized</code></li>
+      <li><code>--bs-color-bg-primary</code></li>
+      <li><code>--bs-color-bg-secondary</code></li>
+      <li><code>--bs-color-bg-tertiary</code></li>
+      <li><code>--bs-color-border-brand-primary</code></li>
+      <li><code>--bs-color-border-default</code></li>
+      <li><code>--bs-color-border-emphasized</code></li>
+      <li><code>--bs-color-border-focus</code></li>
+      <li><code>--bs-color-border-focus-inset</code></li>
+      <li><code>--bs-color-border-on-brand-primary</code></li>
+      <li><code>--bs-color-content-brand-primary</code></li>
+      <li><code>--bs-color-content-default</code></li>
+      <li><code>--bs-color-content-disabled</code></li>
+      <li><code>--bs-color-content-muted</code></li>
+      <li><code>--bs-color-content-on-action-disabled</code></li>
+      <li><code>--bs-color-content-on-action-enabled</code></li>
+      <li><code>--bs-color-content-on-action-focus</code></li>
+      <li><code>--bs-color-content-on-action-highlighted</code></li>
+      <li><code>--bs-color-content-on-action-hover</code></li>
+      <li><code>--bs-color-content-on-action-loading</code></li>
+      <li><code>--bs-color-content-on-action-pressed</code></li>
+      <li><code>--bs-color-content-on-brand-primary</code></li>
+      <li><code>--bs-color-content-on-overlay-emphasized</code></li>
+      <li><code>--bs-color-content-on-status-emphasized</code></li>
+      <li><code>--bs-color-content-on-status-emphasized-alt</code></li>
+      <li><code>--bs-color-content-on-status-muted</code></li>
+      <li><code>--bs-color-content-status-info</code></li>
+      <li><code>--bs-color-content-status-negative</code></li>
+      <li><code>--bs-color-content-status-positive</code></li>
+      <li><code>--bs-color-content-status-warning</code></li>
+      <li><code>--bs-color-decorative-accent-1-default</code></li>
+      <li><code>--bs-color-decorative-accent-1-emphasized</code></li>
+      <li><code>--bs-color-decorative-accent-1-muted</code></li>
+      <li><code>--bs-color-decorative-accent-2-default</code></li>
+      <li><code>--bs-color-decorative-accent-2-emphasized</code></li>
+      <li><code>--bs-color-decorative-accent-2-muted</code></li>
+      <li><code>--bs-color-decorative-accent-3-default</code></li>
+      <li><code>--bs-color-decorative-accent-3-emphasized</code></li>
+      <li><code>--bs-color-decorative-accent-3-muted</code></li>
+      <li><code>--bs-color-decorative-accent-4-default</code></li>
+      <li><code>--bs-color-decorative-accent-4-emphasized</code></li>
+      <li><code>--bs-color-decorative-accent-4-muted</code></li>
+      <li><code>--bs-color-decorative-accent-5-default</code></li>
+      <li><code>--bs-color-decorative-accent-5-emphasized</code></li>
+      <li><code>--bs-color-decorative-accent-5-muted</code></li>
+      <li><code>--bs-color-decorative-brand-primary</code></li>
+      <li><code>--bs-color-decorative-brand-secondary</code></li>
+      <li><code>--bs-color-decorative-brand-tertiary</code></li>
+      <li><code>--bs-color-decorative-neutral-default</code></li>
+      <li><code>--bs-color-decorative-neutral-emphasized</code></li>
+      <li><code>--bs-color-decorative-neutral-muted</code></li>
+      <li><code>--bs-color-decorative-skin-tint-100</code></li>
+      <li><code>--bs-color-decorative-skin-tint-200</code></li>
+      <li><code>--bs-color-decorative-skin-tint-300</code></li>
+      <li><code>--bs-color-decorative-skin-tint-400</code></li>
+      <li><code>--bs-color-decorative-skin-tint-500</code></li>
+      <li><code>--bs-color-decorative-skin-tint-600</code></li>
+      <li><code>--bs-color-decorative-skin-tint-700</code></li>
+      <li><code>--bs-color-decorative-skin-tint-800</code></li>
+      <li><code>--bs-color-decorative-skin-tint-900</code></li>
+      <li><code>--bs-color-opacity-lower</code></li>
+      <li><code>--bs-color-opacity-lowest</code></li>
+      <li><code>--bs-color-opacity-transparent</code></li>
+      <li><code>--bs-color-overlay-default</code></li>
+      <li><code>--bs-color-overlay-drag</code></li>
+      <li><code>--bs-color-overlay-emphasized</code></li>
+      <li><code>--bs-color-overlay-modal</code></li>
+      <li><code>--bs-color-surface-brand-primary</code></li>
+      <li><code>--bs-color-surface-status-accent-emphasized</code></li>
+      <li><code>--bs-color-surface-status-accent-muted</code></li>
+      <li><code>--bs-color-surface-status-info-emphasized</code></li>
+      <li><code>--bs-color-surface-status-info-muted</code></li>
+      <li><code>--bs-color-surface-status-negative-emphasized</code></li>
+      <li><code>--bs-color-surface-status-negative-muted</code></li>
+      <li><code>--bs-color-surface-status-neutral-emphasized</code></li>
+      <li><code>--bs-color-surface-status-neutral-muted</code></li>
+      <li><code>--bs-color-surface-status-positive-emphasized</code></li>
+      <li><code>--bs-color-surface-status-positive-muted</code></li>
+      <li><code>--bs-color-surface-status-warning-emphasized</code></li>
+      <li><code>--bs-color-surface-status-warning-muted</code></li>
       <li><code>--bs-container-margin-x</code></li>
+      <li><code>--bs-elevation-color-default</code></li>
+      <li><code>--bs-elevation-color-drag</code></li>
+      <li><code>--bs-elevation-color-emphasized</code></li>
+      <li><code>--bs-elevation-color-none</code></li>
+      <li><code>--bs-elevation-color-raised</code></li>
+      <li><code>--bs-elevation-color-sticky-default</code></li>
+      <li><code>--bs-elevation-color-sticky-emphasized</code></li>
+      <li><code>--bs-elevation-color-sticky-navigation-scrolled</code></li>
       <li><code>--bs-font-size-display-large</code></li>
       <li><code>--bs-font-size-display-medium</code></li>
       <li><code>--bs-font-size-display-small</code></li>
@@ -1040,6 +1674,8 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>$blockquote-letter-spacing</code></li>
       <li><code>$boosted-prefix</code></li>
       <li><code>$boosted-variable-prefix</code></li>
+      <li><code>$border-color-subtle</code></li>
+      <li><code>$border-color-subtle-dark</code></li>
       <li><code>$btn-close-white-active-border-color</code></li>
       <li><code>$btn-close-white-active-color</code></li>
       <li><code>$btn-close-white-bg</code></li>
@@ -1047,6 +1683,8 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>$btn-close-white-color</code></li>
       <li><code>$btn-close-white-disabled-color</code></li>
       <li><code>$btn-close-white-hover-color</code></li>
+      <li><code>$disabled-color</code></li>
+      <li><code>$disabled-color-dark</code></li>
       <li><code>$display1-size</code></li>
       <li><code>$display1-spacing</code></li>
       <li><code>$display2-size</code></li>
@@ -1055,6 +1693,10 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>$display3-spacing</code></li>
       <li><code>$display4-size</code></li>
       <li><code>$display4-spacing</code></li>
+      <li><code>$focus-visible-inner-color</code></li>
+      <li><code>$focus-visible-inner-color-dark</code></li>
+      <li><code>$focus-visible-outer-color</code></li>
+      <li><code>$focus-visible-outer-color-dark</code></li>
       <li><code>$footer-nav-link-font-weight</code></li>
       <li><code>$font-size-xlg</code></li>
       <li><code>$form-star-focus-box-shadow</code></li>
@@ -1062,6 +1704,15 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>$form-star-focus-color-dark</code></li>
       <li><code>$form-star-focus-outline</code></li>
       <li><code>$form-star-focus-outline-dark</code></li>
+      <li><code>$functional-blue</code></li>
+      <li><code>$functional-blue-dark</code></li>
+      <li><code>$functional-green</code></li>
+      <li><code>$functional-green-dark</code></li>
+      <li><code>$functional-red</code></li>
+      <li><code>$functional-red-dark</code></li>
+      <li><code>$functional-yellow</code></li>
+      <li><code>$functional-yellow-dark</code></li>
+      <li><code>$gray-950</code></li>
       <li><code>$grid-gutter-breakpoint</code></li>
       <li><code>$h1-line-height</code></li>
       <li><code>$h1-spacing</code></li>
@@ -1087,17 +1738,27 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>$outline-width</code></li>
       <li><code>$pre-line-height</code></li>
       <li><code>$step-item-padding-end</code></li>
+      <li><code>$supporting-blue</code></li>
+      <li><code>$supporting-green</code></li>
+      <li><code>$supporting-orange</code></li>
+      <li><code>$supporting-pink</code></li>
+      <li><code>$supporting-purple</code></li>
+      <li><code>$supporting-yellow</code></li>
+      <li><code>$tertiary-active-bg</code></li>
+      <li><code>$tertiary-active-bg-dark</code></li>
       <li><code>$title-bar-border-color-dark</code></li>
       <li><code>$title-bar-font-size-md</code></li>
       <li><code>$title-bar-font-size-xl</code></li>
       <li><code>$title-bar-line-height-md</code></li>
       <li><code>$title-bar-line-height-xl</code></li>
+      <li><code>$variable-prefix</code></li>
     </ul>
   </details>
 
 - <details class="mb-short">
     <summary><span class="badge text-bg-status-warning-emphasized">Warning</span> Dropped CSS variables:</summary>
     <ul>
+      <li><code>--bs-border-color-subtle</code></li>
       <li><code>--bs-btn-close-active-border-color</code></li>
       <li><code>--bs-btn-close-active-color</code></li>
       <li><code>--bs-btn-close-bg</code></li>
@@ -1105,12 +1766,25 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>--bs-btn-close-color</code></li>
       <li><code>--bs-btn-close-disabled-color</code></li>
       <li><code>--bs-btn-close-hover-color</code></li>
+      <li><code>--bs-disabled-color</code></li>
+      <li><code>--bs-focus-visible-inner-color</code></li>
+      <li><code>--bs-focus-visible-outer-color</code></li>
+      <li><code>--bs-gray-950</code></li>
+      <li><code>--bs-tertiary-active-bg</code></li>
     </ul>
   </details>
 
 - <details class="mb-short">
     <summary><span class="badge text-bg-status-negative-emphasized">Breaking</span> CSS variables only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
     <ul>
+      <li><code>--bs-black</code></li>
+      <li><code>--bs-black-rgb</code></li>
+      <li><code>--bs-blue</code></li>
+      <li><code>--bs-body-bg</code></li>
+      <li><code>--bs-body-bg-rgb</code></li>
+      <li><code>--bs-body-color</code></li>
+      <li><code>--bs-body-color-rgb</code></li>
+      <li><code>--bs-border-color-translucent</code></li>
       <li><code>--bs-border-radius</code></li>
       <li><code>--bs-border-radius-2xl</code></li>
       <li><code>--bs-border-radius-lg</code></li>
@@ -1122,6 +1796,81 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>--bs-box-shadow-inset</code></li>
       <li><code>--bs-box-shadow-lg</code></li>
       <li><code>--bs-box-shadow-sm</code></li>
+      <li><code>--bs-code-color</code></li>
+      <li><code>--bs-cyan</code></li>
+      <li><code>--bs-danger</code></li>
+      <li><code>--bs-danger-bg-subtle</code></li>
+      <li><code>--bs-danger-border-subtle</code></li>
+      <li><code>--bs-danger-rgb</code></li>
+      <li><code>--bs-danger-text-emphasis</code></li>
+      <li><code>--bs-dark</code></li>
+      <li><code>--bs-dark-bg-subtle</code></li>
+      <li><code>--bs-dark-border-subtle</code></li>
+      <li><code>--bs-dark-rgb</code></li>
+      <li><code>--bs-dark-text-emphasis</code></li>
+      <li><code>--bs-emphasis-color</code></li>
+      <li><code>--bs-emphasis-color-rgb</code></li>
+      <li><code>--bs-gray</code></li>
+      <li><code>--bs-gray-100</code></li>
+      <li><code>--bs-gray-200</code></li>
+      <li><code>--bs-gray-300</code></li>
+      <li><code>--bs-gray-400</code></li>
+      <li><code>--bs-gray-500</code></li>
+      <li><code>--bs-gray-600</code></li>
+      <li><code>--bs-gray-700</code></li>
+      <li><code>--bs-gray-800</code></li>
+      <li><code>--bs-gray-900</code></li>
+      <li><code>--bs-gray-dark</code></li>
+      <li><code>--bs-green</code></li>
+      <li><code>--bs-highlight-bg</code></li>
+      <li><code>--bs-highlight-color</code></li>
+      <li><code>--bs-indigo</code></li>
+      <li><code>--bs-info</code></li>
+      <li><code>--bs-info-bg-subtle</code></li>
+      <li><code>--bs-info-border-subtle</code></li>
+      <li><code>--bs-info-rgb</code></li>
+      <li><code>--bs-info-text-emphasis</code></li>
+      <li><code>--bs-light</code></li>
+      <li><code>--bs-light-bg-subtle</code></li>
+      <li><code>--bs-light-border-subtle</code></li>
+      <li><code>--bs-light-rgb</code></li>
+      <li><code>--bs-light-text-emphasis</code></li>
+      <li><code>--bs-orange</code></li>
+      <li><code>--bs-pink</code></li>
+      <li><code>--bs-primary</code></li>
+      <li><code>--bs-primary-bg-subtle</code></li>
+      <li><code>--bs-primary-border-subtle</code></li>
+      <li><code>--bs-primary-rgb</code></li>
+      <li><code>--bs-primary-text-emphasis</code></li>
+      <li><code>--bs-purple</code></li>
+      <li><code>--bs-red</code></li>
+      <li><code>--bs-secondary</code></li>
+      <li><code>--bs-secondary-bg</code></li>
+      <li><code>--bs-secondary-bg-rgb</code></li>
+      <li><code>--bs-secondary-bg-subtle</code></li>
+      <li><code>--bs-secondary-border-subtle</code></li>
+      <li><code>--bs-secondary-color</code></li>
+      <li><code>--bs-secondary-color-rgb</code></li>
+      <li><code>--bs-secondary-rgb</code></li>
+      <li><code>--bs-secondary-text-emphasis</code></li>
+      <li><code>--bs-success</code></li>
+      <li><code>--bs-success-bg-subtle</code></li>
+      <li><code>--bs-success-border-subtle</code></li>
+      <li><code>--bs-success-rgb</code></li>
+      <li><code>--bs-success-text-emphasis</code></li>
+      <li><code>--bs-teal</code></li>
+      <li><code>--bs-tertiary-bg</code></li>
+      <li><code>--bs-tertiary-bg-rgb</code></li>
+      <li><code>--bs-tertiary-color</code></li>
+      <li><code>--bs-tertiary-color-rgb</code></li>
+      <li><code>--bs-warning</code></li>
+      <li><code>--bs-warning-bg-subtle</code></li>
+      <li><code>--bs-warning-border-subtle</code></li>
+      <li><code>--bs-warning-rgb</code></li>
+      <li><code>--bs-warning-text-emphasis</code></li>
+      <li><code>--bs-white</code></li>
+      <li><code>--bs-white-rgb</code></li>
+      <li><code>--bs-yellow</code></li>
     </ul>
   </details>
 
@@ -1135,17 +1884,21 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 - <details class="mb-short">
     <summary><span class="badge text-bg-status-negative-emphasized">Breaking</span> Keys in <code>$utilities</code> map only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
     <ul>
+      <li><code>background-color</code></li>
       <li><code>border</code></li>
       <li><code>border-bottom</code></li>
+      <li><code>border-color</code></li>
       <li><code>border-end</code></li>
       <li><code>border-opacity</code></li>
       <li><code>border-start</code></li>
       <li><code>border-top</code></li>
       <li><code>border-width</code></li>
+      <li><code>color</code></li>
       <li><code>column-gap</code></li>
       <li><code>font-size</code></li>
       <li><code>font-weight</code></li>
       <li><code>gap</code></li>
+      <li><code>gradient</code></li>
       <li><code>line-height</code></li>
       <li><code>margin-bottom</code></li>
       <li><code>margin-end</code></li>
@@ -1176,13 +1929,19 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>rounded-top</code></li>
       <li><code>row-gap</code></li>
       <li><code>shadow</code></li>
+      <li><code>subtle-background-color</code></li>
+      <li><code>subtle-border-color</code></li>
+      <li><code>text-color</code></li>
     </ul>
   </details>
 
 - <details class="mb-short">
     <summary><span class="badge text-bg-status-warning-emphasized">Warning</span> Dropped keys in <code>$utilities</code> map:</summary>
     <ul>
+      <li><code>bg-opacity</code></li>
+      <li><code>border-opacity</code></li>
       <li><code>line-length</code></li>
+      <li><code>text-opacity</code></li>
     </ul>
   </details>
 
@@ -1191,3 +1950,5 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 ## Sass mixins
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> The mixin `get-font-size({font-size-ref})` has been added, where `font-size-ref` is one of: `"code-medium"`, `"label-small"`, `"label-medium"`, `"label-large"`, `"label-xlarge"`, `"body-small"`, `"body-medium"`, `"body-large"`, `"heading-small"`, `"heading-medium"`, `"heading-large"`, `"heading-xlarge"`, `"display-small"`, `"display-medium"`, `"display-large"`. If you have/need any `font-size` in one of your SCSS classes, please consider using this mixin instead. See [Typography Sass mixins]({{< docsref "/content/typography/#sass-mixins" >}}) for more details.
+
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> `color-mode({mode}, {root}, {inverted-mode})` mixin signature has changed. We now provide an `$inverted-mode` parameter that is set by default to `light` or `dark` depending on the `$mode`. It allows you to precise another mode to be the inverse of a certain mode.
