@@ -40,7 +40,7 @@
 
   // OUDS mod: no &:focus
 
-  // OUDS mod: matching .btn-no-outline
+  // OUDS mod
   &:hover,
   &:active {
     border: var(--#{$prefix}btn-close-border-width) solid var(--#{$prefix}btn-close-active-border-color);

@@ -9,15 +9,15 @@
   $background,
   $border,
   $color, // OUDS mod
-  $hover-background: $btn-default-hover-bg, // OUDS mod
-  $hover-border: $btn-default-hover-border, // OUDS mod
-  $hover-color: $btn-default-hover-color, // OUDS mod
-  $active-background: $btn-default-active-bg, // OUDS mod
-  $active-border: $btn-default-active-border, // OUDS mod
-  $active-color: $btn-default-active-color, // OUDS mod
-  $disabled-background: $btn-default-disabled-bg, // OUDS mod
-  $disabled-border: $btn-default-disabled-border, // OUDS mod
-  $disabled-color: $btn-default-disabled-color, // OUDS mod
+  $hover-background: $ouds-button-color-bg-default-hover, // OUDS mod
+  $hover-border: $ouds-button-color-border-default-hover, // OUDS mod
+  $hover-color: $ouds-button-color-content-default-hover, // OUDS mod
+  $active-background: $ouds-button-color-bg-default-pressed, // OUDS mod
+  $active-border: $ouds-button-color-border-default-pressed, // OUDS mod
+  $active-color: $ouds-button-color-content-default-pressed, // OUDS mod
+  $disabled-background: $ouds-button-color-bg-default-disabled, // OUDS mod
+  $disabled-border: $ouds-button-color-border-default-disabled, // OUDS mod
+  $disabled-color: $ouds-button-color-content-default-disabled, // OUDS mod
 ) {
   --#{$prefix}btn-color: #{$color};
   --#{$prefix}btn-bg: #{$background};
@@ -36,41 +36,38 @@
 }
 // scss-docs-end btn-variant-mixin
 
-// scss-docs-start btn-outline-variant-mixin
-@mixin button-outline-variant(
-  $color,
-  $color-hover: $btn-outline-default-hover-color, // OUDS mod: instead of `color-contrast($color)`
-  $active-background: $btn-outline-default-active-bg, // OUDS mod: instead of `$color`
-  $active-border: $btn-outline-default-active-border, // OUDS mod: instead of `$color`
-  $active-color: $btn-outline-default-active-color, // Booted mod: `color-contrast($active-background)`
-  $hover-background: $btn-outline-default-hover-bg, // OUDS mod
-  $hover-border: $btn-outline-default-hover-border // OUDS mod
-) {
-  --#{$prefix}btn-color: #{$color};
-  --#{$prefix}btn-border-color: #{$color};
-  --#{$prefix}btn-hover-color: #{$color-hover};
-  --#{$prefix}btn-hover-bg: #{$hover-background}; // OUDS mod: instead of using `#{$active-background}`
-  --#{$prefix}btn-hover-border-color: #{$hover-border}; // OUDS mod: instead of using `#{$active-border}`
-  --#{$prefix}btn-focus-shadow-rgb: #{$color};
-  --#{$prefix}btn-active-color: #{$active-color};
-  --#{$prefix}btn-active-bg: #{$active-background};
-  --#{$prefix}btn-active-border-color: #{$active-border};
-  --#{$prefix}btn-active-shadow: #{$btn-active-box-shadow};
-  --#{$prefix}btn-disabled-color: #{$btn-outline-default-disabled-color};
-  --#{$prefix}btn-disabled-bg: #{$btn-outline-default-disabled-bg};
-  --#{$prefix}btn-disabled-border-color: #{$btn-outline-default-disabled-border};
-  --#{$prefix}gradient: none;
-}
+// scss-docs-start btn-outline-variant-mixin - not used by OUDS
+//@mixin button-outline-variant(
+//  $color,
+//  $color-hover: $btn-outline-default-hover-color, // OUDS mod: instead of `color-contrast($color)`
+//  $active-background: $btn-outline-default-active-bg, // OUDS mod: instead of `$color`
+//  $active-border: $btn-outline-default-active-border, // OUDS mod: instead of `$color`
+//  $active-color: $btn-outline-default-active-color, // Booted mod: `color-contrast($active-background)`
+//  $hover-background: $btn-outline-default-hover-bg, // OUDS mod
+//  $hover-border: $btn-outline-default-hover-border // OUDS mod
+//) {
+//  --#{$prefix}btn-color: #{$color};
+//  --#{$prefix}btn-border-color: #{$color};
+//  --#{$prefix}btn-hover-color: #{$color-hover};
+//  --#{$prefix}btn-hover-bg: #{$hover-background}; // OUDS mod: instead of using `#{$active-background}`
+//  --#{$prefix}btn-hover-border-color: #{$hover-border}; // OUDS mod: instead of using `#{$active-border}`
+//  --#{$prefix}btn-focus-shadow-rgb: #{$color};
+//  --#{$prefix}btn-active-color: #{$active-color};
+//  --#{$prefix}btn-active-bg: #{$active-background};
+//  --#{$prefix}btn-active-border-color: #{$active-border};
+//  --#{$prefix}btn-active-shadow: #{$btn-active-box-shadow};
+//  --#{$prefix}btn-disabled-color: #{$btn-outline-default-disabled-color};
+//  --#{$prefix}btn-disabled-bg: #{$btn-outline-default-disabled-bg};
+//  --#{$prefix}btn-disabled-border-color: #{$btn-outline-default-disabled-border};
+//  --#{$prefix}gradient: none;
+//}
 // scss-docs-end btn-outline-variant-mixin
 
-// scss-docs-start btn-size-mixin
-@mixin button-size($padding-y, $padding-x, $font-size, $border-radius, $line-height: null, $icon-spacing: $btn-icon-padding-x, $letter-spacing: $letter-spacing-base) {
-  --#{$prefix}icon-spacing: #{$icon-spacing}; // OUDS mod: used for icons
+// scss-docs-start btn-size-mixin - not used by OUDS
+@mixin button-size($padding-y, $padding-x, $font-size, $border-radius) {
   --#{$prefix}btn-padding-y: #{$padding-y};
   --#{$prefix}btn-padding-x: #{$padding-x};
   @include rfs($font-size, --#{$prefix}btn-font-size);
-  --#{$prefix}btn-line-height: #{$line-height}; // OUDS mod
-  --#{$prefix}btn-letter-spacing: #{$letter-spacing}; // OUDS mod
   --#{$prefix}btn-border-radius: #{$border-radius};
 }
 // scss-docs-end btn-size-mixin
@@ -101,3 +98,16 @@
   }
 }
 // scss-docs-end btn-icon
+
+// OUDS mod: set button variant focus tokens
+// scss-docs-start button-variant-focus
+@mixin button-variant-focus(
+  $btn-focus-bg,
+  $btn-focus-border-color,
+  $btn-focus-color
+) {
+  --#{$prefix}btn-focus-bg: #{$btn-focus-bg};
+  --#{$prefix}btn-focus-border-color: #{$btn-focus-border-color};
+  --#{$prefix}btn-focus-color: #{$btn-focus-color};
+}
+// scss-docs-end button-variant-focus

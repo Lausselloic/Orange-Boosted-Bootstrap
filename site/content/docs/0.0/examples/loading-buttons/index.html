@@ -1,0 +1,70 @@
+---
+layout: examples
+title: Loading buttons
+extra_css:
+- "loading-buttons.css"
+extra_js:
+- src: "loading-buttons.js"
+defer: true
+aliases:
+- "/examples/loading-buttons"
+- "/docs/examples/loading-buttons"
+---
+
+<div class="container-fluid container-max-width">
+  <h1 class="py-medium">Loading buttons</h1>
+
+  Find here some examples of how to implement a live loading button, for an indeterminate or determinate time. These
+  examples are not part of the OUDS Web library and must be adapted to your project. You can find the code below.
+
+  <h2 class="py-short">Loading button in an indeterminate time</h2>
+  For this example, the time is set to 5 seconds by Javascript, but in a real project, you just need a callback when the
+  action is finished.
+  An update to the status is done every second to let the user know the download is still ongoing.
+  Each time, a dot is added to the message to make sure it will change and then be vocalised by the screen readers.
+  <div class="row py-taller">
+    <div class="col-4">
+      <button type="button" class="btn btn-default" id="loading-btn-1">
+        Download file 1
+        <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader d-none" aria-hidden="true">
+          <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
+        </svg>
+        <span role="status" id="loading-btn-msg-1" class="visually-hidden d-none">Downloading file 1</span>
+      </button>
+    </div>
+  </div>
+
+  <h2 class="py-short">Loading buttons in a determinate time</h2>
+  The time must be set to through the CSS variable <code>--bs-button-loading-time</code> directly on the button.
+  In this example, it is set to 4 seconds.
+  An update to the status is done every second, giving the percentage of time that has elapsed.
+  <div class="row py-taller">
+    <div class="col-3">
+      <button type="button" class="btn btn-default" id="loading-btn-2" style="--bs-btn-loading-time: 4s;">
+        Download file 2
+        <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader d-none" aria-hidden="true">
+          <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
+        </svg>
+        <span role="status" id="loading-btn-msg-2" class="visually-hidden d-none">Downloading file 2</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="accordion" id="code-accordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                aria-expanded="false" aria-controls="collapseOne">
+          See Javascript code
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#code-accordion">
+        <div class="accordion-body border border-subtle">
+          {{< js-docs name="live-loading-buttons" file="/docs/0.0/examples/loading-buttons/loading-buttons.js"
+          example="true">}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

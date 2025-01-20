@@ -995,7 +995,7 @@ describe('Modal', () => {
     it('should open modal, having special characters in its id', () => {
       return new Promise(resolve => {
         fixtureEl.innerHTML = [
-          '<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#j_id22:exampleModal">',
+          '<button class="btn btn-strong" data-bs-toggle="modal" data-bs-target="#j_id22:exampleModal">',
           '   Launch demo modal',
           '</button>',
           '<div class="modal fade" id="j_id22:exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">',

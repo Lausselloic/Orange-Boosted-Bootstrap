@@ -4,7 +4,6 @@
   z-index: $zindex-modal;
   display: none;
   width: 100%;
-  max-width: $modal-md;
   padding: $modal-content-padding;
   background-color: $modal-content-bg;
   background-clip: padding-box;
@@ -15,6 +14,23 @@
     display: block;
     font-weight: $font-weight-bold;
     color: $modal-content-color;
+  }
+
+  @include media-breakpoint-up(sm) {
+    max-width: $modal-sm;
+    margin: $modal-dialog-margin-y-sm-up auto;
+  }
+
+  @include media-breakpoint-up(md) {
+    max-width: $modal-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    max-width: $modal-lg * 1.125;
+  }
+
+  @include media-breakpoint-up(xl) {
+    max-width: $modal-xl * 1.25;
   }
 }
 
@@ -143,22 +159,6 @@
   padding: $spacer / 4 $spacer / 2;
   color: $ouds-color-functional-white;
   background-color: $ouds-color-functional-black;
-}
-
-@include tac("Allow", true) {
-  @include button-icon($form-switch-checked-bg-image, $btn-font-size-sm);
-
-  &::before {
-    margin-right: $spacer / 4;
-  }
-}
-
-@include tac("Deny", true) {
-  @include button-icon($form-switch-bg-image, $btn-font-size-sm);
-
-  &::before {
-    margin-right: $spacer / 4;
-  }
 }
 
 .catToggleBtn,

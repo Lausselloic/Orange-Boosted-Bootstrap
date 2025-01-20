@@ -34,7 +34,7 @@ Use the mixin in SCSS:
 
 {{< example >}}
 <div class="bg-status-info-emphasized clearfix">
-  <button type="button" class="btn btn-secondary float-start">Example Button floated left</button>
-  <button type="button" class="btn btn-secondary float-end">Example Button floated right</button>
+  <button type="button" class="btn btn-strong float-start">Example Button floated left</button>
+  <button type="button" class="btn btn-strong float-end">Example Button floated right</button>
 </div>
 {{< /example >}} -->

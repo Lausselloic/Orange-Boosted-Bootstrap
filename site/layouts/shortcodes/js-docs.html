@@ -1,5 +1,5 @@
 {{- /*
-  Usage: `js-docs name="name" file="file/_location.js`
+  Usage: `js-docs name="name" file="file/_location.js" example="false"`
 
   Prints everything between `// js-docs-start "name"` and `// js-docs-end "name"`
   comments in the docs.
@@ -7,6 +7,7 @@
 
 {{- $name := .Get "name" -}}
 {{- $file := .Get "file" -}}
+{{- $example := .Get "example" | default false -}}
 
 {{- /* If any parameters are missing, print an error and exit */ -}}
 {{- if or (not $name) (not $file) -}}
@@ -64,12 +65,14 @@
     {{- end -}}
     {{- highlight $output "js" "" -}}
 
-    <!-- OUDS mod: moved this section and changed the positioning to handle a different focus order -->
+    <!-- OUDS mod: moved this section and changed the positioning to handle a different focus order and add a condition -->
+    {{- if not $example -}}
     <div class="position-absolute top-0 mt-shortest end-0 me-short">
       <button type="button" class="btn-clipboard mt-none me-none" title="Copy to clipboard">
         <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
       </button>
     </div>
+    {{- end -}}
     <!-- End mod -->
   </div>
 {{- end -}}

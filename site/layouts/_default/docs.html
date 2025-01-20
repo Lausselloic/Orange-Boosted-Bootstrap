@@ -22,7 +22,7 @@
             {{- if (or (and (.Page.Params.added) (not (isset .Page.Params.added "show_badge"))) (and (.Page.Params.added) (isset .Page.Params.added "show_badge") (not (eq .Page.Params.added.show_badge false)))) -}}
               <p class="mb-none me-short"><span class="tag tag-sm">Added in v{{ .Page.Params.added.version }}</span></p>
             {{- end -}}
-            <a class="btn btn-sm btn-outline-secondary" href="{{ .Site.Params.repo }}/blob/v{{ .Site.Params.current_version }}-ouds-web/site/content/{{ .Page.File.Path | replaceRE `\\` "/" }}" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+            <a class="btn btn-default" href="{{ .Site.Params.repo }}/blob/v{{ .Site.Params.current_version }}-ouds-web/site/content/{{ .Page.File.Path | replaceRE `\\` "/" }}" title="View and edit this file on GitHub" target="_blank" rel="noopener">
               View on GitHub
             </a>
           </div>
@@ -35,7 +35,7 @@
       {{ if (eq .Page.Params.toc true) }}
         <div class="bd-toc mt-tall mb-huge my-lg-none mb-lg-huge px-sm-shortest text-muted">
           <h2 class="mb-none">
-            <button class="btn btn-outline-secondary p-md-none mb-short mb-md-none text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
+            <button class="btn btn-default p-md-none mb-short mb-md-none text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
               On this page
               <svg class="bi d-md-none ms-short" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
             </button>

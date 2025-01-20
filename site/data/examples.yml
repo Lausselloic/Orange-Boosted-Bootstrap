@@ -37,7 +37,6 @@
       url: /examples/tree/main/webpack
       indexPath: src/index.html
 
-
 - category: Framework
   description: "Examples that focus on implementing uses of built-in components provided by OUDS Web."
   examples:
@@ -47,6 +46,12 @@
       description: "Multiple examples of grid layouts with all four tiers, nesting, and more."
     - name: Grid system
       description: "OUDS Web default grid system illustration."
+
+- category: Live examples
+  description: "How to use some components in real-life examples using Javascript."
+  examples:
+    - name: Loading buttons
+      description: "Use loading buttons in an accessible way."
 
 - category: "Bootstrap examples"
   bootstrap: true

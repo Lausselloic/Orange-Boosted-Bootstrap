@@ -11,12 +11,12 @@
     const tac = document.getElementById('tarteaucitron')
 
     tac.querySelectorAll('.tarteaucitronAllow').forEach(button => {
-      button.classList.add('btn', 'btn-sm', 'btn-success')
+      button.classList.add('btn', 'btn-strong')
       button.innerHTML = tarteaucitron.lang.allowAll
     })
 
     tac.querySelectorAll('.tarteaucitronDeny').forEach(button => {
-      button.classList.add('btn', 'btn-sm', 'btn-danger', 'mt-1', 'mt-md-0', 'ms-md-3')
+      button.classList.add('btn', 'btn-negative', 'mt-1', 'mt-md-0', 'ms-md-3')
       button.innerHTML = tarteaucitron.lang.denyAll
     })
 
@@ -32,23 +32,27 @@
 
     alert.setAttribute('data-bs-theme', 'dark')
 
-    document.getElementById('tarteaucitronCloseAlert').classList.add('btn', 'btn-sm', 'btn-secondary', 'ms-lg-2')
-    alert.querySelector('.tarteaucitronAllow').classList.add('btn', 'btn-sm', 'btn-success', 'mx-sm-2', 'ms-lg-auto', 'my-2', 'my-lg-0')
+    document.getElementById('tarteaucitronCloseAlert').classList.add('btn', 'btn-default', 'ms-lg-2')
+    alert.querySelector('.tarteaucitronAllow').classList.add('btn', 'btn-strong', 'mx-sm-2', 'ms-lg-auto', 'my-2', 'my-lg-0')
     alert.querySelector('.tarteaucitronAllow').innerHTML = tarteaucitron.lang.acceptAll
-    alert.querySelector('.tarteaucitronDeny').classList.add('btn', 'btn-sm', 'btn-danger', 'mx-sm-2', 'my-2', 'my-lg-0')
+    alert.querySelector('.tarteaucitronDeny').classList.add('btn', 'btn-negative', 'mx-sm-2', 'my-2', 'my-lg-0')
     alert.querySelector('.tarteaucitronDeny').innerHTML = tarteaucitron.lang.denyAll
   }, { once: true })
 
   window.addEventListener('tac.open_panel',
     () => {
-      document.getElementById('tarteaucitronSaveButton').classList.add('btn', 'btn-secondary', 'd-flex', 'mt-3', 'mx-auto')
+      document.getElementById('tarteaucitronSaveButton').classList.add('btn', 'btn-default', 'd-flex', 'mt-3', 'mx-auto')
 
       document.querySelectorAll('#tarteaucitronServices_api button').forEach(button => {
-        button.classList.add('btn', 'btn-sm', 'ms-2')
+        button.classList.add('btn', 'ms-2')
       })
       const allowConsentButton = document.querySelector('#tarteaucitronAllAllowed')
       const denyConsentButton = document.querySelector('#tarteaucitronAllDenied')
       const checkboxes = document.querySelectorAll('.form-check-input')
+
+      allowConsentButton.innerHTML = '<svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">\n' +
+        '<use xlink:href="/docs/0.0/assets/img/ouds-web-sprite.svg#tick"/>\n' +
+        `</svg>${allowConsentButton.innerHTML}`
 
       allowConsentButton.addEventListener('click', () => {
         for (let i = 0; i < checkboxes.length; i++) {
@@ -57,6 +61,11 @@
           }
         }
       })
+
+      denyConsentButton.innerHTML = '<svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">\n' +
+        '<use xlink:href="/docs/0.0/assets/img/ouds-web-sprite.svg#delete"/>\n' +
+        `</svg>${denyConsentButton.innerHTML}`
+
       denyConsentButton.addEventListener('click', () => {
         for (let i = 0; i < checkboxes.length; i++) {
           if (checkboxes.checked !== true) {

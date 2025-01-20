@@ -76,7 +76,48 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 ### Close button
 
-- <span class="badge text-bg-status-warning-emphasized">Warning</span> `.btn-close-white` class has been removed as it was deprecated in Boosted v5.3.3.
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> `.btn-close-white` class has been removed as it was deprecated in Boosted v5.3.3. You can use contextual color mode instead.
+
+### Buttons
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> `.btn-default`, `.btn-strong`, `.btn-minimal`, and `.btn-negative` have been added.
+- <span class="badge text-bg-status-positive-emphasized">New</span> `.btn-on-colored-bg` has been added; it can be used with `.btn-default`, `.btn-strong` and `.btn-minimal` to get variants on colored backgrounds (neither primary, nor secondary, nor tertiary, nor emphasized backgrounds).
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.btn-primary`, `.btn-secondary`, `.btn-success`, `.btn-danger`, `.btn-warning`, `.btn-info`, `.btn-light`, and `.btn-dark` have been removed. You can still have them using `$enable-bootstrap-compatibility`. Here is the visual correspondence:
+  - `.btn-primary` and `.btn-dark` will look as `.btn-strong`
+  - `.btn-secondary` and `.btn-success` will look as `.btn-default`
+  - `.btn-danger` and `.btn-warning` will look as `.btn-negative`
+  - `.btn-info`and `.btn-light` will look as `.btn-minimal`
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.btn-no-outline` has been removed. You can use `.btn-minimal` instead.
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.btn-outline-*` have been removed. You can still have them using `$enable-bootstrap-compatibility`. They all look like `.btn-default`.
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> `.btn-sm` and `.btn-lg` have been removed.
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Loading buttons implementation has changed. You should now use the classes `.loading-indeterminate` and `.loading-determinate` and no more spinner borders.
+<div class="ps-taller">
+
+For example, if you used to write:
+
+```html
+<button class="btn btn-secondary" type="button" disabled>
+  <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+  <span class="visually-hidden" role="status">Loading...</span>
+</button>
+```
+Now you should write:
+
+```html
+<button type="button" class="btn btn-default loading-indeterminate" id="loading-btn-1" disabled>
+  Download file 1
+  <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+    <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
+  </svg>
+  <span role="status" id="loading-btn-msg-1" class="visually-hidden">Downloading file 1</span>
+</button>
+```
+
+You will have to make some extra Javascript to change the styles and update the status message like explained in the documentation. You can find a complete example in our [loading buttons live example]({{< docsref "/examples/loading-buttons" >}}).
+
+</div>
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Button plugin (button with a toggle behavior) has been removed.
 
 ## Forms
 

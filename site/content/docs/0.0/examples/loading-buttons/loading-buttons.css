@@ -1,0 +1,15 @@
+.accordion-item {
+  max-width: 55rem;
+}
+
+.accordion-body {
+  margin-bottom: 5rem;
+}
+
+.accordion-body .highlight {
+  padding: 24px 24px 0;
+}
+
+.accordion-collapse {
+  background-color: #f4f4f4;
+}

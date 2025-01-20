@@ -1,4 +1,4 @@
-.placeholder {
+.placeholder:not(.btn) { // OUDS mod
   display: inline-block;
   min-height: 1em;
   vertical-align: middle;
@@ -6,10 +6,7 @@
   background-color: currentcolor;
   opacity: $placeholder-opacity-max;
 
-  &.btn::before {
-    display: inline-block;
-    content: "";
-  }
+  // OUDs mod: no &.btn::before
 }
 
 // Sizing
