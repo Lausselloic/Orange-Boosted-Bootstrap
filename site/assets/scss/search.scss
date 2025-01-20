@@ -5,9 +5,11 @@
  * For details, see https://creativecommons.org/licenses/by/3.0/.
  */
 
+@import "../../../scss/config";
 @import "../../../scss/functions";
 @import "../../../scss/tokens/raw";
 @import "../../../scss/tokens/semantic";
+@import "../../../scss/tokens/semantic-colors-custom-props";
 @import "../../../scss/tokens/composite";
 @import "../../../scss/tokens/component";
 @import "../../../scss/variables";

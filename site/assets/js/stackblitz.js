@@ -43,7 +43,7 @@ const openOUDSWebSnippet = (htmlSnippet, jsSnippet, classes) => {
   <title>OUDS Web Example</title>
   <${'script'} defer src="${jsBundleCdn}"></${'script'}>
 </head>
-<body class="p-tall m-none border-0 ${classes}">
+<body class="p-tall m-none border-none ${classes}">
   <!-- Example Code -->
 ${htmlSnippet.trimStart().replace(/^/gm, '    ').replace(/^ {4}$/gm, '').trimEnd()}
   <!-- End Example Code -->

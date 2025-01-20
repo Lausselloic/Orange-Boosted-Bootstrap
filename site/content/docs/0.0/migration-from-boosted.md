@@ -45,21 +45,21 @@ Technically, it means that you can get rid of the following things:
 
 ### Typography
 
-- <span class="badge text-bg-success">New</span> Body fonts' sizes are now responsive and can change depending on the screen size. See [Typography]({{< docsref "/content/typography/" >}}) for more details.
+- <span class="badge text-bg-status-positive-emphasized">New</span> Body fonts' sizes are now responsive and can change depending on the screen size. See [Typography]({{< docsref "/content/typography/" >}}) for more details.
 
-- <span class="badge text-bg-success">New</span> A `max-width` has been added on all font references for readability reasons. If you want to get rid of the `max-width`, please use our `.mw-none` width utility.
+- <span class="badge text-bg-status-positive-emphasized">New</span> A `max-width` has been added on all font references for readability reasons. If you want to get rid of the `max-width`, please use our `.mw-none` width utility.
 
-- <span class="badge text-bg-success">New</span> Selected text is now styled with a specific text `color` and `background-color`, making it easier to spot and to read.
+- <span class="badge text-bg-status-positive-emphasized">New</span> Selected text is now styled with a specific text `color` and `background-color`, making it easier to spot and to read.
 
-- <span class="badge text-bg-danger">Breaking</span> Display headings classes `.display-{1|2|3|4|5|6}` have been removed and replaced by `.display-{small|medium|large}`. You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Display headings classes `.display-{1|2|3|4|5|6}` have been removed and replaced by `.display-{small|medium|large}`. You can still have them using `$enable-bootstrap-compatibility`.
 
-- <span class="badge text-bg-danger">Breaking</span> Abbreviation class `.initialism` has been removed.
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Abbreviation class `.initialism` has been removed.
 
-- <span class="badge text-bg-warning">Warning</span> Default spacing values now use `px`s instead of `em`s for fixed component spacing, to keep as much space as possible for meaningful content on zoom.
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> Default spacing values now use `px`s instead of `em`s for fixed component spacing, to keep as much space as possible for meaningful content on zoom.
 
 ## Layout
 
-- <span class="badge text-bg-danger">Breaking</span> Responsive breakpoints have changed:
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Responsive breakpoints have changed:
   - `2xs` and `3xl` have been added.
   - `xxl` has been renamed to `2xl`.
   - The breakpoints values have changed. Please refer to the [breakpoints' documentation]({{< docsref "/layout/breakpoints/" >}}).
@@ -69,26 +69,26 @@ Technically, it means that you can get rid of the following things:
 
 All responsive classes, helpers, and utilities have been updated accordingly to match the new breakpoints.
 
-- <span class="badge text-bg-info">Info</span> `.container` and `.container-{breakpoint}` have been removed from the default build but you can still have them using `$enable-bootstrap-compatibility`.
-- <span class="badge text-bg-info">Info</span> `xxl` breakpoint and thus all related classes (like `.container-xxl`, `.col-xxl-*`) can still be available when `$enable-bootstrap-compatibility` is enabled.
+- <span class="badge text-bg-status-info-emphasized">Info</span> `.container` and `.container-{breakpoint}` have been removed from the default build but you can still have them using `$enable-bootstrap-compatibility`.
+- <span class="badge text-bg-status-info-emphasized">Info</span> `xxl` breakpoint and thus all related classes (like `.container-xxl`, `.col-xxl-*`) can still be available when `$enable-bootstrap-compatibility` is enabled.
 
 ## Components
 
 ### Close button
 
-- <span class="badge text-bg-warning">Warning</span> `.btn-close-white` class has been removed as it was deprecated in Boosted v5.3.3.
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> `.btn-close-white` class has been removed as it was deprecated in Boosted v5.3.3.
 
 ## Forms
 
 ### Checks & radios
 
-- <span class="badge text-bg-warning">Warning</span> `form-star-rating()` mixin has been removed as it was deprecated in Boosted v5.3.2.
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> `form-star-rating()` mixin has been removed as it was deprecated in Boosted v5.3.2.
 
 ## Helpers
 
 ### Icon
 
-- <span class="badge text-bg-success">New</span> Icons' sizes helpers have been added to help choose the right icon size with a specific typography reference. If you need these helpers, and you are using a custom import stack for helpers, don't forget to add the needed file `helpers/_icon.scss`:
+- <span class="badge text-bg-status-positive-emphasized">New</span> Icons' sizes helpers have been added to help choose the right icon size with a specific typography reference. If you need these helpers, and you are using a custom import stack for helpers, don't forget to add the needed file `helpers/_icon.scss`:
   - Responsive icons' sizes in headings:
     - `.h{size}-short-icon`, `.h{size}-medium-icon`, `.h{size}-tall-icon`, where `h` stands for heading and size is one of `s` for small, `m` for medium, `l` for large, or `xl` for x-large
     - `.b{size}-short-icon`, `.b{size}-medium-icon`, , `.h{size}-tall-icon`, where `b` stands for body and size is one of `m` for medium, or `l` for large
@@ -97,23 +97,23 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 ### Position
 
-- <span class="badge text-bg-danger">Breaking</span> Responsive sticky helpers `.sticky-xxl-{top|bottom}` have been removed and replaced by their equivalent `.sticky-2xl-{top|bottom}`. You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Responsive sticky helpers `.sticky-xxl-{top|bottom}` have been removed and replaced by their equivalent `.sticky-2xl-{top|bottom}`. You can still have them using `$enable-bootstrap-compatibility`.
 
-- <span class="badge text-bg-success">New</span> Responsive sticky helpers: `.sticky-xs-{top|bottom}`, `.sticky-2xl-{top|bottom}` and `.sticky-3xl-{top|bottom}`.
+- <span class="badge text-bg-status-positive-emphasized">New</span> Responsive sticky helpers: `.sticky-xs-{top|bottom}`, `.sticky-2xl-{top|bottom}` and `.sticky-3xl-{top|bottom}`.
 
 ## Utilities
 
 ### Border
 
-- <span class="badge text-bg-danger">Breaking</span> Border operative utilities have been removed: `.border-0`, `.border-top-0`, `.border-bottom-0`, `.border-start-0`, and `.border-end-0`. Please check the new [border values]({{< docsref "/utilities/borders#border" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Border operative utilities have been removed: `.border-0`, `.border-top-0`, `.border-bottom-0`, `.border-start-0`, and `.border-end-0`. Please check the new [border values]({{< docsref "/utilities/borders#border" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
 
-- <span class="badge text-bg-success">New</span> Border operative utilities: `.border-none`, `.border-top-none`, `.border-bottom-none`, `.border-start-none`, and `.border-end-none`.
+- <span class="badge text-bg-status-positive-emphasized">New</span> Border operative utilities: `.border-none`, `.border-top-none`, `.border-bottom-none`, `.border-start-none`, and `.border-end-none`.
 
-- <span class="badge text-bg-danger">Breaking</span> Border width utilities have been removed: `.border-0`, `.border-1`, `.border-2`, `.border-3`, `.border-4` and `.border-5`. Please check the new [border values]({{< docsref "/utilities/borders#width" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Border width utilities have been removed: `.border-0`, `.border-1`, `.border-2`, `.border-3`, `.border-4` and `.border-5`. Please check the new [border values]({{< docsref "/utilities/borders#width" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
 
-- <span class="badge text-bg-success">New</span> Border width utilities: `.border-none`, `.border-thin`, `.border-medium`, `.border-thick`, and `.border-thicker`.
+- <span class="badge text-bg-status-positive-emphasized">New</span> Border width utilities: `.border-none`, `.border-thin`, `.border-medium`, `.border-thick`, and `.border-thicker`.
 
-- <span class="badge text-bg-danger">Breaking</span> Border radius utilities with many sizes have been removed. Please check the new [border values]({{< docsref "/utilities/borders#radius" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`:
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Border radius utilities with many sizes have been removed. Please check the new [border values]({{< docsref "/utilities/borders#radius" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`:
   - **0**: `.rounded-0`, `.rounded-top-0`, `.rounded-bottom-0`, `.rounded-start-0` and `.rounded-end-0`.
   - **1**: `.rounded-1`, `.rounded-top-1`, `.rounded-bottom-1`, `.rounded-start-1` and `.rounded-end-1`.
   - **2**: `.rounded-2`, `.rounded-top-2`, `.rounded-bottom-2`, `.rounded-start-2` and `.rounded-end-2`.
@@ -121,53 +121,53 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   - **4**: `.rounded-4`, `.rounded-top-4`, `.rounded-bottom-4`, `.rounded-start-4` and `.rounded-end-4`.
   - **5**: `.rounded-5`, `.rounded-top-5`, `.rounded-bottom-5`, `.rounded-start-5` and `.rounded-end-5`.
 
-- <span class="badge text-bg-success">New</span> Border radius utilities with all sizes:
+- <span class="badge text-bg-status-positive-emphasized">New</span> Border radius utilities with all sizes:
   - **None**: `.rounded-none`, `.rounded-top-none`, `.rounded-bottom-none`, `.rounded-start-none` and `.rounded-end-none`.
   - **Short**: `.rounded-short`, `.rounded-top-short`, `.rounded-bottom-short`, `.rounded-start-short` and `.rounded-end-short`.
   - **Medium**: `.rounded-medium`, `.rounded-top-medium`, `.rounded-bottom-medium`, `.rounded-start-medium` and `.rounded-end-medium`.
   - **Tall**: `.rounded-tall`, `.rounded-top-tall`, `.rounded-bottom-tall`, `.rounded-start-tall` and `.rounded-end-tall`.
 
-- <span class="badge text-bg-success">New</span> Border style utilities: `.border-drag`.
+- <span class="badge text-bg-status-positive-emphasized">New</span> Border style utilities: `.border-drag`.
 
 ### Display
 
-- <span class="badge text-bg-danger">Breaking</span> `.d-xxl-{value}` responsive display utility has been replaced by `.d-2xl-{value}`. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}). You can still have it using `$enable-bootstrap-compatibility`.
-- <span class="badge text-bg-success">New</span> `.d-xs-{value}` and `.d-3xl-{value}` responsive display utilities have been added. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}).
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.d-xxl-{value}` responsive display utility has been replaced by `.d-2xl-{value}`. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}). You can still have it using `$enable-bootstrap-compatibility`.
+- <span class="badge text-bg-status-positive-emphasized">New</span> `.d-xs-{value}` and `.d-3xl-{value}` responsive display utilities have been added. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}).
 
 ### Flex
 
-- <span class="badge text-bg-danger">Breaking</span> `xxl` responsive flex utilities have been replaced by `2xl` utilities: `.d-xxl-flex`, `.d-xxl-inline-flex`, `.flex-xxl-{row|column}`, `.flex-xxl-{row|column}-reverse`, `.justify-content-xxl-{start|end|center|between|around|evenly}`, `.align-items-xxl-{start|end|center|baseline|stretch}`, `.align-self-xxl-{start|end|center|baseline|stretch}`, `.flex-xxl-fill`, `.flex-xxl-{grow|shrink}-{0|1}`, `.flex-xxl-{nowrap|wrap|wrap-reverse}`, `.order-xxl-{number}`, `.order-xxl-{first|last}` and `.align-content-xxl-{start|end|center|between|around|stretch}` utilities have been replaced by `.d-2xl-flex`, `.d-2xl-inline-flex`, `.flex-2xl-{row|column}`, `.flex-2xl-{row|column}-reverse`, `.justify-content-2xl-{start|end|center|between|around|evenly}`, `.align-items-2xl-{start|end|center|baseline|stretch}`, `.align-self-2xl-{start|end|center|baseline|stretch}`, `.flex-2xl-fill`, `.flex-2xl-{grow|shrink}-{0|1}`, `.flex-2xl-{nowrap|wrap|wrap-reverse}`, `.order-2xl-{number}`, `.order-2xl-{first|last}` and `.align-content-2xl-{start|end|center|between|around|stretch}`. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}). You can still have them using `$enable-bootstrap-compatibility`.
-- <span class="badge text-bg-success">New</span> `xs` and `3xl` responsive flex utilities have been added: `.d-xs-flex`, `.d-xs-inline-flex`, `.flex-xs-{row|column}`, `.flex-xs-{row|column}-reverse`, `.justify-content-xs-{start|end|center|between|around|evenly}`, `.align-items-xs-{start|end|center|baseline|stretch}`, `.align-self-xs-{start|end|center|baseline|stretch}`, `.flex-xs-fill`, `.flex-xs-{grow|shrink}-{0|1}`, `.flex-xs-{nowrap|wrap|wrap-reverse}`, `.order-xs-{number}`, `.order-xs-{first|last}`, `.align-content-xs-{start|end|center|between|around|stretch}`, `.d-3xl-flex`, `.d-3xl-inline-flex`, `.flex-3xl-{row|column}`, `.flex-3xl-{row|column}-reverse`, `.justify-content-3xl-{start|end|center|between|around|evenly}`, `.align-items-3xl-{start|end|center|baseline|stretch}`, `.align-self-3xl-{start|end|center|baseline|stretch}`, `.flex-3xl-fill`, `.flex-3xl-{grow|shrink}-{0|1}`, `.flex-3xl-{nowrap|wrap|wrap-reverse}`, `.order-3xl-{number}`, `.order-3xl-{first|last}` and `.align-content-3xl-{start|end|center|between|around|stretch}`. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}).
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> `xxl` responsive flex utilities have been replaced by `2xl` utilities: `.d-xxl-flex`, `.d-xxl-inline-flex`, `.flex-xxl-{row|column}`, `.flex-xxl-{row|column}-reverse`, `.justify-content-xxl-{start|end|center|between|around|evenly}`, `.align-items-xxl-{start|end|center|baseline|stretch}`, `.align-self-xxl-{start|end|center|baseline|stretch}`, `.flex-xxl-fill`, `.flex-xxl-{grow|shrink}-{0|1}`, `.flex-xxl-{nowrap|wrap|wrap-reverse}`, `.order-xxl-{number}`, `.order-xxl-{first|last}` and `.align-content-xxl-{start|end|center|between|around|stretch}` utilities have been replaced by `.d-2xl-flex`, `.d-2xl-inline-flex`, `.flex-2xl-{row|column}`, `.flex-2xl-{row|column}-reverse`, `.justify-content-2xl-{start|end|center|between|around|evenly}`, `.align-items-2xl-{start|end|center|baseline|stretch}`, `.align-self-2xl-{start|end|center|baseline|stretch}`, `.flex-2xl-fill`, `.flex-2xl-{grow|shrink}-{0|1}`, `.flex-2xl-{nowrap|wrap|wrap-reverse}`, `.order-2xl-{number}`, `.order-2xl-{first|last}` and `.align-content-2xl-{start|end|center|between|around|stretch}`. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}). You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="badge text-bg-status-positive-emphasized">New</span> `xs` and `3xl` responsive flex utilities have been added: `.d-xs-flex`, `.d-xs-inline-flex`, `.flex-xs-{row|column}`, `.flex-xs-{row|column}-reverse`, `.justify-content-xs-{start|end|center|between|around|evenly}`, `.align-items-xs-{start|end|center|baseline|stretch}`, `.align-self-xs-{start|end|center|baseline|stretch}`, `.flex-xs-fill`, `.flex-xs-{grow|shrink}-{0|1}`, `.flex-xs-{nowrap|wrap|wrap-reverse}`, `.order-xs-{number}`, `.order-xs-{first|last}`, `.align-content-xs-{start|end|center|between|around|stretch}`, `.d-3xl-flex`, `.d-3xl-inline-flex`, `.flex-3xl-{row|column}`, `.flex-3xl-{row|column}-reverse`, `.justify-content-3xl-{start|end|center|between|around|evenly}`, `.align-items-3xl-{start|end|center|baseline|stretch}`, `.align-self-3xl-{start|end|center|baseline|stretch}`, `.flex-3xl-fill`, `.flex-3xl-{grow|shrink}-{0|1}`, `.flex-3xl-{nowrap|wrap|wrap-reverse}`, `.order-3xl-{number}`, `.order-3xl-{first|last}` and `.align-content-3xl-{start|end|center|between|around|stretch}`. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}).
 
 ### Float
 
-- <span class="badge text-bg-danger">Breaking</span> `xxl` responsive float utilities have been replaced by `2xl` utilities: `.float-xxl-{start|end|none}` utilities have been replaced by `.float-2xl-{start|end|none}`. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}). You can still have it using `$enable-bootstrap-compatibility`.
-- <span class="badge text-bg-success">New</span> `xs` and `3xl` responsive float utilities have been added:  `.float-xs-{start|end|none}` and  `.float-3xl-{start|end|none}`. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}).
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> `xxl` responsive float utilities have been replaced by `2xl` utilities: `.float-xxl-{start|end|none}` utilities have been replaced by `.float-2xl-{start|end|none}`. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}). You can still have it using `$enable-bootstrap-compatibility`.
+- <span class="badge text-bg-status-positive-emphasized">New</span> `xs` and `3xl` responsive float utilities have been added:  `.float-xs-{start|end|none}` and  `.float-3xl-{start|end|none}`. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}).
 
 ### Object fit
 
-- <span class="badge text-bg-danger">Breaking</span> `xxl` responsive object fit utilities have been replaced by `2xl` utilities: `.object-fit-xxl-{contain|cover|fill|scale|none}` utilities have been replaced by ``.object-fit-2xl-{contain|cover|fill|scale|none}``. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}). You can still have them using `$enable-bootstrap-compatibility`.
-- <span class="badge text-bg-success">New</span> `xs` and `3xl` responsive object fit utilities have been added:  `.object-fit-xs-{contain|cover|fill|scale|none}` and  `.object-fit-3xl-{contain|cover|fill|scale|none}`. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}).
-- <span class="badge text-bg-info">Info</span> `xxl` responsive object fit utilities can still be available when <code>$enable-bootstrap-compatibility</code> is on.
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> `xxl` responsive object fit utilities have been replaced by `2xl` utilities: `.object-fit-xxl-{contain|cover|fill|scale|none}` utilities have been replaced by ``.object-fit-2xl-{contain|cover|fill|scale|none}``. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}). You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="badge text-bg-status-positive-emphasized">New</span> `xs` and `3xl` responsive object fit utilities have been added:  `.object-fit-xs-{contain|cover|fill|scale|none}` and  `.object-fit-3xl-{contain|cover|fill|scale|none}`. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}).
+- <span class="badge text-bg-status-info-emphasized">Info</span> `xxl` responsive object fit utilities can still be available when <code>$enable-bootstrap-compatibility</code> is on.
 
 ### Opacity
 
-- <span class="badge text-bg-danger">Breaking</span> `.opacity-0`, `.opacity-25`, `.opacity-50`, `.opacity-75` and `.opacity-100` have been removed from the default build. Please check the new [opacity values]({{< docsref "/utilities/opacity" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
-- <span class="badge text-bg-success">New</span> Opacity utilities: `.opacity-invisible`, `.opacity-weaker`, `.opacity-weak`, `.opacity-medium`, `.opacity-strong` and `.opacity-opaque`.
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.opacity-0`, `.opacity-25`, `.opacity-50`, `.opacity-75` and `.opacity-100` have been removed from the default build. Please check the new [opacity values]({{< docsref "/utilities/opacity" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="badge text-bg-status-positive-emphasized">New</span> Opacity utilities: `.opacity-invisible`, `.opacity-weaker`, `.opacity-weak`, `.opacity-medium`, `.opacity-strong` and `.opacity-opaque`.
 
 ### Shadow
 
-- <span class="badge text-bg-danger">Breaking</span> `.shadow`, `.shadow-sm` and `.shadow-lg` have been removed from the default build. Please check the new [shadows values]({{< docsref "/utilities/shadows" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
-- <span class="badge text-bg-success">New</span> Shadows utilities:
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.shadow`, `.shadow-sm` and `.shadow-lg` have been removed from the default build. Please check the new [shadows values]({{< docsref "/utilities/shadows" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="badge text-bg-status-positive-emphasized">New</span> Shadows utilities:
 `.shadow-none`, `.shadow-raised`, `.shadow-drag`, `.shadow-default`, `.shadow-emphasized`, `.shadow-sticky-default`, `.shadow-sticky-emphasized` and `.shadow-sticky-navigation-scrolled`.
 
 ### Sizing
 
-- <span class="badge text-bg-success">New</span> Sizing utility `.mw-none` to set `max-width: none`. This utility is particularly useful now that a `max-width` has been added on all font references (for readability reasons), if you want to omit it in some special cases.
+- <span class="badge text-bg-status-positive-emphasized">New</span> Sizing utility `.mw-none` to set `max-width: none`. This utility is particularly useful now that a `max-width` has been added on all font references (for readability reasons), if you want to omit it in some special cases.
 
 ### Spacings
 
-- <span class="badge text-bg-danger">Breaking</span> The following margin spacing utilities have been removed from the default build (`.m{position}-{breakpoint}-{negative}{value}`). Please check the new [spacing values]({{< docsref "/utilities/spacing" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`:
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> The following margin spacing utilities have been removed from the default build (`.m{position}-{breakpoint}-{negative}{value}`). Please check the new [spacing values]({{< docsref "/utilities/spacing" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`:
   - **0**: `.m-0`, `.mx-0`, `.my-0`, `.mt-0`, `.mb-0`, `.ms-0`, `.me-0`, `.m-sm-0`, etc...
   - **1**: `.m-1`, `.mx-1`, `.my-1`, `.mt-1`, `.mb-1`, `.ms-1`, `.me-1`, `.m-sm-1`, etc...
   - **2**: `.m-2`, `.mx-2`, `.my-2`, `.mt-2`, `.mb-2`, `.ms-2`, `.me-2`, `.m-sm-2`, etc...
@@ -176,7 +176,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   - **5**: `.m-5`, `.mx-5`, `.my-5`, `.mt-5`, `.mb-5`, `.ms-5`, `.me-5`, `.m-sm-5`, etc...
   - **Negative**: `.m-n1`, `.m-n2`, `.m-n3`, `.m-n4`, `.m-n5`, `.mx-n1`, etc...
 
-- <span class="badge text-bg-danger">Breaking</span> The following padding spacing utilities have been removed from the default build (`.p{position}-{breakpoint}-{value}`). Please check the new [spacing values]({{< docsref "/utilities/spacing" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`:
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> The following padding spacing utilities have been removed from the default build (`.p{position}-{breakpoint}-{value}`). Please check the new [spacing values]({{< docsref "/utilities/spacing" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`:
   - **0**: `.p-0`, `.px-0`, `.py-0`, `.pt-0`, `.pb-0`, `.ps-0`, `.pe-0`, `.p-sm-0`, etc...
   - **1**: `.p-1`, `.px-1`, `.py-1`, `.pt-1`, `.pb-1`, `.ps-1`, `.pe-1`, `.p-sm-1`, etc...
   - **2**: `.p-2`, `.px-2`, `.py-2`, `.pt-2`, `.pb-2`, `.ps-2`, `.pe-2`, `.p-sm-2`, etc...
@@ -184,7 +184,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   - **4**: `.p-4`, `.px-4`, `.py-4`, `.pt-4`, `.pb-4`, `.ps-4`, `.pe-4`, `.p-sm-4`, etc...
   - **5**: `.p-5`, `.px-5`, `.py-5`, `.pt-5`, `.pb-5`, `.ps-5`, `.pe-5`, `.p-sm-5`, etc...
 
-- <span class="badge text-bg-danger">Breaking</span> The following gap spacing utilities have been removed from the default build (`.{row-|column-|}gap-{breakpoint}-{value}`). Please check the new [spacing values]({{< docsref "/utilities/spacing" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`:
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> The following gap spacing utilities have been removed from the default build (`.{row-|column-|}gap-{breakpoint}-{value}`). Please check the new [spacing values]({{< docsref "/utilities/spacing" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`:
   - **0**: `.gap-0`, `.row-gap-0`, `.column-gap-0`, `.gap-sm-0`, etc...
   - **1**: `.gap-1`, `.row-gap-1`, `.column-gap-1`, `.gap-sm-1`, etc...
   - **2**: `.gap-2`, `.row-gap-2`, `.column-gap-2`, `.gap-sm-2`, etc...
@@ -192,7 +192,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   - **4**: `.gap-4`, `.row-gap-4`, `.column-gap-4`, `.gap-sm-4`, etc...
   - **5**: `.gap-5`, `.row-gap-5`, `.column-gap-5`, `.gap-sm-5`, etc...
 
-- <span class="badge text-bg-success">New</span> fixed margin spacing utilities:
+- <span class="badge text-bg-status-positive-emphasized">New</span> fixed margin spacing utilities:
   - **None**: `.m-none`, `.mx-none`, `.my-none`, `.mt-none`, `.mb-none`, `.ms-none`, `.me-none`, `.m-xs-none`, etc...
   - **Smash**: `.m-smash`, `.mx-smash`, `.my-smash`, `.mt-smash`, `.mb-smash`, `.ms-smash`, `.me-smash`, `.m-xs-smash`, etc...
   - **Shortest**: `.m-shortest`, `.mx-shortest`, `.my-shortest`, `.mt-shortest`, `.mb-shortest`, `.ms-shortest`, `.me-shortest`, `.m-xs-shortest`, etc...
@@ -208,7 +208,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   - **Auto**: `.m-xs-auto`, `.mx-xs-auto`, `.my-xs-auto`, `.mt-xs-auto`, `.mb-xs-auto`, `.ms-xs-auto`, `.me-xs-auto`, `.m-2xl-auto`, etc...
   - **Negative**: `.m-nsmash`, `.m-nshortest`, `.m-nshorter`, `.m-nshort`, `.m-nmedium`, `.m-ntall`, `.m-ntaller`, `.m-ntallest`, `.m-nspacious`, `.m-nhuge`, `.m-njumbo`, `.mx-nsmash`, etc...
 
-- <span class="badge text-bg-success">New</span> scaled margin spacing utilities:
+- <span class="badge text-bg-status-positive-emphasized">New</span> scaled margin spacing utilities:
   - **None**: `.m-scaled-none`, `.mx-scaled-none`, `.my-scaled-none`, `.mt-scaled-none`, `.mb-scaled-none`, `.ms-scaled-none`, `.me-scaled-none`,
   - **Smash**: `.m-scaled-smash`, `.mx-scaled-smash`, `.my-scaled-smash`, `.mt-scaled-smash`, `.mb-scaled-smash`, `.ms-scaled-smash`, `.me-scaled-smash`,
   - **Shortest**: `.m-scaled-shortest`, `.mx-scaled-shortest`, `.my-scaled-shortest`, `.mt-scaled-shortest`, `.mb-scaled-shortest`, `.ms-scaled-shortest`, `.me-scaled-shortest`,
@@ -220,7 +220,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   - **Tallest**: `.m-scaled-tallest`, `.mx-scaled-tallest`, `.my-scaled-tallest`, `.mt-scaled-tallest`, `.mb-scaled-tallest`, `.ms-scaled-tallest`, `.me-scaled-tallest`,
   - **Spacious**: `.m-scaled-spacious`, `.mx-scaled-spacious`, `.my-scaled-spacious`, `.mt-scaled-spacious`, `.mb-scaled-spacious`, `.ms-scaled-spacious`, `.me-scaled-spacious`
 
-- <span class="badge text-bg-success">New</span> fixed padding spacing utilities:
+- <span class="badge text-bg-status-positive-emphasized">New</span> fixed padding spacing utilities:
   - **None**: `.p-none`, `.px-none`, `.py-none`, `.pt-none`, `.pb-none`, `.ps-none`, `.pe-none`, `.p-xs-none`, etc...
   - **Smash**: `.p-smash`, `.px-smash`, `.py-smash`, `.pt-smash`, `.pb-smash`, `.ps-smash`, `.pe-smash`, `.p-xs-smash`, etc...
   - **Shortest**: `.p-shortest`, `.px-shortest`, `.py-shortest`, `.pt-shortest`, `.pb-shortest`, `.ps-shortest`, `.pe-shortest`, `.p-xs-shortest`, etc...
@@ -234,7 +234,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   - **Huge**: `.p-huge`, `.px-huge`, `.py-huge`, `.pt-huge`, `.pb-huge`, `.ps-huge`, `.pe-huge`, `.p-xs-huge`, etc...
   - **Jumbo**: `.p-jumbo`, `.px-jumbo`, `.py-jumbo`, `.pt-jumbo`, `.pb-jumbo`, `.ps-jumbo`, `.pe-jumbo`, `.p-xs-jumbo`, etc...
 
-- <span class="badge text-bg-success">New</span> scaled padding spacing utilities:
+- <span class="badge text-bg-status-positive-emphasized">New</span> scaled padding spacing utilities:
   - **None**: `.p-scaled-none`, `.px-scaled-none`, `.py-scaled-none`, `.pt-scaled-none`, `.pb-scaled-none`, `.ps-scaled-none`, `.pe-scaled-none`,
   - **Smash**: `.p-scaled-smash`, `.px-scaled-smash`, `.py-scaled-smash`, `.pt-scaled-smash`, `.pb-scaled-smash`, `.ps-scaled-smash`, `.pe-scaled-smash`,
   - **Shortest**: `.p-scaled-shortest`, `.px-scaled-shortest`, `.py-scaled-shortest`, `.pt-scaled-shortest`, `.pb-scaled-shortest`, `.ps-scaled-shortest`, `.pe-scaled-shortest`,
@@ -246,7 +246,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   - **Tallest**: `.p-scaled-tallest`, `.px-scaled-tallest`, `.py-scaled-tallest`, `.pt-scaled-tallest`, `.pb-scaled-tallest`, `.ps-scaled-tallest`, `.pe-scaled-tallest`,
   - **Spacious**: `.p-scaled-spacious`, `.px-scaled-spacious`, `.py-scaled-spacious`, `.pt-scaled-spacious`, `.pb-scaled-spacious`, `.ps-scaled-spacious`, `.pe-scaled-spacious`
 
-- <span class="badge text-bg-success">New</span> fixed gap spacing utilities:
+- <span class="badge text-bg-status-positive-emphasized">New</span> fixed gap spacing utilities:
   - **None**: `.gap-none`, `.row-gap-none`, `.column-gap-none`, `.gap-xs-none`, etc...
   - **Smash**: `.gap-smash`, `.row-gap-smash`, `.column-gap-smash`, `.gap-xs-smash`, etc...
   - **Shortest**: `.gap-shortest`, `.row-gap-shortest`, `.column-gap-shortest`, `.gap-xs-shortest`, etc...
@@ -260,7 +260,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   - **Huge**: `.gap-huge`, `.row-gap-huge`, `.column-gap-huge`, `.gap-xs-huge`, etc...
   - **Jumbo**: `.gap-jumbo`, `.row-gap-jumbo`, `.column-gap-jumbo`, `.gap-xs-jumbo`, etc...
 
-- <span class="badge text-bg-success">New</span> scaled gap spacing utilities:
+- <span class="badge text-bg-status-positive-emphasized">New</span> scaled gap spacing utilities:
   - **None**: `.gap-scaled-none`, `.row-gap-scaled-none`, `.column-gap-scaled-none`
   - **Smash**: `.gap-scaled-smash`, `.row-gap-scaled-smash`, `.column-gap-scaled-smash`
   - **Shortest**: `.gap-scaled-shortest`, `.row-gap-scaled-shortest`, `.column-gap-scaled-shortest`
@@ -272,7 +272,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   - **Tallest**: `.gap-scaled-tallest`, `.row-gap-scaled-tallest`, `.column-gap-scaled-tallest`
   - **Spacious**: `.gap-scaled-spacious`, `.row-gap-scaled-spacious`, `.column-gap-scaled-spacious`
 
-- <span class="badge text-bg-warning">Warning</span> You might be able to transfer your spacing utilities following one of the two proposed methods (while keeping almost the rendering and at least the same proportion between spacings):
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> You might be able to transfer your spacing utilities following one of the two proposed methods (while keeping almost the rendering and at least the same proportion between spacings):
   - Keep the previous behavior and getting one utility for another.
     1. **0**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)0` → `$1none`
     2. **1**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)1` → `$1shortest`
@@ -288,42 +288,44 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 ### Text
 
-- <span class="badge text-bg-danger">Breaking</span> `.text-xxl-{start|end|none}` responsive alignment text utility has been replaced by `.text-2xl-{start|end|none}`. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}). You can still have it using `$enable-bootstrap-compatibility`.
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.text-xxl-{start|end|none}` responsive alignment text utility has been replaced by `.text-2xl-{start|end|none}`. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}). You can still have it using `$enable-bootstrap-compatibility`.
 
-- <span class="badge text-bg-success">New</span> `.text-xs-{start|end|none}` and `.text-3xl-{start|end|none}` responsive alignment text utilities have been added. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}).
+- <span class="badge text-bg-status-positive-emphasized">New</span> `.text-xs-{start|end|none}` and `.text-3xl-{start|end|none}` responsive alignment text utilities have been added. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}).
 
-- <span class="badge text-bg-danger">Breaking</span> Font size text utilities `.fs-{1|2|3|4|5|6}` have been removed and replaced by new ones. You can still have them using `$enable-bootstrap-compatibility`:
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Font size text utilities `.fs-{1|2|3|4|5|6}` have been removed and replaced by new ones. You can still have them using `$enable-bootstrap-compatibility`:
   - **Display headings**: `.fs-dl`, `.fs-dm`, `.fs-ds`
   - **Headings**: `.fs-hxl`, `.fs-hl`, `.fs-hm`, `.fs-hs`
   - **Body**: `.fs-bl`, `.fs-bm`, `.fs-bs`
   - **Code**: `.fs-cm`, `.fs-cs`
 
-- <span class="badge text-bg-danger">Breaking</span> Font weight text utilities `.fw-semibold` and `.fw-medium` have been removed.
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Font weight text utilities `.fw-semibold` and `.fw-medium` have been removed.
 
-- <span class="badge text-bg-danger">Breaking</span> Line height text utilities `.lh-1`, `.lh-sm`, `.lh-base`, and `.lh-lg` have been removed, since our font references already have defined `line-height`s. You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Line height text utilities `.lh-1`, `.lh-sm`, `.lh-base`, and `.lh-lg` have been removed, since our font references already have defined `line-height`s. You can still have them using `$enable-bootstrap-compatibility`.
 
-- <span class="badge text-bg-danger">Breaking</span> Line length text utilities `.ll-sm` and `.ll-md` have been removed, since there is already a default `max-width`.
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Line length text utilities `.ll-sm` and `.ll-md` have been removed, since there is already a default `max-width`.
 
 ## Examples
 
-- <span class="badge text-bg-success">New</span> New [Font example]({{< docsref "/examples/font" >}}).
+- <span class="badge text-bg-status-positive-emphasized">New</span> New [Font example]({{< docsref "/examples/font" >}}).
 
-- <span class="badge text-bg-success">New</span> New [Grid system example]({{< docsref "/examples/grid-system" >}}).
+- <span class="badge text-bg-status-positive-emphasized">New</span> New [Grid system example]({{< docsref "/examples/grid-system" >}}).
 
 ## CSS and Sass variables
 
-- <span class="badge text-bg-success">New</span> `$enable-bootstrap-compatibility` option set to `false` by default. This option allows you to compile the Sass files with a Bootstrap compatibility mode.
+- <span class="badge text-bg-status-positive-emphasized">New</span> `$enable-bootstrap-compatibility` option set to `false` by default. This option allows you to compile the Sass files with a Bootstrap compatibility mode.
   - For instance, without the Bootstrap compatibility mode, you won't have the opacity Bootstrap utilities such as `.opacity-0`, `.opacity-1`, `.opacity-50`, etc. You will only have the semantic OUDS Web utilities such as `.opacity-invisible`, `.opacity-weaker`, `.opacity-weak`, etc.
 
-- <span class="badge text-bg-success">New</span> OUDS Web fully implements the design tokens. If you were using the Sass compilation, you must import the new Sass files before the variables.
+- <span class="badge text-bg-status-positive-emphasized">New</span> OUDS Web fully implements the design tokens. If you were using the Sass compilation, you must import the new Sass files before the variables.
 
   <details class="mb-tall">
   <summary>See the new import stack</summary>
 
   ```diff
+  + @import "config";
     @import "functions";
   + @import "tokens/raw";
   + @import "tokens/semantic";
+  + @import "tokens/semantic-colors-custom-props";
   + @import "tokens/composite";
   + @import "tokens/component";
     @import "variables";
@@ -333,7 +335,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   </details>
 
 - <details class="mb-short">
-    <summary><span class="badge text-bg-success">New</span> Sass variables:</summary>
+    <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass variables:</summary>
     <ul>
       <li><code>$ouds-border-base</code></li>
       <li><code>$ouds-border-radius-0</code></li>
@@ -840,7 +842,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   </details>
 
 - <details class="mb-short">
-    <summary><span class="badge text-bg-success">New</span> Sass maps:</summary>
+    <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass maps:</summary>
     <ul>
       <li><code>$grid-gutter-widths</code></li>
       <li><code>$ouds-border-radiuses</code></li>
@@ -859,14 +861,14 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   </details>
 
 - <details class="mb-short">
-    <summary><span class="badge text-bg-success">New</span> Sass mixins:</summary>
+    <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass mixins:</summary>
     <ul>
       <li><code>get-font-size()</code></li>
     </ul>
   </details>
 
 - <details class="mb-short">
-    <summary><span class="badge text-bg-success">New</span> Keys in <code>$utilities</code> map:</summary>
+    <summary><span class="badge text-bg-status-positive-emphasized">New</span> Keys in <code>$utilities</code> map:</summary>
     <ul>
       <li><code>border-bottom-ouds</code></li>
       <li><code>border-end-ouds</code></li>
@@ -936,7 +938,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   </details>
 
 - <details class="mb-short">
-    <summary><span class="badge text-bg-success">New</span> CSS variable:</summary>
+    <summary><span class="badge text-bg-status-positive-emphasized">New</span> CSS variable:</summary>
     <ul>
       <li><code>--bs-body-letter-spacing</code></li>
       <li><code>--bs-container-margin-x</code></li>
@@ -1030,7 +1032,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   </details>
 
 - <details class="mb-short">
-    <summary><span class="badge text-bg-warning">Warning</span> Dropped Sass variables:</summary>
+    <summary><span class="badge text-bg-status-warning-emphasized">Warning</span> Dropped Sass variables:</summary>
     <ul>
       <li><code>$blockquote-font-size</code></li>
       <li><code>$blockquote-footer-font-size</code></li>
@@ -1094,7 +1096,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   </details>
 
 - <details class="mb-short">
-    <summary><span class="badge text-bg-warning">Warning</span> Dropped CSS variables:</summary>
+    <summary><span class="badge text-bg-status-warning-emphasized">Warning</span> Dropped CSS variables:</summary>
     <ul>
       <li><code>--bs-btn-close-active-border-color</code></li>
       <li><code>--bs-btn-close-active-color</code></li>
@@ -1107,7 +1109,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   </details>
 
 - <details class="mb-short">
-    <summary><span class="badge text-bg-danger">Breaking</span> CSS variables only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
+    <summary><span class="badge text-bg-status-negative-emphasized">Breaking</span> CSS variables only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
     <ul>
       <li><code>--bs-border-radius</code></li>
       <li><code>--bs-border-radius-2xl</code></li>
@@ -1124,14 +1126,14 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   </details>
 
 - <details class="mb-short">
-    <summary><span class="badge text-bg-warning">Warning</span> Dropped Sass mixins:</summary>
+    <summary><span class="badge text-bg-status-warning-emphasized">Warning</span> Dropped Sass mixins:</summary>
     <ul>
       <li><code>make-container-fluid-margin()</code></li>
     </ul>
   </details>
 
 - <details class="mb-short">
-    <summary><span class="badge text-bg-danger">Breaking</span> Keys in <code>$utilities</code> map only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
+    <summary><span class="badge text-bg-status-negative-emphasized">Breaking</span> Keys in <code>$utilities</code> map only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
     <ul>
       <li><code>border</code></li>
       <li><code>border-bottom</code></li>
@@ -1178,14 +1180,14 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   </details>
 
 - <details class="mb-short">
-    <summary><span class="badge text-bg-warning">Warning</span> Dropped keys in <code>$utilities</code> map:</summary>
+    <summary><span class="badge text-bg-status-warning-emphasized">Warning</span> Dropped keys in <code>$utilities</code> map:</summary>
     <ul>
       <li><code>line-length</code></li>
     </ul>
   </details>
 
-- <span class="badge text-bg-warning">Warning</span> Signature of `make-row($gutter, $gutter-sm)` is now `make-row($gutter)`.
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> Signature of `make-row($gutter, $gutter-sm)` is now `make-row($gutter)`.
 
 ## Sass mixins
 
-- <span class="badge text-bg-success">New</span> The mixin `get-font-size({font-size-ref})` has been added, where `font-size-ref` is one of: `"code-medium"`, `"label-small"`, `"label-medium"`, `"label-large"`, `"label-xlarge"`, `"body-small"`, `"body-medium"`, `"body-large"`, `"heading-small"`, `"heading-medium"`, `"heading-large"`, `"heading-xlarge"`, `"display-small"`, `"display-medium"`, `"display-large"`. If you have/need any `font-size` in one of your SCSS classes, please consider using this mixin instead. See [Typography Sass mixins]({{< docsref "/content/typography/#sass-mixins" >}}) for more details.
+- <span class="badge text-bg-status-positive-emphasized">New</span> The mixin `get-font-size({font-size-ref})` has been added, where `font-size-ref` is one of: `"code-medium"`, `"label-small"`, `"label-medium"`, `"label-large"`, `"label-xlarge"`, `"body-small"`, `"body-medium"`, `"body-large"`, `"heading-small"`, `"heading-medium"`, `"heading-large"`, `"heading-xlarge"`, `"display-small"`, `"display-medium"`, `"display-large"`. If you have/need any `font-size` in one of your SCSS classes, please consider using this mixin instead. See [Typography Sass mixins]({{< docsref "/content/typography/#sass-mixins" >}}) for more details.

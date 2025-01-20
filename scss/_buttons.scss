@@ -105,7 +105,7 @@
 
 // scss-docs-start btn-variant-loops
 .btn-primary {
-  @include button-variant($supporting-orange, $supporting-orange, $black, $active-background: var(--#{$prefix}highlight-color), $active-border: var(--#{$prefix}border-color), $active-color: var(--#{$prefix}body-color));
+  @include button-variant($ouds-color-orange-500, $ouds-color-orange-500, $black, $active-background: var(--#{$prefix}highlight-color), $active-border: var(--#{$prefix}border-color), $active-color: var(--#{$prefix}body-color));
 }
 
 .btn-success {
@@ -151,7 +151,7 @@
 
 // OUDS mod: OUDS Web-specific no outline button
 .btn-no-outline {
-  @include button-variant(transparent, transparent, var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}primary), transparent, transparent, var(--#{$prefix}disabled-color));
+  @include button-variant(transparent, transparent, var(--#{$prefix}body-color), transparent, var(--#{$prefix}color-border-emphasized), var(--#{$prefix}body-color), transparent, var(--#{$prefix}color-border-emphasized), var(--#{$prefix}primary), transparent, transparent, var(--#{$prefix}color-content-disabled));
 
   .btn-check:checked + &.btn {
     border-color: transparent;
@@ -166,7 +166,7 @@
 
 // OUDS mod: OUDS Web-specific toggle button
 .btn-toggle {
-  @include button-variant(transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}primary), $supporting-orange, $supporting-orange, $black, transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}disabled-color));
+  @include button-variant(transparent, var(--#{$prefix}color-border-emphasized), var(--#{$prefix}body-color), transparent, var(--#{$prefix}color-border-emphasized), var(--#{$prefix}primary), $ouds-color-orange-500, $ouds-color-orange-500, $black, transparent, var(--#{$prefix}color-border-emphasized), var(--#{$prefix}color-content-disabled));
 
   .btn-check:checked + & {
     color: var(--#{$prefix}highlight-color);
@@ -201,7 +201,7 @@
 
 // OUDS mod: OUDS Web-specific dropdown button
 .btn-dropdown {
-  @include button-variant(var(--#{$prefix}body-bg), var(--#{$prefix}border-color-subtle), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}border-color-subtle), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}body-color), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}disabled-color), var(--#{$prefix}disabled-color));
+  @include button-variant(var(--#{$prefix}body-bg), var(--#{$prefix}color-border-emphasized), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}color-border-emphasized), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}body-color), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}color-content-disabled), var(--#{$prefix}color-content-disabled));
 }
 // End mod
 
@@ -270,7 +270,7 @@
   --#{$prefix}btn-active-color: var(--#{$prefix}highlight-color);
   --#{$prefix}btn-active-bg: var(--#{$prefix}highlight-bg);
   --#{$prefix}btn-active-border-color: var(--#{$prefix}border-color);
-  --#{$prefix}btn-disabled-color: var(--#{$prefix}disabled-color);
+  --#{$prefix}btn-disabled-color: var(--#{$prefix}color-content-disabled);
   --#{$prefix}btn-disabled-bg: transparent;
   @include border-radius(50%, 50%);
   @include button-icon(var(--#{$prefix}network-logo));

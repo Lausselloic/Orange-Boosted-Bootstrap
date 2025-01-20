@@ -16,6 +16,7 @@
 }
 
 // OUDS mod
+// TODO LM: Decide if we keep the dark mode or not
 @if $enable-dark-mode {
   @include color-mode(dark) {
     @each $color, $value in $theme-colors-dark {

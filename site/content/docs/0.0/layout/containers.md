@@ -23,8 +23,8 @@ Please note that we apply an extra-padding on our containers (see [our mixin](#s
 {{< bs-table "table" >}}
 |  | 2x-small<div class="fw-normal">&lt;390px</div> | X-small<div class="fw-normal">&ge;390px</div> | Small<div class="fw-normal">&ge;480px</div> | Medium<div class="fw-normal">&ge;736px</div> | Large<div class="fw-normal">&ge;1024px</div> | X-large<div class="fw-normal">&ge;1320px</div> | 2x-large<div class="fw-normal">&ge;1640px</div> | 3x-large<div class="fw-normal">&ge;1880px</div> |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `.container-fluid` with `.container-max-width`  | <span class="text-body-secondary">100% -<br>(2 * 16px)</span> | <span class="text-body-secondary">100% -<br>(2 * 24px)</span> | <span class="text-body-secondary">100% -<br>(2 * 28px)</span> | <span class="text-body-secondary">100% -<br>(2 * 32px)</span> | <span class="text-body-secondary">100% -<br>(2 * 40px)</span> | <span class="text-body-secondary">100% -<br>(2 * 56px)</span> | 1520px | 1520px |
-| `.container-fluid` | <span class="text-body-secondary">100% -<br>(2 * 16px)</span> | <span class="text-body-secondary">100% -<br>(2 * 24px)</span> | <span class="text-body-secondary">100% -<br>(2 * 28px)</span> | <span class="text-body-secondary">100% -<br>(2 * 32px)</span> | <span class="text-body-secondary">100% -<br>(2 * 40px)</span> | <span class="text-body-secondary">100% -<br>(2 * 56px)</span> | <span class="text-body-secondary">100% -<br>(2 * 80px)</span> | <span class="text-body-secondary">100% -<br>(2 * 112px)</span> |
+| `.container-fluid` with `.container-max-width`  | <span class="text-muted">100% -<br>(2 * 16px)</span> | <span class="text-muted">100% -<br>(2 * 24px)</span> | <span class="text-muted">100% -<br>(2 * 28px)</span> | <span class="text-muted">100% -<br>(2 * 32px)</span> | <span class="text-muted">100% -<br>(2 * 40px)</span> | <span class="text-muted">100% -<br>(2 * 56px)</span> | 1520px | 1520px |
+| `.container-fluid` | <span class="text-muted">100% -<br>(2 * 16px)</span> | <span class="text-muted">100% -<br>(2 * 24px)</span> | <span class="text-muted">100% -<br>(2 * 28px)</span> | <span class="text-muted">100% -<br>(2 * 32px)</span> | <span class="text-muted">100% -<br>(2 * 40px)</span> | <span class="text-muted">100% -<br>(2 * 56px)</span> | <span class="text-muted">100% -<br>(2 * 80px)</span> | <span class="text-muted">100% -<br>(2 * 112px)</span> |
 {{< /bs-table >}}
 
 {{< bootstrap-compatibility >}}
@@ -48,16 +48,16 @@ Please note that we apply an extra-padding on our containers (see [our mixin](#s
 {{< bs-table "table" >}}
 |  | 2x-small<div class="fw-normal">&lt;390px</div> | X-small<div class="fw-normal">&ge;390px</div> | Small<div class="fw-normal">&ge;480px</div> | Medium<div class="fw-normal">&ge;736px</div> | Large<div class="fw-normal">&ge;1024px</div> | X-large<div class="fw-normal">&ge;1320px</div> | 2x-large<div class="fw-normal">&ge;1640px</div> | 3x-large<div class="fw-normal">&ge;1880px</div> |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `.container` | <span class="text-body-secondary">100% -<br>(2 * 16px)</span> | 342px | 424px | 672px | 944px | 1208px | 1480px | 1656px |
-| `.container-xs` | <span class="text-body-secondary">100% -<br>(2 * 16px)</span> | 342px | 424px | 672px | 944px | 1208px | 1480px | 1656px |
-| `.container-sm` | <span class="text-body-secondary">100% -<br>(2 * 16px)</span> | <span class="text-body-secondary">100% -<br>(2 * 24px)</span> | 424px | 672px | 944px | 1208px | 1480px | 1656px |
-| `.container-md` | <span class="text-body-secondary">100% -<br>(2 * 16px)</span> | <span class="text-body-secondary">100% -<br>(2 * 24px)</span> | <span class="text-body-secondary">100% -<br>(2 * 28px)</span> | 672px | 944px | 1208px | 1480px | 1656px |
-| `.container-lg` | <span class="text-body-secondary">100% -<br>(2 * 16px)</span> | <span class="text-body-secondary">100% -<br>(2 * 24px)</span> | <span class="text-body-secondary">100% -<br>(2 * 28px)</span> | <span class="text-body-secondary">100% -<br>(2 * 32px)</span> | 944px | 1208px | 1480px | 1656px |
-| `.container-xl` | <span class="text-body-secondary">100% -<br>(2 * 16px)</span> | <span class="text-body-secondary">100% -<br>(2 * 24px)</span> | <span class="text-body-secondary">100% -<br>(2 * 28px)</span> | <span class="text-body-secondary">100% -<br>(2 * 32px)</span> | <span class="text-body-secondary">100% -<br>(2 * 40px)</span> | 1208px | 1480px | 1656px |
-| `.container-2xl` | <span class="text-body-secondary">100% -<br>(2 * 16px)</span> | <span class="text-body-secondary">100% -<br>(2 * 24px)</span> | <span class="text-body-secondary">100% -<br>(2 * 28px)</span> | <span class="text-body-secondary">100% -<br>(2 * 32px)</span> | <span class="text-body-secondary">100% -<br>(2 * 40px)</span> | <span class="text-body-secondary">100% -<br>(2 * 56px)</span> | 1480px | 1656px |
-| `.container-xxl` | <span class="text-body-secondary">100% -<br>(2 * 16px)</span> | <span class="text-body-secondary">100% -<br>(2 * 24px)</span> | <span class="text-body-secondary">100% -<br>(2 * 28px)</span> | <span class="text-body-secondary">100% -<br>(2 * 32px)</span> | <span class="text-body-secondary">100% -<br>(2 * 40px)</span> | <span class="text-body-secondary">100% -<br>(2 * 56px)</span> | 1480px | 1656px |
-| `.container-3xl` | <span class="text-body-secondary">100% -<br>(2 * 16px)</span> | <span class="text-body-secondary">100% -<br>(2 * 24px)</span> | <span class="text-body-secondary">100% -<br>(2 * 28px)</span> | <span class="text-body-secondary">100% -<br>(2 * 32px)</span> | <span class="text-body-secondary">100% -<br>(2 * 40px)</span> | <span class="text-body-secondary">100% -<br>(2 * 56px)</span> | <span class="text-body-secondary">100% -<br>(2 * 80px)</span> | 1656px |
-| `.container-fluid` | <span class="text-body-secondary">100% -<br>(2 * 16px)</span> | <span class="text-body-secondary">100% -<br>(2 * 24px)</span> | <span class="text-body-secondary">100% -<br>(2 * 28px)</span> | <span class="text-body-secondary">100% -<br>(2 * 32px)</span> | <span class="text-body-secondary">100% -<br>(2 * 40px)</span> | <span class="text-body-secondary">100% -<br>(2 * 56px)</span> | <span class="text-body-secondary">100% -<br>(2 * 80px)</span> | <span class="text-body-secondary">100% -<br>(2 * 112px)</span> |
+| `.container` | <span class="text-muted">100% -<br>(2 * 16px)</span> | 342px | 424px | 672px | 944px | 1208px | 1480px | 1656px |
+| `.container-xs` | <span class="text-muted">100% -<br>(2 * 16px)</span> | 342px | 424px | 672px | 944px | 1208px | 1480px | 1656px |
+| `.container-sm` | <span class="text-muted">100% -<br>(2 * 16px)</span> | <span class="text-muted">100% -<br>(2 * 24px)</span> | 424px | 672px | 944px | 1208px | 1480px | 1656px |
+| `.container-md` | <span class="text-muted">100% -<br>(2 * 16px)</span> | <span class="text-muted">100% -<br>(2 * 24px)</span> | <span class="text-muted">100% -<br>(2 * 28px)</span> | 672px | 944px | 1208px | 1480px | 1656px |
+| `.container-lg` | <span class="text-muted">100% -<br>(2 * 16px)</span> | <span class="text-muted">100% -<br>(2 * 24px)</span> | <span class="text-muted">100% -<br>(2 * 28px)</span> | <span class="text-muted">100% -<br>(2 * 32px)</span> | 944px | 1208px | 1480px | 1656px |
+| `.container-xl` | <span class="text-muted">100% -<br>(2 * 16px)</span> | <span class="text-muted">100% -<br>(2 * 24px)</span> | <span class="text-muted">100% -<br>(2 * 28px)</span> | <span class="text-muted">100% -<br>(2 * 32px)</span> | <span class="text-muted">100% -<br>(2 * 40px)</span> | 1208px | 1480px | 1656px |
+| `.container-2xl` | <span class="text-muted">100% -<br>(2 * 16px)</span> | <span class="text-muted">100% -<br>(2 * 24px)</span> | <span class="text-muted">100% -<br>(2 * 28px)</span> | <span class="text-muted">100% -<br>(2 * 32px)</span> | <span class="text-muted">100% -<br>(2 * 40px)</span> | <span class="text-muted">100% -<br>(2 * 56px)</span> | 1480px | 1656px |
+| `.container-xxl` | <span class="text-muted">100% -<br>(2 * 16px)</span> | <span class="text-muted">100% -<br>(2 * 24px)</span> | <span class="text-muted">100% -<br>(2 * 28px)</span> | <span class="text-muted">100% -<br>(2 * 32px)</span> | <span class="text-muted">100% -<br>(2 * 40px)</span> | <span class="text-muted">100% -<br>(2 * 56px)</span> | 1480px | 1656px |
+| `.container-3xl` | <span class="text-muted">100% -<br>(2 * 16px)</span> | <span class="text-muted">100% -<br>(2 * 24px)</span> | <span class="text-muted">100% -<br>(2 * 28px)</span> | <span class="text-muted">100% -<br>(2 * 32px)</span> | <span class="text-muted">100% -<br>(2 * 40px)</span> | <span class="text-muted">100% -<br>(2 * 56px)</span> | <span class="text-muted">100% -<br>(2 * 80px)</span> | 1656px |
+| `.container-fluid` | <span class="text-muted">100% -<br>(2 * 16px)</span> | <span class="text-muted">100% -<br>(2 * 24px)</span> | <span class="text-muted">100% -<br>(2 * 28px)</span> | <span class="text-muted">100% -<br>(2 * 32px)</span> | <span class="text-muted">100% -<br>(2 * 40px)</span> | <span class="text-muted">100% -<br>(2 * 56px)</span> | <span class="text-muted">100% -<br>(2 * 80px)</span> | <span class="text-muted">100% -<br>(2 * 112px)</span> |
 {{< /bs-table >}}
 
 ## Default container
@@ -126,16 +126,18 @@ If necessary, in specific cases, you can define a custom maximum width for the f
 This adjustment will apply to all containers using the `.container-max-width`class, ensuring that your layout stays within the specific width. Once the layout exceeds the `$ouds-size-max-width-grid` value at larger breakpoints, the container's margins and gutter values will remain unchanged.
 
 ```scss
-@import "../node_modules/ouds-web/scss/functions";
+@import "../node_modules/@ouds/web/scss/config";
+@import "../node_modules/@ouds/web/scss/functions";
 
 $ouds-size-max-width-grid: 3500px; // Custom container max width
 
-@import "../node_modules/ouds-web/tokens/raw";
-@import "../node_modules/ouds-web/tokens/semantic";
-@import "../node_modules/ouds-web/tokens/composite";
-@import "../node_modules/ouds-web/tokens/component";
-@import "../node_modules/ouds-web/variables";
-@import "../node_modules/ouds-web/variables-dark";
+@import "../node_modules/@ouds/web/scss/tokens/raw";
+@import "../node_modules/@ouds/web/scss/tokens/semantic";
+@import "../node_modules/@ouds/web/scss/tokens/semantic-colors-custom-props";
+@import "../node_modules/@ouds/web/scss/tokens/composite";
+@import "../node_modules/@ouds/web/scss/tokens/component";
+@import "../node_modules/@ouds/web/scss/variables";
+@import "../node_modules/@ouds/web/scss/variables-dark";
 // etc
 ```
 

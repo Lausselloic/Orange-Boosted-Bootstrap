@@ -150,7 +150,6 @@
 .bd-gray-700 { color: color-contrast($gray-700); background-color: $gray-700; }
 .bd-gray-800 { color: color-contrast($gray-800); background-color: $gray-800; }
 .bd-gray-900 { color: color-contrast($gray-900); background-color: $gray-900; }
-.bd-gray-950 { color: color-contrast($gray-950); background-color: $gray-950; }
 
 .bd-white { color: color-contrast($white); background-color: $white; }
 .bd-black { color: color-contrast($black); background-color: $black; }
@@ -174,7 +173,8 @@
   @return $level;
 }
 
-@each $color, $value in map-merge($colors, map-merge($grays, ("supporting-yellow": $supporting-yellow, "black": $black))) {
+// TODO LM: see if we remove it
+@each $color, $value in map-merge($colors, map-merge($grays, ("supporting-yellow": $ouds-color-decorative-amber-500, "black": $black))) {
   .a11y-swatch-#{$color} {
     color: color-contrast($value);
     background-color: #{$value};

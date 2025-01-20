@@ -1,20 +1,18 @@
 - name: 100
-  hex: "#fafafa"
+  hex: "#f4f4f4"
 - name: 200
-  hex: "#f6f6f6"
-- name: 300
   hex: "#eee"
+- name: 300
+  hex: "#bbb"
 - name: 400
-  hex: "#ddd"
+  hex: "#bbb"
 - name: 500
-  hex: "#ccc"
+  hex: "#555"
 - name: 600
-  hex: "#999"
-- name: 700
-  hex: "#666"
-- name: 800
-  hex: "#595959"
-- name: 900
   hex: "#333"
-- name: 950
+- name: 700
+  hex: "#272727"
+- name: 800
+  hex: "#1f1f1f"
+- name: 900
   hex: "#141414"

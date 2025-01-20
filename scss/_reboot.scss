@@ -25,7 +25,7 @@
 // Ability to the value of the root font sizes, affecting the value of `rem`.
 // null by default, thus nothing is generated.
 
-:root {
+#{$ouds-root-selector} {
   @if $font-size-root != null {
     @include font-size(var(--#{$prefix}root-font-size));
   }
@@ -61,7 +61,7 @@
 //    See https://developer.mozilla.org/fr/docs/Web/CSS/font-synthesis
 
 // scss-docs-start reboot-body-rules
-body {
+#{$ouds-root-selector} > * {
   position: relative; // OUDS mod: required for back-to-top component
   margin: 0; // 1
   font-family: var(--#{$prefix}body-font-family);
@@ -244,7 +244,7 @@ ul {
 // See https://developer.mozilla.org/fr/docs/Web/CSS/::marker
 // stylelint-disable selector-max-type
 li::marker {
-  color: var(--#{$prefix}primary);
+  color: var(--#{$prefix}color-content-brand-primary);
   vertical-align: middle;
 
   ol & {
@@ -252,15 +252,15 @@ li::marker {
   }
 }
 
-li li::marker { color: var(--#{$prefix}secondary-color); }
+li li::marker { color: var(--#{$prefix}color-content-muted); }
 
-li li li::marker { color: var(--#{$prefix}tertiary-color); }
+li li li::marker { color: var(--#{$prefix}color-content-disabled); } // TODO: Check the colors once the design is done
 
 // Bullet-proof markers' color
 // @todo To remove when ::marker support is OK
 // See https://caniuse.com/#search=%3A%3Amarker
 li::before {
-  color: var(--#{$prefix}primary);
+  color: var(--#{$prefix}color-content-brand-primary);
   vertical-align: text-top;
 
   ol & {
@@ -268,9 +268,9 @@ li::before {
   }
 }
 
-li li::before { color: var(--#{$prefix}secondary-color); }
+li li::before { color: var(--#{$prefix}color-content-muted); }
 
-li li li::before { color: var(--#{$prefix}tertiary-color); }
+li li li::before { color: var(--#{$prefix}color-content-disabled); }
 // stylelint-enable selector-max-type
 // End mod
 

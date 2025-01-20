@@ -11,12 +11,12 @@
   .lead {
     @include get-font-size("heading-small"); // OUDS mod: instead of `@include font-size(1rem)`
     font-weight: 400;
-    color: var(--bs-secondary-color);
+    color: var(--#{$prefix}color-content-muted); // OUDS mod: instead of: `var(--bs-secondary-color)`
   }
 
   .bd-code-snippet {
     margin: 0;
-    border-color: var(--bs-border-color-subtle);
+    border-color: var(--bs-color-border-default);
     border-width: 1px;
     @include border-radius(calc(.5rem - 1px));
   }
@@ -27,7 +27,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    background-color: rgba(var(--bs-body-color-rgb), .075);
+    background-color: var(--#{$prefix}color-bg-secondary);
     @include border-radius(.5rem);
 
     @include media-breakpoint-up(lg) {

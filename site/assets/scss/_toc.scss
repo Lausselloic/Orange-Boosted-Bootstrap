@@ -65,8 +65,8 @@
   @include media-breakpoint-down(md) {
     nav {
       padding: $ouds-space-fixed-medium; // OUDS mod: instead of `1.25rem 1.25rem 1.25rem 1rem`
-      background-color: var(--bs-tertiary-bg);
-      border: 1px solid var(--bs-border-color);
+      background-color: var(--#{$prefix}color-bg-secondary);
+      border: 1px solid var(--bs-color-border-emphasized);
       @include border-radius(var(--bs-border-radius));
     }
   }

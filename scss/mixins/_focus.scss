@@ -1,5 +1,5 @@
 // scss-docs-start focus-visible
-@mixin focus-visible($zindex: $focus-visible-zindex, $color: var(--#{$prefix}focus-visible-outer-color), $width: $focus-visible-outer-width, $offset: $focus-visible-outer-offset, $box-width: $focus-visible-inner-width, $box-color: var(--#{$prefix}focus-visible-inner-color)) {
+@mixin focus-visible($zindex: $focus-visible-zindex, $color: var(--#{$prefix}color-border-focus), $width: $focus-visible-outer-width, $offset: $focus-visible-outer-offset, $box-width: $focus-visible-inner-width, $box-color: var(--#{$prefix}color-border-focus-inset)) {
   z-index: $zindex;
   isolation: isolate;
   outline: $width solid $color;

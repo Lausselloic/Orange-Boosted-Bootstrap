@@ -202,12 +202,14 @@ $utilities: map-merge(
       local-vars: (
         "border-opacity": 1
       ),
-      values: $utilities-border-colors
+      values: $utilities-border-colors,
+      bootstrap-compatibility: true
     ),
     "subtle-border-color": (
       property: border-color,
       class: border,
-      values: $utilities-border-subtle
+      values: $utilities-border-subtle,
+      bootstrap-compatibility: true
     ),
     "border-width": (
       property: border-width,
@@ -269,6 +271,11 @@ $utilities: map-merge(
       property: border-style,
       class: border,
       values: $ouds-border-styles
+    ),
+    "border-color-ouds": (
+      property: border-color,
+      class: border,
+      values: $ouds-border-colors
     ),
     // scss-docs-end utils-borders-ouds
     // End mod
@@ -978,9 +985,10 @@ $utilities: map-merge(
           "body-secondary": var(--#{$prefix}secondary-color),
           "body-tertiary": var(--#{$prefix}tertiary-color),
           "body-emphasis": var(--#{$prefix}emphasis-color),
-          "reset": inherit,
+          // OUDS mod: no "reset"
         )
-      )
+      ),
+      bootstrap-compatibility: true
     ),
     "text-opacity": (
       css-var: true,
@@ -990,14 +998,23 @@ $utilities: map-merge(
         50: .5,
         75: .75,
         100: 1
-      )
+      ),
+      bootstrap-compatibility: true
     ),
     "text-color": (
       property: color,
       class: text,
-      values: $utilities-text-emphasis-colors
+      values: $utilities-text-emphasis-colors,
+      bootstrap-compatibility: true
     ),
     // scss-docs-end utils-color
+    // scss-docs-start utils-color-ouds
+    "color-ouds": (
+      property: color,
+      class: text,
+      values: $ouds-text-colors
+    ),
+    // scss-docs-end utils-color-ouds
     // scss-docs-start utils-links
     "link-opacity": (
       css-var: true,
@@ -1058,17 +1075,12 @@ $utilities: map-merge(
       values: map-merge(
         $utilities-bg-colors,
         (
-          "transparent": transparent,
+          // OUDS mod: no "transparent"
           "body-secondary": rgba(var(--#{$prefix}secondary-bg-rgb), var(--#{$prefix}bg-opacity)),
           "body-tertiary": rgba(var(--#{$prefix}tertiary-bg-rgb), var(--#{$prefix}bg-opacity)),
-          "supporting-green": $supporting-green, // OUDS mod
-          "supporting-blue": $supporting-blue, // OUDS mod
-          "supporting-yellow": $supporting-yellow, // OUDS mod
-          "supporting-pink": $supporting-pink, // OUDS mod
-          "supporting-purple": $supporting-purple, // OUDS mod
-          "supporting-orange": $supporting-orange, // OUDS mod
         )
-      )
+      ),
+      bootstrap-compatibility: true,
     ),
     "bg-opacity": (
       css-var: true,
@@ -1079,14 +1091,23 @@ $utilities: map-merge(
         50: .5,
         75: .75,
         100: 1
-      )
+      ),
+      bootstrap-compatibility: true,
     ),
     "subtle-background-color": (
       property: background-color,
       class: bg,
-      values: $utilities-bg-subtle
+      values: $utilities-bg-subtle,
+      bootstrap-compatibility: true,
     ),
     // scss-docs-end utils-bg-color
+    // scss-docs-start utils-bg-color-ouds
+    "background-color-ouds": (
+      property: background-color,
+      class: bg,
+      values: $ouds-backgrounds,
+    ),
+    // scss-docs-end utils-bg-color-ouds
     "gradient": (
       property: background-image,
       class: bg,

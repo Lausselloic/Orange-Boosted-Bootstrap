@@ -2,7 +2,7 @@
 // stylelint-disable-next-line function-disallowed-list
 $bd-primary-light: lighten(saturate($primary, 5%), 15%); // OUDS mod
 // stylelint-disable-next-line function-disallowed-list
-$bd-primary-dark:  darken(saturate($supporting-orange, 5%), 15%); // OUDS mod
+$bd-primary-dark:  darken(saturate($ouds-color-orange-500, 5%), 15%); // OUDS mod
 $bd-purple:        #4c0bce;
 $bd-violet:        lighten(saturate($bd-purple, 5%), 15%); // stylelint-disable-line function-disallowed-list
 // OUDS mod: np $bd-purple-light
@@ -11,8 +11,7 @@ $bd-violet:        lighten(saturate($bd-purple, 5%), 15%); // stylelint-disable-
 $bd-gutter-x: .625rem; // OUDS mod
 $bd-callout-variants: info, warning, danger !default;
 
-:root,
-[data-bs-theme="light"] {
+@include color-mode(light, true) {
   --bd-primary-light: #{$bd-primary-light}; // OUDS mod
   // OUDS mod: no --bd-purple
   --bd-violet: #{$bd-violet};
@@ -27,7 +26,7 @@ $bd-callout-variants: info, warning, danger !default;
   // OUDS mod: no --bd-sidebar-link-bg
   // OUDS mod: no --bd-callout-link
   // OUDS mod: no --bd-callout-code-color
-  --bd-pre-bg: var(--bs-tertiary-bg);
+  --bd-pre-bg: var(--#{$prefix}color-bg-secondary);
 }
 
 @include color-mode(dark, true) {
@@ -39,7 +38,7 @@ $bd-callout-variants: info, warning, danger !default;
   // OUDS mod: no --bd-sidebar-link-bg
   // OUDS mod: no --bd-callout-link
   // OUDS mod: no --bd-callout-code-color
-  --bd-pre-bg: var(--bs-tertiary-bg); // OUDS mod: instead of `#{adjust-color($gray-900, $lightness: -2.5%)}`
+  --bd-pre-bg: var(--#{$prefix}color-bg-secondary); // OUDS mod: instead of `#{adjust-color($gray-900, $lightness: -2.5%)}`
 }
 
 // OUDS mod

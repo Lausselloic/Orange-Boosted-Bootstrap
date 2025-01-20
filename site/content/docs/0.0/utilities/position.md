@@ -86,25 +86,25 @@ By adding `.translate-middle-x` or `.translate-middle-y` classes, elements can b
 </div>
 {{< /example >}}
 
-<!--## Examples
+## Examples
 
 Here are some real life examples of these classes:
 
 {{< example class="bd-example-position-examples d-flex justify-content-around align-items-center" >}}
-<button type="button" class="btn btn-primary position-relative">
+<div class="position-relative py-short px-tallest text-bg-status-neutral-emphasized border border-emphasized">
+  Marker <svg width="1em" height="1em" viewBox="0 0 16 16" class="position-absolute top-100 start-50 translate-middle mt-shortest" fill="var(--bs-color-border-emphasized)" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>
+</div>
+{{< /example >}}
+
+<!--<button type="button" class="btn btn-primary position-relative">
   Mails <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-secondary">+99 <span class="visually-hidden">unread messages</span></span>
 </button>
 
-<div class="position-relative py-short px-tallest text-bg-secondary border border-secondary">
-  Marker <svg width="1em" height="1em" viewBox="0 0 16 16" class="position-absolute top-100 start-50 translate-middle mt-shortest" fill="var(-bs-secondary)" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg> // TODO: reinsert hyphens
-</div>
-
 <button type="button" class="btn btn-primary position-relative">
-  Alerts <span class="position-absolute top-0 start-100 translate-middle badge border rounded-circle text-bg-warning p-short"><span class="visually-hidden">unread messages</span></span>
-</button>
-{{< /example >}}
+  Alerts <span class="position-absolute top-0 start-100 translate-middle badge border rounded-circle text-bg-status-warning-emphasized p-short"><span class="visually-hidden">unread messages</span></span>
+</button> -->
 
-You can use these classes with existing components to create new ones. Remember that you can extend its functionality by adding entries to the `$position-values` variable.
+<!--You can use these classes with existing components to create new ones. Remember that you can extend its functionality by adding entries to the `$position-values` variable.
 
 {{< example class="bd-example-position-examples" >}}
 <div class="position-relative m-tallest">

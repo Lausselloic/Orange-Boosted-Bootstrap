@@ -55,195 +55,285 @@
     - name: Secondary Color
       hex: "#666"
       darkHex: "#999"
-- category: ODS colors
-  name: "ODS colors"
+- category: OUDS colors
+  name: "OUDS colors"
   subcategories:
   - subcategory: Orange
     name: "orange"
     colors:
-      - name: Orange 100
-        variable: $ods-orange-100
+      - name: Orange 500
+        variable: $ouds-color-orange-500
         hex: "#ff7900"
-      - name: Orange 200
-        variable: $ods-orange-200
-        hex: "#f16e00"
+      - name: Orange 550
+        variable: $ouds-color-orange-550
+        hex: "#f15e00"
+  - subcategory: Warm gray
+    name: "warm-gray"
+    colors:
+      - name: Warm gray 100
+        variable: $ouds-color-warm-gray-100
+        hex: "#f9f5f0"
+      - name: Warm gray 900
+        variable: $ouds-color-warm-gray-900
+        hex: "#353228"
   - subcategory: White
     name: "white"
     colors:
-      - name: White 100
-        variable: $ods-white-100
+      - name: Functional white
+        variable: $ouds-color-functional-white
         hex: "#fff"
-  - subcategory: Gray
-    name: "gray"
+  - subcategory: Light gray
+    name: "light-gray"
     colors:
-      - name: Gray 200
-        variable: $ods-gray-200
+      - name: Functional light gray 80
+        variable: $ouds-color-functional-light-gray-80
+        hex: "#f4f4f4"
+      - name: Functional light gray 160
+        variable: $ouds-color-functional-light-gray-160
         hex: "#eee"
-      - name: Gray 300
-        variable: $ods-gray-300
-        hex: "#ddd"
-      - name: Gray 400
-        variable: $ods-gray-400
+      - name: Functional light gray 560
+        variable: $ouds-color-functional-light-gray-560
         hex: "#ccc"
-      - name: Gray 500
-        variable: $ods-gray-500
-        hex: "#999"
-      - name: Gray 600
-        variable: $ods-gray-600
-        hex: "#666"
-      - name: Gray 700
-        variable: $ods-gray-700
-        hex: "#595959"
-      - name: Gray 800
-        variable: $ods-gray-800
+  - subcategory: Dark gray
+    name: "dark-gray"
+    colors:
+      - name: Functional dark gray 400
+        variable: $ouds-color-functional-dark-gray-400
+        hex: "#555"
+      - name: Functional dark gray 640
+        variable: $ouds-color-functional-dark-gray-640
         hex: "#333"
-      - name: Gray 900
-        variable: $ods-gray-900
+      - name: Functional dark gray 720
+        variable: $ouds-color-functional-dark-gray-720
+        hex: "#272727"
+      - name: Functional dark gray 800
+        variable: $ouds-color-functional-dark-gray-800
+        hex: "#1f1f1f"
+      - name: Functional dark gray 880
+        variable: $ouds-color-functional-dark-gray-880
         hex: "#141414"
-  - subcategory: Black
-    name: "black"
+  - subcategory: Functional black
+    name: "functional-black"
     colors:
-      - name: Black 900
-        variable: $ods-black-900
+      - name: Functional black
+        variable: $ouds-color-functional-black
         hex: "#000"
-  - subcategory: Forest
-    name: "forest"
+  - subcategory: Functional malachite
+    name: "functional-malachite"
     colors:
-      - name: Forest 100
-        variable: $ods-forest-100
-        hex: "#6c6"
-      - name: Forest 200
-        variable: $ods-forest-200
-        hex: "#228722"
-  - subcategory: Fire
-    name: "fire"
+      - name: Functional malachite 300
+        variable: $ouds-color-functional-malachite-300
+        hex: "#94f0a4"
+      - name: Functional malachite 500
+        variable: $ouds-color-functional-malachite-500
+        hex: "#3de35a"
+      - name: Functional malachite 900
+        variable: $ouds-color-functional-malachite-900
+        hex: "#0a4715"
+  - subcategory: Functional scarlet
+    name: "functional-scarlet"
     colors:
-      - name: Fire 100
-        variable: $ods-fire-100
-        hex: "#ff4d4d"
-      - name: Fire 200
-        variable: $ods-fire-200
-        hex: "#cd3c14"
-  - subcategory: Water
-    name: "water"
+      - name: Functional scarlet 100
+        variable: $ouds-color-functional-scarlet-100
+        hex: "#ffe5e6"
+      - name: Functional scarlet 200
+        variable: $ouds-color-functional-scarlet-200
+        hex: "#ffb2b3"
+      - name: Functional scarlet 300
+        variable: $ouds-color-functional-scarlet-300
+        hex: "#ff8081"
+      - name: Functional scarlet 600
+        variable: $ouds-color-functional-scarlet-600
+        hex: "#ea0305"
+      - name: Functional scarlet 700
+        variable: $ouds-color-functional-scarlet-700
+        hex: "#b20002"
+      - name: Functional scarlet 800
+        variable: $ouds-color-functional-scarlet-800
+        hex: "#800001"
+      - name: Functional scarlet 900
+        variable: $ouds-color-functional-scarlet-900
+        hex: "#4d0001"
+  - subcategory: Functional dodger
+    name: "functional-dodger"
     colors:
-      - name: Water 100
-        variable: $ods-water-100
-        hex: "#69f"
-      - name: Water 200
-        variable: $ods-water-200
-        hex: "#4170d8"
-  - subcategory: Sun
-    name: "sun"
+      - name: Functional dodger 300
+        variable: $ouds-color-functional-dodger-300
+        hex: "#8ad5ff"
+      - name: Functional dodger 500
+        variable: $ouds-color-functional-dodger-500
+        hex: "#26b2ff"
+      - name: Functional dodger 900
+        variable: $ouds-color-functional-dodger-900
+        hex: "#003857"
+  - subcategory: Functional sun
+    name: "functional-sun"
     colors:
-      - name: Sun 100
-        variable: $ods-sun-100
-        hex: "#fc0"
-      - name: Sun 200
-        variable: $ods-sun-200
-        hex: "#8f7200"
-  - subcategory: Blue
-    name: "blue"
+      - name: Functional sun 200
+        variable: $ouds-color-functional-sun-200
+        hex: "#ffed99"
+      - name: Functional sun 300
+        variable: $ouds-color-functional-sun-300
+        hex: "#ffe270"
+      - name: Functional sun 500
+        variable: $ouds-color-functional-sun-500
+        hex: "#ffd000"
+      - name: Functional sun 900
+        variable: $ouds-color-functional-sun-900
+        hex: "#3d3100"
+  - subcategory: Decorative sky
+    name: "decorative-sky"
     colors:
-      - name: Blue 100
-        variable: $ods-blue-100
-        hex: "#b5e8f7"
-      - name: Blue 200
-        variable: $ods-blue-200
-        hex: "#80ceef"
-      - name: Blue 300
-        variable: $ods-blue-300
-        hex: "#4bb4e6"
-      - name: Blue 400
-        variable: $ods-blue-400
-        hex: "#3e9dd6"
-      - name: Blue 500
-        variable: $ods-blue-500
-        hex: "#237eca"
-      - name: Blue 600
-        variable: $ods-blue-600
-        hex: "#085ebd"
-  - category: Green
-    name: "green"
+      - name: Decorative sky 200
+        variable: $ouds-color-decorative-sky-200
+        hex: "#a5daf3"
+      - name: Decorative sky 400
+        variable: $ouds-color-decorative-sky-400
+        hex: "#4ab4e6"
+      - name: Decorative sky 700
+        variable: $ouds-color-decorative-sky-700
+        hex: "#136186"
+  - category: Decorative emerald
+    name: "decorative-emerald"
     colors:
-      - name: Green 100
-        variable: $ods-green-100
-        hex: "#b8ebd6"
-      - name: Green 200
-        variable: $ods-green-200
-        hex: "#84d5af"
-      - name: Green 300
-        variable: $ods-green-300
+      - name: Decorative emerald 200
+        variable: $ouds-color-decorative-emerald-200
+        hex: "#c0e8d4"
+      - name: Decorative emerald 500
+        variable: $ouds-color-decorative-emerald-500
         hex: "#50be87"
-      - name: Green 400
-        variable: $ods-green-400
-        hex: "#27a971"
-      - name: Green 500
-        variable: $ods-green-500
-        hex: "#198c51"
-      - name: Green 600
-        variable: $ods-green-600
-        hex: "#0a6e31"
-  - subcategory: Pink
-    name: "pink"
+      - name: Decorative emerald 700
+        variable: $ouds-color-decorative-emerald-700
+        hex: "#2e7b54"
+  - category: Decorative amber
+    name: "decorative-amber"
     colors:
-      - name: Pink 100
-        variable: $ods-pink-100
-        hex: "#ffe8f7"
-      - name: Pink 200
-        variable: $ods-pink-200
-        hex: "#ffceef"
-      - name: Pink 300
-        variable: $ods-pink-300
-        hex: "#ffb4e6"
-      - name: Pink 400
-        variable: $ods-pink-400
-        hex: "#ff8ad4"
-      - name: Pink 500
-        variable: $ods-pink-500
-        hex: "#d573bb"
-      - name: Pink 600
-        variable: $ods-pink-600
-        hex: "#bc4d9a"
-  - category: Purple
-    name: "purple"
-    colors:
-      - name: Purple 100
-        variable: $ods-purple-100
-        hex: "#d9c2f0"
-      - name: Purple 200
-        variable: $ods-purple-200
-        hex: "#c1a4e4"
-      - name: Purple 300
-        variable: $ods-purple-300
-        hex: "#a885d8"
-      - name: Purple 400
-        variable: $ods-purple-400
-        hex: "#9373bd"
-      - name: Purple 500
-        variable: $ods-purple-500
-        hex: "#6e4aa7"
-      - name: Purple 600
-        variable: $ods-purple-600
-        hex: "#492191"
-  - category: Yellow
-    name: "yellow"
-    colors:
-      - name: Yellow 100
-        variable: $ods-yellow-100
-        hex: "#fff6b6"
-      - name: Yellow 200
-        variable: $ods-yellow-200
-        hex: "#ffe45b"
-      - name: Yellow 300
-        variable: $ods-yellow-300
-        hex: "#ffd200"
-      - name: Yellow 400
-        variable: $ods-yellow-400
+      - name: Decorative amber 500
+        variable: $ouds-color-decorative-amber-500
         hex: "#ffb400"
-      - name: Yellow 500
-        variable: $ods-yellow-500
-        hex: "#b98f11"
-      - name: Yellow 600
-        variable: $ods-yellow-600
-        hex: "#9d6e06"
+  - category: Decorative deep peach
+    name: "decorative-deep-peach"
+    colors:
+      - name: Decorative deep peach 100
+        variable: $ouds-color-decorative-deep-peach-100
+        hex: "#fbebdf"
+      - name: Decorative deep peach 200
+        variable: $ouds-color-decorative-deep-peach-200
+        hex: "#f4cfb2"
+      - name: Decorative deep peach 300
+        variable: $ouds-color-decorative-deep-peach-300
+        hex: "#e3b591"
+      - name: Decorative deep peach 400
+        variable: $ouds-color-decorative-deep-peach-400
+        hex: "#c19372"
+      - name: Decorative deep peach 500
+        variable: $ouds-color-decorative-deep-peach-500
+        hex: "#cf7e3f"
+      - name: Decorative deep peach 600
+        variable: $ouds-color-decorative-deep-peach-600
+        hex: "#aa6631"
+      - name: Decorative deep peach 700
+        variable: $ouds-color-decorative-deep-peach-700
+        hex: "#7e4f2a"
+      - name: Decorative deep peach 800
+        variable: $ouds-color-decorative-deep-peach-800
+        hex: "#553720"
+      - name: Decorative deep peach 900
+        variable: $ouds-color-decorative-deep-peach-900
+        hex: "#2e2014"
+  - subcategory: Decorative shocking pink
+    name: "decorative-shocking-pink"
+    colors:
+      - name: Decorative shocking pink 100
+        variable: $ouds-color-decorative-shocking-pink-100
+        hex: "#ffe5f6"
+      - name: Decorative shocking pink 200
+        variable: $ouds-color-decorative-shocking-pink-200
+        hex: "#ffb4e6"
+      - name: Decorative shocking pink 300
+        variable: $ouds-color-decorative-shocking-pink-300
+        hex: "#ff80d4"
+  - category: Decorative amethyst
+    name: "decorative-amethyst"
+    colors:
+      - name: Decorative amethyst 200
+        variable: $ouds-color-decorative-amethyst-200
+        hex: "#e0d4f2"
+      - name: Decorative amethyst 400
+        variable: $ouds-color-decorative-amethyst-400
+        hex: "#a885d8"
+      - name: Decorative amethyst 600
+        variable: $ouds-color-decorative-amethyst-600
+        hex: "#5b2f98"
+      - name: Decorative amethyst 800
+        variable: $ouds-color-decorative-amethyst-800
+        hex: "#2c174a"
+  - category: Opacity white
+    name: "opacity-white"
+    colors:
+      - name: Opacity white 0
+        variable: $ouds-color-opacity-white-0
+        hex: "rgba(255, 255, 255, 0)"
+      - name: Opacity white 40
+        variable: $ouds-color-opacity-white-40
+        hex: "rgba(255, 255, 255, .04)"
+      - name: Opacity white 80
+        variable: $ouds-color-opacity-white-80
+        hex: "rgba(255, 255, 255, .08)"
+      - name: Opacity white 200
+        variable: $ouds-color-opacity-white-200
+        hex: "rgba(255, 255, 255, .2)"
+      - name: Opacity white 640
+        variable: $ouds-color-opacity-white-640
+        hex: "rgba(255, 255, 255, .64)"
+      - name: Opacity white 800
+        variable: $ouds-color-opacity-white-800
+        hex: "rgba(255, 255, 255, .8)"
+      - name: Opacity white 920
+        variable: $ouds-color-opacity-white-920
+        hex: "rgba(255, 255, 255, .92)"
+  - category: Opacity black
+    name: "opacity-black"
+    colors:
+      - name: Opacity black 0
+        variable: $ouds-color-opacity-black-0
+        hex: "rgba(0, 0, 0, 0)"
+      - name: Opacity black 40
+        variable: $ouds-color-opacity-black-40
+        hex: "rgba(0, 0, 0, .04)"
+      - name: Opacity black 80
+        variable: $ouds-color-opacity-black-80
+        hex: "rgba(0, 0, 0, .08)"
+      - name: Opacity black 160
+        variable: $ouds-color-opacity-black-160
+        hex: "rgba(0, 0, 0, .16)"
+      - name: Opacity black 200
+        variable: $ouds-color-opacity-black-200
+        hex: "rgba(0, 0, 0, .2)"
+      - name: Opacity black 240
+        variable: $ouds-color-opacity-black-240
+        hex: "rgba(0, 0, 0, .24)"
+      - name: Opacity black 320
+        variable: $ouds-color-opacity-black-320
+        hex: "rgba(0, 0, 0, .32)"
+      - name: Opacity black 680
+        variable: $ouds-color-opacity-black-680
+        hex: "rgba(0, 0, 0, .68)"
+      - name: Opacity black 840
+        variable: $ouds-color-opacity-black-840
+        hex: "rgba(0, 0, 0, .84)"
+  - category: Opacity colored
+    name: "opacity"
+    colors:
+      - name: Opacity malachite
+        variable: $ouds-color-opacity-malachite
+        hex: "rgba(61, 227, 90, .12)"
+      - name: Opacity scarlet
+        variable: $ouds-color-opacity-scarlet
+        hex: "rgba(234, 3, 5, .08)"
+      - name: Opacity dodger blue
+        variable: $ouds-color-opacity-dodger-blue
+        hex: "rgba(38, 178, 255, .08)"
+      - name: Opacity sun
+        variable: $ouds-color-opacity-sun
+        hex: "rgba(255, 208, 0, .16)"

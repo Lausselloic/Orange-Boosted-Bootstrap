@@ -99,7 +99,7 @@
   color: var(--#{$prefix}stepped-process-link-color);
   text-decoration: if($link-decoration == none, null, none);
   white-space: nowrap;
-  outline-color: var(--#{$prefix}focus-visible-inner-color);
+  outline-color: var(--#{$prefix}color-border-focus-inset);
   box-shadow: none;
 
   &::before {
@@ -121,7 +121,7 @@
 
   .active ~ .stepped-process-item & {
     color: var(--#{$prefix}stepped-process-link-next-color);
-    outline-color: var(--#{$prefix}focus-visible-outer-color);
+    outline-color: var(--#{$prefix}color-border-focus);
   }
 }
 

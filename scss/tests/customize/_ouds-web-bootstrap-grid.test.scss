@@ -5,9 +5,11 @@ $enable-bootstrap-compatibility: null !default;
 @include describe("customize/ouds-web-bootstrap") {
   @include it("generates only OUDS containers") {
     $enable-bootstrap-compatibility: false !global;
+    @import "../../config";
     @import "../../functions";
     @import "../../tokens/raw";
     @import "../../tokens/semantic";
+    @import "../../tokens/semantic-colors-custom-props";
     @import "../../tokens/composite";
     @import "../../tokens/component";
     @import "../../variables";
@@ -86,9 +88,11 @@ $enable-bootstrap-compatibility: null !default;
 
   @include it("generates OUDS and Bootstrap containers") {
     $enable-bootstrap-compatibility: true !global;
+    @import "../../config";
     @import "../../functions";
     @import "../../tokens/raw";
     @import "../../tokens/semantic";
+    @import "../../tokens/semantic-colors-custom-props";
     @import "../../tokens/composite";
     @import "../../tokens/component";
     @import "../../variables";
@@ -354,9 +358,11 @@ $enable-bootstrap-compatibility: null !default;
 
   @include it("generates only OUDS grid classes") {
     $enable-bootstrap-compatibility: false !global;
+    @import "../../config";
     @import "../../functions";
     @import "../../tokens/raw";
     @import "../../tokens/semantic";
+    @import "../../tokens/semantic-colors-custom-props";
     @import "../../tokens/composite";
     @import "../../tokens/component";
     @import "../../variables";
@@ -2631,9 +2637,11 @@ $enable-bootstrap-compatibility: null !default;
 
   @include it("generates OUDS and Bootstrap grid classes") {
     $enable-bootstrap-compatibility: true !global;
+    @import "../../config";
     @import "../../functions";
     @import "../../tokens/raw";
     @import "../../tokens/semantic";
+    @import "../../tokens/semantic-colors-custom-props";
     @import "../../tokens/composite";
     @import "../../tokens/component";
     @import "../../variables";

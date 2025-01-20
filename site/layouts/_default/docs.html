@@ -33,7 +33,7 @@
       </div>
 
       {{ if (eq .Page.Params.toc true) }}
-        <div class="bd-toc mt-tall mb-huge my-lg-none mb-lg-huge px-sm-shortest text-body-secondary">
+        <div class="bd-toc mt-tall mb-huge my-lg-none mb-lg-huge px-sm-shortest text-muted">
           <h2 class="mb-none">
             <button class="btn btn-outline-secondary p-md-none mb-short mb-md-none text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
               On this page
@@ -55,7 +55,7 @@
             <div class="col-md-6">
               <a class="d-block text-decoration-none" href="../{{ urlize .title }}/">
                 <strong class="d-block h5 mb-none">{{ .title }}</strong>
-                <span class="text-secondary">{{ .description }}</span>
+                <span class="text-default">{{ .description }}</span>
               </a>
             </div>
             {{ end }}

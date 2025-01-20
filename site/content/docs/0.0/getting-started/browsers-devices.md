@@ -31,8 +31,8 @@ Generally speaking, OUDS Web supports the latest versions of each major platform
 {{< bs-table "table" >}}
 | | Chrome | Firefox | Safari | Android Browser &amp; WebView |
 | --- | --- | --- | --- | --- |
-| **Android** | Supported | Supported | <span class="text-body-secondary">&mdash;</span> | v6.0+ |
-| **iOS** | Supported | Supported | Supported | <span class="text-body-secondary">&mdash;</span> |
+| **Android** | Supported | Supported | <span class="text-muted">&mdash;</span> | v6.0+ |
+| **iOS** | Supported | Supported | Supported | <span class="text-muted">&mdash;</span> |
 {{< /bs-table >}}
 
 ### Desktop browsers
@@ -43,7 +43,7 @@ Similarly, the latest versions of most desktop browsers are supported.
 | | Chrome | Firefox | Microsoft Edge | Opera | Safari |
 | --- | --- | --- | --- | --- | --- |
 | **Mac** | Supported | Supported | Supported | Supported | Supported |
-| **Windows** | Supported | Supported | Supported | Supported | <span class="text-body-secondary">&mdash;</span> |
+| **Windows** | Supported | Supported | Supported | Supported | <span class="text-muted">&mdash;</span> |
 {{< /bs-table >}}
 
 For Firefox, in addition to the latest normal stable release, we also support the latest [Extended Support Release (ESR)](https://www.mozilla.org/en-US/firefox/enterprise/) version of Firefox.
@@ -58,11 +58,11 @@ Internet Explorer is not supported.
 
 ### Overflow and scrolling
 
-Support for `overflow: hidden;` on the `<body>` element is quite limited in iOS and Android. To that end, when you scroll past the top or bottom of a modal in either of those devices' browsers, the `<body>` content will begin to scroll. See [Chrome bug #175502](https://issues.chromium.org/issues/40301599) (fixed in Chrome v40) and [WebKit bug #153852](https://bugs.webkit.org/show_bug.cgi?id=153852).
+Support for `overflow: hidden;` on the `:root` children elements is quite limited in iOS and Android. To that end, when you scroll past the top or bottom of a modal in either of those devices' browsers, the `:root` children content will begin to scroll. See [Chrome bug #175502](https://issues.chromium.org/issues/40301599) (fixed in Chrome v40) and [WebKit bug #153852](https://bugs.webkit.org/show_bug.cgi?id=153852).
 
 ### iOS text fields and scrolling
 
-As of iOS 9.2, while a modal is open, if the initial touch of a scroll gesture is within the boundary of a textual `<input>` or a `<textarea>`, the `<body>` content underneath the modal will be scrolled instead of the modal itself. See [WebKit bug #153856](https://bugs.webkit.org/show_bug.cgi?id=153856).
+As of iOS 9.2, while a modal is open, if the initial touch of a scroll gesture is within the boundary of a textual `<input>` or a `<textarea>`, the `:root` children content underneath the modal will be scrolled instead of the modal itself. See [WebKit bug #153856](https://bugs.webkit.org/show_bug.cgi?id=153856).
 
 ### Navbar Dropdowns
 

@@ -7,21 +7,14 @@
 //
 
 // OUDS mod
-// scss-docs-start brand-colors-dark
-$functional-green-dark:  $ods-forest-100 !default;
-$functional-blue-dark:   $ods-water-100 !default;
-$functional-yellow-dark: $functional-yellow !default;
-$functional-red-dark:    $ods-fire-100 !default;
-// scss-docs-end brand-colors-dark
-
 // scss-docs-start sass-dark-mode-vars
 // scss-docs-start theme-color-dark-variables
-$primary-dark:    $supporting-orange !default;
+$primary-dark:    $ouds-color-content-brand-primary-dark !default;
 $secondary-dark:  $white !default;
-$success-dark:    $functional-green-dark !default;
-$info-dark:       $functional-blue-dark !default;
-$warning-dark:    $functional-yellow-dark !default;
-$danger-dark:     $functional-red-dark !default;
+$success-dark:    $ouds-color-functional-malachite-500 !default;
+$info-dark:       $ouds-color-functional-dodger-blue-500 !default;
+$warning-dark:    $ouds-color-functional-sun-500 !default;
+$danger-dark:     $ouds-color-functional-scarlet-600 !default;
 $light-dark:      $gray-500 !default;
 $dark-dark:       $black !default;
 // scss-docs-end theme-color-dark-variables
@@ -73,32 +66,26 @@ $light-border-subtle-dark:          $light-dark !default; // OUDS mod: instead o
 $dark-border-subtle-dark:           $dark-dark !default; // OUDS mod: instead of `$gray-800`
 // scss-docs-end theme-border-subtle-dark-variables
 
-$body-color-dark:                   $white !default; // OUDS mod: instead of `$gray-300`
-$body-bg-dark:                      $gray-950 !default; // OUDS mod: instead of `$gray-900`
-$body-secondary-color-dark:         $gray-600 !default; // OUDS mod: instead of `rgba($body-color-dark, .75)`
-$body-secondary-bg-dark:            $gray-900 !default; // OUDS mod: instead of `$gray-800`
-$body-tertiary-color-dark:          $gray-700 !default; // OUDS mod: instead of `rgba($body-color-dark, .5)`
-$body-tertiary-bg-dark:             $black !default; // OUDS mod: instead of `mix($gray-800, $gray-900, 50%)`
-$body-emphasis-color-dark:          $white !default; // OUDS mod: instead of `$gray-100`
-$disabled-color-dark:               var(--#{$prefix}tertiary-color) !default; // OUDS mod
-$tertiary-active-bg-dark:           $gray-700 !default; // OUDS mod
-$border-color-dark:                 $white !default; // OUDS mod: instead of `$gray-700`
-$border-color-subtle-dark:          $gray-700 !default; // OUDS mod
+$body-color-dark:                   $ouds-color-content-default-dark !default; // OUDS mod: instead of `$gray-300`
+$body-bg-dark:                      $ouds-color-bg-primary-dark !default; // OUDS mod: instead of `$gray-900`
+$body-secondary-color-dark:         $ouds-color-content-muted-dark !default; // OUDS mod: instead of `rgba($body-color-dark, .75)`
+$body-secondary-bg-dark:            $ouds-color-bg-secondary-dark !default; // OUDS mod: instead of `$gray-800`
+$body-tertiary-color-dark:          $ouds-color-content-muted-dark !default; // OUDS mod: instead of `rgba($body-color-dark, .5)`
+$body-tertiary-bg-dark:             $ouds-color-bg-tertiary-dark !default; // OUDS mod: instead of `mix($gray-800, $gray-900, 50%)`
+$body-emphasis-color-dark:          $ouds-color-content-default-dark !default; // OUDS mod: instead of `$gray-100`
+$border-color-dark:                 $ouds-color-border-default-dark !default; // OUDS mod: instead of `$gray-700`
 $border-color-translucent-dark:     rgba($white, .15) !default;
 $headings-color-dark:               inherit !default;
 $link-color-dark:                   $white !default; // OUDS mod: instead of `tint-color($primary, 40%)`
-$link-hover-color-dark:             $supporting-orange !default; // OUDS mod: instead of `shift-color($link-color-dark, -$link-shade-percentage)`
-$code-color-dark:                   $gray-600 !default; // OUDS mod: instead of `tint-color($code-color, 40%)`
-$mark-color-dark:                   $black !default; // OUDS mod: instead of `$body-color-dark`
-$mark-bg-dark:                      $white !default; // OUDS mod: instead of `$yellow-800`
+$link-hover-color-dark:             $ouds-color-orange-500 !default; // OUDS mod: instead of `shift-color($link-color-dark, -$link-shade-percentage)`
+$code-color-dark:                   $ouds-color-content-muted-dark !default; // OUDS mod: instead of `tint-color($code-color, 40%)`
+$mark-color-dark:                   $ouds-color-content-on-action-highlighted-dark !default; // OUDS mod: instead of `$body-color-dark`
+$mark-bg-dark:                      $ouds-color-action-highlighted-dark !default; // OUDS mod: instead of `$yellow-800`
 
-$focus-ring-color-dark:             rgba($supporting-orange, $focus-ring-opacity) !default; // OUDS mod
+$focus-ring-color-dark:             rgba($ouds-color-orange-500, $focus-ring-opacity) !default; // OUDS mod
 
-$focus-visible-inner-color-dark:    $black !default; // OUDS mod
-$focus-visible-outer-color-dark:    $white !default; // OUDS mod
-
-$success-icon-dark:                 url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 125'><path fill='#{$functional-green-dark}' d='M62.5 0a62.5 62.5 0 1 0 0 125 62.5 62.5 0 0 0 0-125zm28 29.4c3.3 0 6 2.6 6 5.9a5.9 5.9 0 0 1-1.3 3.7L57.7 86a5.8 5.8 0 0 1-9.1 0L29.8 62.5c-.8-1-1.2-2.3-1.2-3.7a5.9 5.9 0 0 1 1.7-4.1l2.3-2.4a5.8 5.8 0 0 1 4.2-1.7 5.8 5.8 0 0 1 3.8 1.4L52 64.7 86.6 31a5.8 5.8 0 0 1 4-1.6z'/></svg>") !default; // OUDS mod
-$danger-icon-dark:                  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 125'><path fill='#{$functional-red-dark}' d='M70.3 0c-5.8 0-10.8 3.1-13.5 7.8L2.3 101.3l-.2.2A15.6 15.6 0 0 0 15.6 125H125a15.6 15.6 0 0 0 13.5-23.5L83.8 7.8A15.6 15.6 0 0 0 70.3 0zm19.2 50a6.4 6.4 0 0 1 4.4 1.9 6.4 6.4 0 0 1 0 9L79.4 75.6l15 15a6.4 6.4 0 0 1 0 9.2 6.4 6.4 0 0 1-4.5 1.9 6.4 6.4 0 0 1-4.6-2l-15-15-15 15a6.4 6.4 0 0 1-4.6 2 6.4 6.4 0 0 1-4.6-2 6.4 6.4 0 0 1 0-9l15-15L46.8 61a6.4 6.4 0 1 1 9-9.1l14.6 14.5L84.8 52a6.4 6.4 0 0 1 4.7-1.9z'/></svg>") !default; // OUDS mod
+$success-icon-dark:                 url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 125'><path fill='#{$ouds-color-functional-malachite-500}' d='M62.5 0a62.5 62.5 0 1 0 0 125 62.5 62.5 0 0 0 0-125zm28 29.4c3.3 0 6 2.6 6 5.9a5.9 5.9 0 0 1-1.3 3.7L57.7 86a5.8 5.8 0 0 1-9.1 0L29.8 62.5c-.8-1-1.2-2.3-1.2-3.7a5.9 5.9 0 0 1 1.7-4.1l2.3-2.4a5.8 5.8 0 0 1 4.2-1.7 5.8 5.8 0 0 1 3.8 1.4L52 64.7 86.6 31a5.8 5.8 0 0 1 4-1.6z'/></svg>") !default; // OUDS mod
+$danger-icon-dark:                  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 125'><path fill='#{$ouds-color-functional-scarlet-600}' d='M70.3 0c-5.8 0-10.8 3.1-13.5 7.8L2.3 101.3l-.2.2A15.6 15.6 0 0 0 15.6 125H125a15.6 15.6 0 0 0 13.5-23.5L83.8 7.8A15.6 15.6 0 0 0 70.3 0zm19.2 50a6.4 6.4 0 0 1 4.4 1.9 6.4 6.4 0 0 1 0 9L79.4 75.6l15 15a6.4 6.4 0 0 1 0 9.2 6.4 6.4 0 0 1-4.5 1.9 6.4 6.4 0 0 1-4.6-2l-15-15-15 15a6.4 6.4 0 0 1-4.6 2 6.4 6.4 0 0 1-4.6-2 6.4 6.4 0 0 1 0-9l15-15L46.8 61a6.4 6.4 0 1 1 9-9.1l14.6 14.5L84.8 52a6.4 6.4 0 0 1 4.7-1.9z'/></svg>") !default; // OUDS mod
 
 // OUDS mod
 $svg-as-custom-props-dark: (
@@ -114,7 +101,7 @@ $svg-as-custom-props-dark: (
 $form-check-filter-dark:                none !default; // OUDS mod
 $form-check-input-disabled-color-dark:  $gray-700 !default; // OUDS mod
 $form-color-disabled-filter-dark:       brightness(0) invert(1) brightness(.4) !default; // OUDS mod
-$form-switch-square-bg-dark:            $gray-950 !default; // OUDS mod
+$form-switch-square-bg-dark:            $ouds-color-functional-dark-gray-880 !default; // OUDS mod
 
 // OUDS mod: no $form-select-indicator-color-dark
 $form-select-indicator-dark:            escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#{$white}' d='M7 7 0 0h14L7 7z'/></svg>")) !default; // OUDS mod: instead of Bootstrap svg

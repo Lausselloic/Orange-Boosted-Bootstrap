@@ -4,14 +4,14 @@
 // Elevation
 
 // scss-docs-start ouds-composite-elevation
-$ouds-elevation-default: $ouds-elevation-x-default $ouds-elevation-y-default $ouds-elevation-blur-default $ouds-elevation-spread-default $ouds-elevation-color-default-light !default;
-$ouds-elevation-drag: $ouds-elevation-x-drag $ouds-elevation-y-drag $ouds-elevation-blur-drag $ouds-elevation-spread-drag $ouds-elevation-color-drag-light !default;
-$ouds-elevation-emphasized: $ouds-elevation-x-emphasized $ouds-elevation-y-emphasized $ouds-elevation-blur-emphasized $ouds-elevation-spread-emphasized $ouds-elevation-color-emphasized-light !default;
-$ouds-elevation-none: $ouds-elevation-x-none $ouds-elevation-y-none $ouds-elevation-blur-none $ouds-elevation-spread-none $ouds-elevation-color-none-light !default;
-$ouds-elevation-raised: $ouds-elevation-x-raised $ouds-elevation-y-raised $ouds-elevation-blur-raised $ouds-elevation-spread-raised $ouds-elevation-color-raised-light !default;
-$ouds-elevation-sticky-default: $ouds-elevation-x-sticky-default $ouds-elevation-y-sticky-default $ouds-elevation-blur-sticky-default $ouds-elevation-spread-sticky-default $ouds-elevation-color-sticky-default-light !default;
-$ouds-elevation-sticky-emphasized: $ouds-elevation-x-sticky-emphasized $ouds-elevation-y-sticky-emphasized $ouds-elevation-blur-sticky-emphasized $ouds-elevation-spread-sticky-emphasized $ouds-elevation-color-sticky-emphasized-light !default;
-$ouds-elevation-sticky-navigation-scrolled: $ouds-elevation-x-sticky-navigation-scrolled $ouds-elevation-y-sticky-navigation-scrolled $ouds-elevation-blur-sticky-navigation-scrolled $ouds-elevation-spread-sticky-navigation-scrolled $ouds-elevation-color-sticky-navigation-scrolled-light !default;
+$ouds-elevation-default: $ouds-elevation-x-default $ouds-elevation-y-default $ouds-elevation-blur-default $ouds-elevation-spread-default var(--#{$prefix}elevation-color-default) !default;
+$ouds-elevation-drag: $ouds-elevation-x-drag $ouds-elevation-y-drag $ouds-elevation-blur-drag $ouds-elevation-spread-drag var(--#{$prefix}elevation-color-drag) !default;
+$ouds-elevation-emphasized: $ouds-elevation-x-emphasized $ouds-elevation-y-emphasized $ouds-elevation-blur-emphasized $ouds-elevation-spread-emphasized var(--#{$prefix}elevation-color-emphasized) !default;
+$ouds-elevation-none: $ouds-elevation-x-none $ouds-elevation-y-none $ouds-elevation-blur-none $ouds-elevation-spread-none var(--#{$prefix}elevation-color-none) !default;
+$ouds-elevation-raised: $ouds-elevation-x-raised $ouds-elevation-y-raised $ouds-elevation-blur-raised $ouds-elevation-spread-raised var(--#{$prefix}elevation-color-raised) !default;
+$ouds-elevation-sticky-default: $ouds-elevation-x-sticky-default $ouds-elevation-y-sticky-default $ouds-elevation-blur-sticky-default $ouds-elevation-spread-sticky-default var(--#{$prefix}elevation-color-sticky-default) !default;
+$ouds-elevation-sticky-emphasized: $ouds-elevation-x-sticky-emphasized $ouds-elevation-y-sticky-emphasized $ouds-elevation-blur-sticky-emphasized $ouds-elevation-spread-sticky-emphasized var(--#{$prefix}elevation-color-sticky-emphasized) !default;
+$ouds-elevation-sticky-navigation-scrolled: $ouds-elevation-x-sticky-navigation-scrolled $ouds-elevation-y-sticky-navigation-scrolled $ouds-elevation-blur-sticky-navigation-scrolled $ouds-elevation-spread-sticky-navigation-scrolled var(--#{$prefix}elevation-color-sticky-navigation-scrolled) !default;
 // scss-docs-end ouds-composite-elevation
 
 // stylelint-disable value-keyword-case

@@ -2,7 +2,7 @@
 
 // OUDS mod: the entire file is modified and is specific to OUDS Web
 
-:root {
+#{$ouds-root-selector} {
   // All available CSS vars and specific modifications for OUDS Web
   --docsearch-primary-color: var(--bs-primary);
   --docsearch-text-color: var(--bs-body-color);
@@ -29,7 +29,7 @@
   --docsearch-key-shadow: null;
   // --docsearch-footer-height;
   --docsearch-footer-background: transparent;
-  --docsearch-footer-shadow: 0 -1px var(--bs-border-color);
+  --docsearch-footer-shadow: 0 -1px var(--bs-color-border-emphasized);
 }
 
 .bd-search {
@@ -50,7 +50,7 @@
 }
 
 .DocSearch-Modal {
-  border: var(--bs-border-width) solid var(--bs-border-color-subtle);
+  border: var(--bs-border-width) solid var(--bs-color-border-default);
   @include border-radius(0, 0);
 }
 
@@ -79,7 +79,7 @@
   }
 
   .DocSearch-Search-Icon {
-    color: var(--bs-body-color);
+    color: var(--#{$prefix}color-content-default);
   }
 }
 
@@ -98,7 +98,7 @@
 }
 
 .DocSearch-Form {
-  box-shadow: var(--bs-border-color-subtle) 0 0 0 .125rem inset;
+  box-shadow: var(--bs-color-border-default) 0 0 0 .125rem inset;
   @include border-radius(0, 0);
 
   &:focus-within {
@@ -130,7 +130,7 @@
 }
 
 .DocSearch-Commands-Key {
-  background-color: var(--bs-highlight-color);
+  background-color: var(--#{$prefix}color-action-highlighted);
 }
 
 .DocSearch-Hits {
@@ -151,19 +151,19 @@
   }
 
   mark {
-    color: var(--bs-highlight-color);
-    background: var(--bs-highlight-bg);
+    color: var(--#{$prefix}color-content-on-action-highlighted);
+    background: var(--#{$prefix}color-action-highlighted);
   }
 
   &[aria-selected="true"] {
     a {
-      background-color: var(--bs-highlight-bg);
+      background-color: var(--#{$prefix}color-action-highlighted);
     }
 
     mark {
       --docsearch-hit-active-color: var(--bs-body-color);
       text-decoration: none;
-      background: var(--bs-highlight-color);
+      background: var(--#{$prefix}color-action-highlighted);
     }
   }
 }
@@ -182,7 +182,7 @@
 }
 
 .DocSearch-Prefill {
-  color: var(--bs-body-color);
+  color: var(--#{$prefix}color-content-default);
   text-decoration: underline;
   @include border-radius(0, 0);
 

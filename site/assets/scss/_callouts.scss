@@ -10,8 +10,8 @@
   margin-top: $spacer; // OUDS mod
   margin-bottom: $spacer; // OUDS mod
   color: var(--bd-callout-color, inherit);
-  background-color: var(--bd-callout-bg, var(--bs-gray-200)); // OUDS mod
-  border-left: .25rem solid var(--bd-callout-border, var(--bs-gray-200)); // OUDS mod
+  background-color: var(--bd-callout-bg, var(--#{$prefix}color-surface-status-neutral)); // OUDS mod
+  // OUDS mod: no border-left
 
   h4 {
     margin-bottom: .25rem;
@@ -31,8 +31,8 @@
 // Variations
 @each $variant in $bd-callout-variants {
   .bd-callout-#{$variant} {
-    --bd-callout-color: var(--bs-emphasis-color); // OUDS mod: instead of `var(--bs-#{$variant}-text-emphasis)`
-    --bd-callout-bg: var(--bs-secondary-bg); // OUDS mod: instead of `var(--bs-#{$variant}-bg-subtle)`
-    --bd-callout-border: var(--bs-#{$variant}-border-subtle);
+    --bd-callout-color: var(--#{$prefix}color-content-on-status-muted); // OUDS mod: instead of `var(--bs-#{$variant}-text-emphasis)`
+    --bd-callout-bg: var(--#{$prefix}color-surface-status-#{if($variant == "danger", negative, $variant)}-muted); // OUDS mod: instead of `var(--bs-#{$variant}-bg-subtle)`
+    // OUDS mod: no --bd-callout-border
   }
 }

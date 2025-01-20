@@ -13,13 +13,13 @@
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-always-black">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <a class="navbar-brand text-white" href="#">This shouldn't jump!</a>
+          <a class="navbar-brand text-always-on-black" href="#">This shouldn't jump!</a>
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link active" href="#" aria-current="page">Home</a>
@@ -188,7 +188,7 @@
 
       <br><br>
 
-      <div class="text-bg-dark p-short" id="tall" style="display: none;">
+      <div class="text-bg-always-black p-short" id="tall" style="display: none;">
         Tall body content to force the page to have a scrollbar.
       </div>
 
@@ -212,7 +212,7 @@
 
       function reportFirefoxTestResult(result) {
         if (!firefoxTestDone) {
-          ffBugTestResult.classList.add(result ? 'text-success' : 'text-danger')
+          ffBugTestResult.classList.add(result ? 'text-status-positive' : 'text-status-negative')
           ffBugTestResult.textContent = result ? 'PASS' : 'FAIL'
         }
       }

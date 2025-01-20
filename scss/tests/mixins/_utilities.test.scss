@@ -3,9 +3,11 @@ $enable-important-utilities: false;
 
 // Important: Do not import rfs to check that the mixin just calls the appropriate functions from it
 // OUDS mod
+@import "../../config";
 @import "../../functions"; // Added because needed by "variables"
 @import "../../tokens/raw";
 @import "../../tokens/semantic";
+@import "../../tokens/semantic-colors-custom-props";
 @import "../../tokens/composite";
 @import "../../tokens/component";
 @import "../../variables"; // Added to avoid undefined variable error like `$white`

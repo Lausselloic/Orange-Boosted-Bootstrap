@@ -56,7 +56,7 @@
   > [data-focus-visible-added]:focus + label {
     @include focus-visible();
     outline-offset: -1px;
-    box-shadow: inset 0 0 0 add(1px, $focus-visible-inner-width) var(--#{$prefix}focus-visible-inner-color);
+    box-shadow: inset 0 0 0 add(1px, $focus-visible-inner-width) var(--#{$prefix}color-border-focus-inset);
   }
 
   &:hover input + label::before {

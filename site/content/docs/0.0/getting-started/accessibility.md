@@ -24,22 +24,25 @@ OUDS Web's interactive components<!--—such as modal dialogs, dropdown menus, a
 
 Because OUDS Web's components are purposely designed to be fairly generic, authors may need to include further <abbr title="Accessible Rich Internet Applications">ARIA</abbr> roles and attributes, as well as JavaScript behavior, to more accurately convey the precise nature and functionality of their component. This is usually noted in the documentation.
 
-<!--### Color contrast
+### Color contrast
 
-Some combinations of colors that currently make up OUDS Web's default palette—used throughout the framework for things such as button variations, alert variations, form validation indicators—may lead to *insufficient* color contrast (below the recommended [WCAG 2.1 text color contrast ratio of 4.5:1](https://www.w3.org/TR/WCAG/#contrast-minimum) and the [WCAG 2.1 non-text color contrast ratio of 3:1](https://www.w3.org/TR/WCAG21/#non-text-contrast)), particularly when used against a light background.
+Some combinations of colors that currently make up OUDS Web's default palette—used throughout the framework<!-- for things such as button variations, alert variations, form validation indicators—-->may lead to *insufficient* color contrast (below the recommended [WCAG 2.2 text color contrast ratio of 4.5:1](https://www.w3.org/TR/WCAG/#contrast-minimum) and the [WCAG 2.2 non-text color contrast ratio of 3:1](https://www.w3.org/TR/WCAG21/#non-text-contrast)), particularly when used against a light background.
 
-Unlike Bootstrap, in OUDS Web **contrasts are locked to ensure they meet [WCAG 2.1 accessibility standards for color contrast](https://www.w3.org/TR/WCAG21/#contrast-minimum)** when using [`.text-*`]({{< docsref "/utilities/colors" >}}) and [`.bg-*` utilities]({{< docsref "/utilities/background" >}}), by defining `color` and `background-color` altogether. Please refer to [our theme colors]({{< docsref "/customize/color-palette" >}}) to have a full preview of OUDS Web color palette’s reached WCAG level.-->
+OUDS Web **contrasts aren't locked, please make sure they meet [WCAG 2.2 accessibility standards for color contrast](https://www.w3.org/TR/WCAG21/#contrast-minimum)** when using [`.text-*`]({{< docsref "/utilities/colors" >}}) and [`.bg-*` utilities]({{< docsref "/utilities/background" >}}), by defining `color` and `background-color`.<!-- Please refer to [our theme colors]({{< docsref "/customize/color-palette" >}}) to have a full preview of OUDS Web color palette’s reached WCAG level.-->
 
 ### Visually hidden content
 
 Content which should be visually hidden, but remain accessible to assistive technologies such as screen readers, can be styled using the `.visually-hidden` class. This can be useful in situations where additional visual information or cues (such as meaning denoted through the use of color) need to also be conveyed to non-visual users.
 
-<!--```html
-<p class="text-danger">
+```html
+<p>
+  <svg width="8em" height="8em" class="text-status-negative" aria-hidden="true">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#error-severe"/>
+  </svg>
   <span class="visually-hidden">Danger: </span>
   This action is not reversible
 </p>
-```-->
+```
 
 For visually hidden interactive controls, such as traditional "skip" links, use the `.visually-hidden-focusable` class. This will ensure that the control becomes visible once focused (for sighted keyboard users). **Watch out, `.visually-hidden-focusable` is a standalone class, and must not be used in combination with the `.visually-hidden` class.**
 

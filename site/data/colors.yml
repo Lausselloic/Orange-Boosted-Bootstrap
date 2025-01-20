@@ -1,5 +1,5 @@
 - name: blue
-  hex: "#4170d8"
+  hex: "#26b2ff"
 - name: indigo
   hex: "#a885d8"
 - name: purple
@@ -7,17 +7,17 @@
 - name: pink
   hex: "#ffb4e6"
 - name: red
-  hex: "#cd3c14"
+  hex: "#ea0305"
 - name: orange
-  hex: "#f16e00"
+  hex: "#f15e00"
 - name: yellow
-  hex: "#fc0"
+  hex: "#ffd000"
 - name: green
-  hex: "#228722"
+  hex: "#3de35a"
 - name: teal
   hex: "#50be87"
 - name: cyan
-  hex: "#4bb4e6"
+  hex: "#4ab4e6"
 - name: white
   hex: "#fff"
 - name: gray

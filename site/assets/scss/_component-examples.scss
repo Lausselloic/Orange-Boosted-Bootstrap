@@ -6,7 +6,7 @@
   display: flex; // OUDS mod
   flex-direction: column; // OUDS mod
   margin: 0 ($bd-gutter-x * -.5) 1rem;
-  border: solid var(--bs-border-color-subtle); // OUDS mod: instead of `var(--bs-border-color)`
+  border: solid var(--bs-color-border-default); // OUDS mod: instead of `var(--bs-border-color)`
   border-width: 1px 0;
 
   @include media-breakpoint-up(md) {
@@ -23,7 +23,7 @@
   position: relative;
   padding: var(--bd-example-padding);
   margin: 0 ($bd-gutter-x * -.5) 1rem;
-  border: solid var(--bs-border-color-subtle); // OUDS mod: instead of `var(--bs-border-color)`
+  border: solid var(--bs-color-border-default); // OUDS mod: instead of `var(--bs-border-color)`
   border-width: 1px 0;
   @include clearfix();
 
@@ -206,9 +206,9 @@
     display: inline-block;
     width: 9rem; // OUDS mod
     font-weight: $font-weight-bold; // OUDS mod
-    color: var(--bs-secondary-color);
-    background-color: var(--bs-secondary-bg); // OUDS mod: instead of `var(--bs-tertiary-bg)`
-    border: var(--bs-border-width) solid var(--bs-border-color-subtle); // OUDS mod: instead of `var(--bs-border-width) solid var(--bs-border-color)`
+    color: var(--#{$prefix}color-content-muted); // OUDS mod: instead of `var(--bs-secondary-color)`
+    background-color: var(--#{$prefix}color-bg-secondary); // OUDS mod: instead of `var(--bs-tertiary-bg)`
+    border: var(--bs-border-width) solid var(--bs-color-border-default); // OUDS mod: instead of `var(--bs-border-width) solid var(--bs-border-color)`
 
     > div {
       display: flex;
@@ -281,17 +281,18 @@
 
 // OUDS mod
 .simple-list-example-scrollspy .active {
-  color: var(--bs-primary);
+  color: var(--#{$prefix}color-content-brand-primary);
 }
 // End mod
 
 .bd-example-border-utils {
   [class^="border"] {
     display: inline-block;
+    flex-shrink: 0;
     width: 5rem;
     height: 5rem;
     margin: .25rem;
-    background-color: var(--bs-tertiary-bg);
+    background-color: var(--#{$prefix}color-bg-secondary);
   }
 }
 
@@ -307,13 +308,13 @@
 
   .position-relative {
     height: 12.5rem;
-    background-color: var(--bs-tertiary-bg);
+    background-color: var(--#{$prefix}color-bg-secondary);
   }
 
   .position-absolute {
     width: 2rem;
     height: 2rem;
-    background-color: var(--bs-body-color);
+    background-color: var(--#{$prefix}color-bg-emphasized);
     @include border-radius();
   }
 }
@@ -406,7 +407,7 @@
 
   pre code {
     @include font-size(inherit);
-    color: var(--bs-body-color); // Effectively the base text color
+    color: var(--#{$prefix}color-content-default); // OUDS mod: instead of `var(--bs-body-color)`
     word-wrap: normal;
   }
 }
@@ -472,28 +473,24 @@
 }
 // scss-docs-end sticker-fs-xl
 
-.border-subtle {
-  --bs-border-color: var(--bs-border-color-subtle);
-}
-
-.color-copy:hover svg {
+.color-copy:hover > svg {
   transform: scale(1.07);
 }
 
-.color-copy svg {
+.color-copy > svg {
   transition: transform .15s ease-in-out; // stylelint-disable-line property-disallowed-list
 }
 
 .double-figure-svg {
   padding-top: 10px;
   padding-bottom: 10px;
-  background: linear-gradient(to bottom, $white, $white 50%, $gray-950 50%, $gray-950 100%);
+  background: linear-gradient(to bottom, $ouds-color-functional-white, $ouds-color-functional-white 50%, $ouds-color-functional-dark-gray-880 50%, $ouds-color-functional-dark-gray-880 100%);
 }
 
 .double-figure {
   padding-top: 10px;
   padding-bottom: 10px;
-  background: linear-gradient(to bottom, $white, $white calc((100% - 1.875rem) * .5), $gray-950 calc((100% - 1.875rem) * .5), $gray-950 calc(100% - 1.875rem), transparent calc(100% - 1.875rem)); // stylelint-disable-line function-disallowed-list
+  background: linear-gradient(to bottom, $ouds-color-functional-white, $ouds-color-functional-white calc((100% - 1.875rem) * .5), $ouds-color-functional-dark-gray-880 calc((100% - 1.875rem) * .5), $ouds-color-functional-dark-gray-880 calc(100% - 1.875rem), transparent calc(100% - 1.875rem)); // stylelint-disable-line function-disallowed-list
 
   figcaption {
     height: 1.875rem;

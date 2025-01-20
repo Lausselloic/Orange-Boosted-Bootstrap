@@ -82,7 +82,7 @@
     // OUDS mod
     &[data-focus-visible-added] {
       outline-offset: add($focus-visible-outer-offset, var(--#{$prefix}accordion-border-width));
-      box-shadow: 0 0 0 add(var(--#{$prefix}accordion-border-width), $focus-visible-inner-width) var(--#{$prefix}focus-visible-inner-color);
+      box-shadow: 0 0 0 add(var(--#{$prefix}accordion-border-width), $focus-visible-inner-width) var(--#{$prefix}color-border-focus-inset);
     }
     // End mod
   }

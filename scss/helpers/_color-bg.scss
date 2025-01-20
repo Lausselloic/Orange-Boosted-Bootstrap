@@ -13,3 +13,29 @@
     background-color: RGBA(var(--#{$prefix}#{$color}-rgb), var(--#{$prefix}bg-opacity, 1)) if($enable-important-utilities, !important, null);
   }
 }
+
+// OUDS mod
+@each $color, $value in map-remove($ouds-backgrounds, "transparent") {
+  $text-bg-color: var(--#{$prefix}color-content-default);
+  @if index(("brand-primary"), #{$color}) {
+    $text-bg-color: var(--#{$prefix}color-content-on-brand-primary);
+  } @else if index(("emphasized"), #{$color}) {
+    $text-bg-color: var(--#{$prefix}color-always-white);
+  } @else if index(("always-black"), #{$color}) {
+    $text-bg-color: var(--#{$prefix}color-always-on-black);
+  } @else if index(("always-white"), #{$color}) {
+    $text-bg-color: var(--#{$prefix}color-always-on-white);
+  } @else if index(("status-neutral-emphasized", "status-negative-emphasized"), #{$color}) {
+    $text-bg-color: var(--#{$prefix}color-content-on-status-emphasized-alt);
+  } @else if index(("status-accent-emphasized", "status-positive-emphasized", "status-warning-emphasized", "status-info-emphasized"), #{$color}) {
+    $text-bg-color: var(--#{$prefix}color-content-on-status-emphasized);
+  } @else if index(("status-neutral-muted", "status-accent-muted", "status-positive-muted", "status-negative-muted", "status-warning-muted", "status-info-muted"), #{$color}) {
+    $text-bg-color: var(--#{$prefix}color-content-on-status-muted);
+  }
+
+  .text-bg-#{$color} {
+    color: $text-bg-color if($enable-important-utilities, !important, null);
+    background-color: $value if($enable-important-utilities, !important, null);
+  }
+}
+// End mod

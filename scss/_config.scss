@@ -1,0 +1,6 @@
+// Configuration file for OUDS Web
+
+$prefix: bs- !default;
+$color-mode-type: data !default; // `data` or `media-query`
+
+$ouds-root-selector: ":root" !default;

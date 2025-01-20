@@ -1,5 +1,5 @@
 - name: primary
-  hex: "#f16e00"
+  hex: "#f15e00"
   dark_hex: "#ff7900"
   description: "<b>Primary —</b> Main theme color, used for high emphasis and active component."
 - name: secondary

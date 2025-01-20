@@ -1,5 +1,5 @@
 // stylelint-disable selector-max-id
-:root {
+#{$ouds-root-selector} {
   scroll-padding-top: $offset-top / 2;
 
   @include media-breakpoint-up(lg) {

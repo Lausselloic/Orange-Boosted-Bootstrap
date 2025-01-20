@@ -1,8 +1,10 @@
 // TODO: this file can be removed safely in v6 when `@import "variables-dark"` will be removed at the end of _variables.scss
 
+@import "../../config";
 @import "../../functions";
 @import "../../tokens/raw";
 @import "../../tokens/semantic";
+@import "../../tokens/semantic-colors-custom-props";
 @import "../../tokens/composite";
 @import "../../tokens/component";
 @import "../../variables";

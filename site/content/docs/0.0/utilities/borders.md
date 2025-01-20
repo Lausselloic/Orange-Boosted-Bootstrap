@@ -48,7 +48,56 @@ Or remove borders:
 
 {{< /bootstrap-compatibility >}}
 
-<!--## Color-->
+## Color
+
+Change the border color using utilities. The color utilities are generated from our `$ouds-border-colors` Sass map.
+
+{{< example class="bd-example-border-utils d-flex align-items-center flex-wrap" >}}
+<span class="border border-brand-primary"></span>
+<span class="border border-default"></span>
+<span class="border border-emphasized"></span>
+<div data-bs-theme="light" class="bg-brand-primary d-inline-flex m-shortest p-shorter"><span class="border border-on-brand-primary m-none bg-brand-primary"></span></div>
+<div data-bs-theme="light" class="bg-always-white d-inline-flex m-shortest p-shorter"><span class="border border-always-black m-none bg-always-white"></span></div>
+<div data-bs-theme="dark" class="bg-always-black d-inline-flex m-shortest p-shorter"><span class="border border-always-white m-none bg-always-black"></span></div>
+<div data-bs-theme="dark" class="bg-always-black d-inline-flex m-shortest p-shorter"><span class="border border-always-on-black m-none bg-always-black"></span></div>
+<div data-bs-theme="light" class="bg-always-white d-inline-flex m-shortest p-shorter"><span class="border border-always-on-white m-none bg-always-white"></span></div>
+{{< /example >}}
+
+{{< bootstrap-compatibility >}}
+
+{{< callout info >}}
+Border utilities like `.border-*` that generated from our original `$theme-colors` Sass map don't yet respond to color modes, however, any `.border-*-subtle` utility will. This will be resolved in v6.
+{{< /callout >}}
+
+{{< example class="bd-example-border-utils" >}}
+{{< border.inline >}}
+{{- range (index $.Site.Data "theme-colors") }}
+<span class="border border-{{ .name }}"></span>
+<span class="border border-{{ .name }}-subtle"></span>
+{{- end -}}
+{{< /border.inline >}}
+<span class="border border-black"></span>
+<span class="border border-white"></span>
+{{< /example >}}
+
+Or modify the default `border-color` of a component:
+
+{{< example >}}
+<div class="mb-4">
+  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+  <input type="email" class="form-control border-brand-primary" id="exampleFormControlInput1" placeholder="name@example.com">
+</div>
+
+<div class="h4 pb-2 mb-4 text-danger border-bottom border-emphasized">
+  Dangerous heading
+</div>
+
+<div class="p-3 bg-info bg-opacity-10 border border-emphasized border-start-0 rounded-end">
+  Changing border color and width
+</div>
+{{< /example >}}
+
+{{< /bootstrap-compatibility >}}
 
 <!--## Opacity-->
 
@@ -182,7 +231,7 @@ Border semantic tokens are defined as Sass variables.
 
 {{< scss-docs name="border-radius-variables" file="scss/_variables.scss" >}}
 
-<!--Variables for setting `border-color` in `.border-{direction}-subtle` utilities in light and dark mode:
+<!-- TODO LM: Variables for setting `border-color` in `.border-{direction}-subtle` utilities in light and dark mode:
 
 {{< scss-docs name="theme-border-subtle-variables" file="scss/_variables.scss" >}}
 

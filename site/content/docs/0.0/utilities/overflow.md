@@ -51,7 +51,7 @@ Adjust the `overflow-x` property to affect the overflow of content horizontally.
     <div><code>.overflow-x-visible</code> example </div>
     <div>on an element with set width and height dimensions.</div>
   </div>
-  <div class="overflow-x-scroll p-tall bg-body w-100 border" style="max-width: 200px; max-height: 100px;white-space: nowrap;">
+  <div class="overflow-x-scroll p-tall bg-primary w-100 border" style="max-width: 200px; max-height: 100px;white-space: nowrap;">
     <div><code>.overflow-x-scroll</code> example on an element</div>
     <div> with set width and height dimensions.</div>
   </div>

@@ -1,9 +1,11 @@
+// Kept it quite simple using only light and dark modes, but you can extend it like in https://codepen.io/louismaximepiton/pen/vYbEvLO for example, to allow more color modes.
+// OUDS mod: add `$invert-mode`, root mode and root-inverted mode
 // scss-docs-start color-mode-mixin
-@mixin color-mode($mode: light, $root: false) {
+@mixin color-mode($mode: light, $root: false, $inverted-mode: if($mode == light, dark, light)) {
   @if $color-mode-type == "media-query" {
     @if $root == true {
       @media (prefers-color-scheme: $mode) {
-        :root {
+        #{$ouds-root-selector} {
           @content;
         }
       }
@@ -12,8 +14,17 @@
         @content;
       }
     }
+  } @else if $root == true and $mode == light {
+    #{$ouds-root-selector},
+    [data-bs-theme="#{$mode}"],
+    #{$ouds-root-selector}[data-bs-theme="#{$mode}"] [data-bs-theme="root"],
+    #{$ouds-root-selector}[data-bs-theme="#{$inverted-mode}"] [data-bs-theme="root-inverted"] {
+      @content;
+    }
   } @else {
-    [data-bs-theme="#{$mode}"] {
+    [data-bs-theme="#{$mode}"],
+    #{$ouds-root-selector}[data-bs-theme="#{$mode}"] [data-bs-theme="root"],
+    #{$ouds-root-selector}[data-bs-theme="#{$inverted-mode}"] [data-bs-theme="root-inverted"] {
       @content;
     }
   }

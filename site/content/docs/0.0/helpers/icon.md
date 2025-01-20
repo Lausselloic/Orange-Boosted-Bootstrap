@@ -51,19 +51,19 @@ Here are the rules to follow for headings. These icons' sizes are responsive.
 {{< example >}}
 <!-- h1 uses heading-xlarge font reference like all related classes as `.h1`, `.fs-hxl`, etc... -->
 <div class="d-flex align-items-center mb-medium">
-  <svg class="hxl-lg-icon me-scaled-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="hxl-lg-icon me-scaled-short text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <h1 class="mb-none">H1 with large icon</h1>
 </div>
 <div class="d-flex align-items-center mb-medium">
-  <svg class="hxl-md-icon me-scaled-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="hxl-md-icon me-scaled-short text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <h1 class="mb-none">H1 with medium icon</h1>
 </div>
 <div class="d-flex align-items-center mb-medium">
-  <svg class="hxl-sm-icon me-scaled-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="hxl-sm-icon me-scaled-short text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <h1 class="mb-none">H1 with small icon</h1>
@@ -73,19 +73,19 @@ Here are the rules to follow for headings. These icons' sizes are responsive.
 
 <!-- h2 uses heading-large font reference like all related classes as `.h2`, `.fs-hl`, etc... -->
 <div class="d-flex align-items-center mb-medium">
-  <svg class="hl-lg-icon me-scaled-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="hl-lg-icon me-scaled-short text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <h2 class="mb-none">H2 with large icon</h2>
 </div>
 <div class="d-flex align-items-center mb-medium">
-  <svg class="hl-md-icon me-scaled-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="hl-md-icon me-scaled-short text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <h2 class="mb-none">H2 with medium icon</h2>
 </div>
 <div class="d-flex align-items-center mb-medium">
-  <svg class="hl-sm-icon me-scaled-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="hl-sm-icon me-scaled-short text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <h2 class="mb-none">H2 with small icon</h2>
@@ -95,19 +95,19 @@ Here are the rules to follow for headings. These icons' sizes are responsive.
 
 <!-- h3 uses heading-medium font reference like all related classes as `.h3`, `.fs-hm`, etc... -->
 <div class="d-flex align-items-center mb-medium">
-  <svg class="hm-lg-icon me-scaled-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="hm-lg-icon me-scaled-short text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <h3 class="mb-none">H3 with large icon</h3>
 </div>
 <div class="d-flex align-items-center mb-medium">
-  <svg class="hm-md-icon me-scaled-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="hm-md-icon me-scaled-short text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <h3 class="mb-none">H3 with medium icon</h3>
 </div>
 <div class="d-flex align-items-center mb-medium">
-  <svg class="hm-sm-icon me-scaled-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="hm-sm-icon me-scaled-short text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <h3 class="mb-none">H3 with small icon</h3>
@@ -117,19 +117,19 @@ Here are the rules to follow for headings. These icons' sizes are responsive.
 
 <!-- h4 uses heading-small font reference like all related classes as `.h4`, `.fs-hs`, etc... -->
 <div class="d-flex align-items-center mb-medium">
-  <svg class="hs-lg-icon me-scaled-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="hs-lg-icon me-scaled-short text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <h4 class="mb-none">H4 with large icon</h4>
 </div>
 <div class="d-flex align-items-center mb-medium">
-  <svg class="hs-md-icon me-scaled-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="hs-md-icon me-scaled-short text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <h4 class="mb-none">H4 with medium icon</h4>
 </div>
 <div class="d-flex align-items-center mb-medium">
-  <svg class="hs-sm-icon me-scaled-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="hs-sm-icon me-scaled-short text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <h4 class="mb-none">H4 with small icon</h4>
@@ -139,19 +139,19 @@ Here are the rules to follow for headings. These icons' sizes are responsive.
 
 <!-- h5 uses body-large font reference like all related classes as `.h5`, `.fs-bl`, etc... -->
 <div class="d-flex align-items-center mb-medium">
-  <svg class="bl-lg-icon me-scaled-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="bl-lg-icon me-scaled-short text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <h5 class="mb-none">H5 with large icon</h5>
 </div>
 <div class="d-flex align-items-center mb-medium">
-  <svg class="bl-md-icon me-scaled-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="bl-md-icon me-scaled-short text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <h5 class="mb-none">H5 with medium icon</h5>
 </div>
 <div class="d-flex align-items-center mb-medium">
-  <svg class="bl-sm-icon me-scaled-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="bl-sm-icon me-scaled-short text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <h5 class="mb-none">H5 with small icon</h5>
@@ -161,19 +161,19 @@ Here are the rules to follow for headings. These icons' sizes are responsive.
 
 <!-- h6 uses body-medium font reference like all related classes as `.h6`, `.fs-bm`, etc... -->
 <div class="d-flex align-items-center mb-medium">
-  <svg class="bm-lg-icon me-scaled-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="bm-lg-icon me-scaled-short text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <h6 class="mb-none">H6 with lg icon</h6>
 </div>
 <div class="d-flex align-items-center mb-medium">
-  <svg class="bm-md-icon me-scaled-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="bm-md-icon me-scaled-short text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <h6 class="mb-none">H6 with medium icon</h6>
 </div>
 <div class="d-flex align-items-center mb-medium">
-  <svg class="bm-sm-icon me-scaled-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="bm-sm-icon me-scaled-short text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <h6 class="mb-none">H6 with small icon</h6>
@@ -210,7 +210,7 @@ Here are the rules to follow for regular texts. These icons' sizes are responsiv
 {{< example >}}
 <!-- .lead uses body-large font reference like all related classes as `.lead`, `.fs-bl`, etc... -->
 <div class="d-flex align-items-center mb-medium">
-  <svg class="bl-lg-icon me-scaled-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="bl-lg-icon me-scaled-short text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <p class="lead mb-none">
@@ -218,7 +218,7 @@ Here are the rules to follow for regular texts. These icons' sizes are responsiv
   </p>
 </div>
 <div class="d-flex align-items-center mb-medium">
-  <svg class="bl-md-icon me-scaled-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="bl-md-icon me-scaled-short text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <p class="lead mb-none">
@@ -226,7 +226,7 @@ Here are the rules to follow for regular texts. These icons' sizes are responsiv
   </p>
 </div>
 <div class="d-flex align-items-center mb-medium">
-  <svg class="bl-sm-icon me-scaled-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="bl-sm-icon me-scaled-short text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <p class="lead mb-none">
@@ -238,7 +238,7 @@ Here are the rules to follow for regular texts. These icons' sizes are responsiv
 
 <!-- default paragraph uses body-medium font reference like all related classes as `.fs-bm`, etc... -->
 <div class="d-flex align-items-center mb-medium">
-  <svg class="bm-lg-icon me-scaled-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="bm-lg-icon me-scaled-short text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <p class="mb-none">
@@ -246,7 +246,7 @@ Here are the rules to follow for regular texts. These icons' sizes are responsiv
   </p>
 </div>
 <div class="d-flex align-items-center mb-medium">
-  <svg class="bm-md-icon me-scaled-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="bm-md-icon me-scaled-short text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <p class="mb-none">
@@ -254,7 +254,7 @@ Here are the rules to follow for regular texts. These icons' sizes are responsiv
   </p>
 </div>
 <div class="d-flex align-items-center mb-medium">
-  <svg class="bm-sm-icon me-scaled-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="bm-sm-icon me-scaled-short text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <p class="mb-none">
@@ -266,7 +266,7 @@ Here are the rules to follow for regular texts. These icons' sizes are responsiv
 
 <!-- .small paragraph uses body-small font reference like all related classes as `.small`, `.fs-bs`, etc... -->
 <div class="d-flex align-items-center mb-medium">
-  <svg class="bs-lg-icon me-scaled-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="bs-lg-icon me-scaled-short text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <p class="small mb-none">
@@ -274,7 +274,7 @@ Here are the rules to follow for regular texts. These icons' sizes are responsiv
   </p>
 </div>
 <div class="d-flex align-items-center mb-medium">
-  <svg class="bs-md-icon me-scaled-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="bs-md-icon me-scaled-short text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <p class="small mb-none">
@@ -282,7 +282,7 @@ Here are the rules to follow for regular texts. These icons' sizes are responsiv
   </p>
 </div>
 <div class="d-flex align-items-center mb-medium">
-  <svg class="bs-sm-icon me-scaled-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="bs-sm-icon me-scaled-short text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <p class="small mb-none">
@@ -314,8 +314,8 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
 
 <div class="bd-example">
   <div class="d-flex mb-medium">
-    <div class="bg-secondary d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
-      <svg class="decorative-2xs-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <div class="bg-emphasized d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
+      <svg class="decorative-2xs-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
       </svg>
     </div>
@@ -325,8 +325,8 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
     </div>
   </div>
   <div class="d-flex mb-medium">
-    <div class="bg-secondary d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
-      <svg class="decorative-xs-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <div class="bg-emphasized d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
+      <svg class="decorative-xs-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
       </svg>
     </div>
@@ -336,8 +336,8 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
     </div>
   </div>
   <div class="d-flex mb-medium">
-    <div class="bg-secondary d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
-      <svg class="decorative-sm-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <div class="bg-emphasized d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
+      <svg class="decorative-sm-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
       </svg>
     </div>
@@ -347,8 +347,8 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
     </div>
   </div>
   <div class="d-flex mb-medium">
-    <div class="bg-secondary d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
-      <svg class="decorative-md-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <div class="bg-emphasized d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
+      <svg class="decorative-md-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
       </svg>
     </div>
@@ -358,8 +358,8 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
     </div>
   </div>
   <div class="d-flex mb-medium">
-    <div class="bg-secondary d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
-      <svg class="decorative-lg-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <div class="bg-emphasized d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
+      <svg class="decorative-lg-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
       </svg>
     </div>
@@ -369,8 +369,8 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
     </div>
   </div>
   <div class="d-flex mb-medium">
-    <div class="bg-secondary d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
-      <svg class="decorative-xl-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <div class="bg-emphasized d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
+      <svg class="decorative-xl-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
       </svg>
     </div>
@@ -380,8 +380,8 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
     </div>
   </div>
   <div class="d-flex mb-medium">
-    <div class="bg-secondary d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
-      <svg class="decorative-2xl-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <div class="bg-emphasized d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
+      <svg class="decorative-2xl-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
       </svg>
     </div>
@@ -393,13 +393,13 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
 </div>
 
 ```html
-<svg class="decorative-2xs-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
-<svg class="decorative-xs-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
-<svg class="decorative-sm-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
-<svg class="decorative-md-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
-<svg class="decorative-lg-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
-<svg class="decorative-xl-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
-<svg class="decorative-2xl-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+<svg class="decorative-2xs-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+<svg class="decorative-xs-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+<svg class="decorative-sm-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+<svg class="decorative-md-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+<svg class="decorative-lg-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+<svg class="decorative-xl-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+<svg class="decorative-2xl-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
 ```
 
 ## Multiple lines
@@ -412,7 +412,7 @@ This is the default behavior of our DOM.
 
 {{< example >}}
 <div class="d-flex align-items-center">
-  <svg class="hxl-lg-icon me-scaled-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="hxl-lg-icon me-scaled-short text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <h1 class="mb-none">H1 with large icon and a very long title to see how it behaves while being wrapped</h1>
@@ -421,7 +421,7 @@ This is the default behavior of our DOM.
 
 {{< example >}}
 <div class="d-flex align-items-center">
-  <svg class="bm-lg-icon me-scaled-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="bm-lg-icon me-scaled-short text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <p class="mb-none">
@@ -436,7 +436,7 @@ You can also have the icon above the text block.
 
 {{< example >}}
 <div>
-  <svg class="hxl-lg-icon mb-scaled-shorter text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="hxl-lg-icon mb-scaled-shorter text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <h1 class="mb-none">H1 with large icon and a very long title to see how it behaves while being wrapped</h1>
@@ -445,7 +445,7 @@ You can also have the icon above the text block.
 
 {{< example >}}
 <div>
-  <svg class="bm-lg-icon mb-scaled-shortest text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="bm-lg-icon mb-scaled-shortest text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <p class="mb-none">

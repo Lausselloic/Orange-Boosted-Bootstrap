@@ -142,11 +142,11 @@
   .btn.active + &,
   &:active + * + .btn,
   &.active + * + .btn {
-    border-color: $supporting-orange;
+    border-color: $ouds-color-orange-500;
   }
 
   .btn-group.show > &:not(:focus):not(:active)::before {
-    color: $supporting-orange;
+    color: $ouds-color-orange-500;
     background-color: currentcolor;
   }
   // End mod

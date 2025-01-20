@@ -39,17 +39,17 @@ The display values can be altered by changing the `display` values defined in `$
 
 The media queries affect screen widths with the given breakpoint *or larger*. For example, `.d-lg-none` sets `display: none;` on `lg`, `xl`, `2xl`, and `3xl` screens.
 
-<!--## Examples
+## Examples
 
 {{< example >}}
-<div class="d-inline p-short text-bg-primary">d-inline</div>
-<div class="d-inline p-short text-bg-dark">d-inline</div>
+<div class="d-inline p-short text-bg-brand-primary">d-inline</div>
+<div class="d-inline p-short text-bg-always-black">d-inline</div>
 {{< /example >}}
 
 {{< example >}}
-<span class="d-block p-short text-bg-primary">d-block</span>
-<span class="d-block p-short text-bg-dark">d-block</span>
-{{< /example >}}-->
+<span class="d-block p-short text-bg-brand-primary">d-block</span>
+<span class="d-block p-short text-bg-always-black">d-block</span>
+{{< /example >}}
 
 ## Hiding elements
 
